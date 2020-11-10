@@ -1,0 +1,12 @@
+
+# Compile files
+**/__pycache__/
+*.pyc
+
+# Mac 
+.DS_Store
+
+
+# packages
+*.tar
+*.gz
