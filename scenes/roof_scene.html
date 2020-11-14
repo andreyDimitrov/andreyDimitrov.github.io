@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - OBJLoader + MTLLoader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		<div id="info">
+		<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - OBJLoader + MTLLoader
+		</div>
+
+		<script type="module">
+
+			import * as THREE from '../build/three.module.js';
+
+			import { MTLLoader } from './jsm/loaders/MTLLoader.js';
+			import { OBJLoader } from './jsm/loaders/OBJLoader.js';
+
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+
+			import { EffectComposer } from './jsm/postprocessing/EffectComposer.js';
+            import { RenderPass } from './jsm/postprocessing/RenderPass.js';
+            import { ShaderPass } from './jsm/postprocessing/ShaderPass.js';
+            import { OutlinePass } from './jsm/postprocessing/OutlinePass.js';
+            import {FXAAShader} from './jsm/shaders/FXAAShader.js';
+
+			let camera, scene, renderer;
+
+			let meshes = new THREE.Group();
+
+			const raycaster = new THREE.Raycaster();
+			const mouse = new THREE.Vector2()
+
+			let windowHalfX = window.innerWidth / 2;
+			let windowHalfY = window.innerHeight / 2;
+
+			let composer, effectFXAA, outlinePass;
+
+
+			init();
+			animate();
+
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				camera.position.z = 20;
+				camera.position.y = 15;
+				camera.position.x = 10;
+
+				// scene
+
+				scene = new THREE.Scene();
+
+				const ambientLight = new THREE.AmbientLight( 0xffffff, 1.55 );
+				scene.add( ambientLight );
+
+
+				scene.add( camera );
+
+				// model
+
+				const onProgress = function ( xhr ) {
+
+					if ( xhr.lengthComputable ) {
+
+						const percentComplete = xhr.loaded / xhr.total * 100;
+						console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+
+					}
+
+				};
+
+				const onError = function () { };
+
+				new MTLLoader( )
+					.setPath( 'models/roof/' )
+					.load( 'model.mtl', function ( materials ) {
+
+						materials.preload();
+
+						new OBJLoader( )
+							.setMaterials( materials )
+							.setPath( 'models/roof/' )
+							.load( 'model.obj', function ( object ) {
+
+								object.position.y = 0;
+								meshes = object;
+								scene.add( meshes );
+
+							}, onProgress, onError );
+
+					} );
+
+				//
+
+				renderer = new THREE.WebGLRenderer({antialias: true, alpha: true });
+				renderer.shadowMap.enabled = true;
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+
+				// controls
+				const controls = new OrbitControls( camera, renderer.domElement );
+				controls.maxPolarAngle = Math.PI * 0.5;
+				controls.minDistance = 1;
+				controls.maxDistance = 200;
+
+
+				// postprocessing
+
+                // composer = new EffectComposer( renderer );
+                // const renderPass = new RenderPass( scene, camera );
+                // composer.addPass( renderPass );
+
+                // outlinePass = new OutlinePass( new THREE.Vector2( window.innerWidth, window.innerHeight ), scene, camera );
+
+                // outlinePass.edgeStrength = Number( 4 );
+                // outlinePass.edgeGlow = Number( 0.5 );
+                // outlinePass.edgeThickness = Number( 2 );
+                // outlinePass.visibleEdgeColor.set( '#ff754f' );
+                // outlinePass.hiddenEdgeColor.set( '#ff754f' );
+
+                // composer.addPass( outlinePass );
+
+    //             effectFXAA = new ShaderPass( FXAAShader );
+				// effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
+				// composer.addPass( effectFXAA );
+
+
+                document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				// composer.setSize( window.innerWidth, window.innerHeight );
+
+				// effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
+
+	
+			}
+
+			function onDocumentMouseMove( event ) {
+
+				event.preventDefault();
+
+				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+				// find intersections
+				raycaster.setFromCamera( mouse, camera );
+				var intersects = raycaster.intersectObjects( meshes.children );
+				if ( intersects.length > 0 ) {
+					console.log( 'intersects' );
+	                // outlinePass.selectedObjects = [intersects[ 0 ].object];
+				} else {
+	                // outlinePass.selectedObjects = [];
+	            }
+
+			}
+
+			//
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+				// camera.position.x += ( mouseX - camera.position.x ) * .05;
+				// camera.position.y += ( - mouseY - camera.position.y ) * .05;
+
+				// camera.lookAt( scene.position );
+
+				renderer.render( scene, camera );
+				// composer.render();
+
+			}
+
+		</script>
+
+	</body>
+</html>

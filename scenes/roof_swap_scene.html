@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - OBJLoader + MTLLoader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		<div id="info">
+		<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - OBJLoader + MTLLoader
+		</div>
+
+		<script type="module">
+
+			import * as THREE from '../build/three.module.js';
+
+			import { MTLLoader } from './jsm/loaders/MTLLoader.js';
+			import { OBJLoader } from './jsm/loaders/OBJLoader.js';
+
+			import { GUI } from './jsm/libs/dat.gui.module.js';
+
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+
+			let camera, scene, renderer;
+
+
+			const raycaster = new THREE.Raycaster();
+			const mouse = new THREE.Vector2()
+
+			let windowHalfX = window.innerWidth / 2;
+			let windowHalfY = window.innerHeight / 2;
+
+
+			let shell, roofs, cRoofId;
+
+
+			init();
+			animate();
+
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				camera.position.z = 20;
+				camera.position.y = 15;
+				camera.position.x = 10;
+
+				// scene
+
+				scene = new THREE.Scene();
+
+				const ambientLight = new THREE.AmbientLight( 0xffffff, 1.55 );
+				scene.add( ambientLight );
+
+				scene.add( camera );
+
+
+				roofs = new THREE.Group();
+				cRoofId = true;
+				shell = new THREE.Group();
+
+
+				// Gui
+				const gui = new GUI(),
+					folderToggles = gui.addFolder( 'Toggles' ),
+					propsLocal = {
+
+						get 'Roof'() {
+							return cRoofId;
+						},
+
+						set 'Roof'( v ) {
+
+							if (cRoofId) {
+								roofs.children[0].visible = false
+								roofs.children[1].visible = true
+							} else {
+								roofs.children[0].visible = true
+								roofs.children[1].visible = false
+							};
+							cRoofId = v;
+						}
+					};
+
+				folderToggles.add( propsLocal, 'Roof' );
+
+				// model
+
+				const onProgress = function ( xhr ) {
+
+					if ( xhr.lengthComputable ) {
+
+						const percentComplete = xhr.loaded / xhr.total * 100;
+						console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+
+					}
+
+				};
+
+				const onError = function () { };
+
+				new MTLLoader( )
+					.setPath( 'models/roof_swap/' )
+					.load( 'model.mtl', function ( materials ) {
+
+						console.log( 'mats' );
+
+						materials.preload();
+
+						new OBJLoader( )
+							.setMaterials( materials )
+							.setPath( 'models/roof_swap/' )
+							.load( 'model.obj', function ( object ) {
+
+								// object.position.y = 0;
+
+								for ( var i = 0; i < object.children.length; i ++ ) {
+									console.log( object.children[i].name );
+									if ( object.children[i].name.startsWith( 'roof_' ) ) {
+										object.children[i].visible = false;
+										roofs.children.push(object.children[i]);
+									} else {
+										shell.children.push(object.children[i]);
+									};
+								};
+
+								roofs.children[0].visible = true;
+
+								console.log( roofs );
+								console.log( shell );
+
+								scene.add( roofs );
+								scene.add( shell );
+
+								// scene.add( object );
+
+							}, onProgress, onError );
+
+					} );
+
+				//
+
+				renderer = new THREE.WebGLRenderer({antialias: true, alpha: true });
+				renderer.shadowMap.enabled = true;
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+
+				// controls
+				const controls = new OrbitControls( camera, renderer.domElement );
+				controls.maxPolarAngle = Math.PI * 0.5;
+				controls.minDistance = 1;
+				controls.maxDistance = 200;
+
+                document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentMouseMove( event ) {
+
+				event.preventDefault();
+
+				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+				// find intersections
+				raycaster.setFromCamera( mouse, camera );
+				var intersects = raycaster.intersectObjects( roofs.children );
+				if ( intersects.length > 0 ) {
+					console.log( 'intersects' );
+				} else {
+	            }
+
+			}
+
+			//
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+				// camera.position.x += ( mouseX - camera.position.x ) * .05;
+				// camera.position.y += ( - mouseY - camera.position.y ) * .05;
+
+				// camera.lookAt( scene.position );
+
+				renderer.render( scene, camera );
+				// composer.render();
+
+			}
+
+		</script>
+
+	</body>
+</html>
