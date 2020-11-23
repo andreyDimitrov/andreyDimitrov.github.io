@@ -1,0 +1,38 @@
+{
+    "base_lot": {
+        "setbacks": {
+            "mesh": "models/scene/lot",
+            "material": "models/scene/lot_setbacks"
+        }
+    },
+    "shell": {
+        "default": {
+            "mesh": "models/scene/shell",
+            "material": "models/scene/checker"
+        }
+    },
+    "roof_primary": {
+        "shingles_gray": {
+            "mesh": "models/scene/roof_primary_2",
+            "material": "models/scene/checker"
+        },
+        "shingles_brown": {
+            "mesh": "models/scene/roof_primary_2",
+            "material": "models/scene/checker"
+        },
+        "metal_standing_seam_gray": {
+            "mesh": "models/scene/roof_primary_1",
+            "material": "models/scene/checker"
+        }
+    },
+    "window_frame": {
+        "vinyl_white": {
+            "mesh": "models/scene/window_frame-vinyl",
+            "material": "models/scene/window_frame-vinyl_white"
+        },
+        "vinyl_black": {
+            "mesh": "models/scene/window_frame-vinyl",
+            "material": "models/scene/window_frame-vinyl_black"
+        }
+    }
+}

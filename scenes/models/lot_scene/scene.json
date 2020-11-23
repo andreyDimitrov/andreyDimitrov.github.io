@@ -1,0 +1,24 @@
+{
+    "base_lot": {
+        "setbacks": {
+            "mesh": "models/lot_scene/lot",
+            "material": "models/lot_scene/lot_setbacks"
+        }
+    },
+    "shell": {
+        "default": {
+            "mesh": "models/lot_scene/shell",
+            "material": "models/lot_scene/shell_base"
+        }
+    },
+    "roof_primary": {
+        "shingles_gray": {
+            "mesh": "models/lot_scene/roof_primary_2",
+            "material": "models/lot_scene/roof_primary_2"
+        },
+        "metal_standing_seam_gray": {
+            "mesh": "models/lot_scene/roof_primary_1",
+            "material": "models/lot_scene/roof_primary_1"
+        }
+    }
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - OBJLoader + MTLLoader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		<div id="info">
+		<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - OBJLoader + MTLLoader
+		</div>
+
+		<script type="module">
+
+			import * as THREE from '../build/three.module.js';
+
+			import { MTLLoader } from './jsm/loaders/MTLLoader.js';
+			import { OBJLoader } from './jsm/loaders/OBJLoader.js';
+
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+
+			import { GUI } from './jsm/libs/dat.gui.module.js';
+
+			let camera, scene, renderer;
+
+			
+
+			const raycaster = new THREE.Raycaster();
+			const mouse = new THREE.Vector2()
+
+			let windowHalfX = window.innerWidth / 2;
+			let windowHalfY = window.innerHeight / 2;
+
+			const loader = new THREE.FileLoader();
+			const mtl_loader = new MTLLoader();
+			const obj_loader = new OBJLoader();
+
+			let meshes = new THREE.Group();
+
+			let scene_info = {}
+			let scene_materials = {};
+			let scene_meshes = {};
+
+			let current_styles = {};
+			let cRoofId = false;
+
+			init();
+			animate();
+
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				camera.position.z = 80;
+				camera.position.y = 60;
+				camera.position.x = 40;
+
+				// scene
+
+				scene = new THREE.Scene();
+
+				const ambientLight = new THREE.AmbientLight( 0xffffff, 1.55 );
+				scene.add( ambientLight );
+
+
+				scene.add( camera );
+
+				// Gui
+				const gui = new GUI(),
+					folderToggles = gui.addFolder( 'Toggles' ),
+					propsLocal = {
+
+						get 'Roof'() {
+							return cRoofId;
+						},
+
+						set 'Roof'( v ) {
+
+							if (cRoofId) {
+								assign_style('roof_primary', 'shingles_gray');
+							} else {
+								assign_style('roof_primary', 'metal_standing_seam_gray');
+							};
+							cRoofId = v;
+						}
+					};
+
+				folderToggles.add( propsLocal, 'Roof' );
+
+				// load scene info
+				load_scene_info();
+
+
+				renderer = new THREE.WebGLRenderer({antialias: true, alpha: true });
+				renderer.shadowMap.enabled = true;
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+
+				// controls
+				const controls = new OrbitControls( camera, renderer.domElement );
+				controls.maxPolarAngle = Math.PI * 0.5;
+				controls.minDistance = 1;
+				controls.maxDistance = 200;
+
+                document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function prepare_scene(info){
+
+				// clear scene stuff
+				scene_meshes = {};
+				scene_materials = {};
+
+				// rebuild with empties
+				for (const [p_key, p_value] of Object.entries(info)) {
+					current_styles[p_key] = null;
+					for (const [s_key, s_value] of Object.entries(info[p_key])) {
+						scene_meshes[s_value["mesh"]] = null;
+						scene_materials[s_value["material"]] = null;
+					}
+				}
+
+			}
+
+			function update_scene() {
+
+				// set everything to visible false
+				// TODO: only the ones that are affected maybe? Might not matter
+				for (const [key, mesh] of Object.entries(scene_meshes)) {
+					if (mesh != null) {
+						mesh.visible = false;
+					};
+				};
+				// go through styles and set visible true to what's needed
+				for (const [p, s] of Object.entries(current_styles)) {
+					if (s != null) {
+						var mesh_name = scene_info[p][s]["mesh"];
+						scene_meshes[mesh_name].visible = true;
+					};
+				};
+
+			}
+
+			function assign_style(part_name, style_name) {
+
+				// console.log('showing:')
+
+				var s = scene_info[part_name][style_name];
+				// console.log(s);
+
+				current_styles[part_name] = style_name
+				console.log(current_styles);
+
+				if (scene_meshes[s['mesh']] == null) {
+
+					obj_loader.load( s['mesh'] + '.obj',
+
+						function ( obj ) {
+							add_mesh(s['mesh'], obj);
+							console.log('mesh loaded, toggle visibility');
+
+							// material
+							assign_material(s['mesh'], s['material'])
+							update_scene()
+
+						}, onProgress, onError );
+
+				} else {
+
+					console.log('mesh exists, toggle visibility');
+					assign_material(s['mesh'], s['material'])
+					update_scene()
+
+				};
+			
+			}
+
+			function assign_material(mesh_name, material_name) {
+
+				if (scene_materials[material_name] == null) {
+					mtl_loader.load( material_name + '.mtl',
+					
+						function ( mtl ) {
+							add_material(material_name, mtl);
+							console.log('mtl loaded, assigning');
+							scene_meshes[mesh_name].material = scene_materials[material_name]
+						}, onProgress, onError );
+
+				} else {
+					console.log('mtl exists, assigning');
+					scene_meshes[mesh_name].material = scene_materials[material_name]
+				};
+
+
+			}
+
+			function add_material(material_name, mtl) {
+
+				mtl.preload();
+				var mat_keys = Object.keys(mtl.materials);
+				// ASSUME: only one material
+				scene_materials[material_name] = mtl.materials[mat_keys[0]]
+
+			}
+
+			function add_mesh(obj_name, obj) {
+
+				// ASSUME: only one mesh
+				// console.log(obj.children[0])
+				// object.position.y = 0;
+				scene_meshes[obj_name] = obj.children[0]
+				// console.log(scene_meshes)
+
+				scene.add( scene_meshes[obj_name] );
+
+			}
+
+			function load_scene_info() {
+
+				loader.load(
+					'models/lot_scene/scene.json',
+
+					function ( text ) {
+
+						scene_info = JSON.parse(text);
+						prepare_scene(scene_info);
+
+						// console.log(scene_info)
+						// console.log(current_styles)
+						// console.log(scene_meshes)
+						// console.log(scene_materials)
+
+						// show part
+						assign_style('roof_primary', 'shingles_gray');
+						// assign_style('roof_primary', 'metal_standing_seam_gray');
+						// assign_style('window_frame', 'vinyl_black');
+						assign_style('base_lot', 'setbacks');
+						assign_style('shell', 'default');
+
+
+					}, onProgress, onError );
+			}
+
+
+			function onProgress( xhr ) {
+
+				if ( xhr.lengthComputable ) {
+					const percentComplete = xhr.loaded / xhr.total * 100;
+					console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+				}
+
+			};
+
+			function onError() { };
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentMouseMove( event ) {
+
+				event.preventDefault();
+				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+				renderer.render( scene, camera );
+
+			}
+
+			
+
+
+		</script>
+
+	</body>
+</html>
