@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - OBJLoader + MTLLoader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		<div id="info">
+		<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - OBJLoader + MTLLoader
+		</div>
+
+		<script type="module">
+
+			import * as THREE from '../build/three.module.js';
+
+			import { MTLLoader } from './jsm/loaders/MTLLoader.js';
+			import { OBJLoader } from './jsm/loaders/OBJLoader.js';
+
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+
+			import { GUI } from './jsm/libs/dat.gui.module.js';
+
+			let camera, scene, renderer;
+
+			
+
+			const raycaster = new THREE.Raycaster();
+			const mouse = new THREE.Vector2()
+
+			let windowHalfX = window.innerWidth / 2;
+			let windowHalfY = window.innerHeight / 2;
+
+			const loader = new THREE.FileLoader();
+			const mtl_loader = new MTLLoader();
+			const obj_loader = new OBJLoader();
+
+			let meshes = new THREE.Group();
+
+			let scene_dir = 'models/layout/';
+			let models = {};
+			let active_model = null;
+
+			let surrounding = {};
+
+			let scene_materials = {};
+			let scene_meshes = {};
+			let scene_info = null;
+
+			// let current_styles = {};
+			// let cRoofId = false;
+
+			// GUI
+			let params = {
+				selection: "",
+				structuralOption: "",
+				archStyle: ""
+			};
+
+			init();
+			animate();
+
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				camera.position.z = 80;
+				camera.position.y = 60;
+				camera.position.x = 40;
+
+				// scene
+
+				scene = new THREE.Scene();
+
+				const ambientLight = new THREE.AmbientLight( 0xffffff, 1.55 );
+				scene.add( ambientLight );
+
+
+				scene.add( camera );
+
+				// Gui
+				const gui = new GUI(),
+					folderToggles = gui.addFolder( 'Inputs' ),
+					propsLocal = {
+
+						get 'Roof'() {
+							return cRoofId;
+						},
+
+						set 'Roof'( v ) {
+
+							// if (cRoofId) {
+							// 	assign_style('roof_primary', 'shingles_gray');
+							// } else {
+							// 	assign_style('roof_primary', 'metal_standing_seam_gray');
+							// };
+							// cRoofId = v;
+						}
+					};
+
+				// folderToggles.add( propsLocal, 'Roof' );
+
+				folderToggles.add(params, "selection").onFinishChange(function (value) {
+			        var args = value.split(' ')
+			        console.log(args);
+			        if (args.length == 3) {
+			        	assign_style(args[0], args[1], args[2]);
+			        };
+			    });
+
+			    folderToggles.add(params, "structuralOption").onFinishChange(function (value) {
+			        var args = value.split(' ')
+			        console.log(args);
+			        if (args.length == 2) {
+			        	assign_structural_option(args[0], args[1]);
+			        };
+			    });
+
+			    folderToggles.add(params, "archStyle").onFinishChange(function (value) {
+			        assign_architectural_style(value);
+			    });
+
+
+
+				
+
+				// load scene info
+				load_scene_info('scene');
+
+
+				renderer = new THREE.WebGLRenderer({antialias: true, alpha: true });
+				renderer.shadowMap.enabled = true;
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+
+				// controls
+				const controls = new OrbitControls( camera, renderer.domElement );
+				controls.maxPolarAngle = Math.PI * 0.5;
+				controls.minDistance = 1;
+				controls.maxDistance = 200;
+
+                document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function prepare_model(model, structural_options){
+
+				// clear scene stuff
+				model['selections'] = {};
+				model['structural_options'] = {};
+
+				// rebuild with empties
+				for (const [g, group] of Object.entries(model['info'])) {
+					model['selections'][g] = null;
+					for (const [p, part] of Object.entries(group)) {
+						for (const [s, style] of Object.entries(part)) {
+							for (const [l, layout] of Object.entries(style)) {
+
+								for (var i = 0; i < layout["meshes"].length; i++) {
+									if (!(layout["meshes"][i] in scene_meshes)){
+										scene_meshes[layout["meshes"][i]] = null;
+									}	
+								};
+								for (const [c, color] of Object.entries(layout["materials"])) {
+									for (var i = 0; i < color.length; i++) {
+										if (!(color[i] in scene_meshes)){
+											scene_materials[color[i]] = null;
+										}
+									};
+								};
+							};
+						};
+					};
+				};
+
+				if (structural_options != null){
+					for (const [o, options] of Object.entries(structural_options)) {
+						model['structural_options'][o] = null;
+					};
+				};
+
+
+
+			}
+
+			function update_scene() {
+				console.log('updating scene')
+
+
+				// set everything to visible false
+				for (const [key, mesh] of Object.entries(scene_meshes)) {
+					if (mesh != null) {
+						mesh.visible = false;
+					};
+				};
+
+				// go through styles and set visible true to what's needed
+				var selections = models[active_model]['selections']
+				for (const [g, group_selection] of Object.entries(selections)) {
+					if (group_selection != null) {
+						var lps = affected_part_layouts(g, group_selection[0]);
+						for (var i = 0; i < lps.length; i++) {
+							for (var j = 0; j < lps[i]['meshes'].length; j++) {
+								if (scene_meshes[lps[i]['meshes'][j]] != null){
+									scene_meshes[lps[i]['meshes'][j]].visible = true;
+								};
+							};
+						};
+					};
+				};
+				
+
+				// in surrounding
+				selections = surrounding['selections']
+				for (const [g, group_selection] of Object.entries(selections)) {
+					if (group_selection != null) {
+						var lps = affected_part_layouts(g, group_selection[0], surrounding);
+						for (var i = 0; i < lps.length; i++) {
+							for (var j = 0; j < lps[i]['meshes'].length; j++) {
+								if (scene_meshes[lps[i]['meshes'][j]] != null){
+									scene_meshes[lps[i]['meshes'][j]].visible = true;
+								};
+							};
+						};
+					};
+				};
+
+
+			};
+
+			function affected_part_layouts(group_name, material_name, model=models[active_model], all_layouts=false) {
+
+				var lps = []
+				var group = model['info'][group_name]
+
+				var sopts = Object.values(model['structural_options'])
+				console.log(model['structural_options'])
+				
+				for (const [p, part] of Object.entries(group)) {
+					var mat = part[material_name]
+
+					var layouts = Object.keys(mat)
+					if (all_layouts){
+						for (var i = 0; i < layouts.length; i++) {
+							lps.push(mat[layouts[i]]);
+						};
+
+					} else {
+						var layout_found = false;
+						
+						for (var i = 0; i < sopts.length; i++) {
+							if (layouts.includes(sopts[i])) {
+								lps.push(mat[sopts[i]]);
+								layout_found = true;
+							};
+							
+						};
+
+						if (!layout_found) {
+							lps.push(mat[layouts[0]]);
+						};
+					}
+		
+
+				};
+
+				return lps;
+
+			};
+
+			function assign_structural_option(option_name, selection, model=models[active_model]) {
+
+				console.log(model)
+
+				model['structural_options'][option_name] = selection
+				console.log('---------assigning option --------')
+				update_scene()
+
+			};
+
+
+			function assign_style(group_name, material_name, color_name, model=models[active_model]) {
+
+
+				// update selections
+				if ((material_name == null) | (color_name == null)){
+					
+					// removing a group from visibility
+					model['selections'][group_name] = null;
+					update_scene();
+				
+				} else {
+
+					console.log('assigning style')
+					console.log(model)
+					
+					// adding or updating a group
+					model['selections'][group_name] = [material_name, color_name]
+
+					var lps = affected_part_layouts(group_name, material_name, model, true);
+					for (var i = 0; i < lps.length; i++) {
+						for (var j = 0; j < lps[i]['meshes'].length; j++) {
+							assign_style_per_mesh(lps[i]['meshes'][j], lps[i]['materials'][color_name][j]);
+						};
+					};
+				
+				}
+				
+			
+			};
+
+			function assign_style_per_mesh(obj_name, mtl_name) {
+
+				if (scene_meshes[obj_name] == null) {
+
+					obj_loader.load( obj_name + '.obj',
+
+						function ( obj ) {
+							add_mesh(obj_name, obj);
+							console.log('mesh loaded, toggle visibility');
+
+							// material
+							assign_material(obj_name, mtl_name)
+							update_scene()
+
+						}, onProgress, onError );
+
+				} else {
+
+					console.log('mesh exists, toggle visibility');
+					assign_material(obj_name, mtl_name)
+					update_scene()
+
+				};
+
+			};
+
+			function assign_material(mesh_name, material_name) {
+
+				if (scene_materials[material_name] == null) {
+					mtl_loader.load( material_name + '.mtl',
+					
+						function ( mtl ) {
+							add_material(material_name, mtl);
+							console.log('mtl loaded, assigning');
+							scene_meshes[mesh_name].material = scene_materials[material_name]
+						}, onProgress, onError );
+
+				} else {
+					console.log('mtl exists, assigning');
+					scene_meshes[mesh_name].material = scene_materials[material_name]
+				};
+
+
+			}
+
+			function add_material(material_name, mtl) {
+
+				mtl.preload();
+				var mat_keys = Object.keys(mtl.materials);
+				// ASSUME: only one material
+				scene_materials[material_name] = mtl.materials[mat_keys[0]]
+
+			}
+
+			function add_mesh(obj_name, obj) {
+
+				// ASSUME: only one mesh
+				scene_meshes[obj_name] = obj.children[0]
+				scene.add( scene_meshes[obj_name] );
+
+			}
+
+			function assign_architectural_style(new_model_name) {
+
+				console.log('switching style to')
+				console.log(new_model_name)
+
+				active_model = new_model_name
+
+				var preset_selections = scene_info['preset_selections']['structural_options'][active_model]
+				for (const [option_name, selection] of Object.entries(preset_selections)) {
+					assign_structural_option(option_name, selection);
+				}
+
+				// var current_selections = models[active_model]['selections']
+				var preset_selections = scene_info['preset_selections']['edit'][active_model]
+				for (const [group_name, selection] of Object.entries(preset_selections)) {
+					// if (group_name in current_selections)
+					if (selection == null){
+						assign_style(group_name, null, null);
+					} else {
+						assign_style(group_name, selection[0], selection[1]);
+					}
+				}
+
+
+			}
+
+			function load_scene_info(scene_name) {
+
+				loader.load(
+					scene_dir + scene_name + '.json',
+
+					function ( text ) {
+
+						scene_info = JSON.parse(text);
+
+						var model_names = Object.keys(scene_info['architectural_styles'])
+						for (var i = 0; i < model_names.length; i++) {
+							models[model_names[i]] = {
+								'info': {}
+							};
+							models[model_names[i]]['info'] = scene_info['architectural_styles'][model_names[i]]
+							prepare_model(models[model_names[i]], scene_info['structural_options'][model_names[i]]);
+						}
+						
+						active_model = scene_info['preset_selections']['architectural_style'];
+
+
+						surrounding['info'] = scene_info['surrounding']
+						prepare_model(surrounding, null);
+						assign_style('house', 'uniform', 'default', surrounding);
+
+						// console.log(current_styles)
+						// console.log(scene_meshes)
+						// console.log(scene_materials)
+
+						// show part
+
+						var preset_selections = scene_info['preset_selections']['structural_options'][active_model]
+						for (const [option_name, selection] of Object.entries(preset_selections)) {
+							assign_structural_option(option_name, selection);
+						}
+
+						var preset_selections = scene_info['preset_selections']['edit'][active_model]
+						for (const [group_name, selection] of Object.entries(preset_selections)) {
+							if (selection == null){
+								assign_style(group_name, null, null);
+							} else {
+								assign_style(group_name, selection[0], selection[1]);
+							}
+						}
+						
+
+
+
+					}, onProgress, onError );
+			}
+
+
+			function onProgress( xhr ) {
+
+				if ( xhr.lengthComputable ) {
+					const percentComplete = xhr.loaded / xhr.total * 100;
+					console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+				}
+
+			};
+
+			function onError() { };
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentMouseMove( event ) {
+
+				event.preventDefault();
+				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+				renderer.render( scene, camera );
+
+			}
+
+			
+
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,28 @@
+{
+    "base_lot": {
+        "setbacks": {
+            "mesh": "models/street_scene/lot",
+            "material": "models/street_scene/lot_setbacks"
+        },
+        "shadow": {
+            "mesh": "models/street_scene/lot",
+            "material": "models/street_scene/lot_shadow"
+        }
+    },
+    "shell": {
+        "default": {
+            "mesh": "models/street_scene/shell",
+            "material": "models/street_scene/shell_base"
+        }
+    },
+    "roof_primary": {
+        "shingles_gray": {
+            "mesh": "models/street_scene/roof_primary_2",
+            "material": "models/street_scene/roof_primary_2"
+        },
+        "metal_standing_seam_gray": {
+            "mesh": "models/street_scene/roof_primary_1",
+            "material": "models/street_scene/roof_primary_1"
+        }
+    }
+}

@@ -1,0 +1,238 @@
+{
+    "preset_selections":{
+        "architectural_style": "farmhouse",
+        "edit": {
+            "farmhouse":{
+                "lot": ["uniform", "default"],
+                "roof": ["metal", "gray"],
+                "siding": ["lap", "green"]
+            },
+            "modern":{
+                "lot": ["uniform", "default"],
+                "roof": ["metal", "gray"],
+                "siding": ["lap", "green"]
+            }
+        },
+        "street": {
+            "farmhouse":{
+                "lot": null
+            }
+        },
+        "structural_options": {
+            "farmhouse":{
+                "second_back": "layout_a"
+            },
+            "modern":{
+                "second_back": "layout_a"
+            }
+        }
+    },
+    "structural_options":{
+        "farmhouse":{
+            "second_back": ["layout_a", "layout_b"]
+        },
+        "modern":{
+            "second_back": ["layout_a", "layout_b"]
+        }
+    },
+    "architectural_styles": {
+        "farmhouse": {
+            "lot": {
+                "lot": {
+                    "uniform": {
+                        "default": {
+                            "meshes": ["models/layout/objs/lot"],
+                            "materials": {
+                                "default":["models/layout/mtls/light_gray"]
+                            }
+                        }
+                    }
+                }
+            },
+            "roof": {
+                "roof_1": {
+                    "metal": {
+                        "default": {
+                            "meshes": ["models/layout/objs/farmhouse_roof_roof_1_metal_seam_default_surface"],
+                            "materials": {
+                                "gray": ["models/layout/mtls/metal_gray"],
+                                "blue": ["models/layout/mtls/metal_blue"]
+                            }
+                        }
+                    },
+                    "shingles": {
+                        "default": {
+                            "meshes": ["models/layout/objs/farmhouse_roof_roof_1_shingles_default_surface"],
+                            "materials": {
+                                "gray": ["models/layout/mtls/shingles_gray"],
+                                "brown": ["models/layout/mtls/shingles_brown"]
+                            }
+                        }
+                    }
+                }
+            },
+            "siding": {
+                "siding_1": {
+                    "lap": {
+                        "default": {
+                            "meshes": ["models/layout/objs/farmhouse_siding_siding_1_lap_default_surface"],
+                            "materials": {
+                                "green": ["models/layout/mtls/lap_green"],
+                                "blue": ["models/layout/mtls/lap_blue"]
+                            }
+                        }
+                    },
+                    "board": {
+                        "default": {
+                            "meshes": ["models/layout/objs/farmhouse_siding_siding_1_board_default_surface"],
+                            "materials": {
+                                "green": ["models/layout/mtls/board_green"],
+                                "blue": ["models/layout/mtls/board_blue"]
+                            }
+                        }
+                    }
+                },
+                "siding_2": {
+                    "lap": {
+                        "layout_a": {
+                            "meshes": ["models/layout/objs/farmhouse_siding_siding_2_lap_layout_a_surface", "models/layout/objs/farmhouse_siding_siding_2_lap_layout_a_box"],
+                            "materials": {
+                                "green": ["models/layout/mtls/lap_green", "models/layout/mtls/gray"],
+                                "blue": ["models/layout/mtls/lap_blue", "models/layout/mtls/gray"]
+                            }
+                        },
+                        "layout_b": {
+                            "meshes": ["models/layout/objs/farmhouse_siding_siding_2_lap_layout_b_surface", "models/layout/objs/farmhouse_siding_siding_2_lap_layout_b_box"],
+                            "materials": {
+                                "green": ["models/layout/mtls/lap_green", "models/layout/mtls/gray"],
+                                "blue": ["models/layout/mtls/lap_blue", "models/layout/mtls/gray"]
+                            }
+                        }
+                    },
+                    "board": {
+                        "layout_a": {
+                            "meshes": ["models/layout/objs/farmhouse_siding_siding_2_board_layout_a_surface", "models/layout/objs/farmhouse_siding_siding_2_board_layout_a_box"],
+                            "materials": {
+                                "green": ["models/layout/mtls/board_green", "models/layout/mtls/gray"],
+                                "blue": ["models/layout/mtls/board_blue", "models/layout/mtls/gray"]
+                            }
+                        },
+                        "layout_b": {
+                            "meshes": ["models/layout/objs/farmhouse_siding_siding_2_board_layout_b_surface", "models/layout/objs/farmhouse_siding_siding_2_board_layout_b_box"],
+                            "materials": {
+                                "green": ["models/layout/mtls/board_green", "models/layout/mtls/gray"],
+                                "blue": ["models/layout/mtls/board_blue", "models/layout/mtls/gray"]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "modern": {
+            "lot": {
+                "lot": {
+                    "uniform": {
+                        "default": {
+                            "meshes": ["models/layout/objs/lot"],
+                            "materials": {
+                                "default":["models/layout/mtls/light_gray"]
+                            }
+                        }
+                    }
+                }
+            },
+            "roof": {
+                "roof_1": {
+                    "metal": {
+                        "default": {
+                            "meshes": ["models/layout/objs/modern_roof_roof_1_metal_seam_default_surface"],
+                            "materials": {
+                                "gray": ["models/layout/mtls/metal_gray"],
+                                "blue": ["models/layout/mtls/metal_blue"]
+                            }
+                        }
+                    },
+                    "shingles": {
+                        "default": {
+                            "meshes": ["models/layout/objs/modern_roof_roof_1_shingles_default_surface"],
+                            "materials": {
+                                "gray": ["models/layout/mtls/shingles_gray"],
+                                "brown": ["models/layout/mtls/shingles_brown"]
+                            }
+                        }
+                    }
+                }
+            },
+            "siding": {
+                "siding_1": {
+                    "lap": {
+                        "default": {
+                            "meshes": ["models/layout/objs/modern_siding_siding_1_lap_default_surface"],
+                            "materials": {
+                                "green": ["models/layout/mtls/lap_green"],
+                                "blue": ["models/layout/mtls/lap_blue"]
+                            }
+                        }
+                    },
+                    "board": {
+                        "default": {
+                            "meshes": ["models/layout/objs/modern_siding_siding_1_board_default_surface"],
+                            "materials": {
+                                "green": ["models/layout/mtls/board_green"],
+                                "blue": ["models/layout/mtls/board_blue"]
+                            }
+                        }
+                    }
+                },
+                "siding_2": {
+                    "lap": {
+                        "layout_a": {
+                            "meshes": ["models/layout/objs/modern_siding_siding_2_lap_layout_a_surface", "models/layout/objs/modern_siding_siding_2_lap_layout_a_box"],
+                            "materials": {
+                                "green": ["models/layout/mtls/lap_green", "models/layout/mtls/gray"],
+                                "blue": ["models/layout/mtls/lap_blue", "models/layout/mtls/gray"]
+                            }
+                        },
+                        "layout_b": {
+                            "meshes": ["models/layout/objs/modern_siding_siding_2_lap_layout_b_surface", "models/layout/objs/modern_siding_siding_2_lap_layout_b_box"],
+                            "materials": {
+                                "green": ["models/layout/mtls/lap_green", "models/layout/mtls/gray"],
+                                "blue": ["models/layout/mtls/lap_blue", "models/layout/mtls/gray"]
+                            }
+                        }
+                    },
+                    "board": {
+                        "layout_a": {
+                            "meshes": ["models/layout/objs/modern_siding_siding_2_board_layout_a_surface", "models/layout/objs/modern_siding_siding_2_board_layout_a_box"],
+                            "materials": {
+                                "green": ["models/layout/mtls/board_green", "models/layout/mtls/gray"],
+                                "blue": ["models/layout/mtls/board_blue", "models/layout/mtls/gray"]
+                            }
+                        },
+                        "layout_b": {
+                            "meshes": ["models/layout/objs/modern_siding_siding_2_board_layout_b_surface", "models/layout/objs/modern_siding_siding_2_board_layout_b_box"],
+                            "materials": {
+                                "green": ["models/layout/mtls/board_green", "models/layout/mtls/gray"],
+                                "blue": ["models/layout/mtls/board_blue", "models/layout/mtls/gray"]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "surrounding": {
+        "house": {
+            "house_1": {
+                "uniform": {
+                    "default": {
+                        "meshes": ["models/layout/objs/surrounding_house_house_1_uniform_default_surface"],
+                        "materials": {
+                            "default": ["models/layout/mtls/light_gray"]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
