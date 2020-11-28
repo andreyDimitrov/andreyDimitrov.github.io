@@ -24,11 +24,12 @@
 			import { GUI } from './jsm/libs/dat.gui.module.js';
 
 			let camera, scene, renderer;
+			let current_camera;
+			let street_camera;
 
-			
+			let view_mode;
 
-			const raycaster = new THREE.Raycaster();
-			const mouse = new THREE.Vector2()
+
 
 			let windowHalfX = window.innerWidth / 2;
 			let windowHalfY = window.innerHeight / 2;
@@ -47,16 +48,25 @@
 
 			let scene_materials = {};
 			let scene_meshes = {};
+			let scene_meshes_info = {};
 			let scene_info = null;
 
 			// let current_styles = {};
 			// let cRoofId = false;
 
+
+			// Interaction
+			const raycaster = new THREE.Raycaster();
+			const mouse = new THREE.Vector2();
+			const mouse_down = new THREE.Vector2();
+			let focused_group = null;
+
 			// GUI
 			let params = {
 				selection: "",
 				structuralOption: "",
-				archStyle: ""
+				archStyle: "",
+				viewMode: ""
 			};
 
 			init();
@@ -68,10 +78,18 @@
 				const container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
+
+				street_camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 2000);
+				street_camera.position.z = 80;
+				street_camera.position.y = 60;
+				street_camera.position.x = 40;
+
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
 				camera.position.z = 80;
 				camera.position.y = 60;
 				camera.position.x = 40;
+
+				change_view_mode('edit')
 
 				// scene
 
@@ -84,30 +102,11 @@
 				scene.add( camera );
 
 				// Gui
-				const gui = new GUI(),
-					folderToggles = gui.addFolder( 'Inputs' ),
-					propsLocal = {
-
-						get 'Roof'() {
-							return cRoofId;
-						},
-
-						set 'Roof'( v ) {
-
-							// if (cRoofId) {
-							// 	assign_style('roof_primary', 'shingles_gray');
-							// } else {
-							// 	assign_style('roof_primary', 'metal_standing_seam_gray');
-							// };
-							// cRoofId = v;
-						}
-					};
-
-				// folderToggles.add( propsLocal, 'Roof' );
+				const gui = new GUI()
+				const folderToggles = gui.addFolder( 'Inputs' )
 
 				folderToggles.add(params, "selection").onFinishChange(function (value) {
 			        var args = value.split(' ')
-			        console.log(args);
 			        if (args.length == 3) {
 			        	assign_style(args[0], args[1], args[2]);
 			        };
@@ -115,14 +114,19 @@
 
 			    folderToggles.add(params, "structuralOption").onFinishChange(function (value) {
 			        var args = value.split(' ')
-			        console.log(args);
 			        if (args.length == 2) {
 			        	assign_structural_option(args[0], args[1]);
 			        };
 			    });
 
 			    folderToggles.add(params, "archStyle").onFinishChange(function (value) {
-			        assign_architectural_style(value);
+			    	if (value in models){
+			        	assign_architectural_style(value);
+			        }
+			    });
+
+			    folderToggles.add(params, "viewMode").onFinishChange(function (value) {
+			    	change_view_mode(value)
 			    });
 
 
@@ -140,6 +144,7 @@
 				container.appendChild( renderer.domElement );
 
 
+
 				// controls
 				const controls = new OrbitControls( camera, renderer.domElement );
 				controls.maxPolarAngle = Math.PI * 0.5;
@@ -147,8 +152,52 @@
 				controls.maxDistance = 200;
 
                 document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+                document.addEventListener( 'pointerdown', onDocumentMouseDown, false );
+                document.addEventListener( 'click', onDocumentMouseClick, false );
 				window.addEventListener( 'resize', onWindowResize, false );
 
+			}
+
+
+			// EVENT LISTENER
+
+			function mainEventHandler(event) {
+
+				var data = null; // get that from event
+				
+				// Austin wants to change the view mode
+				if (data.type == 'view_mode'){
+					change_view_mode(data.mode);
+				};
+
+				// Austin wants to change the architectural style
+				if (data.type == 'arch_style'){
+			        assign_architectural_style(data.style);
+				};
+
+				// Austin wants to change a structural option
+				if (data.type == 'structural_option'){
+			        assign_structural_option(data.option, data.selection);
+				};
+
+				// Austin wants to change a material
+				if (data.type == 'material_selection'){
+			        assign_style(data.group, data.material, data.color);
+				};
+
+			}
+
+			function change_view_mode(mode){
+				
+				view_mode = mode;
+
+				if (view_mode == 'edit'){
+					current_camera = camera;
+				}
+
+				if (view_mode == 'street'){
+					current_camera = street_camera;
+				}
 			}
 
 			function prepare_model(model, structural_options){
@@ -167,6 +216,7 @@
 								for (var i = 0; i < layout["meshes"].length; i++) {
 									if (!(layout["meshes"][i] in scene_meshes)){
 										scene_meshes[layout["meshes"][i]] = null;
+										scene_meshes_info[layout["meshes"][i]] = {'group_name': g};
 									}	
 								};
 								for (const [c, color] of Object.entries(layout["materials"])) {
@@ -192,7 +242,7 @@
 			}
 
 			function update_scene() {
-				console.log('updating scene')
+				// console.log('updating scene')
 
 
 				// set everything to visible false
@@ -242,7 +292,7 @@
 				var group = model['info'][group_name]
 
 				var sopts = Object.values(model['structural_options'])
-				console.log(model['structural_options'])
+				// console.log(model['structural_options'])
 				
 				for (const [p, part] of Object.entries(group)) {
 					var mat = part[material_name]
@@ -276,12 +326,83 @@
 
 			};
 
+			function assign_architectural_style(new_model_name) {
+
+				if (active_model == new_model_name) {
+					console.log('same arch style, skipping.')
+					return;
+				}
+
+
+				var old_active_model = active_model
+				active_model = new_model_name
+
+				console.log('switching style from')
+				console.log(old_active_model)
+				console.log('switching style to')
+				console.log(active_model)
+
+				var old_sopts = models[old_active_model]['structural_options']
+				var all_sopts = scene_info['structural_options'][active_model]
+				var preset_selections = scene_info['preset_selections']['structural_options'][active_model]
+				for (const [option_name, selection] of Object.entries(preset_selections)) {
+					var this_selection = selection;
+					if (option_name in old_sopts){
+						if (all_sopts[option_name].includes(old_sopts[option_name])){
+							this_selection = old_sopts[option_name]
+						}
+					}
+					assign_structural_option(option_name, this_selection);
+					
+				}
+
+				// var current_selections = models[active_model]['selections']
+				var old_selections = models[old_active_model]['selections']
+				var new_selections = models[active_model]['selections']
+				var preset_selections = scene_info['preset_selections']['edit'][active_model]
+
+				for (const [group_name, selection] of Object.entries(new_selections)) {
+					
+					var preset_selection = preset_selections[group_name]
+
+					// default to preset
+					var this_selection = [preset_selection[0], preset_selection[1]]
+
+					// check if there is already something there
+					if (selection != null){
+						this_selection = [selection[0], selection[1]]
+					}
+					
+					if (group_name in old_selections){
+
+						var old_selection = old_selections[group_name]
+
+						var mg = models[active_model]['info'][group_name];
+						var part_names = Object.keys(mg)
+						var mat_names = Object.keys(mg[part_names[0]])
+						if (mat_names.includes(old_selection[0])) {
+							// check if color
+							var mat = mg[part_names[0]][old_selection[0]]
+							var layout_names = Object.keys(mat)
+							var layout = mat[layout_names[0]]
+							var color_names = Object.keys(layout['materials'])
+							if (color_names.includes(old_selection[1])) {
+								this_selection = [old_selection[0], old_selection[1]]
+							}
+						}
+					}
+				
+					assign_style(group_name, this_selection[0], this_selection[1]);
+
+				}
+
+			}
+
+
 			function assign_structural_option(option_name, selection, model=models[active_model]) {
 
-				console.log(model)
-
 				model['structural_options'][option_name] = selection
-				console.log('---------assigning option --------')
+				// console.log('---------assigning option --------')
 				update_scene()
 
 			};
@@ -299,8 +420,8 @@
 				
 				} else {
 
-					console.log('assigning style')
-					console.log(model)
+					// console.log('assigning style')
+					// console.log(model)
 					
 					// adding or updating a group
 					model['selections'][group_name] = [material_name, color_name]
@@ -325,7 +446,7 @@
 
 						function ( obj ) {
 							add_mesh(obj_name, obj);
-							console.log('mesh loaded, toggle visibility');
+							// console.log('mesh loaded, toggle visibility');
 
 							// material
 							assign_material(obj_name, mtl_name)
@@ -335,7 +456,7 @@
 
 				} else {
 
-					console.log('mesh exists, toggle visibility');
+					// console.log('mesh exists, toggle visibility');
 					assign_material(obj_name, mtl_name)
 					update_scene()
 
@@ -350,12 +471,12 @@
 					
 						function ( mtl ) {
 							add_material(material_name, mtl);
-							console.log('mtl loaded, assigning');
+							// console.log('mtl loaded, assigning');
 							scene_meshes[mesh_name].material = scene_materials[material_name]
 						}, onProgress, onError );
 
 				} else {
-					console.log('mtl exists, assigning');
+					// console.log('mtl exists, assigning');
 					scene_meshes[mesh_name].material = scene_materials[material_name]
 				};
 
@@ -374,36 +495,13 @@
 			function add_mesh(obj_name, obj) {
 
 				// ASSUME: only one mesh
-				scene_meshes[obj_name] = obj.children[0]
+				scene_meshes[obj_name] = obj.children[0];
+				scene_meshes[obj_name].userData['obj_name'] = obj_name;
 				scene.add( scene_meshes[obj_name] );
 
 			}
 
-			function assign_architectural_style(new_model_name) {
-
-				console.log('switching style to')
-				console.log(new_model_name)
-
-				active_model = new_model_name
-
-				var preset_selections = scene_info['preset_selections']['structural_options'][active_model]
-				for (const [option_name, selection] of Object.entries(preset_selections)) {
-					assign_structural_option(option_name, selection);
-				}
-
-				// var current_selections = models[active_model]['selections']
-				var preset_selections = scene_info['preset_selections']['edit'][active_model]
-				for (const [group_name, selection] of Object.entries(preset_selections)) {
-					// if (group_name in current_selections)
-					if (selection == null){
-						assign_style(group_name, null, null);
-					} else {
-						assign_style(group_name, selection[0], selection[1]);
-					}
-				}
-
-
-			}
+			
 
 			function load_scene_info(scene_name) {
 
@@ -449,11 +547,81 @@
 								assign_style(group_name, selection[0], selection[1]);
 							}
 						}
+
+						var payload = {
+							'event_type': 'scene_init',
+							'scene_info': scene_info
+						}
+						console.log('SEND TO AUSTIN')
+						console.log(payload)
 						
 
 
 
 					}, onProgress, onError );
+			}
+
+			function update_highlights(object){
+
+				var key = object.userData['obj_name'];
+				var group_name = scene_meshes_info[key]['group_name'];
+
+				var clickable = scene_info['clickable'][active_model][group_name];
+
+				if (!clickable){
+					turn_off_highlights()
+					return null;
+				};
+
+				// clear all highlights
+				turn_off_highlights()
+
+				//turn on group only
+				for (const [key, info] of Object.entries(scene_meshes_info)) {
+					if (info['group_name'] == group_name) {
+						if (scene_meshes[key] != null) {
+							if (scene_meshes[key].visible == true){
+								scene_meshes[key].material.emissive.r = 0.3;
+								scene_meshes[key].material.emissive.g = 0.3;
+								scene_meshes[key].material.emissive.b = 0.3;
+							}
+						}
+					};
+				};
+
+				return group_name;
+
+			}
+
+			function turn_off_highlights(){
+
+				for (const [key, info] of Object.entries(scene_meshes)) {
+					if (scene_meshes[key] != null) {
+						scene_meshes[key].material.emissive.r = 0;
+						scene_meshes[key].material.emissive.g = 0;
+						scene_meshes[key].material.emissive.b = 0;
+					}
+				};
+			
+			}
+
+			function get_group_style_options(group_name){
+
+				var options = {}
+
+				var group = models[active_model]['info'][group_name];
+
+				var keys = Object.keys(group)
+				var part = group[keys[0]]
+
+
+				for (const [material_name, mat] of Object.entries(part)) {
+					keys = Object.keys(mat)
+					options[material_name] = Object.keys(mat[keys[0]]['materials'])
+				}
+
+				return options;
+
 			}
 
 
@@ -484,6 +652,55 @@
 				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
 				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
+
+				// find intersections
+				raycaster.setFromCamera( mouse, current_camera );
+				var intersects = raycaster.intersectObjects( scene.children );
+				if ( intersects.length > 0 ) {
+					focused_group = update_highlights(intersects[ 0 ].object)
+				} else {
+					focused_group = null;
+					turn_off_highlights()
+	            }
+
+			}
+
+			function onDocumentMouseDown( event ) {
+				event.preventDefault();
+
+				// // drag camera rotation interaction
+				// isUserInteracting = true;
+				mouse_down.x = event.clientX;
+				mouse_down.y = event.clientY;
+
+
+			}
+
+			function checkMoved(event) {
+
+				var diffX = Math.abs(mouse_down.x - event.clientX)
+				var diffY = Math.abs(mouse_down.y - event.clientY)
+				var diff = diffX + diffY
+
+				return diff > 3
+
+			}
+
+			function onDocumentMouseClick( event ) {
+				event.preventDefault();
+
+				if (!checkMoved(event)) {
+					if (focused_group != null){
+						console.log('SEND TO AUSTIN')
+
+						var payload = {'event_type': 'material_selection',
+							'group': focused_group,
+							'available_options':get_group_style_options(focused_group),
+						}
+						console.log(payload)
+					}
+					
+				}
 			}
 
 			function animate() {
@@ -495,7 +712,7 @@
 
 			function render() {
 
-				renderer.render( scene, camera );
+				renderer.render( scene, current_camera );
 
 			}
 

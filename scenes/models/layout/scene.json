@@ -9,7 +9,7 @@
             },
             "modern":{
                 "lot": ["uniform", "default"],
-                "roof": ["metal", "gray"],
+                "roof": ["rubber", "default"],
                 "siding": ["lap", "green"]
             }
         },
@@ -25,6 +25,18 @@
             "modern":{
                 "second_back": "layout_a"
             }
+        }
+    },
+    "clickable":{
+        "farmhouse":{
+            "lot": false,
+            "roof": true,
+            "siding": true
+        },
+        "modern":{
+            "lot": false,
+            "roof": false,
+            "siding": true
         }
     },
     "structural_options":{
@@ -143,21 +155,11 @@
             },
             "roof": {
                 "roof_1": {
-                    "metal": {
+                    "rubber": {
                         "default": {
                             "meshes": ["models/layout/objs/modern_roof_roof_1_metal_seam_default_surface"],
                             "materials": {
-                                "gray": ["models/layout/mtls/metal_gray"],
-                                "blue": ["models/layout/mtls/metal_blue"]
-                            }
-                        }
-                    },
-                    "shingles": {
-                        "default": {
-                            "meshes": ["models/layout/objs/modern_roof_roof_1_shingles_default_surface"],
-                            "materials": {
-                                "gray": ["models/layout/mtls/shingles_gray"],
-                                "brown": ["models/layout/mtls/shingles_brown"]
+                                "default": ["models/layout/mtls/rubber"]
                             }
                         }
                     }
