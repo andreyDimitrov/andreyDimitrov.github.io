@@ -23,36 +23,37 @@
 
 			import { GUI } from './jsm/libs/dat.gui.module.js';
 
-			let camera, scene, renderer;
-			let current_camera;
-			let street_camera;
-
-			let view_mode;
-
-
-
 			let windowHalfX = window.innerWidth / 2;
 			let windowHalfY = window.innerHeight / 2;
 
+			let controls, scene, renderer;
+			let current_camera, street_camera, edit_camera;
+			let base_pano, mask_pano;
+
+			// street view vars
+			let saved_edit_target = new THREE.Vector3();
+			let saved_edit_position = new THREE.Vector3();
+			let view_mode;
+			let lon, lat, onPointerDownLon, onPointerDownLat;
+			let isUserDragging;
+			const target = new THREE.Vector3();
+
+			// loaders
 			const loader = new THREE.FileLoader();
 			const mtl_loader = new MTLLoader();
 			const obj_loader = new OBJLoader();
+			var texture_loader = new THREE.TextureLoader();
 
-			let meshes = new THREE.Group();
-
+			// scene vars
 			let scene_dir = 'models/layout/';
 			let models = {};
 			let active_model = null;
-
 			let surrounding = {};
 
 			let scene_materials = {};
 			let scene_meshes = {};
 			let scene_meshes_info = {};
 			let scene_info = null;
-
-			// let current_styles = {};
-			// let cRoofId = false;
 
 
 			// Interaction
@@ -68,6 +69,7 @@
 				archStyle: "",
 				viewMode: ""
 			};
+			let isStreetView = true;
 
 			init();
 			animate();
@@ -79,18 +81,6 @@
 				document.body.appendChild( container );
 
 
-				street_camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 2000);
-				street_camera.position.z = 80;
-				street_camera.position.y = 60;
-				street_camera.position.x = 40;
-
-				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-				camera.position.z = 80;
-				camera.position.y = 60;
-				camera.position.x = 40;
-
-				change_view_mode('edit')
-
 				// scene
 
 				scene = new THREE.Scene();
@@ -98,12 +88,35 @@
 				const ambientLight = new THREE.AmbientLight( 0xffffff, 1.55 );
 				scene.add( ambientLight );
 
+				view_mode = null;
+				current_camera = null;
 
-				scene.add( camera );
+
+
 
 				// Gui
 				const gui = new GUI()
 				const folderToggles = gui.addFolder( 'Inputs' )
+
+
+				const propsLocal = {
+
+					get 'StreetView'() {
+						return isStreetView;
+					},
+
+					set 'StreetView'( v ) {
+
+						if (isStreetView) {
+							update_view_mode('edit')
+						} else {
+							update_view_mode('street')
+						};
+						isStreetView = v;
+					}
+				};
+
+				folderToggles.add( propsLocal, 'StreetView' );
 
 				folderToggles.add(params, "selection").onFinishChange(function (value) {
 			        var args = value.split(' ')
@@ -125,12 +138,6 @@
 			        }
 			    });
 
-			    folderToggles.add(params, "viewMode").onFinishChange(function (value) {
-			    	change_view_mode(value)
-			    });
-
-
-
 				
 
 				// load scene info
@@ -145,15 +152,9 @@
 
 
 
-				// controls
-				const controls = new OrbitControls( camera, renderer.domElement );
-				controls.maxPolarAngle = Math.PI * 0.5;
-				controls.minDistance = 1;
-				controls.maxDistance = 200;
-
-                document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+                document.addEventListener( 'pointermove', onDocumentMouseMove, false );
                 document.addEventListener( 'pointerdown', onDocumentMouseDown, false );
-                document.addEventListener( 'click', onDocumentMouseClick, false );
+                document.addEventListener( 'pointerup', onDocumentMouseClick, false );
 				window.addEventListener( 'resize', onWindowResize, false );
 
 			}
@@ -167,7 +168,7 @@
 				
 				// Austin wants to change the view mode
 				if (data.type == 'view_mode'){
-					change_view_mode(data.mode);
+					update_view_mode(data.mode);
 				};
 
 				// Austin wants to change the architectural style
@@ -187,17 +188,112 @@
 
 			}
 
-			function change_view_mode(mode){
+			function update_view_mode(mode){
 				
 				view_mode = mode;
 
 				if (view_mode == 'edit'){
-					current_camera = camera;
+
+					edit_camera.position.set(saved_edit_position.x, saved_edit_position.y, saved_edit_position.z);
+					controls.update();
+					controls.target.set(saved_edit_target.x, saved_edit_target.y, saved_edit_target.z);
+					controls.update();
+					
+					current_camera = edit_camera;
+
+					assign_style('house', null, null, surrounding);
+
+					// assing lot in edit mode
+					assign_style('lot', 'edit', 'default');
+
+					base_pano.visible = false;
+					mask_pano.visible = false;
 				}
 
 				if (view_mode == 'street'){
 					current_camera = street_camera;
+
+					saved_edit_position.x = edit_camera.position.x;
+					saved_edit_position.y = edit_camera.position.y;
+					saved_edit_position.z = edit_camera.position.z;
+					saved_edit_target.x = controls.target.x;
+					saved_edit_target.y = controls.target.y;
+					saved_edit_target.z = controls.target.z;
+					
+					assign_style('house', 'uniform', 'default', surrounding);
+					assign_style('lot', 'street', 'default');
+
+					base_pano.visible = true;
+					mask_pano.visible = true;
+					
 				}
+			}
+
+			function prepare_views(){
+
+
+				street_camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 2000);
+				var cam_pos = scene_info['views']['street']['camera']['position']
+				street_camera.position.x = cam_pos[0];
+				street_camera.position.y = cam_pos[1];
+				street_camera.position.z = cam_pos[2];
+				scene.add( street_camera );
+
+				lon = scene_info['views']['street']['camera']['target']['lon'];
+				lat = scene_info['views']['street']['camera']['target']['lat'];
+				onPointerDownLon = lon;
+				onPointerDownLat = lat;
+				isUserDragging = false;
+
+
+				// Buil pano view
+				base_pano = new THREE.Mesh(
+					new THREE.SphereGeometry( 200, 50, 50),
+					new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
+				);
+				base_pano.position.x = street_camera.position.x;
+				base_pano.position.y = street_camera.position.y;
+				base_pano.position.z = street_camera.position.z;
+				base_pano.userData = {'obj_name': 'ignore'}
+				scene.add(base_pano)
+
+				var base_texture = texture_loader.load(scene_info['views']['street']['pano_background'])
+				base_pano.material.map = base_texture;
+
+				mask_pano = new THREE.Mesh(
+					new THREE.SphereGeometry( 2, 100, 100),
+					new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
+				);
+				mask_pano.position.x = street_camera.position.x;
+				mask_pano.position.y = street_camera.position.y;
+				mask_pano.position.z = street_camera.position.z;
+				mask_pano.userData = {'obj_name': 'ignore'}
+				scene.add(mask_pano)
+
+				var mask_texture = texture_loader.load(scene_info['views']['street']['pano_foreground'])
+				mask_pano.material.map = mask_texture;
+				mask_pano.material.transparent = true;
+
+				edit_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				cam_pos = scene_info['views']['edit']['camera']['position']
+				edit_camera.position.x = cam_pos[0];
+				edit_camera.position.y = cam_pos[1];
+				edit_camera.position.z = cam_pos[2];
+				saved_edit_position.x = edit_camera.position.x;
+				saved_edit_position.y = edit_camera.position.y;
+				saved_edit_position.z = edit_camera.position.z;
+				scene.add( edit_camera );
+
+				// controls
+				controls = new OrbitControls( edit_camera, renderer.domElement );
+				controls.maxPolarAngle = Math.PI * 0.5;
+				controls.minDistance = 1;
+				controls.maxDistance = 200;
+				var cam_target = scene_info['views']['edit']['camera']['target']
+				controls.target.set(cam_target[0], cam_target[1], cam_target[2]);
+				controls.update();
+
+
 			}
 
 			function prepare_model(model, structural_options){
@@ -489,6 +585,7 @@
 				var mat_keys = Object.keys(mtl.materials);
 				// ASSUME: only one material
 				scene_materials[material_name] = mtl.materials[mat_keys[0]]
+				// scene_materials[material_name].transparent = true
 
 			}
 
@@ -512,6 +609,10 @@
 
 						scene_info = JSON.parse(text);
 
+						prepare_views()
+						console.log('views ready')
+						
+
 						var model_names = Object.keys(scene_info['architectural_styles'])
 						for (var i = 0; i < model_names.length; i++) {
 							models[model_names[i]] = {
@@ -526,11 +627,10 @@
 
 						surrounding['info'] = scene_info['surrounding']
 						prepare_model(surrounding, null);
-						assign_style('house', 'uniform', 'default', surrounding);
 
-						// console.log(current_styles)
-						// console.log(scene_meshes)
-						// console.log(scene_materials)
+
+						update_view_mode('street')
+						
 
 						// show part
 
@@ -564,6 +664,11 @@
 			function update_highlights(object){
 
 				var key = object.userData['obj_name'];
+
+				if (key == 'ignore'){
+					turn_off_highlights()
+					return null;
+				}
 				var group_name = scene_meshes_info[key]['group_name'];
 
 				var clickable = scene_info['clickable'][active_model][group_name];
@@ -640,8 +745,10 @@
 
 				windowHalfX = window.innerWidth / 2;
 				windowHalfY = window.innerHeight / 2;
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
+				edit_camera.aspect = window.innerWidth / window.innerHeight;
+				edit_camera.updateProjectionMatrix();
+				street_camera.aspect = window.innerWidth / window.innerHeight;
+				street_camera.updateProjectionMatrix();
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
 			}
@@ -652,16 +759,25 @@
 				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
 				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
+				if ( isUserDragging == true ) {
 
-				// find intersections
-				raycaster.setFromCamera( mouse, current_camera );
-				var intersects = raycaster.intersectObjects( scene.children );
-				if ( intersects.length > 0 ) {
-					focused_group = update_highlights(intersects[ 0 ].object)
-				} else {
-					focused_group = null;
-					turn_off_highlights()
-	            }
+					lon = ( mouse_down.x - event.clientX ) * 0.1 + onPointerDownLon;
+					lat = ( event.clientY - mouse_down.y ) * 0.1 + onPointerDownLat;
+
+				}
+
+
+				if (view_mode == 'edit'){
+					// find intersections
+					raycaster.setFromCamera( mouse, current_camera );
+					var intersects = raycaster.intersectObjects( scene.children );
+					if ( intersects.length > 0 ) {
+						focused_group = update_highlights(intersects[ 0 ].object)
+					} else {
+						focused_group = null;
+						turn_off_highlights()
+		            }
+		        }
 
 			}
 
@@ -669,9 +785,12 @@
 				event.preventDefault();
 
 				// // drag camera rotation interaction
-				// isUserInteracting = true;
+				isUserDragging = true;
 				mouse_down.x = event.clientX;
 				mouse_down.y = event.clientY;
+
+				onPointerDownLon = lon;
+				onPointerDownLat = lat;
 
 
 			}
@@ -688,6 +807,8 @@
 
 			function onDocumentMouseClick( event ) {
 				event.preventDefault();
+
+				isUserDragging = false;
 
 				if (!checkMoved(event)) {
 					if (focused_group != null){
@@ -712,7 +833,32 @@
 
 			function render() {
 
-				renderer.render( scene, current_camera );
+
+				if (view_mode == 'street'){
+					
+					//horizontal rotation
+					var theta = THREE.Math.degToRad( lon );
+					target.x = current_camera.position.x + Math.cos( theta );
+					target.z = current_camera.position.z + Math.sin( theta );
+
+					//vertical rotation
+					lat = Math.max( - 85, Math.min( 85, lat ) );
+					var phi = THREE.Math.degToRad( 90 - lat );
+					target.y = current_camera.position.y + Math.cos( phi );
+
+					// console.log(target)
+
+
+					current_camera.lookAt( target );
+					current_camera.updateProjectionMatrix();
+
+				};
+
+				if (current_camera != null){
+					renderer.render( scene, current_camera );
+				}
+
+				
 
 			}
 

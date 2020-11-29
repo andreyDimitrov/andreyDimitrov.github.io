@@ -1,21 +1,32 @@
 {
+    "views": {
+        "edit":{
+            "camera": {
+                "position": [71, 50, -242],
+                "target": [12, 10, -190]
+            }
+        },
+        "street":{
+            "camera": {
+                "position": [9, 9, -255],
+                "target": {"lat": 0, "lon": 90}
+            },
+            "pano_background": "models/layout/spano_clear.jpg",
+            "pano_foreground": "models/layout/spano_1.png"
+        }
+    },
     "preset_selections":{
         "architectural_style": "farmhouse",
         "edit": {
             "farmhouse":{
-                "lot": ["uniform", "default"],
+                "lot": ["edit", "default"],
                 "roof": ["metal", "gray"],
                 "siding": ["lap", "green"]
             },
             "modern":{
-                "lot": ["uniform", "default"],
+                "lot": ["edit", "default"],
                 "roof": ["rubber", "default"],
                 "siding": ["lap", "green"]
-            }
-        },
-        "street": {
-            "farmhouse":{
-                "lot": null
             }
         },
         "structural_options": {
@@ -51,11 +62,19 @@
         "farmhouse": {
             "lot": {
                 "lot": {
-                    "uniform": {
+                    "edit": {
                         "default": {
                             "meshes": ["models/layout/objs/lot"],
                             "materials": {
                                 "default":["models/layout/mtls/light_gray"]
+                            }
+                        }
+                    },
+                    "street": {
+                        "default": {
+                            "meshes": ["models/layout/objs/lot"],
+                            "materials": {
+                                "default":["models/layout/mtls/transparent"]
                             }
                         }
                     }
@@ -143,11 +162,19 @@
         "modern": {
             "lot": {
                 "lot": {
-                    "uniform": {
+                    "edit": {
                         "default": {
                             "meshes": ["models/layout/objs/lot"],
                             "materials": {
                                 "default":["models/layout/mtls/light_gray"]
+                            }
+                        }
+                    },
+                    "street": {
+                        "default": {
+                            "meshes": ["models/layout/objs/lot"],
+                            "materials": {
+                                "default":["models/layout/mtls/transparent"]
                             }
                         }
                     }
