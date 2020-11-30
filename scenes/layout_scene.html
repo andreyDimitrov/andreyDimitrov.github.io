@@ -70,6 +70,10 @@
 				viewMode: ""
 			};
 			let isStreetView = true;
+			let isGreenSiding = true;
+			let isLayoutA = true;
+			let isArchStyle = true;
+
 
 			init();
 			animate();
@@ -94,12 +98,11 @@
 
 
 
-				// Gui
+				// Gui - for standalone testing
 				const gui = new GUI()
 				const folderToggles = gui.addFolder( 'Inputs' )
 
-
-				const propsLocal = {
+				const streetViewProps = {
 
 					get 'StreetView'() {
 						return isStreetView;
@@ -115,33 +118,87 @@
 						isStreetView = v;
 					}
 				};
+				folderToggles.add( streetViewProps, 'StreetView' );
 
-				folderToggles.add( propsLocal, 'StreetView' );
+				const materialSelectionProps = {
 
-				folderToggles.add(params, "selection").onFinishChange(function (value) {
-			        var args = value.split(' ')
-			        if (args.length == 3) {
-			        	assign_style(args[0], args[1], args[2]);
-			        };
-			    });
+					get 'Siding'() {
+						return isGreenSiding;
+					},
 
-			    folderToggles.add(params, "structuralOption").onFinishChange(function (value) {
-			        var args = value.split(' ')
-			        if (args.length == 2) {
-			        	assign_structural_option(args[0], args[1]);
-			        };
-			    });
+					set 'Siding'( v ) {
 
-			    folderToggles.add(params, "archStyle").onFinishChange(function (value) {
-			    	if (value in models){
-			        	assign_architectural_style(value);
-			        }
-			    });
+						if (isGreenSiding) {
+							assign_style('siding', 'board', 'blue')
+						} else {
+							assign_style('siding', 'lap', 'green')
+						};
+						isGreenSiding = v;
+					}
+				};
+				folderToggles.add( materialSelectionProps, 'Siding' );
+
+				const layoutProps = {
+
+					get 'Layout'() {
+						return isLayoutA;
+					},
+
+					set 'Layout'( v ) {
+
+						if (isLayoutA) {
+							assign_structural_option('second_back', 'layout_b');
+						} else {
+							assign_structural_option('second_back', 'layout_a')
+						};
+						isLayoutA = v;
+					}
+				};
+				folderToggles.add( layoutProps, 'Layout' );
+
+				const archStyleProps = {
+
+					get 'Style'() {
+						return isArchStyle;
+					},
+
+					set 'Style'( v ) {
+
+						if (isArchStyle) {
+							assign_architectural_style('modern');
+						} else {
+							assign_architectural_style('farmhouse');
+						};
+						isArchStyle = v;
+					}
+				};
+				folderToggles.add( archStyleProps, 'Style' );
+
+
+				// folderToggles.add(params, "selection").onFinishChange(function (value) {
+			 //        var args = value.split(' ')
+			 //        if (args.length == 3) {
+			 //        	assign_style(args[0], args[1], args[2]);
+			 //        };
+			 //    });
+
+			 //    folderToggles.add(params, "structuralOption").onFinishChange(function (value) {
+			 //        var args = value.split(' ')
+			 //        if (args.length == 2) {
+			 //        	assign_structural_option(args[0], args[1]);
+			 //        };
+			 //    });
+
+			 //    folderToggles.add(params, "archStyle").onFinishChange(function (value) {
+			 //    	if (value in models){
+			 //        	assign_architectural_style(value);
+			 //        }
+			 //    });
 
 				
 
 				// load scene info
-				load_scene_info('scene');
+				init_scene('scene');
 
 
 				renderer = new THREE.WebGLRenderer({antialias: true, alpha: true });
@@ -160,7 +217,11 @@
 			}
 
 
+			// -------------------------------------------
 			// EVENT LISTENER
+			// Handles all events coming in from Atmos platform
+
+			// Edit to integrate
 
 			function mainEventHandler(event) {
 
@@ -188,31 +249,44 @@
 
 			}
 
+			// -------------------------------------------
+
+			
+
+			// HELPER FUNCTIONS
+
 			function update_view_mode(mode){
 				
 				view_mode = mode;
 
 				if (view_mode == 'edit'){
 
+					// set previously saved camera state
 					edit_camera.position.set(saved_edit_position.x, saved_edit_position.y, saved_edit_position.z);
 					controls.update();
 					controls.target.set(saved_edit_target.x, saved_edit_target.y, saved_edit_target.z);
 					controls.update();
 					
+					// set camera
 					current_camera = edit_camera;
 
+					// update surrounding
 					assign_style('house', null, null, surrounding);
 
-					// assing lot in edit mode
+					// update lot
 					assign_style('lot', 'edit', 'default');
 
+					// update background
 					base_pano.visible = false;
 					mask_pano.visible = false;
 				}
 
 				if (view_mode == 'street'){
+					
+					// set camera
 					current_camera = street_camera;
 
+					// save camera state
 					saved_edit_position.x = edit_camera.position.x;
 					saved_edit_position.y = edit_camera.position.y;
 					saved_edit_position.z = edit_camera.position.z;
@@ -220,9 +294,13 @@
 					saved_edit_target.y = controls.target.y;
 					saved_edit_target.z = controls.target.z;
 					
+					// update surrounding
 					assign_style('house', 'uniform', 'default', surrounding);
+					
+					// update lot
 					assign_style('lot', 'street', 'default');
 
+					// update background
 					base_pano.visible = true;
 					mask_pano.visible = true;
 					
@@ -232,6 +310,7 @@
 			function prepare_views(){
 
 
+				// Build pano view
 				street_camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 2000);
 				var cam_pos = scene_info['views']['street']['camera']['position']
 				street_camera.position.x = cam_pos[0];
@@ -246,7 +325,6 @@
 				isUserDragging = false;
 
 
-				// Buil pano view
 				base_pano = new THREE.Mesh(
 					new THREE.SphereGeometry( 200, 50, 50),
 					new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
@@ -274,6 +352,8 @@
 				mask_pano.material.map = mask_texture;
 				mask_pano.material.transparent = true;
 
+				
+				// Build edit view
 				edit_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
 				cam_pos = scene_info['views']['edit']['camera']['position']
 				edit_camera.position.x = cam_pos[0];
@@ -284,7 +364,6 @@
 				saved_edit_position.z = edit_camera.position.z;
 				scene.add( edit_camera );
 
-				// controls
 				controls = new OrbitControls( edit_camera, renderer.domElement );
 				controls.maxPolarAngle = Math.PI * 0.5;
 				controls.minDistance = 1;
@@ -585,7 +664,6 @@
 				var mat_keys = Object.keys(mtl.materials);
 				// ASSUME: only one material
 				scene_materials[material_name] = mtl.materials[mat_keys[0]]
-				// scene_materials[material_name].transparent = true
 
 			}
 
@@ -600,7 +678,7 @@
 
 			
 
-			function load_scene_info(scene_name) {
+			function init_scene(scene_name) {
 
 				loader.load(
 					scene_dir + scene_name + '.json',
@@ -785,12 +863,15 @@
 				event.preventDefault();
 
 				// // drag camera rotation interaction
-				isUserDragging = true;
+				
 				mouse_down.x = event.clientX;
 				mouse_down.y = event.clientY;
 
-				onPointerDownLon = lon;
-				onPointerDownLat = lat;
+				if (view_mode == 'street'){
+					isUserDragging = true;
+					onPointerDownLon = lon;
+					onPointerDownLat = lat;
+				}
 
 
 			}
