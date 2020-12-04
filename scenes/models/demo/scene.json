@@ -1,0 +1,448 @@
+{
+    "views": {
+        "edit":{
+            "camera": {
+                "position": [71, 50, -242],
+                "target": [12, 10, -190]
+            }
+        },
+        "street":{
+            "camera": {
+                "position": [9, 9, -260],
+                "target": {"lat": 0, "lon": 90}
+            },
+            "pano_background": "models/demo/spano_clear.jpg",
+            "pano_foreground": "models/demo/spano_1.png"
+        }
+    },
+    "preset_selections":{
+        "architectural_style": "farmhouse",
+        "edit": {
+            "farmhouse":{
+                "lot": ["edit", "default"],
+                "roof": ["metal_seam", "dark"],
+                "siding": ["lap", "white"],
+                "siding_front": ["board", "white"],
+                "windows": ["minimal", "black"],
+                "doors": ["standard", "white"],
+                "soffits": ["standard", "white"],
+                "trim": ["standard", "white"],
+                "porches": ["standard", "hill_country"],
+                "base": ["concrete", "gray"]
+            }
+        },
+        "structural_options": {
+            "farmhouse":{
+                "dining": "dining_back",
+                "kitchen": "kitchen_I"
+            }
+        }
+    },
+    "clickable":{
+        "farmhouse":{
+            "lot": false,
+            "roof": true,
+            "siding": true,
+            "siding_front": true,
+            "windows": false,
+            "doors": false,
+            "soffits": false,
+            "trim": false,
+            "porches": true,
+            "base": false
+        }
+    },
+    "structural_options":{
+        "farmhouse":{
+            "dining": ["dining_back", "dining_mid"],
+            "kitchen": ["kitchen_I", "kitchen_L"]
+        }
+    },
+    "architectural_styles": {
+        "farmhouse": {
+            "lot": {
+                "lot": {
+                    "edit": {
+                        "default": {
+                            "meshes": ["models/demo/objs/lot"],
+                            "materials": {
+                                "default":["models/demo/mtls/lot_narrow_setbacks_base"]
+                            }
+                        }
+                    },
+                    "street": {
+                        "default": {
+                            "meshes": ["models/demo/objs/lot"],
+                            "materials": {
+                                "default":["models/demo/mtls/light_gray"]
+                            }
+                        }
+                    }
+                }
+            },
+            "base": {
+                "base_1": {
+                    "concrete": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_base_base_1_plain_default_surface"
+                            ],
+                            "materials": {
+                                "gray": [
+                                    "models/demo/mtls/farmhouse_base_base_1_plain_default_surface_concrete"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "roof": {
+                "roof_base": {
+                    "metal_seam": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_roof_roof_base_metal_seam_default_surface"
+                            ],
+                            "materials": {
+                                "gray": [
+                                    "models/demo/mtls/farmhouse_roof_roof_base_metal_seam_default_surface_gray"
+                                ],
+                                "dark": [
+                                    "models/demo/mtls/farmhouse_roof_roof_base_metal_seam_default_surface_dark"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "siding_front": {
+                "siding_front": {
+                    "lap": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_siding_front_siding_front_lap_default_surface"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_siding_front_siding_front_lap_default_surface_white"
+                                ],
+                                "waterloo": [
+                                    "models/demo/mtls/farmhouse_siding_front_siding_front_lap_default_surface_wloo"
+                                ]
+                            }
+                        }
+                    },
+                    "board": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_siding_front_siding_front_board_default_surface"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_siding_front_siding_front_board_default_surface_white"
+                                ],
+                                "waterloo": [
+                                    "models/demo/mtls/farmhouse_siding_front_siding_front_board_default_surface_wloo"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "siding": {
+                "siding_base": {
+                    "lap": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_siding_siding_base_lap_default_surface"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_siding_siding_base_lap_default_surface_white"
+                                ],
+                                "waterloo": [
+                                    "models/demo/mtls/farmhouse_siding_siding_base_lap_default_surface_wloo"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "siding_sides": {
+                    "lap": {
+                        "dining_back": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_siding_siding_sides_lap_dining_back_surface"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_siding_siding_sides_lap_dining_back_surface_white"
+                                ],
+                                "waterloo": [
+                                    "models/demo/mtls/farmhouse_siding_siding_sides_lap_dining_back_surface_wloo"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "siding_back": {
+                    "lap": {
+                        "kitchen_I": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_siding_siding_back_lap_kitchen_I_surface"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_siding_siding_back_lap_kitchen_I_surface_white"
+                                ],
+                                "waterloo": [
+                                    "models/demo/mtls/farmhouse_siding_siding_back_lap_kitchen_I_surface_wloo"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "windows": {
+                "windows_base": {
+                    "minimal": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_windows_windows_base_minimal_default_frame",
+                                "models/demo/objs/farmhouse_windows_windows_base_minimal_default_glass"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/farmhouse_windows_windows_base_minimal_default_frame_black",
+                                    "models/demo/mtls/glass"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "windows_sides": {
+                    "minimal": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_windows_windows_sides_minimal_dining_back_frame",
+                                "models/demo/objs/farmhouse_windows_windows_sides_minimal_dining_back_glass"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/farmhouse_windows_windows_sides_minimal_dining_back_frame_black",
+                                    "models/demo/mtls/glass"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "doors": {
+                "door_back_porch": {
+                    "standard": {
+                        "kitchen_I": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_doors_door_back_porch_standard_kitchen_I_frame",
+                                "models/demo/objs/farmhouse_doors_door_back_porch_standard_kitchen_I_hardware",
+                                "models/demo/objs/farmhouse_doors_door_back_porch_standard_kitchen_I_glass"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_doors_door_back_porch_standard_kitchen_I_frame_white",
+                                    "models/demo/mtls/farmhouse_doors_door_back_porch_standard_kitchen_I_hardware_b",
+                                    "models/demo/mtls/glass"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "door_front": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_doors_door_front_standard_default_frame",
+                                "models/demo/objs/farmhouse_doors_door_front_standard_default_hardware",
+                                "models/demo/objs/farmhouse_doors_door_front_standard_default_glass"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_doors_door_front_standard_default_frame_white",
+                                    "models/demo/mtls/farmhouse_doors_door_front_standard_default_hardware_black",
+                                    "models/demo/mtls/glass"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "door_terrace": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_doors_door_terrace_standard_default_frame",
+                                "models/demo/objs/farmhouse_doors_door_terrace_standard_default_hardware",
+                                "models/demo/objs/farmhouse_doors_door_terrace_standard_default_glass"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_doors_door_terrace_standard_default_frame_white",
+                                    "models/demo/mtls/farmhouse_doors_door_terrace_standard_default_hardware_black",
+                                    "models/demo/mtls/glass"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "soffits": {
+                "soffits_base": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_soffits_soffits_base_default_facia",
+                                "models/demo/objs/farmhouse_soffits_soffits_base_default_gutter",
+                                "models/demo/objs/farmhouse_soffits_soffits_base_default_soffit",
+                                "models/demo/objs/farmhouse_soffits_soffits_base_default_porch_ceiling"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_soffits_soffits_base_default_facia_white",
+                                    "models/demo/mtls/farmhouse_soffits_soffits_base_default_gutter_gray",
+                                    "models/demo/mtls/farmhouse_soffits_soffits_base_default_soffit_white",
+                                    "models/demo/mtls/farmhouse_soffits_soffits_base_default_porch_ceiling_whPlank"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "trim": {
+                "trim_base": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_trim_trim_base_standard_default_surface"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_trim_trim_base_standard_default_surface_white"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "trim_sides": {
+                    "standard": {
+                        "dining_back": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_trim_trim_sides_standard_dining_back_surface"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_trim_trim_sides_standard_dining_back_surface_white"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "trim_back_porch": {
+                    "standard": {
+                        "kitchen_I": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_trim_trim_back_porch_standard_kitchen_I_surface"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_trim_trim_back_porch_standard_kitchen_I_surface_white"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "porches": {
+                "porch_back": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_porches_porch_back_standard_default_deck_top",
+                                "models/demo/objs/farmhouse_porches_porch_back_standard_default_deck",
+                                "models/demo/objs/farmhouse_porches_porch_back_standard_default_railing"
+                            ],
+                            "materials": {
+                                "mountain_ash": [
+                                    "models/demo/mtls/farmhouse_porches_porch_back_standard_default_deck_top_mash",
+                                    "models/demo/mtls/farmhouse_porches_porch_back_standard_default_deck_mash",
+                                    "models/demo/mtls/farmhouse_porches_porch_back_standard_default_railing_white"
+                                ],
+                                "hill_country": [
+                                    "models/demo/mtls/farmhouse_porches_porch_back_standard_default_deck_top_hctry",
+                                    "models/demo/mtls/farmhouse_porches_porch_back_standard_default_deck_hctry",
+                                    "models/demo/mtls/farmhouse_porches_porch_back_standard_default_railing_white"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "porch_front": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_porches_porch_front_standard_default_deck_top",
+                                "models/demo/objs/farmhouse_porches_porch_front_standard_default_deck",
+                                "models/demo/objs/farmhouse_porches_porch_front_standard_default_railing"
+                            ],
+                            "materials": {
+                                "mountain_ash": [
+                                    "models/demo/mtls/farmhouse_porches_porch_front_standard_default_deck_top_mash",
+                                    "models/demo/mtls/farmhouse_porches_porch_front_standard_default_deck_mash",
+                                    "models/demo/mtls/farmhouse_porches_porch_front_standard_default_railing_white"
+                                ],
+                                "hill_country": [
+                                    "models/demo/mtls/farmhouse_porches_porch_front_standard_default_deck_top_hctry",
+                                    "models/demo/mtls/farmhouse_porches_porch_front_standard_default_deck_hctry",
+                                    "models/demo/mtls/farmhouse_porches_porch_front_standard_default_railing_white"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "terrace": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_porches_terrace_standard_default_deck_top",
+                                "models/demo/objs/farmhouse_porches_terrace_standard_default_deck",
+                                "models/demo/objs/farmhouse_porches_terrace_standard_default_railing"
+                            ],
+                            "materials": {
+                                "mountain_ash": [
+                                    "models/demo/mtls/farmhouse_porches_terrace_standard_default_deck_top_mash",
+                                    "models/demo/mtls/farmhouse_porches_terrace_standard_default_deck_mash",
+                                    "models/demo/mtls/farmhouse_porches_terrace_standard_default_railing_white"
+                                ],
+                                "hill_country": [
+                                    "models/demo/mtls/farmhouse_porches_terrace_standard_default_deck_top_hctry",
+                                    "models/demo/mtls/farmhouse_porches_terrace_standard_default_deck_hctry",
+                                    "models/demo/mtls/farmhouse_porches_terrace_standard_default_railing_white"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "surrounding": {
+        "house": {
+            "house_1": {
+                "uniform": {
+                    "default": {
+                        "meshes": ["models/demo/objs/surrounding_house_house_1_uniform_default_surface"],
+                        "materials": {
+                            "default": ["models/demo/mtls/light_gray"]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

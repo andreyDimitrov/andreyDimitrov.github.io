@@ -45,7 +45,7 @@
 			var texture_loader = new THREE.TextureLoader();
 
 			// scene vars
-			let scene_dir = 'models/layout/';
+			let scene_dir = 'models/demo/';
 			let models = {};
 			let active_model = null;
 			let surrounding = {};
@@ -70,7 +70,10 @@
 				viewMode: ""
 			};
 			let isStreetView = true;
-			let isGreenSiding = true;
+			let isWhiteFrontSiding = true;
+			let isWhiteSiding = true;
+			let isHillPorch = true;
+			let isDarkRoof = true;
 			let isLayoutA = true;
 			let isArchStyle = true;
 
@@ -89,7 +92,7 @@
 
 				scene = new THREE.Scene();
 
-				const ambientLight = new THREE.AmbientLight( 0xffffff, 1.55 );
+				const ambientLight = new THREE.AmbientLight( 0xffffff );
 				scene.add( ambientLight );
 
 				view_mode = null;
@@ -120,59 +123,117 @@
 				};
 				folderToggles.add( streetViewProps, 'StreetView' );
 
-				const materialSelectionProps = {
+				const roofSelectionProps = {
+
+					get 'Roof'() {
+						return isDarkRoof;
+					},
+
+					set 'Roof'( v ) {
+
+						if (isDarkRoof) {
+							assign_style('roof', 'metal_seam', 'gray')
+						} else {
+							assign_style('roof', 'metal_seam', 'dark')
+						};
+						isDarkRoof = v;
+					}
+				};
+				folderToggles.add( roofSelectionProps, 'Roof' );
+
+
+				const frontSidingSelectionProps = {
+
+					get 'FrontSiding'() {
+						return isWhiteFrontSiding;
+					},
+
+					set 'FrontSiding'( v ) {
+
+						if (isWhiteFrontSiding) {
+							assign_style('siding_front', 'lap', 'waterloo')
+							
+						} else {
+							assign_style('siding_front', 'board', 'white')
+						};
+						isWhiteFrontSiding = v;
+					}
+				};
+				folderToggles.add( frontSidingSelectionProps, 'FrontSiding' );
+
+				const sidingSelectionProps = {
 
 					get 'Siding'() {
-						return isGreenSiding;
+						return isWhiteSiding;
 					},
 
 					set 'Siding'( v ) {
 
-						if (isGreenSiding) {
-							assign_style('siding', 'board', 'blue')
+						if (isWhiteSiding) {
+							assign_style('siding', 'lap', 'waterloo')
+							
 						} else {
-							assign_style('siding', 'lap', 'green')
+							assign_style('siding', 'lap', 'white')
 						};
-						isGreenSiding = v;
+						isWhiteSiding = v;
 					}
 				};
-				folderToggles.add( materialSelectionProps, 'Siding' );
+				folderToggles.add( sidingSelectionProps, 'Siding' );
 
-				const layoutProps = {
+				const porchSelectionProps = {
 
-					get 'Layout'() {
-						return isLayoutA;
+					get 'Porch'() {
+						return isHillPorch;
 					},
 
-					set 'Layout'( v ) {
+					set 'Porch'( v ) {
 
-						if (isLayoutA) {
-							assign_structural_option('second_back', 'layout_b');
+						if (isHillPorch) {
+							assign_style('porches', 'standard', 'mountain_ash')
+							
 						} else {
-							assign_structural_option('second_back', 'layout_a')
+							assign_style('porches', 'standard', 'hill_country')
 						};
-						isLayoutA = v;
+						isHillPorch = v;
 					}
 				};
-				folderToggles.add( layoutProps, 'Layout' );
+				folderToggles.add( porchSelectionProps, 'Porch' );
 
-				const archStyleProps = {
+				// const layoutProps = {
 
-					get 'Style'() {
-						return isArchStyle;
-					},
+				// 	get 'Layout'() {
+				// 		return isLayoutA;
+				// 	},
 
-					set 'Style'( v ) {
+				// 	set 'Layout'( v ) {
 
-						if (isArchStyle) {
-							assign_architectural_style('modern');
-						} else {
-							assign_architectural_style('farmhouse');
-						};
-						isArchStyle = v;
-					}
-				};
-				folderToggles.add( archStyleProps, 'Style' );
+				// 		if (isLayoutA) {
+				// 			assign_structural_option('second_back', 'layout_b');
+				// 		} else {
+				// 			assign_structural_option('second_back', 'layout_a')
+				// 		};
+				// 		isLayoutA = v;
+				// 	}
+				// };
+				// folderToggles.add( layoutProps, 'Layout' );
+
+				// const archStyleProps = {
+
+				// 	get 'Style'() {
+				// 		return isArchStyle;
+				// 	},
+
+				// 	set 'Style'( v ) {
+
+				// 		if (isArchStyle) {
+				// 			assign_architectural_style('modern');
+				// 		} else {
+				// 			assign_architectural_style('farmhouse');
+				// 		};
+				// 		isArchStyle = v;
+				// 	}
+				// };
+				// folderToggles.add( archStyleProps, 'Style' );
 
 
 				// folderToggles.add(params, "selection").onFinishChange(function (value) {
@@ -492,8 +553,8 @@
 
 						// if none are found, output default
 						if (!layout_found) {
-							if layouts.includes('default'){
-								lps.push(mat[default]);
+							if (layouts.includes('default')){
+								lps.push(mat['default']);
 							}
 						};
 					}
@@ -768,9 +829,9 @@
 					if (info['group_name'] == group_name) {
 						if (scene_meshes[key] != null) {
 							if (scene_meshes[key].visible == true){
-								scene_meshes[key].material.emissive.r = 0.3;
-								scene_meshes[key].material.emissive.g = 0.3;
-								scene_meshes[key].material.emissive.b = 0.3;
+								scene_meshes[key].material.emissive.r = 0.2;
+								scene_meshes[key].material.emissive.g = 0.2;
+								scene_meshes[key].material.emissive.b = 0.2;
 							}
 						}
 					};
