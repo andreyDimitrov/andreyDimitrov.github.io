@@ -44,7 +44,7 @@
             "roof": true,
             "siding": true,
             "siding_front": true,
-            "windows": false,
+            "windows": true,
             "doors": false,
             "soffits": false,
             "trim": false,
