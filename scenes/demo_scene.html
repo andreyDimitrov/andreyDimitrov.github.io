@@ -74,6 +74,7 @@
 			let isWhiteSiding = true;
 			let isHillPorch = true;
 			let isDarkRoof = true;
+			let isDarkWindows = true;
 			let isLayoutA = true;
 			let isArchStyle = true;
 
@@ -134,7 +135,7 @@
 						if (isDarkRoof) {
 							assign_style('roof', 'metal_seam', 'gray')
 						} else {
-							assign_style('roof', 'metal_seam', 'dark')
+							assign_style('roof', 'shingles', 'black')
 						};
 						isDarkRoof = v;
 					}
@@ -179,6 +180,25 @@
 					}
 				};
 				folderToggles.add( sidingSelectionProps, 'Siding' );
+
+				const windowSelectionProps = {
+
+					get 'Windows'() {
+						return isDarkWindows;
+					},
+
+					set 'Windows'( v ) {
+
+						if (isDarkWindows) {
+							assign_style('windows', 'standard', 'white')
+							
+						} else {
+							assign_style('windows', 'minimal', 'black')
+						};
+						isDarkWindows = v;
+					}
+				};
+				folderToggles.add( windowSelectionProps, 'Windows' );
 
 				const porchSelectionProps = {
 

@@ -112,6 +112,21 @@
                                 ]
                             }
                         }
+                    },
+                    "shingles": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_roof_roof_base_shingles_default_surface"
+                            ],
+                            "materials": {
+                                "gray": [
+                                    "models/demo/mtls/farmhouse_roof_roof_base_shingles_default_surface_gray"
+                                ],
+                                "black": [
+                                    "models/demo/mtls/farmhouse_roof_roof_base_shingles_default_surface_black"
+                                ]
+                            }
+                        }
                     }
                 }
             },
@@ -217,6 +232,20 @@
                                 ]
                             }
                         }
+                    },
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_windows_windows_base_standard_default_frame",
+                                "models/demo/objs/farmhouse_windows_windows_base_standard_default_glass"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_windows_windows_base_standard_default_frame_white",
+                                    "models/demo/mtls/glass"
+                                ]
+                            }
+                        }
                     }
                 },
                 "windows_sides": {
@@ -229,6 +258,20 @@
                             "materials": {
                                 "black": [
                                     "models/demo/mtls/farmhouse_windows_windows_sides_minimal_dining_back_frame_black",
+                                    "models/demo/mtls/glass"
+                                ]
+                            }
+                        }
+                    },
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/farmhouse_windows_windows_sides_standard_dining_back_frame",
+                                "models/demo/objs/farmhouse_windows_windows_sides_standard_dining_back_glass"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/demo/mtls/farmhouse_windows_windows_sides_standard_dining_back_frame_white",
                                     "models/demo/mtls/glass"
                                 ]
                             }
