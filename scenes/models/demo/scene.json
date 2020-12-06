@@ -11,15 +11,15 @@
                 "position": [9, 9, -260],
                 "target": {"lat": 0, "lon": 90}
             },
-            "pano_background": "models/demo/spano_clear.jpg",
-            "pano_foreground": "models/demo/spano_1.png"
+            "pano_background": "models/demo/pano_background.jpg",
+            "pano_foreground": "models/demo/pano_foreground_lr.png"
         }
     },
     "preset_selections":{
         "architectural_style": "farmhouse",
         "edit": {
             "farmhouse":{
-                "lot": ["edit", "default"],
+                "lot": [null, null],
                 "roof": ["metal_seam", "dark"],
                 "siding": ["lap", "white"],
                 "siding_front": ["board", "white"],
