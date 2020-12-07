@@ -337,6 +337,8 @@
 			// HELPER FUNCTIONS
 
 			function update_view_mode(mode){
+
+				if (view_mode == mode) {return;}
 				
 				view_mode = mode;
 
@@ -892,6 +894,25 @@
 
 			}
 
+			function first_visible_intersect(intersects){
+
+				
+				// exit early if no intersects
+				if (intersects.length == 0){
+					return null
+				}
+				
+				// try to find a visible object
+				for (var i = 0; i < intersects.length; i++) {
+					if (intersects[i].object.visible){
+						return intersects[i]
+					}
+				}
+
+				// if none were found, exit with null
+				return null
+			}
+
 
 			function onProgress( xhr ) {
 
@@ -934,8 +955,9 @@
 					// find intersections
 					raycaster.setFromCamera( mouse, current_camera );
 					var intersects = raycaster.intersectObjects( scene.children );
-					if ( intersects.length > 0 ) {
-						focused_group = update_highlights(intersects[ 0 ].object)
+					var first_intersect = first_visible_intersect(intersects)
+					if ( first_intersect != null ) {
+						focused_group = update_highlights(first_intersect.object)
 					} else {
 						focused_group = null;
 						turn_off_highlights()
