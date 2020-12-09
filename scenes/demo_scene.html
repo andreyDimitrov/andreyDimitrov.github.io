@@ -237,23 +237,23 @@
 				// };
 				// folderToggles.add( layoutProps, 'Layout' );
 
-				// const archStyleProps = {
+				const archStyleProps = {
 
-				// 	get 'Style'() {
-				// 		return isArchStyle;
-				// 	},
+					get 'Style'() {
+						return isArchStyle;
+					},
 
-				// 	set 'Style'( v ) {
+					set 'Style'( v ) {
 
-				// 		if (isArchStyle) {
-				// 			assign_architectural_style('modern');
-				// 		} else {
-				// 			assign_architectural_style('farmhouse');
-				// 		};
-				// 		isArchStyle = v;
-				// 	}
-				// };
-				// folderToggles.add( archStyleProps, 'Style' );
+						if (isArchStyle) {
+							assign_architectural_style('modern');
+						} else {
+							assign_architectural_style('farmhouse');
+						};
+						isArchStyle = v;
+					}
+				};
+				folderToggles.add( archStyleProps, 'Style' );
 
 
 				// folderToggles.add(params, "selection").onFinishChange(function (value) {
@@ -466,7 +466,7 @@
 
 				// rebuild with empties
 				for (const [g, group] of Object.entries(model['info'])) {
-					model['selections'][g] = null;
+					model['selections'][g] = [null, null];
 					for (const [p, part] of Object.entries(group)) {
 						for (const [s, style] of Object.entries(part)) {
 							for (const [l, layout] of Object.entries(style)) {
@@ -513,7 +513,7 @@
 				// go through styles and set visible true to what's needed
 				var selections = models[active_model]['selections']
 				for (const [g, group_selection] of Object.entries(selections)) {
-					if (group_selection != null) {
+					if (group_selection[0] != null) {
 						var lps = affected_part_layouts(g, group_selection[0]);
 						for (var i = 0; i < lps.length; i++) {
 							for (var j = 0; j < lps[i]['meshes'].length; j++) {
@@ -529,7 +529,7 @@
 				// in surrounding
 				selections = surrounding['selections']
 				for (const [g, group_selection] of Object.entries(selections)) {
-					if (group_selection != null) {
+					if (group_selection[0] != null) {
 						var lps = affected_part_layouts(g, group_selection[0], surrounding);
 						for (var i = 0; i < lps.length; i++) {
 							for (var j = 0; j < lps[i]['meshes'].length; j++) {
@@ -599,10 +599,8 @@
 				var old_active_model = active_model
 				active_model = new_model_name
 
-				console.log('switching style from')
-				console.log(old_active_model)
-				console.log('switching style to')
-				console.log(active_model)
+				console.log('switching style from', old_active_model)
+				console.log('to', active_model)
 
 				var old_sopts = models[old_active_model]['structural_options']
 				var all_sopts = scene_info['structural_options'][active_model]
@@ -631,7 +629,7 @@
 					var this_selection = [preset_selection[0], preset_selection[1]]
 
 					// check if there is already something there
-					if (selection != null){
+					if (selection[0] != null){
 						this_selection = [selection[0], selection[1]]
 					}
 					
@@ -677,7 +675,7 @@
 				if ((material_name == null) | (color_name == null)){
 					
 					// removing a group from visibility
-					model['selections'][group_name] = null;
+					model['selections'][group_name] = [null, null];
 					update_scene();
 				
 				} else {
@@ -806,7 +804,7 @@
 
 						var preset_selections = scene_info['preset_selections']['edit'][active_model]
 						for (const [group_name, selection] of Object.entries(preset_selections)) {
-							if (selection == null){
+							if (selection[0] == null){
 								assign_style(group_name, null, null);
 							} else {
 								assign_style(group_name, selection[0], selection[1]);

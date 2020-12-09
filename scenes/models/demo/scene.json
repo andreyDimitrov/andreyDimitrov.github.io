@@ -18,6 +18,18 @@
     "preset_selections":{
         "architectural_style": "farmhouse",
         "edit": {
+            "modern":{
+                "lot": [null, null],
+                "siding": ["lap", "black"],
+                "siding_front": ["wood", "wood"],
+                "base": ["concrete", "gray"],
+                "windows": ["modern", "black"],
+                "doors": ["standard", "black"],
+                "trim": ["standard", "black"],
+                "soffits": ["standard", "black"],
+                "porches": ["standard", "redwood"],
+                "roof": ["rubber", "gray"]
+            },
             "farmhouse":{
                 "lot": [null, null],
                 "roof": ["metal_seam", "dark"],
@@ -32,6 +44,10 @@
             }
         },
         "structural_options": {
+            "modern":{
+                "dining": "dining_back",
+                "kitchen": "kitchen_I"
+            },
             "farmhouse":{
                 "dining": "dining_back",
                 "kitchen": "kitchen_I"
@@ -39,6 +55,18 @@
         }
     },
     "clickable":{
+        "modern":{
+            "lot": false,
+            "siding": false,
+            "siding_front": false,
+            "base": false,
+            "windows": false,
+            "doors": false,
+            "trim": false,
+            "soffits": false,
+            "porches": false,
+            "roof": false
+        },
         "farmhouse":{
             "lot": false,
             "roof": true,
@@ -53,12 +81,256 @@
         }
     },
     "structural_options":{
+        "modern":{
+            "dining": ["dining_back", "dining_mid"],
+            "kitchen": ["kitchen_I", "kitchen_L"]
+        },
         "farmhouse":{
             "dining": ["dining_back", "dining_mid"],
             "kitchen": ["kitchen_I", "kitchen_L"]
         }
     },
     "architectural_styles": {
+        "modern": {
+            "lot": {
+                "lot": {
+                    "edit": {
+                        "default": {
+                            "meshes": ["models/demo/objs/lot"],
+                            "materials": {
+                                "default":["models/demo/mtls/lot_narrow_modern_base"]
+                            }
+                        }
+                    },
+                    "street": {
+                        "default": {
+                            "meshes": ["models/demo/objs/lot"],
+                            "materials": {
+                                "default":["models/demo/mtls/light_gray"]
+                            }
+                        }
+                    }
+                }
+            },
+            "base": {
+                "base_1": {
+                    "concrete": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/modern_base_base_1_plain_default_surface"
+                            ],
+                            "materials": {
+                                "gray": [
+                                    "models/demo/mtls/modern_base_base_1_plain_default_surface_concrete"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "roof": {
+                "roof_base": {
+                    "rubber": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/modern_roof_roof_base_rubber_default_surface",
+                                "models/demo/objs/modern_roof_roof_base_rubber_default_cap"
+                            ],
+                            "materials": {
+                                "gray": [
+                                    "models/demo/mtls/modern_roof_roof_base_rubber_default_surface_gray",
+                                    "models/demo/mtls/modern_roof_roof_base_rubber_default_cap_black"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "siding_front": {
+                "siding_base": {
+                    "wood": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/modern_siding_front_siding_base_wood_default_surface"
+                            ],
+                            "materials": {
+                                "wood": [
+                                    "models/demo/mtls/modern_siding_front_siding_base_wood_default_surface_wood"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "siding": {
+                "siding_base": {
+                    "lap": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/modern_siding_siding_sides_lap_dining_back_surface"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/modern_siding_siding_sides_lap_dining_back_surface_black"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "siding_sides": {
+                    "lap": {
+                        "dining_back": {
+                            "meshes": [
+                                "models/demo/objs/modern_siding_siding_base_lap_default_surface"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/modern_siding_siding_base_lap_default_surface_black"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "siding_back": {
+                    "lap": {
+                        "kitchen_I": {
+                            "meshes": [
+                                "models/demo/objs/modern_siding_siding_back_lap_kitchen_I_surface"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/modern_siding_siding_back_lap_kitchen_I_surface_black"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "windows": {
+                "windows_base": {
+                    "modern": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/modern_windows_windows_base_modern_default_frame",
+                                "models/demo/objs/modern_windows_windows_base_modern_default_glass"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/modern_windows_windows_base_modern_default_frame_black",
+                                    "models/demo/mtls/glass"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "soffits": {
+                "soffits_base": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/modern_soffits_soffits_base_default_soffit",
+                                "models/demo/objs/modern_soffits_soffits_base_default_porch_ceiling"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/modern_soffits_soffits_base_default_soffit_black",
+                                    "models/demo/mtls/modern_soffits_soffits_base_default_porch_ceiling_wood"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "trim": {
+                "trim_base": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/modern_trim_trim_base_standard_default_surface"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/modern_trim_trim_base_standard_default_surface_black"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "trim_sides": {
+                    "standard": {
+                        "dining_back": {
+                            "meshes": [
+                                "models/demo/objs/modern_trim_trim_sides_standard_dining_back_surface"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/modern_trim_trim_sides_standard_dining_back_surface_black"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "trim_back_porch": {
+                    "standard": {
+                        "kitchen_I": {
+                            "meshes": [
+                                "models/demo/objs/modern_trim_trim_porch_back_standard_kitchen_I_surface"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/modern_trim_trim_porch_back_standard_kitchen_I_surface_black"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "doors": {
+                "doors_base": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/modern_doors_doors_base_standard_default_frame",
+                                "models/demo/objs/modern_doors_doors_base_standard_default_hardware",
+                                "models/demo/objs/modern_doors_doors_base_standard_default_glass"
+                            ],
+                            "materials": {
+                                "black": [
+                                    "models/demo/mtls/modern_doors_doors_base_standard_default_frame_black",
+                                    "models/demo/mtls/modern_doors_doors_base_standard_default_hardware_black",
+                                    "models/demo/mtls/glass"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "porches": {
+                "porch_base": {
+                    "standard": {
+                        "default": {
+                            "meshes": [
+                                "models/demo/objs/modern_porches_porches_base_standard_default_deck",
+                                "models/demo/objs/modern_porches_porches_base_standard_default_railing_posts",
+                                "models/demo/objs/modern_porches_porches_base_standard_default_terrace_top",
+                                "models/demo/objs/modern_porches_porches_base_standard_default_concrete",
+                                "models/demo/objs/modern_porches_porches_base_standard_default_railing_wires"
+                            ],
+                            "materials": {
+                                "redwood": [
+                                    "models/demo/mtls/modern_porches_porches_base_standard_default_deck_redwood",
+                                    "models/demo/mtls/modern_porches_porches_base_standard_default_railing_posts_black",
+                                    "models/demo/mtls/modern_porches_porches_base_standard_default_terrace_top_redwood",
+                                    "models/demo/mtls/modern_porches_porches_base_standard_default_concrete_concrete",
+                                    "models/demo/mtls/wires"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "farmhouse": {
             "lot": {
                 "lot": {
