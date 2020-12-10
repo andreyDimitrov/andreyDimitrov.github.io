@@ -9,7 +9,7 @@
 
 	<body>
 		<div id="info">
-		<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - OBJLoader + MTLLoader
+		<!-- <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - OBJLoader + MTLLoader -->
 		</div>
 
 		<script type="module">
@@ -78,6 +78,9 @@
 			let isLayoutA = true;
 			let isArchStyle = true;
 
+			// Monitor current selections / empty states in Atmos Platform
+			let lot_selection_id = null;
+			let home_selection_id = null;
 
 			init();
 			animate();
@@ -288,13 +291,22 @@
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
 
-
-
                 document.addEventListener( 'pointermove', onDocumentMouseMove, false );
                 document.addEventListener( 'pointerdown', onDocumentMouseDown, false );
                 document.addEventListener( 'pointerup', onDocumentMouseClick, false );
 				window.addEventListener( 'resize', onWindowResize, false );
 
+				// Atmos platform -> iframe communication
+				window.addEventListener("message", (data) => {
+					mainEventHandler(data);
+				}, false);
+
+			}
+
+			// Post message to parent (Atmos platform)
+			function post_iframe_message(payload) {
+				console.log('iframe -> platform, posting', payload);
+				window.parent.postMessage(payload, '*');
 			}
 
 
@@ -305,29 +317,40 @@
 			// Edit to integrate
 
 			function mainEventHandler(event) {
+				console.log('platform -> iframe, received');
+				var data = event.data;
 
-				var data = null; // get that from event
-				
-				// Austin wants to change the view mode
+				// Change the view mode
 				if (data.type == 'view_mode'){
+					console.log('platform -> iframe, received - view_mode updated', data.mode);
 					update_view_mode(data.mode);
 				};
 
-				// Austin wants to change the architectural style
+				// Change the architectural style
 				if (data.type == 'arch_style'){
-			        assign_architectural_style(data.style);
+					// alert(data.selection);
+					console.log('platform -> iframe, received - arch_style updated', data.selection);
+					assign_architectural_style(data.selection);
 				};
 
-				// Austin wants to change a structural option
+				// Change a structural option
 				if (data.type == 'structural_option'){
-			        assign_structural_option(data.option, data.selection);
+					console.log('platform -> iframe, received - structural_option updated', data.group, data.selection);
+					assign_structural_option(data.group, data.selection);
 				};
 
-				// Austin wants to change a material
+				// Change a material
 				if (data.type == 'material_selection'){
-			        assign_style(data.group, data.material, data.color);
+					console.log('platform -> iframe - material updated', data.group, data.selection, data.color);
+					assign_style(data.group, data.selection, data.color);
 				};
 
+				// Lot or Home only scene
+				if (data.type === 'update_selection_ids') {
+					console.log('platform -> iframe, received - update_selections')
+					console.log(data);
+					update_main_selection(data.lotId, data.homeId);
+				};
 			}
 
 			// -------------------------------------------
@@ -335,6 +358,21 @@
 			
 
 			// HELPER FUNCTIONS
+
+			function update_main_selection(lotId, homeId) {
+				if (lot_selection_id !== lotId) lot_selection_id = lotId;
+				if (home_selection_id !== homeId) home_selection_id = homeId;
+				if (lotId && homeId) {
+				// Show Lot + Home State
+				}
+				else if (lotId) {
+					// Show Just Lot Scene
+				}
+				else if (homeId) {
+					// Show Just Home Scene
+				}
+			}
+
 
 			function update_view_mode(mode){
 
@@ -454,8 +492,6 @@
 				var cam_target = scene_info['views']['edit']['camera']['target']
 				controls.target.set(cam_target[0], cam_target[1], cam_target[2]);
 				controls.update();
-
-
 			}
 
 			function prepare_model(model, structural_options){
@@ -494,8 +530,6 @@
 						model['structural_options'][o] = null;
 					};
 				};
-
-
 
 			}
 
@@ -589,6 +623,7 @@
 			};
 
 			function assign_architectural_style(new_model_name) {
+				console.log('assign__architectrual_style', new_model_name);
 
 				if (active_model == new_model_name) {
 					console.log('same arch style, skipping.')
@@ -661,7 +696,6 @@
 					assign_style('lot', null, null);
 				}
 				
-
 			}
 
 
@@ -825,8 +859,6 @@
 						console.log(payload)
 						
 
-
-
 					}, onProgress, onError );
 			}
 
@@ -898,6 +930,7 @@
 
 			}
 
+
 			function first_visible_intersect(intersects){
 
 				
@@ -922,7 +955,7 @@
 
 				if ( xhr.lengthComputable ) {
 					const percentComplete = xhr.loaded / xhr.total * 100;
-					console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+					// console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
 				}
 
 			};
@@ -1000,19 +1033,31 @@
 			function onDocumentMouseClick( event ) {
 				event.preventDefault();
 
+				const {offsetX, offsetY} = event;
+
 				isUserDragging = false;
 
 				if (!checkMoved(event)) {
 					if (focused_group != null){
-						console.log('SEND TO AUSTIN')
-
 						var payload = {'event_type': 'material_selection',
 							'group': focused_group,
 							'available_options':get_group_style_options(focused_group),
-						}
-						console.log(payload)
+							'mouseX': offsetX,
+							'mouseY': offsetY,
+						};
+						// Send if surface clicked
+						post_iframe_message(payload)
 					}
-					
+					// Send null event of material_selection type to the parent to indicate clickaway from that surface
+					else {
+						// console.log('click - focused_group === null');
+						post_iframe_message({
+						'event_type': 'material_selection',
+						'group': null,
+						'mouseX': offsetX,
+						'mouseY': offsetY,
+					})
+					}
 				}
 			}
 
@@ -1040,7 +1085,6 @@
 
 					// console.log(target)
 
-
 					current_camera.lookAt( target );
 					current_camera.updateProjectionMatrix();
 
@@ -1049,9 +1093,6 @@
 				if (current_camera != null){
 					renderer.render( scene, current_camera );
 				}
-
-				
-
 			}
 
 			
