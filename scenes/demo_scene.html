@@ -942,7 +942,10 @@
 				// try to find a visible object
 				for (var i = 0; i < intersects.length; i++) {
 					if (intersects[i].object.visible){
-						return intersects[i]
+						// check if special object
+						if (intersects[i].object.userData.obj_name != 'ignore'){
+							return intersects[i]
+						}
 					}
 				}
 
@@ -987,9 +990,8 @@
 
 				}
 
-
-				if (view_mode == 'edit'){
-					// find intersections
+				// Uncomment below if you want intersection only in edit mode
+				// if (view_mode == 'edit'){
 					raycaster.setFromCamera( mouse, current_camera );
 					var intersects = raycaster.intersectObjects( scene.children );
 					var first_intersect = first_visible_intersect(intersects)
@@ -999,14 +1001,14 @@
 						focused_group = null;
 						turn_off_highlights()
 		            }
-		        }
+		        // }
 
 			}
 
 			function onDocumentMouseDown( event ) {
 				event.preventDefault();
 
-				// // drag camera rotation interaction
+				// drag camera rotation interaction
 				
 				mouse_down.x = event.clientX;
 				mouse_down.y = event.clientY;
