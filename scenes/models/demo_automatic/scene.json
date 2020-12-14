@@ -713,7 +713,7 @@
                             "materials": {
                                 "white": [
                                     "models/demo_automatic/mtls/fh2-doors-front-standard-x-hardware-white",
-                                    "models/demo_automatic/mtls/fh2-doors-front-standard-x-glass-white",
+                                    "models/demo_automatic/mtls/glass",
                                     "models/demo_automatic/mtls/fh2-doors-front-standard-x-frame-white"
                                 ]
                             }
@@ -731,7 +731,7 @@
                             "materials": {
                                 "white": [
                                     "models/demo_automatic/mtls/fh2-doors-porch-standard-kitchenA-hardware-white",
-                                    "models/demo_automatic/mtls/fh2-doors-porch-standard-kitchenA-glass-white",
+                                    "models/demo_automatic/mtls/glass",
                                     "models/demo_automatic/mtls/fh2-doors-porch-standard-kitchenA-frame-white"
                                 ]
                             }
@@ -745,7 +745,7 @@
                             "materials": {
                                 "white": [
                                     "models/demo_automatic/mtls/fh2-doors-porch-standard-kitchenB-hardware-white",
-                                    "models/demo_automatic/mtls/fh2-doors-porch-standard-kitchenB-glass-white",
+                                    "models/demo_automatic/mtls/glass",
                                     "models/demo_automatic/mtls/fh2-doors-porch-standard-kitchenB-frame-white"
                                 ]
                             }
