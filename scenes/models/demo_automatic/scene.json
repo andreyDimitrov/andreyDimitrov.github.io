@@ -16,7 +16,7 @@
         }
     },
     "preset_selections":{
-        "architectural_style": "farmhouse2",
+        "architectural_style": "farmhouse",
         "edit": {
             "modern":{
                 "lot": [null, null],

@@ -52,6 +52,8 @@
 
 			let scene_materials = {};
 			let scene_meshes = {};
+			let scene_materials_loading = {};
+			let scene_meshes_loading = {};
 			let scene_meshes_info = {};
 			let scene_info = null;
 
@@ -104,7 +106,6 @@
 
 				view_mode = null;
 				current_camera = null;
-
 
 
 
@@ -560,13 +561,16 @@
 								for (var i = 0; i < layout["meshes"].length; i++) {
 									if (!(layout["meshes"][i] in scene_meshes)){
 										scene_meshes[layout["meshes"][i]] = null;
-										scene_meshes_info[layout["meshes"][i]] = {'group_name': g};
+										scene_meshes_loading[layout["meshes"][i]] = false;
+										scene_meshes_info[layout["meshes"][i]] = {
+											'group_name': g};
 									}	
 								};
 								for (const [c, color] of Object.entries(layout["materials"])) {
 									for (var i = 0; i < color.length; i++) {
 										if (!(color[i] in scene_meshes)){
 											scene_materials[color[i]] = null;
+											scene_materials_loading[color[i]] = false;
 										}
 									};
 								};
@@ -785,7 +789,6 @@
 				} else {
 
 					// console.log('assigning style')
-					// console.log(model)
 					
 					// adding or updating a group
 					model['selections'][group_name] = [material_name, color_name]
@@ -796,6 +799,7 @@
 							assign_style_per_mesh(lps[i]['meshes'][j], lps[i]['materials'][color_name][j]);
 						};
 					};
+					update_scene();
 				
 				}
 				
@@ -804,17 +808,33 @@
 
 			function assign_style_per_mesh(obj_name, mtl_name) {
 
+				// if the mesh is being loaded, do nothing and let that process finish
+				if (scene_meshes_loading[obj_name] == true) {
+					return;
+				}
+
+				// mesh is not being loaded. If null, load, otherwise update material
 				if (scene_meshes[obj_name] == null) {
 
+					// lock
+					scene_meshes_loading[obj_name] = true;
 					obj_loader.load( obj_name + '.obj',
 
 						function ( obj ) {
-							add_mesh(obj_name, obj);
-							// console.log('mesh loaded, toggle visibility');
 
-							// material
-							assign_material(obj_name, mtl_name)
+							scene_meshes[obj_name] = obj.children[0];
+							scene_meshes[obj_name].userData['obj_name'] = obj_name;
+							scene.add( scene_meshes[obj_name] );
+							// unlock
+							scene_meshes_loading[obj_name] = false;
+
+							console.log('mesh loaded, toggle visibility');
 							update_scene()
+							
+							// material
+							assign_material(obj_name, mtl_name);
+							
+							
 
 						}, onProgress, onError );
 
@@ -822,7 +842,9 @@
 
 					// console.log('mesh exists, toggle visibility');
 					assign_material(obj_name, mtl_name)
-					update_scene()
+
+					// update_scene()
+
 
 				};
 
@@ -830,13 +852,21 @@
 
 			function assign_material(mesh_name, material_name) {
 
+
+				// material is not being loaded. If null, load, otherwise update material
 				if (scene_materials[material_name] == null) {
+
 					mtl_loader.load( material_name + '.mtl',
 					
 						function ( mtl ) {
-							add_material(material_name, mtl);
+
+							mtl.preload();
+							var mat_keys = Object.keys(mtl.materials);
+							// ASSUME: only one material
+							scene_materials[material_name] = mtl.materials[mat_keys[0]]
 							// console.log('mtl loaded, assigning');
 							scene_meshes[mesh_name].material = scene_materials[material_name]
+
 						}, onProgress, onError );
 
 				} else {
@@ -844,26 +874,9 @@
 					scene_meshes[mesh_name].material = scene_materials[material_name]
 				};
 
-
 			}
 
-			function add_material(material_name, mtl) {
 
-				mtl.preload();
-				var mat_keys = Object.keys(mtl.materials);
-				// ASSUME: only one material
-				scene_materials[material_name] = mtl.materials[mat_keys[0]]
-
-			}
-
-			function add_mesh(obj_name, obj) {
-
-				// ASSUME: only one mesh
-				scene_meshes[obj_name] = obj.children[0];
-				scene_meshes[obj_name].userData['obj_name'] = obj_name;
-				scene.add( scene_meshes[obj_name] );
-
-			}
 
 			
 
