@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - OBJLoader + MTLLoader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="dark.css">
+	</head>
+
+	<body>
+		<div id="info">
+		<!-- <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - OBJLoader + MTLLoader -->
+		</div>
+
+		<script src="https://cdn.rawgit.com/nicolas-van/snoweffect/gh-pages/static/all.js"></script>
+
+		<script type="module">
+
+			import * as THREE from '../build/three.module.js';
+
+			import { MTLLoader } from './jsm/loaders/MTLLoader.js';
+			import { OBJLoader } from './jsm/loaders/OBJLoader.js';
+
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+
+			import { GUI } from './jsm/libs/dat.gui.module.js';
+
+			let windowHalfX = window.innerWidth / 2;
+			let windowHalfY = window.innerHeight / 2;
+
+			let controls, scene, renderer;
+			let current_camera, street_camera, edit_camera;
+			let base_pano, mask_pano;
+
+			// street view vars
+			let saved_edit_target = new THREE.Vector3();
+			let saved_edit_position = new THREE.Vector3();
+			let view_mode;
+			let lon, lat, onPointerDownLon, onPointerDownLat;
+			let isUserDragging;
+			const target = new THREE.Vector3();
+
+			// loaders
+			const loader = new THREE.FileLoader();
+			const mtl_loader = new MTLLoader();
+			const obj_loader = new OBJLoader();
+			var texture_loader = new THREE.TextureLoader();
+
+			// scene vars
+			let scene_dir = 'models/holiday/';
+			let models = {};
+			let active_model = null;
+			let surrounding = {};
+
+			let scene_materials = {};
+			let scene_meshes = {};
+			let scene_meshes_loading = {};
+			let scene_meshes_info = {};
+			let scene_info = null;
+
+
+			// Interaction
+			const raycaster = new THREE.Raycaster();
+			const mouse = new THREE.Vector2();
+			const mouse_down = new THREE.Vector2();
+			let focused_group = null;
+
+			// GUI
+			let params = {
+				selection: "",
+				structuralOption: "",
+				archStyle: "",
+				viewMode: ""
+			};
+			let isStreetView = true;
+			let isWhiteFrontSiding = true;
+			let isWhiteSiding = true;
+			let isHillPorch = true;
+			let isDarkRoof = true;
+			let isDarkWindows = true;
+			let isLayoutA = true;
+			let isArchStyle = true;
+
+			// Monitor current selections / empty states in Atmos Platform
+			let lot_selection_id = null;
+			let home_selection_id = null;
+
+			init();
+			animate();
+
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+
+				// scene
+
+				scene = new THREE.Scene();
+
+				const ambientLight = new THREE.AmbientLight( 0xffffff );
+				scene.add( ambientLight );
+
+				view_mode = null;
+				current_camera = null;
+
+
+
+				// // Gui - for standalone testing
+				// const gui = new GUI()
+				// const folderToggles = gui.addFolder( 'Inputs' )
+
+				// const streetViewProps = {
+
+				// 	get 'StreetView'() {
+				// 		return isStreetView;
+				// 	},
+
+				// 	set 'StreetView'( v ) {
+
+				// 		if (isStreetView) {
+				// 			update_view_mode('edit')
+				// 		} else {
+				// 			update_view_mode('street')
+				// 		};
+				// 		isStreetView = v;
+				// 	}
+				// };
+				// folderToggles.add( streetViewProps, 'StreetView' );
+
+				// const roofSelectionProps = {
+
+				// 	get 'Roof'() {
+				// 		return isDarkRoof;
+				// 	},
+
+				// 	set 'Roof'( v ) {
+
+				// 		if (isDarkRoof) {
+				// 			assign_style('roof', 'metalSeam', 'white')
+				// 		} else {
+				// 			assign_style('roof', 'shingles', 'white')
+				// 		};
+				// 		isDarkRoof = v;
+				// 	}
+				// };
+				// folderToggles.add( roofSelectionProps, 'Roof' );
+
+
+				// const frontSidingSelectionProps = {
+
+				// 	get 'FrontSiding'() {
+				// 		return isWhiteFrontSiding;
+				// 	},
+
+				// 	set 'FrontSiding'( v ) {
+
+				// 		if (isWhiteFrontSiding) {
+				// 			assign_style('sidingFront', 'lap', 'white')
+							
+				// 		} else {
+				// 			assign_style('sidingFront', 'board', 'white')
+				// 		};
+				// 		isWhiteFrontSiding = v;
+				// 	}
+				// };
+				// folderToggles.add( frontSidingSelectionProps, 'FrontSiding' );
+
+
+
+				// const windowSelectionProps = {
+
+				// 	get 'Windows'() {
+				// 		return isDarkWindows;
+				// 	},
+
+				// 	set 'Windows'( v ) {
+
+				// 		if (isDarkWindows) {
+				// 			assign_style('windows', 'standard', 'white')
+							
+				// 		} else {
+				// 			assign_style('windows', 'minimal', 'white')
+				// 		};
+				// 		isDarkWindows = v;
+				// 	}
+				// };
+				// folderToggles.add( windowSelectionProps, 'Windows' );
+
+
+				
+
+				// load scene info
+				init_scene('scene');
+
+
+				renderer = new THREE.WebGLRenderer({antialias: true, alpha: true });
+				renderer.shadowMap.enabled = true;
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+                document.addEventListener( 'pointermove', onDocumentMouseMove, false );
+                document.addEventListener( 'pointerdown', onDocumentMouseDown, false );
+                document.addEventListener( 'pointerup', onDocumentMouseClick, false );
+				window.addEventListener( 'resize', onWindowResize, false );
+
+				// Atmos platform -> iframe communication
+				window.addEventListener("message", (data) => {
+					mainEventHandler(data);
+				}, false);
+
+			}
+
+			// Post message to parent (Atmos platform)
+			function post_iframe_message(payload) {
+				console.log('iframe -> platform, posting', payload);
+				window.parent.postMessage(payload, '*');
+			}
+
+
+			// -------------------------------------------
+			// EVENT LISTENER
+			// Handles all events coming in from Atmos platform
+
+			// Edit to integrate
+
+			function mainEventHandler(event) {
+				console.log('platform -> iframe, received');
+				var data = event.data;
+
+				// Change the view mode
+				if (data.type == 'view_mode'){
+					console.log('platform -> iframe, received - view_mode updated', data.mode);
+					update_view_mode(data.mode);
+				};
+
+				// Change the architectural style
+				if (data.type == 'arch_style'){
+					// alert(data.selection);
+					console.log('platform -> iframe, received - arch_style updated', data.selection);
+					assign_architectural_style(data.selection);
+				};
+
+				// Change a structural option
+				if (data.type == 'structural_option'){
+					console.log('platform -> iframe, received - structural_option updated', data.group, data.selection);
+					assign_structural_option(data.group, data.selection);
+				};
+
+				// Change a material
+				if (data.type == 'material_selection'){
+					console.log('platform -> iframe - material updated', data.group, data.selection, data.color);
+					assign_style(data.group, data.selection, data.color);
+				};
+
+				// Lot or Home only scene
+				if (data.type === 'update_selection_ids') {
+					console.log('platform -> iframe, received - update_selections')
+					console.log(data);
+					update_main_selection(data.lotId, data.homeId);
+				};
+			}
+
+			// -------------------------------------------
+
+			
+
+			// HELPER FUNCTIONS
+
+			function update_main_selection(lotId, homeId) {
+				if (lot_selection_id !== lotId) lot_selection_id = lotId;
+				if (home_selection_id !== homeId) home_selection_id = homeId;
+				if (lotId && homeId) {
+				// Show Lot + Home State
+				}
+				else if (lotId) {
+					// Show Just Lot Scene
+				}
+				else if (homeId) {
+					// Show Just Home Scene
+				}
+			}
+
+
+			function update_view_mode(mode){
+
+				if (view_mode == mode) {return;}
+				
+				view_mode = mode;
+
+				if (view_mode == 'edit'){
+
+					// set previously saved camera state
+					edit_camera.position.set(saved_edit_position.x, saved_edit_position.y, saved_edit_position.z);
+					controls.update();
+					controls.target.set(saved_edit_target.x, saved_edit_target.y, saved_edit_target.z);
+					controls.update();
+					
+					// set camera
+					current_camera = edit_camera;
+
+					// update surrounding
+					// assign_style('house', null, null, surrounding);
+
+					// update lot
+					console.log('adding lot here')
+					assign_style('lot', 'edit', 'setbacks');
+
+					// update background
+					base_pano.visible = false;
+					mask_pano.visible = false;
+
+				}
+
+				if (view_mode == 'street'){
+					
+					// set camera
+					current_camera = street_camera;
+
+					// save camera state
+					saved_edit_position.x = edit_camera.position.x;
+					saved_edit_position.y = edit_camera.position.y;
+					saved_edit_position.z = edit_camera.position.z;
+					saved_edit_target.x = controls.target.x;
+					saved_edit_target.y = controls.target.y;
+					saved_edit_target.z = controls.target.z;
+					
+					// update surrounding
+					// console.log('adding surrounding')
+					// assign_style('house', 'uniform', 'default', surrounding);
+					
+					// update lot
+					assign_style('lot', null, null);
+
+					// update background
+					base_pano.visible = true;
+					mask_pano.visible = true;
+					
+				}
+			}
+
+			function prepare_views(){
+
+
+				// Build pano view
+				street_camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 2000);
+				var cam_pos = scene_info['views']['street']['camera']['position']
+				street_camera.position.x = cam_pos[0];
+				street_camera.position.y = cam_pos[1];
+				street_camera.position.z = cam_pos[2];
+				scene.add( street_camera );
+
+				lon = scene_info['views']['street']['camera']['target']['lon'];
+				lat = scene_info['views']['street']['camera']['target']['lat'];
+				onPointerDownLon = lon;
+				onPointerDownLat = lat;
+				isUserDragging = false;
+
+
+				base_pano = new THREE.Mesh(
+					new THREE.SphereGeometry( 200, 50, 50),
+					new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
+				);
+				base_pano.position.x = street_camera.position.x;
+				base_pano.position.y = street_camera.position.y;
+				base_pano.position.z = street_camera.position.z;
+				base_pano.userData = {'obj_name': 'ignore'}
+				scene.add(base_pano)
+
+				var base_texture = texture_loader.load(scene_info['views']['street']['pano_background'])
+				base_pano.material.map = base_texture;
+
+				mask_pano = new THREE.Mesh(
+					new THREE.SphereGeometry( 2, 100, 100),
+					new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
+				);
+				mask_pano.position.x = street_camera.position.x;
+				mask_pano.position.y = street_camera.position.y;
+				mask_pano.position.z = street_camera.position.z;
+				mask_pano.userData = {'obj_name': 'ignore'}
+				scene.add(mask_pano)
+
+				var mask_texture = texture_loader.load(scene_info['views']['street']['pano_foreground'])
+				mask_pano.material.map = mask_texture;
+				mask_pano.material.transparent = true;
+
+				
+				// Build edit view
+				edit_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				cam_pos = scene_info['views']['edit']['camera']['position']
+				edit_camera.position.x = cam_pos[0];
+				edit_camera.position.y = cam_pos[1];
+				edit_camera.position.z = cam_pos[2];
+				// saved_edit_position.x = edit_camera.position.x;
+				// saved_edit_position.y = edit_camera.position.y;
+				// saved_edit_position.z = edit_camera.position.z;
+				scene.add( edit_camera );
+
+				controls = new OrbitControls( edit_camera, renderer.domElement );
+				controls.maxPolarAngle = Math.PI * 0.5;
+				controls.minDistance = 1;
+				controls.maxDistance = 200;
+				var cam_target = scene_info['views']['edit']['camera']['target']
+				controls.target.set(cam_target[0], cam_target[1], cam_target[2]);
+				controls.update();
+
+				saved_edit_position.x = edit_camera.position.x;
+				saved_edit_position.y = edit_camera.position.y;
+				saved_edit_position.z = edit_camera.position.z;
+				saved_edit_target.x = controls.target.x;
+				saved_edit_target.y = controls.target.y;
+				saved_edit_target.z = controls.target.z;
+			}
+
+			function prepare_model(model, structural_options){
+
+				// clear scene stuff
+				model['selections'] = {};
+				model['structural_options'] = {};
+
+				// rebuild with empties
+				for (const [g, group] of Object.entries(model['info'])) {
+					model['selections'][g] = [null, null];
+					for (const [p, part] of Object.entries(group)) {
+						for (const [s, style] of Object.entries(part)) {
+							for (const [l, layout] of Object.entries(style)) {
+
+								for (var i = 0; i < layout["meshes"].length; i++) {
+									if (!(layout["meshes"][i] in scene_meshes)){
+										scene_meshes[layout["meshes"][i]] = null;
+										scene_meshes_loading[layout["meshes"][i]] = false;
+										scene_meshes_info[layout["meshes"][i]] = {
+											'group_name': g};
+									}	
+								};
+								for (const [c, color] of Object.entries(layout["materials"])) {
+									for (var i = 0; i < color.length; i++) {
+										if (!(color[i] in scene_meshes)){
+											scene_materials[color[i]] = null;
+										}
+									};
+								};
+							};
+						};
+					};
+				};
+
+				if (structural_options != null){
+					for (const [o, options] of Object.entries(structural_options)) {
+						model['structural_options'][o] = null;
+					};
+				};
+
+			}
+
+			function update_scene() {
+				// console.log('updating scene')
+
+
+				// set everything to visible false
+				for (const [key, mesh] of Object.entries(scene_meshes)) {
+					if (mesh != null) {
+						mesh.visible = false;
+					};
+				};
+
+				// go through styles and set visible true to what's needed
+				var selections = models[active_model]['selections']
+				for (const [g, group_selection] of Object.entries(selections)) {
+					if (group_selection[0] != null) {
+						var lps = affected_part_layouts(g, group_selection[0]);
+						for (var i = 0; i < lps.length; i++) {
+							for (var j = 0; j < lps[i]['meshes'].length; j++) {
+								if (scene_meshes[lps[i]['meshes'][j]] != null){
+									scene_meshes[lps[i]['meshes'][j]].visible = true;
+								};
+							};
+						};
+					};
+				};
+				
+
+				// // in surrounding
+				// selections = surrounding['selections']
+				// for (const [g, group_selection] of Object.entries(selections)) {
+				// 	if (group_selection[0] != null) {
+				// 		var lps = affected_part_layouts(g, group_selection[0], surrounding);
+				// 		for (var i = 0; i < lps.length; i++) {
+				// 			for (var j = 0; j < lps[i]['meshes'].length; j++) {
+				// 				if (scene_meshes[lps[i]['meshes'][j]] != null){
+				// 					scene_meshes[lps[i]['meshes'][j]].visible = true;
+				// 				};
+				// 			};
+				// 		};
+				// 	};
+				// };
+
+
+			};
+
+			function affected_part_layouts(group_name, material_name, model=models[active_model], all_layouts=false) {
+
+				var lps = []
+				var group = model['info'][group_name]
+
+				var sopts = Object.values(model['structural_options'])
+				// console.log(model['structural_options'])
+				
+				for (const [p, part] of Object.entries(group)) {
+					var mat = part[material_name]
+
+					var layouts = Object.keys(mat)
+					if (all_layouts){
+						for (var i = 0; i < layouts.length; i++) {
+							lps.push(mat[layouts[i]]);
+						};
+
+					} else {
+						var layout_found = false;
+						
+						// look for a layout in the structural options
+						for (var i = 0; i < sopts.length; i++) {
+							if (layouts.includes(sopts[i])) {
+								lps.push(mat[sopts[i]]);
+								layout_found = true;
+							};
+							
+						};
+
+						// if none are found, output default
+						if (!layout_found) {
+							if (layouts.includes('x')){
+								lps.push(mat['x']);
+							}
+						};
+					}
+		
+
+				};
+
+				return lps;
+
+			};
+
+			function assign_architectural_style(new_model_name) {
+				console.log('assign__architectrual_style', new_model_name);
+
+				if (active_model == new_model_name) {
+					console.log('same arch style, skipping.')
+					return;
+				};
+
+
+				var old_active_model = active_model
+				active_model = new_model_name
+
+				console.log('switching style from', old_active_model)
+				console.log('to', active_model)
+
+				var old_sopts = models[old_active_model]['structural_options']
+				var all_sopts = scene_info['structural_options'][active_model]
+				var preset_selections = scene_info['preset_selections']['structural_options'][active_model]
+				for (const [option_name, selection] of Object.entries(preset_selections)) {
+					var this_selection = selection;
+					if (option_name in old_sopts){
+						if (all_sopts[option_name].includes(old_sopts[option_name])){
+							this_selection = old_sopts[option_name]
+						}
+					}
+					assign_structural_option(option_name, this_selection);
+					
+				}
+
+				// var current_selections = models[active_model]['selections']
+				var old_selections = models[old_active_model]['selections']
+				var new_selections = models[active_model]['selections']
+				var preset_selections = scene_info['preset_selections']['edit'][active_model]
+
+				for (const [group_name, selection] of Object.entries(new_selections)) {
+					
+					var preset_selection = preset_selections[group_name]
+
+					// default to preset
+					var this_selection = [preset_selection[0], preset_selection[1]]
+
+					// check if there is already something there
+					if (selection[0] != null){
+						this_selection = [selection[0], selection[1]]
+					}
+					
+					if (group_name in old_selections){
+
+						var old_selection = old_selections[group_name]
+
+						var mg = models[active_model]['info'][group_name];
+						var part_names = Object.keys(mg)
+						var mat_names = Object.keys(mg[part_names[0]])
+						if (mat_names.includes(old_selection[0])) {
+							// check if color
+							var mat = mg[part_names[0]][old_selection[0]]
+							var layout_names = Object.keys(mat)
+							var layout = mat[layout_names[0]]
+							var color_names = Object.keys(layout['materials'])
+							if (color_names.includes(old_selection[1])) {
+								this_selection = [old_selection[0], old_selection[1]]
+							}
+						}
+					}
+				
+					assign_style(group_name, this_selection[0], this_selection[1]);
+
+				}
+
+				// TODO: remove this hack
+				if (view_mode == 'street') {
+					assign_style('lot', null, null);
+				}
+				
+			}
+
+
+			function assign_structural_option(option_name, selection, model=models[active_model]) {
+
+				model['structural_options'][option_name] = selection
+				// console.log('---------assigning option --------')
+				update_scene()
+
+			};
+
+
+			function assign_style(group_name, material_name, color_name, model=models[active_model]) {
+
+
+				// update selections
+				if ((material_name == null) | (color_name == null)){
+					
+					// removing a group from visibility
+					model['selections'][group_name] = [null, null];
+					update_scene();
+				
+				} else {
+
+					// console.log('assigning style')
+					
+					// adding or updating a group
+					model['selections'][group_name] = [material_name, color_name]
+
+					var lps = affected_part_layouts(group_name, material_name, model, true);
+					for (var i = 0; i < lps.length; i++) {
+						for (var j = 0; j < lps[i]['meshes'].length; j++) {
+							assign_style_per_mesh(lps[i]['meshes'][j], lps[i]['materials'][color_name][j]);
+						};
+					};
+					update_scene();
+				
+				}
+				
+			
+			};
+
+			function assign_style_per_mesh(obj_name, mtl_name) {
+
+				// if the mesh is being loaded, do nothing and let that process finish
+				if (scene_meshes_loading[obj_name] == true) {
+					return;
+				}
+
+				// mesh is not being loaded. If null, load, otherwise update material
+				if (scene_meshes[obj_name] == null) {
+
+					// lock
+					scene_meshes_loading[obj_name] = true;
+					obj_loader.load( obj_name,
+
+						function ( obj ) {
+
+							scene_meshes[obj_name] = obj.children[0];
+							scene_meshes[obj_name].userData['obj_name'] = obj_name;
+							scene.add( scene_meshes[obj_name] );
+							// unlock
+							scene_meshes_loading[obj_name] = false;
+
+							console.log('mesh loaded, toggle visibility');
+							update_scene()
+							
+							// material
+							assign_material(obj_name, mtl_name);
+							
+							
+
+						}, onProgress, onError );
+
+				} else {
+
+					// console.log('mesh exists, toggle visibility');
+					assign_material(obj_name, mtl_name)
+
+					// update_scene()
+
+
+				};
+
+			};
+
+			function assign_material(mesh_name, material_name) {
+
+
+				// material is not being loaded. If null, load, otherwise update material
+				if (scene_materials[material_name] == null) {
+
+					mtl_loader.load( material_name,
+					
+						function ( mtl ) {
+
+							mtl.preload();
+							var mat_keys = Object.keys(mtl.materials);
+							// ASSUME: only one material
+							scene_materials[material_name] = mtl.materials[mat_keys[0]]
+							// console.log('mtl loaded, assigning');
+							scene_meshes[mesh_name].material = scene_materials[material_name]
+
+						}, onProgress, onError );
+
+				} else {
+					// console.log('mtl exists, assigning');
+					scene_meshes[mesh_name].material = scene_materials[material_name]
+				};
+
+			}
+
+
+
+			
+
+			function init_scene(scene_name) {
+
+				loader.load(
+					scene_dir + scene_name + '.json',
+
+					function ( text ) {
+
+						scene_info = JSON.parse(text);
+
+						prepare_views()
+						console.log('views ready')
+
+						console.log(scene_info)
+						
+
+						var model_names = Object.keys(scene_info['architectural_styles'])
+						for (var i = 0; i < model_names.length; i++) {
+							models[model_names[i]] = {
+								'info': {}
+							};
+							models[model_names[i]]['info'] = scene_info['architectural_styles'][model_names[i]]
+							prepare_model(models[model_names[i]], scene_info['structural_options'][model_names[i]]);
+						}
+						
+						active_model = scene_info['preset_selections']['architectural_style'];
+
+
+
+						// surrounding['info'] = scene_info['surrounding']
+						// prepare_model(surrounding, null);
+
+
+						
+						
+
+						// show part
+
+						var preset_selections = scene_info['preset_selections']['structural_options'][active_model]
+						for (const [option_name, selection] of Object.entries(preset_selections)) {
+							assign_structural_option(option_name, selection);
+						}
+
+						var preset_selections = scene_info['preset_selections']['edit'][active_model]
+						for (const [group_name, selection] of Object.entries(preset_selections)) {
+							if (selection[0] == null){
+								assign_style(group_name, null, null);
+							} else {
+								assign_style(group_name, selection[0], selection[1]);
+							}
+						}
+
+						update_view_mode('edit')
+
+						var payload = {
+							'event_type': 'scene_init',
+							'scene_info': scene_info
+						}
+						console.log('SEND TO AUSTIN')
+						console.log(payload)
+						
+
+					}, onProgress, onError );
+			}
+
+			function update_highlights(object){
+
+				// clear all highlights
+				turn_off_highlights()
+
+				var key = object.userData['obj_name'];
+
+				if (key == 'ignore'){
+					// turn_off_highlights()
+					return null;
+				}
+				if (key == 'sprite'){
+					// turn_off_highlights()
+					return 'style-' + object.userData['to_style'];
+				}
+				var group_name = scene_meshes_info[key]['group_name'];
+
+				var clickable = scene_info['clickable'][active_model][group_name];
+
+				if (!clickable){
+					// turn_off_highlights()
+					return null;
+				};
+
+				// clear all highlights
+				// turn_off_highlights()
+
+				//turn on group only
+				for (const [key, info] of Object.entries(scene_meshes_info)) {
+					if (info['group_name'] == group_name) {
+						if (scene_meshes[key] != null) {
+							if (scene_meshes[key].visible == true){
+								scene_meshes[key].material.emissive.r = 0.2;
+								scene_meshes[key].material.emissive.g = 0.2;
+								scene_meshes[key].material.emissive.b = 0.2;
+							}
+						}
+					};
+				};
+
+				return group_name;
+
+			}
+
+			function turn_off_highlights(){
+
+				for (const [key, info] of Object.entries(scene_meshes)) {
+					if (scene_meshes[key] != null) {
+						scene_meshes[key].material.emissive.r = 0;
+						scene_meshes[key].material.emissive.g = 0;
+						scene_meshes[key].material.emissive.b = 0;
+					}
+				};
+			
+			}
+
+			function get_group_style_options(group_name){
+
+				var options = {}
+
+				var group = models[active_model]['info'][group_name];
+
+				var keys = Object.keys(group)
+				var part = group[keys[0]]
+
+
+				for (const [material_name, mat] of Object.entries(part)) {
+					keys = Object.keys(mat)
+					options[material_name] = Object.keys(mat[keys[0]]['materials'])
+				}
+
+				return options;
+
+			}
+
+
+			function first_visible_intersect(intersects){
+
+				
+				// exit early if no intersects
+				if (intersects.length == 0){
+					return null
+				}
+				
+				// try to find a visible object
+				for (var i = 0; i < intersects.length; i++) {
+					if (intersects[i].object.visible){
+						// check if special object
+						if (intersects[i].object.userData.obj_name != 'ignore'){
+							return intersects[i]
+						}
+					}
+				}
+
+				// if none were found, exit with null
+				return null
+			}
+
+
+			function onProgress( xhr ) {
+
+				if ( xhr.lengthComputable ) {
+					const percentComplete = xhr.loaded / xhr.total * 100;
+					// console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+				}
+
+			};
+
+			function onError() { };
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+				edit_camera.aspect = window.innerWidth / window.innerHeight;
+				edit_camera.updateProjectionMatrix();
+				street_camera.aspect = window.innerWidth / window.innerHeight;
+				street_camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentMouseMove( event ) {
+
+				event.preventDefault();
+				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+				if ( isUserDragging == true ) {
+
+					lon = ( mouse_down.x - event.clientX ) * 0.1 + onPointerDownLon;
+					lat = ( event.clientY - mouse_down.y ) * 0.1 + onPointerDownLat;
+
+				}
+
+				// Uncomment below if you want intersection only in edit mode
+				// if (view_mode == 'edit'){
+					raycaster.setFromCamera( mouse, current_camera );
+					var intersects = raycaster.intersectObjects( scene.children );
+					var first_intersect = first_visible_intersect(intersects)
+					if ( first_intersect != null ) {
+						focused_group = update_highlights(first_intersect.object);
+						if (focused_group != null){
+							document.body.style.cursor = 'pointer'
+						} else{
+							document.body.style.cursor = 'auto'
+						}
+					} else {
+						focused_group = null;
+						document.body.style.cursor = 'auto'
+						turn_off_highlights();
+		            }
+		        // }
+
+			}
+
+			function onDocumentMouseDown( event ) {
+				event.preventDefault();
+
+				// drag camera rotation interaction
+				
+				mouse_down.x = event.clientX;
+				mouse_down.y = event.clientY;
+
+				if (view_mode == 'street'){
+					isUserDragging = true;
+					onPointerDownLon = lon;
+					onPointerDownLat = lat;
+				}
+
+
+			}
+
+			function checkMoved(event) {
+
+				var diffX = Math.abs(mouse_down.x - event.clientX)
+				var diffY = Math.abs(mouse_down.y - event.clientY)
+				var diff = diffX + diffY
+
+				return diff > 3
+
+			}
+
+			function onDocumentMouseClick( event ) {
+				event.preventDefault();
+
+				const {offsetX, offsetY} = event;
+
+				isUserDragging = false;
+
+				if (!checkMoved(event)) {
+					if (focused_group != null){
+						console.log(focused_group)
+						if (focused_group.startsWith('style-')){
+							var payload = {'event_type': 'change_arch_style',
+								'style': focused_group.substring(6),
+								'mouseX': offsetX,
+								'mouseY': offsetY,
+							};
+
+						} else {
+							var payload = {'event_type': 'material_selection',
+								'group': focused_group,
+								'available_options':get_group_style_options(focused_group),
+								'mouseX': offsetX,
+								'mouseY': offsetY,
+							};
+						}
+						// Send if surface clicked
+						post_iframe_message(payload)
+					}
+					// Send null event of material_selection type to the parent to indicate clickaway from that surface
+					else {
+						// console.log('click - focused_group === null');
+						post_iframe_message({
+						'event_type': 'material_selection',
+						'group': null,
+						'mouseX': offsetX,
+						'mouseY': offsetY,
+					})
+					}
+				}
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+
+				if (view_mode == 'street'){
+					
+					//horizontal rotation
+					var theta = THREE.Math.degToRad( lon );
+					target.x = current_camera.position.x + Math.cos( theta );
+					target.z = current_camera.position.z + Math.sin( theta );
+
+					//vertical rotation
+					lat = Math.max( - 85, Math.min( 85, lat ) );
+					var phi = THREE.Math.degToRad( 90 - lat );
+					target.y = current_camera.position.y + Math.cos( phi );
+
+					// console.log(target)
+
+					current_camera.lookAt( target );
+					current_camera.updateProjectionMatrix();
+
+				};
+
+				if (current_camera != null){
+					renderer.render( scene, current_camera );
+				}
+			}
+
+			
+
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,439 @@
+{
+    "structural_options": {
+        "fh2": {
+            "dining": [
+                "diningB"
+            ],
+            "kitchen": [
+                "kitchenA"
+            ]
+        }
+    },
+    "clickable": {
+        "fh2": {
+            "lot": false,
+            "holiday": false,
+            "roof": false,
+            "siding": false,
+            "sidingFront": false,
+            "windows": false,
+            "soffits": false,
+            "porches": false,
+            "trim": false,
+            "base": false,
+            "doors": false
+        }
+    },
+    "preset_selections": {
+        "architectural_style": "fh2",
+        "edit": {
+            "fh2": {
+                "lot": [
+                    null,
+                    null
+                ],
+                "holiday": [
+                    "jolly",
+                    "white"
+                ],
+                "roof": [
+                    "metalSeam",
+                    "white"
+                ],
+                "siding": [
+                    "lap",
+                    "white"
+                ],
+                "sidingFront": [
+                    "lap",
+                    "white"
+                ],
+                "windows": [
+                    "standard",
+                    "white"
+                ],
+                "soffits": [
+                    "standard",
+                    "white"
+                ],
+                "porches": [
+                    "standard",
+                    "white"
+                ],
+                "trim": [
+                    "standard",
+                    "white"
+                ],
+                "base": [
+                    "concrete",
+                    "white"
+                ],
+                "doors": [
+                    "standard",
+                    "white"
+                ]
+            }
+        },
+        "structural_options": {
+            "fh2": {
+                "dining": "diningB",
+                "kitchen": "kitchenA"
+            }
+        }
+    },
+    "architectural_styles": {
+        "fh2": {
+            "lot": {
+                "base": {
+                    "edit": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-lot-base-edit-x-surface.obj"
+                            ],
+                            "materials": {
+                                "setbacks": [
+                                    "models/holiday/mtls/fh2-lot-base-edit-x-surface-setbacks.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "holiday": {
+                "base": {
+                    "jolly": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-holiday-base-jolly-x-lights1.obj",
+                                "models/holiday/objs/fh2-holiday-base-jolly-x-lights2.obj",
+                                "models/holiday/objs/fh2-holiday-base-jolly-x-snowmanCarrot.obj",
+                                "models/holiday/objs/fh2-holiday-base-jolly-x-snowmanSticks.obj",
+                                "models/holiday/objs/fh2-holiday-base-jolly-x-snowmanSnow.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-holiday-base-jolly-x-lights1-white.mtl",
+                                    "models/holiday/mtls/fh2-holiday-base-jolly-x-lights2-white.mtl",
+                                    "models/holiday/mtls/fh2-holiday-base-jolly-x-snowmanCarrot-white.mtl",
+                                    "models/holiday/mtls/fh2-holiday-base-jolly-x-snowmanSticks-white.mtl",
+                                    "models/holiday/mtls/fh2-holiday-base-jolly-x-snowmanSnow-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "roof": {
+                "base": {
+                    "metalSeam": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-roof-base-metalSeam-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-roof-base-metalSeam-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "siding": {
+                "base": {
+                    "lap": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-siding-base-lap-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-siding-base-lap-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "back": {
+                    "lap": {
+                        "kitchenA": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-siding-back-lap-kitchenA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-siding-back-lap-kitchenA-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "sides": {
+                    "lap": {
+                        "diningB": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-siding-sides-lap-diningB-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-siding-sides-lap-diningB-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "sidingFront": {
+                "base": {
+                    "lap": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-sidingFront-base-lap-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-sidingFront-base-lap-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    },
+                    "board": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-sidingFront-base-board-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-sidingFront-base-board-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "windows": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-windows-base-standard-x-glass.obj",
+                                "models/holiday/objs/fh2-windows-base-standard-x-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-windows-base-standard-x-glass-white.mtl",
+                                    "models/holiday/mtls/fh2-windows-base-standard-x-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "sides": {
+                    "standard": {
+                        "diningB": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-windows-sides-standard-diningB-glass.obj",
+                                "models/holiday/objs/fh2-windows-sides-standard-diningB-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-windows-sides-standard-diningB-glass-white.mtl",
+                                    "models/holiday/mtls/fh2-windows-sides-standard-diningB-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "soffits": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-soffits-base-standard-x-facia.obj",
+                                "models/holiday/objs/fh2-soffits-base-standard-x-soffit.obj",
+                                "models/holiday/objs/fh2-soffits-base-standard-x-gutter.obj",
+                                "models/holiday/objs/fh2-soffits-base-standard-x-pCeiling.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-soffits-base-standard-x-facia-white.mtl",
+                                    "models/holiday/mtls/fh2-soffits-base-standard-x-soffit-white.mtl",
+                                    "models/holiday/mtls/fh2-soffits-base-standard-x-gutter-white.mtl",
+                                    "models/holiday/mtls/fh2-soffits-base-standard-x-pCeiling-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "porches": {
+                "front": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-porches-front-standard-x-deck.obj",
+                                "models/holiday/objs/fh2-porches-front-standard-x-railing.obj",
+                                "models/holiday/objs/fh2-porches-front-standard-x-top.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-porches-front-standard-x-deck-white.mtl",
+                                    "models/holiday/mtls/fh2-porches-front-standard-x-railing-white.mtl",
+                                    "models/holiday/mtls/fh2-porches-front-standard-x-top-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "back": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-porches-back-standard-x-deck.obj",
+                                "models/holiday/objs/fh2-porches-back-standard-x-railing.obj",
+                                "models/holiday/objs/fh2-porches-back-standard-x-top.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-porches-back-standard-x-deck-white.mtl",
+                                    "models/holiday/mtls/fh2-porches-back-standard-x-railing-white.mtl",
+                                    "models/holiday/mtls/fh2-porches-back-standard-x-top-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "trim": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-trim-base-standard-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-trim-base-standard-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "sides": {
+                    "standard": {
+                        "diningB": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-trim-sides-standard-diningB-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-trim-sides-standard-diningB-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "porch": {
+                    "standard": {
+                        "kitchenA": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-trim-porch-standard-kitchenA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-trim-porch-standard-kitchenA-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "base": {
+                "base": {
+                    "concrete": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-base-base-concrete-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-base-base-concrete-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "doors": {
+                "front": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-doors-front-standard-x-hardware.obj",
+                                "models/holiday/objs/fh2-doors-front-standard-x-glass.obj",
+                                "models/holiday/objs/fh2-doors-front-standard-x-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-doors-front-standard-x-hardware-white.mtl",
+                                    "models/holiday/mtls/fh2-doors-front-standard-x-glass-white.mtl",
+                                    "models/holiday/mtls/fh2-doors-front-standard-x-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "porch": {
+                    "standard": {
+                        "kitchenA": {
+                            "meshes": [
+                                "models/holiday/objs/fh2-doors-porch-standard-kitchenA-hardware.obj",
+                                "models/holiday/objs/fh2-doors-porch-standard-kitchenA-glass.obj",
+                                "models/holiday/objs/fh2-doors-porch-standard-kitchenA-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/holiday/mtls/fh2-doors-porch-standard-kitchenA-hardware-white.mtl",
+                                    "models/holiday/mtls/fh2-doors-porch-standard-kitchenA-glass-white.mtl",
+                                    "models/holiday/mtls/fh2-doors-porch-standard-kitchenA-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "views": {
+        "edit": {
+            "camera": {
+                "position": [
+                    71,
+                    50,
+                    -242
+                ],
+                "target": [
+                    12,
+                    10,
+                    -190
+                ]
+            }
+        },
+        "street": {
+            "camera": {
+                "position": [
+                    9,
+                    9,
+                    -260
+                ],
+                "target": {
+                    "lat": 0,
+                    "lon": 90
+                }
+            },
+            "pano_background": "models/holiday/pano_background.jpg",
+            "pano_foreground": "models/holiday/pano_foreground_lr.png"
+        }
+    }
+}

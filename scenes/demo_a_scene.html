@@ -52,7 +52,6 @@
 
 			let scene_materials = {};
 			let scene_meshes = {};
-			let scene_materials_loading = {};
 			let scene_meshes_loading = {};
 			let scene_meshes_info = {};
 			let scene_info = null;
@@ -570,7 +569,6 @@
 									for (var i = 0; i < color.length; i++) {
 										if (!(color[i] in scene_meshes)){
 											scene_materials[color[i]] = null;
-											scene_materials_loading[color[i]] = false;
 										}
 									};
 								};
@@ -1081,10 +1079,16 @@
 					var intersects = raycaster.intersectObjects( scene.children );
 					var first_intersect = first_visible_intersect(intersects)
 					if ( first_intersect != null ) {
-						focused_group = update_highlights(first_intersect.object)
+						focused_group = update_highlights(first_intersect.object);
+						if (focused_group != null){
+							document.body.style.cursor = 'pointer'
+						} else{
+							document.body.style.cursor = 'auto'
+						}
 					} else {
 						focused_group = null;
-						turn_off_highlights()
+						document.body.style.cursor = 'auto'
+						turn_off_highlights();
 		            }
 		        // }
 

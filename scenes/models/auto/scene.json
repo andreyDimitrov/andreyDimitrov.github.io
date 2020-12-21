@@ -1,0 +1,527 @@
+{
+    "structural_options": {
+        "fh2": {
+            "dining": [
+                "diningA",
+                "diningB"
+            ],
+            "kitchen": [
+                "kitchenA",
+                "kitchenB"
+            ]
+        }
+    },
+    "clickable": {
+        "fh2": {
+            "lot": false,
+            "roof": false,
+            "siding": true,
+            "sidingFront": true,
+            "windows": false,
+            "soffits": false,
+            "porches": false,
+            "trim": false,
+            "base": false,
+            "doors": false
+        }
+    },
+    "preset_selections": {
+        "architectural_style": "fh2",
+        "edit": {
+            "fh2": {
+                "lot": [
+                    null,
+                    null
+                ],
+                "roof": [
+                    "shingles",
+                    "dark"
+                ],
+                "siding": [
+                    "lap",
+                    "white"
+                ],
+                "sidingFront": [
+                    "lap",
+                    "white"
+                ],
+                "windows": [
+                    "standard",
+                    "white"
+                ],
+                "soffits": [
+                    "standard",
+                    "white"
+                ],
+                "porches": [
+                    "standard",
+                    "white"
+                ],
+                "trim": [
+                    "standard",
+                    "white"
+                ],
+                "base": [
+                    "concrete",
+                    "white"
+                ],
+                "doors": [
+                    "standard",
+                    "white"
+                ]
+            }
+        },
+        "structural_options": {
+            "fh2": {
+                "dining": "diningA",
+                "kitchen": "kitchenA"
+            }
+        }
+    },
+    "architectural_styles": {
+        "fh2": {
+            "lot": {
+                "base": {
+                    "edit": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-lot-base-edit-x-surface.obj"
+                            ],
+                            "materials": {
+                                "setbacks": [
+                                    "models/auto/mtls/fh2-lot-base-edit-x-surface-setbacks.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "roof": {
+                "base": {
+                    "shingles": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-roof-base-shingles-x-surface.obj"
+                            ],
+                            "materials": {
+                                "dark": [
+                                    "models/auto/mtls/fh2-roof-base-shingles-x-surface-dark.mtl"
+                                ]
+                            }
+                        }
+                    },
+                    "metalSeam": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-roof-base-metalSeam-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-roof-base-metalSeam-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "siding": {
+                "base": {
+                    "lap": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-siding-base-lap-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-siding-base-lap-x-surface-white.mtl"
+                                ],
+                                "waterloo": [
+                                    "models/auto/mtls/fh2-siding-base-lap-x-surface-waterloo.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "back": {
+                    "lap": {
+                        "kitchenA": {
+                            "meshes": [
+                                "models/auto/objs/fh2-siding-back-lap-kitchenA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-siding-back-lap-kitchenA-surface-white.mtl"
+                                ],
+                                "waterloo": [
+                                    "models/auto/mtls/fh2-siding-back-lap-kitchenA-surface-waterloo.mtl"
+                                ]
+                            }
+                        },
+                        "kitchenB": {
+                            "meshes": [
+                                "models/auto/objs/fh2-siding-back-lap-kitchenB-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-siding-back-lap-kitchenB-surface-white.mtl"
+                                ],
+                                "waterloo": [
+                                    "models/auto/mtls/fh2-siding-back-lap-kitchenB-surface-waterloo.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "sides": {
+                    "lap": {
+                        "diningA": {
+                            "meshes": [
+                                "models/auto/objs/fh2-siding-sides-lap-diningA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-siding-sides-lap-diningA-surface-white.mtl"
+                                ],
+                                "waterloo": [
+                                    "models/auto/mtls/fh2-siding-sides-lap-diningA-surface-waterloo.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/auto/objs/fh2-siding-sides-lap-diningB-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-siding-sides-lap-diningB-surface-white.mtl"
+                                ],
+                                "waterloo": [
+                                    "models/auto/mtls/fh2-siding-sides-lap-diningB-surface-waterloo.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "sidingFront": {
+                "base": {
+                    "lap": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-sidingFront-base-lap-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-sidingFront-base-lap-x-surface-white.mtl"
+                                ],
+                                "waterloo": [
+                                    "models/auto/mtls/fh2-sidingFront-base-lap-x-surface-waterloo.mtl"
+                                ]
+                            }
+                        }
+                    },
+                    "board": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-sidingFront-base-board-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-sidingFront-base-board-x-surface-white.mtl"
+                                ],
+                                "waterloo": [
+                                    "models/auto/mtls/fh2-sidingFront-base-board-x-surface-waterloo.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "windows": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-windows-base-standard-x-glass.obj",
+                                "models/auto/objs/fh2-windows-base-standard-x-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-windows-base-standard-x-glass-white.mtl",
+                                    "models/auto/mtls/fh2-windows-base-standard-x-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "porch": {
+                    "standard": {
+                        "kitchenB": {
+                            "meshes": [
+                                "models/auto/objs/fh2-windows-porch-standard-kitchenB-glass.obj",
+                                "models/auto/objs/fh2-windows-porch-standard-kitchenB-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-windows-porch-standard-kitchenB-glass-white.mtl",
+                                    "models/auto/mtls/fh2-windows-porch-standard-kitchenB-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "sides": {
+                    "standard": {
+                        "diningA": {
+                            "meshes": [
+                                "models/auto/objs/fh2-windows-sides-standard-diningA-glass.obj",
+                                "models/auto/objs/fh2-windows-sides-standard-diningA-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-windows-sides-standard-diningA-glass-white.mtl",
+                                    "models/auto/mtls/fh2-windows-sides-standard-diningA-frame-white.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/auto/objs/fh2-windows-sides-standard-diningB-glass.obj",
+                                "models/auto/objs/fh2-windows-sides-standard-diningB-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-windows-sides-standard-diningB-glass-white.mtl",
+                                    "models/auto/mtls/fh2-windows-sides-standard-diningB-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "soffits": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-soffits-base-standard-x-facia.obj",
+                                "models/auto/objs/fh2-soffits-base-standard-x-soffit.obj",
+                                "models/auto/objs/fh2-soffits-base-standard-x-gutter.obj",
+                                "models/auto/objs/fh2-soffits-base-standard-x-pCeiling.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-soffits-base-standard-x-facia-white.mtl",
+                                    "models/auto/mtls/fh2-soffits-base-standard-x-soffit-white.mtl",
+                                    "models/auto/mtls/fh2-soffits-base-standard-x-gutter-white.mtl",
+                                    "models/auto/mtls/fh2-soffits-base-standard-x-pCeiling-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "porches": {
+                "front": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-porches-front-standard-x-deck.obj",
+                                "models/auto/objs/fh2-porches-front-standard-x-railing.obj",
+                                "models/auto/objs/fh2-porches-front-standard-x-top.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-porches-front-standard-x-deck-white.mtl",
+                                    "models/auto/mtls/fh2-porches-front-standard-x-railing-white.mtl",
+                                    "models/auto/mtls/fh2-porches-front-standard-x-top-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "back": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-porches-back-standard-x-deck.obj",
+                                "models/auto/objs/fh2-porches-back-standard-x-railing.obj",
+                                "models/auto/objs/fh2-porches-back-standard-x-top.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-porches-back-standard-x-deck-white.mtl",
+                                    "models/auto/mtls/fh2-porches-back-standard-x-railing-white.mtl",
+                                    "models/auto/mtls/fh2-porches-back-standard-x-top-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "trim": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-trim-base-standard-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-trim-base-standard-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "sides": {
+                    "standard": {
+                        "diningA": {
+                            "meshes": [
+                                "models/auto/objs/fh2-trim-sides-standard-diningA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-trim-sides-standard-diningA-surface-white.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/auto/objs/fh2-trim-sides-standard-diningB-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-trim-sides-standard-diningB-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "porch": {
+                    "standard": {
+                        "kitchenA": {
+                            "meshes": [
+                                "models/auto/objs/fh2-trim-porch-standard-kitchenA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-trim-porch-standard-kitchenA-surface-white.mtl"
+                                ]
+                            }
+                        },
+                        "kitchenB": {
+                            "meshes": [
+                                "models/auto/objs/fh2-trim-porch-standard-kitchenB-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-trim-porch-standard-kitchenB-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "base": {
+                "base": {
+                    "concrete": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-base-base-concrete-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-base-base-concrete-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "doors": {
+                "front": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/auto/objs/fh2-doors-front-standard-x-hardware.obj",
+                                "models/auto/objs/fh2-doors-front-standard-x-glass.obj",
+                                "models/auto/objs/fh2-doors-front-standard-x-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-doors-front-standard-x-hardware-white.mtl",
+                                    "models/auto/mtls/fh2-doors-front-standard-x-glass-white.mtl",
+                                    "models/auto/mtls/fh2-doors-front-standard-x-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "porch": {
+                    "standard": {
+                        "kitchenA": {
+                            "meshes": [
+                                "models/auto/objs/fh2-doors-porch-standard-kitchenA-hardware.obj",
+                                "models/auto/objs/fh2-doors-porch-standard-kitchenA-glass.obj",
+                                "models/auto/objs/fh2-doors-porch-standard-kitchenA-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-doors-porch-standard-kitchenA-hardware-white.mtl",
+                                    "models/auto/mtls/fh2-doors-porch-standard-kitchenA-glass-white.mtl",
+                                    "models/auto/mtls/fh2-doors-porch-standard-kitchenA-frame-white.mtl"
+                                ]
+                            }
+                        },
+                        "kitchenB": {
+                            "meshes": [
+                                "models/auto/objs/fh2-doors-porch-standard-kitchenB-hardware.obj",
+                                "models/auto/objs/fh2-doors-porch-standard-kitchenB-glass.obj",
+                                "models/auto/objs/fh2-doors-porch-standard-kitchenB-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/auto/mtls/fh2-doors-porch-standard-kitchenB-hardware-white.mtl",
+                                    "models/auto/mtls/fh2-doors-porch-standard-kitchenB-glass-white.mtl",
+                                    "models/auto/mtls/fh2-doors-porch-standard-kitchenB-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "views": {
+        "edit": {
+            "camera": {
+                "position": [
+                    71,
+                    50,
+                    -242
+                ],
+                "target": [
+                    12,
+                    10,
+                    -190
+                ]
+            }
+        },
+        "street": {
+            "camera": {
+                "position": [
+                    9,
+                    9,
+                    -260
+                ],
+                "target": {
+                    "lat": 0,
+                    "lon": 90
+                }
+            },
+            "pano_background": "models/auto/pano_background.jpg",
+            "pano_foreground": "models/auto/pano_foreground_lr.png"
+        }
+    }
+}
