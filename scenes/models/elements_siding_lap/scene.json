@@ -1,0 +1,80 @@
+{
+    "clickable": {
+        "templates": {
+            "lot": false,
+            "siding": true
+        }
+    },
+    "preset_selections": {
+        "architectural_style": "templates",
+        "edit": {
+            "templates": {
+                "lot": [
+                    "edit",
+                    "grid"
+                ],
+                "siding": [
+                    "lap",
+                    "white"
+                ]
+            }
+        }
+    },
+    "architectural_styles": {
+        "templates": {
+            "lot": {
+                "base": {
+                    "edit": {
+                        "x": {
+                            "meshes": [
+                                "models/elements_siding_lap/objs/templates-lot-base-edit-x-base.obj",
+                                "models/elements_siding_lap/objs/templates-lot-base-edit-x-scaffold.obj"
+                            ],
+                            "materials": {
+                                "grid": [
+                                    "models/elements_siding_lap/mtls/templates-lot-base-edit-x-base-grid.mtl",
+                                    "models/elements_siding_lap/mtls/templates-lot-base-edit-x-scaffold-grid.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "siding": {
+                "base": {
+                    "lap": {
+                        "x": {
+                            "meshes": [
+                                "models/elements_siding_lap/objs/templates-siding-base-lap-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/elements_siding_lap/mtls/templates-siding-base-lap-x-surface-white.mtl"
+                                ],
+                                "waterloo": [
+                                    "models/elements_siding_lap/mtls/templates-siding-base-lap-x-surface-waterloo.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "views": {
+        "edit": {
+            "camera": {
+                "position": [
+                    30,
+                    25,
+                    30
+                ],
+                "target": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        }
+    }
+}
