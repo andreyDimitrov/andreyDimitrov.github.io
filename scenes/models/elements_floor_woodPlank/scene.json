@@ -2,7 +2,7 @@
     "clickable": {
         "templates": {
             "lot": false,
-            "siding": true
+            "floor": true
         }
     },
     "preset_selections": {
@@ -13,8 +13,8 @@
                     "edit",
                     "grid"
                 ],
-                "siding": [
-                    "lap",
+                "floor": [
+                    "woodPlank",
                     "white"
                 ]
             }
@@ -27,32 +27,35 @@
                     "edit": {
                         "x": {
                             "meshes": [
-                                "models/elements_siding_lap/objs/templates-lot-base-edit-x-base.obj",
-                                "models/elements_siding_lap/objs/templates-lot-base-edit-x-scaffold.obj"
+                                "models/elements_floor_woodPlank/objs/templates-lot-base-edit-x-base.obj",
+                                "models/elements_floor_woodPlank/objs/templates-lot-base-edit-x-scaffold.obj"
                             ],
                             "materials": {
                                 "grid": [
-                                    "models/elements_siding_lap/mtls/templates-lot-base-edit-x-base-grid.mtl",
-                                    "models/elements_siding_lap/mtls/templates-lot-base-edit-x-scaffold-grid.mtl"
+                                    "models/elements_floor_woodPlank/mtls/templates-lot-base-edit-x-base-grid.mtl",
+                                    "models/elements_floor_woodPlank/mtls/templates-lot-base-edit-x-scaffold-grid.mtl"
                                 ]
                             }
                         }
                     }
                 }
             },
-            "siding": {
+            "floor": {
                 "base": {
-                    "lap": {
+                    "woodPlank": {
                         "x": {
                             "meshes": [
-                                "models/elements_siding_lap/objs/templates-siding-base-lap-x-surface.obj"
+                                "models/elements_floor_woodPlank/objs/templates-floor-base-woodPlank-x-surface.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/elements_siding_lap/mtls/templates-siding-base-lap-x-surface-white.mtl"
+                                    "models/elements_floor_woodPlank/mtls/templates-floor-base-woodPlank-x-surface-white.mtl"
                                 ],
-                                "waterloo": [
-                                    "models/elements_siding_lap/mtls/templates-siding-base-lap-x-surface-waterloo.mtl"
+                                "hillCountry": [
+                                    "models/elements_floor_woodPlank/mtls/templates-floor-base-woodPlank-x-surface-hillCountry.mtl"
+                                ],
+                                "mountainAsh": [
+                                    "models/elements_floor_woodPlank/mtls/templates-floor-base-woodPlank-x-surface-mountainAsh.mtl"
                                 ]
                             }
                         }

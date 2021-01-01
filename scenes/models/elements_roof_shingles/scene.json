@@ -2,7 +2,7 @@
     "clickable": {
         "templates": {
             "lot": false,
-            "siding": true
+            "roof": true
         }
     },
     "preset_selections": {
@@ -13,9 +13,9 @@
                     "edit",
                     "grid"
                 ],
-                "siding": [
-                    "lap",
-                    "white"
+                "roof": [
+                    "shingles",
+                    "dark"
                 ]
             }
         }
@@ -27,32 +27,32 @@
                     "edit": {
                         "x": {
                             "meshes": [
-                                "models/elements_siding_lap/objs/templates-lot-base-edit-x-base.obj",
-                                "models/elements_siding_lap/objs/templates-lot-base-edit-x-scaffold.obj"
+                                "models/elements_roof_shingles/objs/templates-lot-base-edit-x-base.obj",
+                                "models/elements_roof_shingles/objs/templates-lot-base-edit-x-scaffold.obj"
                             ],
                             "materials": {
                                 "grid": [
-                                    "models/elements_siding_lap/mtls/templates-lot-base-edit-x-base-grid.mtl",
-                                    "models/elements_siding_lap/mtls/templates-lot-base-edit-x-scaffold-grid.mtl"
+                                    "models/elements_roof_shingles/mtls/templates-lot-base-edit-x-base-grid.mtl",
+                                    "models/elements_roof_shingles/mtls/templates-lot-base-edit-x-scaffold-grid.mtl"
                                 ]
                             }
                         }
                     }
                 }
             },
-            "siding": {
+            "roof": {
                 "base": {
-                    "lap": {
+                    "shingles": {
                         "x": {
                             "meshes": [
-                                "models/elements_siding_lap/objs/templates-siding-base-lap-x-surface.obj"
+                                "models/elements_roof_shingles/objs/templates-roof-base-shingles-x-surface.obj"
                             ],
                             "materials": {
-                                "white": [
-                                    "models/elements_siding_lap/mtls/templates-siding-base-lap-x-surface-white.mtl"
+                                "dark": [
+                                    "models/elements_roof_shingles/mtls/templates-roof-base-shingles-x-surface-dark.mtl"
                                 ],
-                                "waterloo": [
-                                    "models/elements_siding_lap/mtls/templates-siding-base-lap-x-surface-waterloo.mtl"
+                                "light": [
+                                    "models/elements_roof_shingles/mtls/templates-roof-base-shingles-x-surface-light.mtl"
                                 ]
                             }
                         }

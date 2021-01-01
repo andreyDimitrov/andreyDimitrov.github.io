@@ -14,7 +14,7 @@
                     "grid"
                 ],
                 "siding": [
-                    "lap",
+                    "board",
                     "white"
                 ]
             }
@@ -27,13 +27,13 @@
                     "edit": {
                         "x": {
                             "meshes": [
-                                "models/elements_siding_lap/objs/templates-lot-base-edit-x-base.obj",
-                                "models/elements_siding_lap/objs/templates-lot-base-edit-x-scaffold.obj"
+                                "models/elements_siding_board/objs/templates-lot-base-edit-x-base.obj",
+                                "models/elements_siding_board/objs/templates-lot-base-edit-x-scaffold.obj"
                             ],
                             "materials": {
                                 "grid": [
-                                    "models/elements_siding_lap/mtls/templates-lot-base-edit-x-base-grid.mtl",
-                                    "models/elements_siding_lap/mtls/templates-lot-base-edit-x-scaffold-grid.mtl"
+                                    "models/elements_siding_board/mtls/templates-lot-base-edit-x-base-grid.mtl",
+                                    "models/elements_siding_board/mtls/templates-lot-base-edit-x-scaffold-grid.mtl"
                                 ]
                             }
                         }
@@ -42,17 +42,17 @@
             },
             "siding": {
                 "base": {
-                    "lap": {
+                    "board": {
                         "x": {
                             "meshes": [
-                                "models/elements_siding_lap/objs/templates-siding-base-lap-x-surface.obj"
+                                "models/elements_siding_board/objs/templates-siding-base-board-x-surface.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/elements_siding_lap/mtls/templates-siding-base-lap-x-surface-white.mtl"
+                                    "models/elements_siding_board/mtls/templates-siding-base-board-x-surface-white.mtl"
                                 ],
                                 "waterloo": [
-                                    "models/elements_siding_lap/mtls/templates-siding-base-lap-x-surface-waterloo.mtl"
+                                    "models/elements_siding_board/mtls/templates-siding-base-board-x-surface-waterloo.mtl"
                                 ]
                             }
                         }
