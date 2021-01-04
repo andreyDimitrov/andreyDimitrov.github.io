@@ -56,6 +56,12 @@
                                 ],
                                 "mountainAsh": [
                                     "models/elements_floor_woodPlank/mtls/templates-floor-base-woodPlank-x-surface-mountainAsh.mtl"
+                                ],
+                                "plain1": [
+                                    "models/elements_floor_woodPlank/mtls/templates-floor-base-woodPlank-x-surface-plain1.mtl"
+                                ],
+                                "displacement": [
+                                    "models/elements_floor_woodPlank/mtls/templates-floor-base-woodPlank-x-surface-displacement.mtl"
                                 ]
                             }
                         }
