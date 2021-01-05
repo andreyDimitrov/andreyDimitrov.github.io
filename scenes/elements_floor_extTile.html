@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Element Explorer</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		<div id="info">
+		<!-- <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - OBJLoader + MTLLoader -->
+		</div>
+
+		<script type="module">
+
+			import * as THREE from '../build/three.module.js';
+
+			import { MTLLoader } from './jsm/loaders/MTLLoader.js';
+			import { OBJLoader } from './jsm/loaders/OBJLoader.js';
+
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+
+			import { GUI } from './jsm/libs/dat.gui.module.js';
+
+			let windowHalfX = window.innerWidth / 2;
+			let windowHalfY = window.innerHeight / 2;
+
+			let controls, scene, renderer;
+			let camera;
+
+			// view vars
+			let view_mode;
+
+			// loaders
+			const loader = new THREE.FileLoader();
+			const mtl_loader = new MTLLoader();
+			const obj_loader = new OBJLoader();
+			var texture_loader = new THREE.TextureLoader();
+
+			// scene vars
+			let scene_dir = 'models/elements_floor_extTile/';
+			let models = {};
+			let active_model = null;
+			let scene_materials = {};
+			let scene_meshes = {};
+			let scene_meshes_loading = {};
+			let scene_meshes_info = {};
+			let scene_info = null;
+
+			// gui
+			let params = {
+				color: ""
+			};
+
+			init();
+			animate();
+
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+
+				// scene
+				scene = new THREE.Scene();
+
+				const ambientLight = new THREE.AmbientLight( 0xffffff );
+				scene.add( ambientLight );
+
+				view_mode = null;
+				camera = null;
+
+
+				// load scene info
+				init_scene('scene');
+
+
+				renderer = new THREE.WebGLRenderer({antialias: true, alpha: true });
+				renderer.shadowMap.enabled = true;
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+
+
+			// -------------------------------------------
+
+			// HELPER FUNCTIONS
+
+
+			function make_gui(){
+
+				// get colors
+				var colors = find_colors()
+				console.log(colors)
+
+				// assign first color
+				params.color = colors[0]
+
+				// Gui - for standalone testing
+				const gui = new GUI()
+				const dropDown = gui.addFolder( 'Options' )
+
+				dropDown.open();
+
+			    // callbacks
+			    dropDown.add( params, 'color', colors).
+			        onChange(
+			            function() {
+			            	update_color(params.color)
+			            }
+			        );
+
+			    
+			}
+
+			function prepare_views(){
+		
+				// Build edit view
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				var cam_pos = scene_info['views']['edit']['camera']['position']
+				camera.position.x = cam_pos[0];
+				camera.position.y = cam_pos[1];
+				camera.position.z = cam_pos[2];
+				scene.add( camera );
+
+				controls = new OrbitControls( camera, renderer.domElement );
+				controls.maxPolarAngle = Math.PI * 0.5;
+				controls.minDistance = 1;
+				controls.maxDistance = 200;
+				var cam_target = scene_info['views']['edit']['camera']['target']
+				controls.target.set(cam_target[0], cam_target[1], cam_target[2]);
+				controls.update();
+			}
+
+			function prepare_model(model){
+
+				// clear scene stuff
+				model['selections'] = {};
+
+				// rebuild with empties
+				for (const [g, group] of Object.entries(model['info'])) {
+					model['selections'][g] = [null, null];
+					for (const [p, part] of Object.entries(group)) {
+						for (const [s, style] of Object.entries(part)) {
+							for (const [l, layout] of Object.entries(style)) {
+
+								for (var i = 0; i < layout["meshes"].length; i++) {
+									if (!(layout["meshes"][i] in scene_meshes)){
+										scene_meshes[layout["meshes"][i]] = null;
+										scene_meshes_loading[layout["meshes"][i]] = false;
+										scene_meshes_info[layout["meshes"][i]] = {
+											'group_name': g};
+									}	
+								};
+								for (const [c, color] of Object.entries(layout["materials"])) {
+									for (var i = 0; i < color.length; i++) {
+										if (!(color[i] in scene_meshes)){
+											scene_materials[color[i]] = null;
+										}
+									};
+								};
+							};
+						};
+					};
+				};
+
+			}
+
+			function update_scene() {
+				// console.log('updating scene')
+
+
+				// set everything to visible false
+				for (const [key, mesh] of Object.entries(scene_meshes)) {
+					if (mesh != null) {
+						mesh.visible = false;
+					};
+				};
+
+				// go through styles and set visible true to what's needed
+				var selections = models[active_model]['selections']
+				for (const [g, group_selection] of Object.entries(selections)) {
+					if (group_selection[0] != null) {
+						var lps = affected_part_layouts(g, group_selection[0]);
+						for (var i = 0; i < lps.length; i++) {
+							for (var j = 0; j < lps[i]['meshes'].length; j++) {
+								if (scene_meshes[lps[i]['meshes'][j]] != null){
+									scene_meshes[lps[i]['meshes'][j]].visible = true;
+								};
+							};
+						};
+					};
+				};
+
+			};
+
+			function affected_part_layouts(group_name, material_name, model=models[active_model], all_layouts=false) {
+
+				var lps = []
+				var group = model['info'][group_name]
+				
+				for (const [p, part] of Object.entries(group)) {
+					var mat = part[material_name]
+
+					var layouts = Object.keys(mat)
+					if (all_layouts){
+						for (var i = 0; i < layouts.length; i++) {
+							lps.push(mat[layouts[i]]);
+						};
+
+					} else {
+						if (layouts.includes('x')){
+							lps.push(mat['x']);
+						}
+					}
+
+				};
+
+				return lps;
+
+			};
+
+
+			function assign_style(group_name, material_name, color_name, model=models[active_model]) {
+
+				
+
+
+				// update selections
+				if ((material_name == null) | (color_name == null)){
+					
+					// removing a group from visibility
+					model['selections'][group_name] = [null, null];
+					update_scene();
+				
+				} else {
+
+					// console.log('assigning style')
+					
+					// adding or updating a group
+					model['selections'][group_name] = [material_name, color_name]
+
+					var lps = affected_part_layouts(group_name, material_name, model, true);
+					for (var i = 0; i < lps.length; i++) {
+						for (var j = 0; j < lps[i]['meshes'].length; j++) {
+							assign_style_per_mesh(lps[i]['meshes'][j], lps[i]['materials'][color_name][j]);
+						};
+					};
+					update_scene();
+				
+				}
+				
+			
+			};
+
+			function assign_style_per_mesh(obj_name, mtl_name) {
+
+				// if the mesh is being loaded, do nothing and let that process finish
+				if (scene_meshes_loading[obj_name] == true) {
+					return;
+				}
+
+				// mesh is not being loaded. If null, load, otherwise update material
+				if (scene_meshes[obj_name] == null) {
+
+					// lock
+					scene_meshes_loading[obj_name] = true;
+					obj_loader.load( obj_name,
+
+						function ( obj ) {
+
+							scene_meshes[obj_name] = obj.children[0];
+							scene_meshes[obj_name].userData['obj_name'] = obj_name;
+							scene.add( scene_meshes[obj_name] );
+							// unlock
+							scene_meshes_loading[obj_name] = false;
+
+							console.log('mesh loaded, toggle visibility');
+							update_scene()
+							
+							// material
+							assign_material(obj_name, mtl_name);
+							
+							
+
+						}, onProgress, onError );
+
+				} else {
+
+					// console.log('mesh exists, toggle visibility');
+					assign_material(obj_name, mtl_name)
+
+				};
+
+			};
+
+			function assign_material(mesh_name, material_name) {
+
+
+				// material is not being loaded. If null, load, otherwise update material
+				if (scene_materials[material_name] == null) {
+
+					mtl_loader.load( material_name,
+					
+						function ( mtl ) {
+
+							mtl.preload();
+							var mat_keys = Object.keys(mtl.materials);
+							// ASSUME: only one material
+							scene_materials[material_name] = mtl.materials[mat_keys[0]]
+							// console.log('mtl loaded, assigning');
+							scene_meshes[mesh_name].material = scene_materials[material_name]
+
+						}, onProgress, onError );
+
+				} else {
+					// console.log('mtl exists, assigning');
+					scene_meshes[mesh_name].material = scene_materials[material_name]
+				};
+
+			}
+
+
+			function init_scene(scene_name) {
+
+				loader.load(
+					scene_dir + scene_name + '.json',
+
+					function ( text ) {
+
+						scene_info = JSON.parse(text);
+
+						prepare_views()
+						
+
+						var model_names = Object.keys(scene_info['architectural_styles'])
+						for (var i = 0; i < model_names.length; i++) {
+							models[model_names[i]] = {
+								'info': {}
+							};
+							models[model_names[i]]['info'] = scene_info['architectural_styles'][model_names[i]]
+							prepare_model(models[model_names[i]]);
+						}
+						
+						active_model = scene_info['preset_selections']['architectural_style'];
+
+
+						// show part
+						var preset_selections = scene_info['preset_selections']['edit'][active_model]
+						for (const [group_name, selection] of Object.entries(preset_selections)) {
+							if (selection[0] == null){
+								assign_style(group_name, null, null);
+							} else {
+								assign_style(group_name, selection[0], selection[1]);
+							}
+						};
+
+						make_gui();
+						
+
+					}, onProgress, onError );
+			}
+
+
+
+			function find_colors(){
+
+				var groups = models[active_model]['info']
+
+				for (const [group_name, group] of Object.entries(groups)) {
+					if (group_name != 'lot'){
+						for (const [part_name, part] of Object.entries(group)) {
+							for (const [material_name, mat] of Object.entries(part)) {
+								var keys = Object.keys(mat)
+								return Object.keys(mat[keys[0]]['materials'])
+							}
+						}
+					}
+				}
+
+				return []
+
+			}
+
+			function update_color(new_color_name){
+
+				var groups = models[active_model]['info']
+
+				for (const [group_name, group] of Object.entries(groups)) {
+					if (group_name != 'lot'){
+						for (const [part_name, part] of Object.entries(group)) {
+							for (const [material_name, mat] of Object.entries(part)) {
+								assign_style(group_name, material_name, new_color_name);
+							}
+						}
+					}
+				}
+
+			}
+
+
+			function onProgress( xhr ) {
+
+				if ( xhr.lengthComputable ) {
+					const percentComplete = xhr.loaded / xhr.total * 100;
+					// console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+				}
+
+			};
+
+			function onError() { };
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+				if (camera != null){
+					renderer.render( scene, camera );
+				}
+			}
+
+			
+
+
+		</script>
+
+	</body>
+</html>

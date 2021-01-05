@@ -62,6 +62,9 @@
                                 ],
                                 "displacement": [
                                     "models/elements_floor_woodPlank/mtls/templates-floor-base-woodPlank-x-surface-displacement.mtl"
+                                ],
+                                "AO": [
+                                    "models/elements_floor_woodPlank/mtls/templates-floor-base-woodPlank-x-surface-AO.mtl"
                                 ]
                             }
                         }

@@ -1,0 +1,86 @@
+{
+    "clickable": {
+        "templates": {
+            "lot": false,
+            "floor": true
+        }
+    },
+    "preset_selections": {
+        "architectural_style": "templates",
+        "edit": {
+            "templates": {
+                "lot": [
+                    "edit",
+                    "grid"
+                ],
+                "floor": [
+                    "woodPlank",
+                    "beige"
+                ]
+            }
+        }
+    },
+    "architectural_styles": {
+        "templates": {
+            "lot": {
+                "base": {
+                    "edit": {
+                        "x": {
+                            "meshes": [
+                                "models/elements_floor_extTile/objs/templates-lot-base-edit-x-base.obj",
+                                "models/elements_floor_extTile/objs/templates-lot-base-edit-x-scaffold.obj"
+                            ],
+                            "materials": {
+                                "grid": [
+                                    "models/elements_floor_extTile/mtls/templates-lot-base-edit-x-base-grid.mtl",
+                                    "models/elements_floor_extTile/mtls/templates-lot-base-edit-x-scaffold-grid.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "floor": {
+                "base": {
+                    "woodPlank": {
+                        "x": {
+                            "meshes": [
+                                "models/elements_floor_extTile/objs/templates-floor-base-woodPlank-x-surface.obj"
+                            ],
+                            "materials": {
+                                "beige": [
+                                    "models/elements_floor_extTile/mtls/templates-floor-base-woodPlank-x-surface-beige.mtl"
+                                ],
+                                "displacement": [
+                                    "models/elements_floor_extTile/mtls/templates-floor-base-woodPlank-x-surface-displacement.mtl"
+                                ],
+                                "gray": [
+                                    "models/elements_floor_extTile/mtls/templates-floor-base-woodPlank-x-surface-gray.mtl"
+                                ],
+                                "displacement2": [
+                                    "models/elements_floor_extTile/mtls/templates-floor-base-woodPlank-x-surface-displacement2.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "views": {
+        "edit": {
+            "camera": {
+                "position": [
+                    20,
+                    15,
+                    20
+                ],
+                "target": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        }
+    }
+}
