@@ -1,0 +1,84 @@
+{
+    "clickable": {
+        "templates": {
+            "lot": false,
+            "intFloor": true
+        }
+    },
+    "preset_selections": {
+        "architectural_style": "templates",
+        "edit": {
+            "templates": {
+                "lot": [
+                    "edit",
+                    "grid"
+                ],
+                "intFloor": [
+                    "hardwood",
+                    "light_1"
+                ]
+            }
+        }
+    },
+    "architectural_styles": {
+        "templates": {
+            "lot": {
+                "base": {
+                    "edit": {
+                        "x": {
+                            "meshes": [
+                                "models/elements_intFloor_hardwood/objs/templates-lot-base-edit-x-base.obj",
+                                "models/elements_intFloor_hardwood/objs/templates-lot-base-edit-x-scaffold.obj",
+                                "models/elements_intFloor_hardwood/objs/templates-lot-base-edit-x-light.obj",
+                                "models/elements_intFloor_hardwood/objs/templates-lot-base-edit-x-hardware.obj"
+                            ],
+                            "materials": {
+                                "grid": [
+                                    "models/elements_intFloor_hardwood/mtls/templates-lot-base-edit-x-base-grid.mtl",
+                                    "models/elements_intFloor_hardwood/mtls/templates-lot-base-edit-x-scaffold-grid.mtl",
+                                    "models/elements_intFloor_hardwood/mtls/templates-lot-base-edit-x-light-grid.mtl",
+                                    "models/elements_intFloor_hardwood/mtls/templates-lot-base-edit-x-hardware-grid.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "intFloor": {
+                "base": {
+                    "hardwood": {
+                        "x": {
+                            "meshes": [
+                                "models/elements_intFloor_hardwood/objs/templates-intFloor-base-hardwood-x-surface.obj"
+                            ],
+                            "materials": {
+                                "light_1": [
+                                    "models/elements_intFloor_hardwood/mtls/templates-intFloor-base-hardwood-x-surface-light_1.mtl"
+                                ],
+                                "dark_1": [
+                                    "models/elements_intFloor_hardwood/mtls/templates-intFloor-base-hardwood-x-surface-dark_1.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "views": {
+        "edit": {
+            "camera": {
+                "position": [
+                    20,
+                    15,
+                    20
+                ],
+                "target": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        }
+    }
+}
