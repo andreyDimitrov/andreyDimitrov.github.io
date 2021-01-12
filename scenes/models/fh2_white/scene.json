@@ -1,0 +1,714 @@
+{
+    "markers":[
+        {
+            "type": "spin",
+            "name": "1_x_1",
+            "icon": "sprites/spin.svg",
+            "position": [14, 2.4, -100],
+            "scale": 1,
+            "model": "int1"
+        },
+        {
+            "type": "spin",
+            "name": "1_x_2",
+            "icon": "sprites/spin.svg",
+            "position": [19, 2.4, -110],
+            "scale": 1,
+            "model": "int1"
+        },
+        {
+            "type": "switch_model",
+            "name": "fh3",
+            "icon": "sprites/add.svg",
+            "position": [15, 30, -100],
+            "scale": 2,
+            "model": "fh2",
+            "structural_option": ["dining", "diningA"]
+        }
+    ],
+    "clickable": {
+        "fh2": {
+            "lot": false,
+            "roof": false,
+            "siding": false,
+            "sidingFront": false,
+            "windows": false,
+            "soffits": false,
+            "porches": false,
+            "trim": false,
+            "base": false,
+            "doors": false
+        },
+        "int1": {
+            "backsplash": false,
+            "counters": true,
+            "cabinets": false,
+            "ceiling": false,
+            "railing": false,
+            "lights": false,
+            "floors": false,
+            "bathFloors": false,
+            "trim": false,
+            "walls": false,
+            "windows": false,
+            "doors": false
+        }
+    },
+    "preset_selections": {
+        "architectural_style": "int1",
+        "structural_options": {
+            "fh2": {
+                "dining": "diningA",
+                "kitchen": "kitchenA"
+            },
+            "int1": {}
+        },
+        "edit": {
+            "fh2": {
+                "lot": [
+                    "edit",
+                    "setbacks"
+                ],
+                "roof": [
+                    "metalSeam",
+                    "white"
+                ],
+                "siding": [
+                    "lap",
+                    "white"
+                ],
+                "sidingFront": [
+                    "lap",
+                    "white"
+                ],
+                "windows": [
+                    "standard",
+                    "white"
+                ],
+                "soffits": [
+                    "standard",
+                    "white"
+                ],
+                "porches": [
+                    "standard",
+                    "white"
+                ],
+                "trim": [
+                    "standard",
+                    "white"
+                ],
+                "base": [
+                    "concrete",
+                    "white"
+                ],
+                "doors": [
+                    "standard",
+                    "white"
+                ]
+            },
+            "int1": {
+                "backsplash": [
+                    "standard",
+                    "white"
+                ],
+                "counters": [
+                    "standard",
+                    "white"
+                ],
+                "cabinets": [
+                    "standard",
+                    "white"
+                ],
+                "ceiling": [
+                    "standard",
+                    "white"
+                ],
+                "railing": [
+                    "standard",
+                    "white"
+                ],
+                "lights": [
+                    "standard",
+                    "white"
+                ],
+                "floors": [
+                    "hardwood",
+                    "light"
+                ],
+                "bathFloors": [
+                    "tile",
+                    "white"
+                ],
+                "trim": [
+                    "standard",
+                    "white"
+                ],
+                "walls": [
+                    "paint",
+                    "white"
+                ],
+                "windows": [
+                    "standard",
+                    "white"
+                ],
+                "doors": [
+                    "standard",
+                    "white"
+                ]
+            }
+        }
+    },
+    "architectural_styles": {
+        "fh2": {
+            "lot": {
+                "base": {
+                    "edit": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-lot-base-edit-x-surface.obj"
+                            ],
+                            "materials": {
+                                "setbacks": [
+                                    "models/fh2_white/mtls/fh2-lot-base-edit-x-surface-setbacks.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "roof": {
+                "base": {
+                    "metalSeam": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-roof-base-metalSeam-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-roof-base-metalSeam-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "siding": {
+                "base": {
+                    "lap": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-siding-base-lap-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-siding-base-lap-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "back": {
+                    "lap": {
+                        "kitchenA": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-siding-back-lap-kitchenA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-siding-back-lap-kitchenA-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "sides": {
+                    "lap": {
+                        "diningA": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-siding-sides-lap-diningA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-siding-sides-lap-diningA-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "sidingFront": {
+                "base": {
+                    "lap": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-sidingFront-base-lap-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-sidingFront-base-lap-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "windows": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-windows-base-standard-x-glass.obj",
+                                "models/fh2_white/objs/fh2-windows-base-standard-x-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-windows-base-standard-x-glass-white.mtl",
+                                    "models/fh2_white/mtls/fh2-windows-base-standard-x-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "sides": {
+                    "standard": {
+                        "diningA": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-windows-sides-standard-diningA-glass.obj",
+                                "models/fh2_white/objs/fh2-windows-sides-standard-diningA-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-windows-sides-standard-diningA-glass-white.mtl",
+                                    "models/fh2_white/mtls/fh2-windows-sides-standard-diningA-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "soffits": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-soffits-base-standard-x-facia.obj",
+                                "models/fh2_white/objs/fh2-soffits-base-standard-x-soffit.obj",
+                                "models/fh2_white/objs/fh2-soffits-base-standard-x-gutter.obj",
+                                "models/fh2_white/objs/fh2-soffits-base-standard-x-pCeiling.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-soffits-base-standard-x-facia-white.mtl",
+                                    "models/fh2_white/mtls/fh2-soffits-base-standard-x-soffit-white.mtl",
+                                    "models/fh2_white/mtls/fh2-soffits-base-standard-x-gutter-white.mtl",
+                                    "models/fh2_white/mtls/fh2-soffits-base-standard-x-pCeiling-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "porches": {
+                "front": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-porches-front-standard-x-deck.obj",
+                                "models/fh2_white/objs/fh2-porches-front-standard-x-railing.obj",
+                                "models/fh2_white/objs/fh2-porches-front-standard-x-top.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-porches-front-standard-x-deck-white.mtl",
+                                    "models/fh2_white/mtls/fh2-porches-front-standard-x-railing-white.mtl",
+                                    "models/fh2_white/mtls/fh2-porches-front-standard-x-top-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "back": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-porches-back-standard-x-deck.obj",
+                                "models/fh2_white/objs/fh2-porches-back-standard-x-railing.obj",
+                                "models/fh2_white/objs/fh2-porches-back-standard-x-top.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-porches-back-standard-x-deck-white.mtl",
+                                    "models/fh2_white/mtls/fh2-porches-back-standard-x-railing-white.mtl",
+                                    "models/fh2_white/mtls/fh2-porches-back-standard-x-top-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "trim": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-trim-base-standard-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-trim-base-standard-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "sides": {
+                    "standard": {
+                        "diningA": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-trim-sides-standard-diningA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-trim-sides-standard-diningA-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "porch": {
+                    "standard": {
+                        "kitchenA": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-trim-porch-standard-kitchenA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-trim-porch-standard-kitchenA-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "base": {
+                "base": {
+                    "concrete": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-base-base-concrete-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-base-base-concrete-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "doors": {
+                "front": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-doors-front-standard-x-hardware.obj",
+                                "models/fh2_white/objs/fh2-doors-front-standard-x-glass.obj",
+                                "models/fh2_white/objs/fh2-doors-front-standard-x-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-doors-front-standard-x-hardware-white.mtl",
+                                    "models/fh2_white/mtls/fh2-doors-front-standard-x-glass-white.mtl",
+                                    "models/fh2_white/mtls/fh2-doors-front-standard-x-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "porch": {
+                    "standard": {
+                        "kitchenA": {
+                            "meshes": [
+                                "models/fh2_white/objs/fh2-doors-porch-standard-kitchenA-hardware.obj",
+                                "models/fh2_white/objs/fh2-doors-porch-standard-kitchenA-glass.obj",
+                                "models/fh2_white/objs/fh2-doors-porch-standard-kitchenA-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/fh2-doors-porch-standard-kitchenA-hardware-white.mtl",
+                                    "models/fh2_white/mtls/fh2-doors-porch-standard-kitchenA-glass-white.mtl",
+                                    "models/fh2_white/mtls/fh2-doors-porch-standard-kitchenA-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "int1": {
+            "backsplash": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-backsplash-base-standard-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-backsplash-base-standard-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "counters": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-counters-base-standard-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-counters-base-standard-x-surface-white.mtl"
+                                ],
+                                "black": [
+                                    "models/fh2_white/mtls/int1-counters-base-standard-x-surface-black.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "cabinets": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-cabinets-base-standard-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-cabinets-base-standard-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "ceiling": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-ceiling-base-standard-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-ceiling-base-standard-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "railing": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-railing-base-standard-x-posts.obj",
+                                "models/fh2_white/objs/int1-railing-base-standard-x-top.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-railing-base-standard-x-posts-white.mtl",
+                                    "models/fh2_white/mtls/int1-railing-base-standard-x-top-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "lights": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-lights-base-standard-x-light.obj",
+                                "models/fh2_white/objs/int1-lights-base-standard-x-hardware.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-lights-base-standard-x-light-white.mtl",
+                                    "models/fh2_white/mtls/int1-lights-base-standard-x-hardware-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "floors": {
+                "base": {
+                    "hardwood": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-floors-base-hardwood-x-surface.obj"
+                            ],
+                            "materials": {
+                                "light": [
+                                    "models/fh2_white/mtls/int1-floors-base-hardwood-x-surface-light.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "stairs": {
+                    "hardwood": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-floors-stairs-hardwood-x-surface.obj"
+                            ],
+                            "materials": {
+                                "light": [
+                                    "models/fh2_white/mtls/int1-floors-stairs-hardwood-x-surface-light.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "bathFloors": {
+                "base": {
+                    "tile": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-bathFloors-base-tile-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-bathFloors-base-tile-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "trim": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-trim-base-standard-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-trim-base-standard-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "walls": {
+                "base": {
+                    "paint": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-walls-base-paint-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-walls-base-paint-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "stairs": {
+                    "paint": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-walls-stairs-paint-x-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-walls-stairs-paint-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "windows": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-windows-base-standard-x-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-windows-base-standard-x-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "doors": {
+                "base": {
+                    "standard": {
+                        "x": {
+                            "meshes": [
+                                "models/fh2_white/objs/int1-doors-base-standard-x-frame.obj",
+                                "models/fh2_white/objs/int1-doors-base-standard-x-hardware.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/fh2_white/mtls/int1-doors-base-standard-x-frame-white.mtl",
+                                    "models/fh2_white/mtls/int1-doors-base-standard-x-hardware-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "structural_options": {
+        "fh2": {
+            "dining": [
+                "diningA"
+            ],
+            "kitchen": [
+                "kitchenA"
+            ]
+        },
+        "int1": {}
+    },
+    "views": {
+        "edit": {
+            "camera": {
+                "position": [71, 50, -182],
+                "target": [12, 10, -100]
+            }
+        },
+        "street": {
+            "camera": {
+                "position": [
+                    9,
+                    9,
+                    -260
+                ],
+                "target": {
+                    "lat": 0,
+                    "lon": 90
+                }
+            },
+            "pano_background": "models/fh2_white/pano_background.jpg",
+            "pano_foreground": "models/fh2_white/pano_foreground_lr.png"
+        }
+    }
+}

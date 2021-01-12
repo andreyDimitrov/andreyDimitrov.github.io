@@ -1,0 +1,75 @@
+{
+    "clickable": {
+        "env": {
+            "house": false
+        }
+    },
+    "preset_selections": {
+        "model": "env",
+        "structural_options": {
+            "env": {}
+        },
+        "materials": {
+            "env": {
+                "house": [
+                    "uniform",
+                    "plain"
+                ]
+            }
+        }
+    },
+    "models": {
+        "env": {
+            "house": {
+                "base": {
+                    "uniform": {
+                        "x": {
+                            "meshes": [
+                                "models/env_demo/objs/env-house-base-uniform-x-surface.obj"
+                            ],
+                            "materials": {
+                                "plain": [
+                                    "models/env_demo/mtls/env-house-base-uniform-x-surface-plain.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "structural_options": {
+        "env": {}
+    },
+    "views": {
+        "edit": {
+            "camera": {
+                "position": [
+                    20,
+                    15,
+                    20
+                ],
+                "target": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "street": {
+            "camera": {
+                "position": [
+                    9,
+                    9,
+                    -260
+                ],
+                "target": {
+                    "lat": 0,
+                    "lon": 90
+                }
+            },
+            "pano_background": "models/env_demo/pano_background.jpg",
+            "pano_foreground": "models/env_demo/pano_foreground_lr.png"
+        }
+    }
+}
