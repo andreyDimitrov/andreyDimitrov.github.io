@@ -1,15 +1,11 @@
 {
     "markers": [],
-    "levels": {
-        "1": [2, 12],
-        "2": [12, 21.5],
-        "3": [21.5, 31]
-    },
+    "levels": {},
     "clickable": {
         "env": {
             "house": false
         },
-        "int1": {
+        "int3": {
             "backsplash": false,
             "counters": false,
             "cabinets": false,
@@ -40,7 +36,9 @@
         "model": "fh2",
         "structural_options": {
             "env": {},
-            "int1": {},
+            "int3": {
+                "dining": "diningA"
+            },
             "fh2": {
                 "dining": "diningA",
                 "kitchen": "kitchenA"
@@ -53,7 +51,7 @@
                     "plain"
                 ]
             },
-            "int1": {
+            "int3": {
                 "backsplash": [
                     "standard",
                     "white"
@@ -166,17 +164,17 @@
                 }
             }
         },
-        "int1": {
+        "int3": {
             "backsplash": {
                 "base": {
                     "standard": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-backsplash-base-standard-x-surface.obj"
+                                "models/exampleA/objs/int3-backsplash-base-standard-x-surface.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-backsplash-base-standard-x-surface-white.mtl"
+                                    "models/exampleA/mtls/int3-backsplash-base-standard-x-surface-white.mtl"
                                 ]
                             }
                         }
@@ -188,11 +186,11 @@
                     "standard": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-counters-base-standard-x-surface.obj"
+                                "models/exampleA/objs/int3-counters-base-standard-x-surface.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-counters-base-standard-x-surface-white.mtl"
+                                    "models/exampleA/mtls/int3-counters-base-standard-x-surface-white.mtl"
                                 ]
                             }
                         }
@@ -204,11 +202,11 @@
                     "standard": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-cabinets-base-standard-x-surface.obj"
+                                "models/exampleA/objs/int3-cabinets-base-standard-x-surface.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-cabinets-base-standard-x-surface-white.mtl"
+                                    "models/exampleA/mtls/int3-cabinets-base-standard-x-surface-white.mtl"
                                 ]
                             }
                         }
@@ -220,11 +218,35 @@
                     "standard": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-ceiling-base-standard-x-surface.obj"
+                                "models/exampleA/objs/int3-ceiling-base-standard-x-surface.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-ceiling-base-standard-x-surface-white.mtl"
+                                    "models/exampleA/mtls/int3-ceiling-base-standard-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "f1d": {
+                    "standard": {
+                        "diningA": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-ceiling-f1d-standard-diningA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-ceiling-f1d-standard-diningA-surface-white.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-ceiling-f1d-standard-diningB-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-ceiling-f1d-standard-diningB-surface-white.mtl"
                                 ]
                             }
                         }
@@ -236,13 +258,13 @@
                     "standard": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-railing-base-standard-x-posts.obj",
-                                "models/exampleA/objs/int1-railing-base-standard-x-top.obj"
+                                "models/exampleA/objs/int3-railing-base-standard-x-posts.obj",
+                                "models/exampleA/objs/int3-railing-base-standard-x-top.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-railing-base-standard-x-posts-white.mtl",
-                                    "models/exampleA/mtls/int1-railing-base-standard-x-top-white.mtl"
+                                    "models/exampleA/mtls/int3-railing-base-standard-x-posts-white.mtl",
+                                    "models/exampleA/mtls/int3-railing-base-standard-x-top-white.mtl"
                                 ]
                             }
                         }
@@ -254,13 +276,41 @@
                     "standard": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-lights-base-standard-x-light.obj",
-                                "models/exampleA/objs/int1-lights-base-standard-x-hardware.obj"
+                                "models/exampleA/objs/int3-lights-base-standard-x-light.obj",
+                                "models/exampleA/objs/int3-lights-base-standard-x-hardware.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-lights-base-standard-x-light-white.mtl",
-                                    "models/exampleA/mtls/int1-lights-base-standard-x-hardware-white.mtl"
+                                    "models/exampleA/mtls/int3-lights-base-standard-x-light-white.mtl",
+                                    "models/exampleA/mtls/int3-lights-base-standard-x-hardware-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "f1d": {
+                    "standard": {
+                        "diningA": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-lights-f1d-standard-diningA-light.obj",
+                                "models/exampleA/objs/int3-lights-f1d-standard-diningA-hardware.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-lights-f1d-standard-diningA-light-white.mtl",
+                                    "models/exampleA/mtls/int3-lights-f1d-standard-diningA-hardware-white.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-lights-f1d-standard-diningB-light.obj",
+                                "models/exampleA/objs/int3-lights-f1d-standard-diningB-hardware.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-lights-f1d-standard-diningB-light-white.mtl",
+                                    "models/exampleA/mtls/int3-lights-f1d-standard-diningB-hardware-white.mtl"
                                 ]
                             }
                         }
@@ -272,11 +322,35 @@
                     "hardwood": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-floors-base-hardwood-x-surface.obj"
+                                "models/exampleA/objs/int3-floors-base-hardwood-x-surface.obj"
                             ],
                             "materials": {
                                 "light": [
-                                    "models/exampleA/mtls/int1-floors-base-hardwood-x-surface-light.mtl"
+                                    "models/exampleA/mtls/int3-floors-base-hardwood-x-surface-light.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "f1d": {
+                    "hardwood": {
+                        "diningA": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-floors-f1d-hardwood-diningA-surface.obj"
+                            ],
+                            "materials": {
+                                "light": [
+                                    "models/exampleA/mtls/int3-floors-f1d-hardwood-diningA-surface-light.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-floors-f1d-hardwood-diningB-surface.obj"
+                            ],
+                            "materials": {
+                                "light": [
+                                    "models/exampleA/mtls/int3-floors-f1d-hardwood-diningB-surface-light.mtl"
                                 ]
                             }
                         }
@@ -286,11 +360,11 @@
                     "hardwood": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-floors-stairs-hardwood-x-surface.obj"
+                                "models/exampleA/objs/int3-floors-stairs-hardwood-x-surface.obj"
                             ],
                             "materials": {
                                 "light": [
-                                    "models/exampleA/mtls/int1-floors-stairs-hardwood-x-surface-light.mtl"
+                                    "models/exampleA/mtls/int3-floors-stairs-hardwood-x-surface-light.mtl"
                                 ]
                             }
                         }
@@ -302,11 +376,35 @@
                     "tile": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-bathFloors-base-tile-x-surface.obj"
+                                "models/exampleA/objs/int3-bathFloors-base-tile-x-surface.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-bathFloors-base-tile-x-surface-white.mtl"
+                                    "models/exampleA/mtls/int3-bathFloors-base-tile-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "f1d": {
+                    "tile": {
+                        "diningA": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-bathFloors-f1d-tile-diningA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-bathFloors-f1d-tile-diningA-surface-white.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-bathFloors-f1d-tile-diningB-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-bathFloors-f1d-tile-diningB-surface-white.mtl"
                                 ]
                             }
                         }
@@ -318,11 +416,35 @@
                     "standard": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-trim-base-standard-x-surface.obj"
+                                "models/exampleA/objs/int3-trim-base-standard-x-surface.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-trim-base-standard-x-surface-white.mtl"
+                                    "models/exampleA/mtls/int3-trim-base-standard-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "f1d": {
+                    "standard": {
+                        "diningA": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-trim-f1d-standard-diningA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-trim-f1d-standard-diningA-surface-white.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-trim-f1d-standard-diningB-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-trim-f1d-standard-diningB-surface-white.mtl"
                                 ]
                             }
                         }
@@ -334,11 +456,35 @@
                     "paint": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-walls-base-paint-x-surface.obj"
+                                "models/exampleA/objs/int3-walls-base-paint-x-surface.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-walls-base-paint-x-surface-white.mtl"
+                                    "models/exampleA/mtls/int3-walls-base-paint-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "f1d": {
+                    "paint": {
+                        "diningA": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-walls-f1d-paint-diningA-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-walls-f1d-paint-diningA-surface-white.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-walls-f1d-paint-diningB-surface.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-walls-f1d-paint-diningB-surface-white.mtl"
                                 ]
                             }
                         }
@@ -348,11 +494,11 @@
                     "paint": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-walls-stairs-paint-x-surface.obj"
+                                "models/exampleA/objs/int3-walls-stairs-paint-x-surface.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-walls-stairs-paint-x-surface-white.mtl"
+                                    "models/exampleA/mtls/int3-walls-stairs-paint-x-surface-white.mtl"
                                 ]
                             }
                         }
@@ -364,11 +510,35 @@
                     "standard": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-windows-base-standard-x-frame.obj"
+                                "models/exampleA/objs/int3-windows-base-standard-x-frame.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-windows-base-standard-x-frame-white.mtl"
+                                    "models/exampleA/mtls/int3-windows-base-standard-x-frame-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "f1d": {
+                    "standard": {
+                        "diningA": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-windows-f1d-standard-diningA-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-windows-f1d-standard-diningA-frame-white.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-windows-f1d-standard-diningB-frame.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-windows-f1d-standard-diningB-frame-white.mtl"
                                 ]
                             }
                         }
@@ -380,13 +550,41 @@
                     "standard": {
                         "x": {
                             "meshes": [
-                                "models/exampleA/objs/int1-doors-base-standard-x-frame.obj",
-                                "models/exampleA/objs/int1-doors-base-standard-x-hardware.obj"
+                                "models/exampleA/objs/int3-doors-base-standard-x-frame.obj",
+                                "models/exampleA/objs/int3-doors-base-standard-x-hardware.obj"
                             ],
                             "materials": {
                                 "white": [
-                                    "models/exampleA/mtls/int1-doors-base-standard-x-frame-white.mtl",
-                                    "models/exampleA/mtls/int1-doors-base-standard-x-hardware-white.mtl"
+                                    "models/exampleA/mtls/int3-doors-base-standard-x-frame-white.mtl",
+                                    "models/exampleA/mtls/int3-doors-base-standard-x-hardware-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "f1d": {
+                    "standard": {
+                        "diningA": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-doors-f1d-standard-diningA-frame.obj",
+                                "models/exampleA/objs/int3-doors-f1d-standard-diningA-hardware.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-doors-f1d-standard-diningA-frame-white.mtl",
+                                    "models/exampleA/mtls/int3-doors-f1d-standard-diningA-hardware-white.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/exampleA/objs/int3-doors-f1d-standard-diningB-frame.obj",
+                                "models/exampleA/objs/int3-doors-f1d-standard-diningB-hardware.obj"
+                            ],
+                            "materials": {
+                                "white": [
+                                    "models/exampleA/mtls/int3-doors-f1d-standard-diningB-frame-white.mtl",
+                                    "models/exampleA/mtls/int3-doors-f1d-standard-diningB-hardware-white.mtl"
                                 ]
                             }
                         }
@@ -803,7 +1001,12 @@
     },
     "structural_options": {
         "env": {},
-        "int1": {},
+        "int3": {
+            "dining": [
+                "diningA",
+                "diningB"
+            ]
+        },
         "fh2": {
             "dining": [
                 "diningA",
