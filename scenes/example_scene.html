@@ -45,9 +45,8 @@
 			var texture_loader = new THREE.TextureLoader();
 
 			// scene vars
-			let scene_dir = 'models/example/';
+			let scene_dir = 'models/exampleA/';
 			let models = {};
-			// let active_model = null;
 			let active_models = [];
 
 			let scene_materials = {};
@@ -56,6 +55,9 @@
 			let scene_meshes_info = {};
 			let scene_info = null;
 			let scene_markers = [];
+
+			// Clipping planes
+			let topPlane, bottomPlane;
 
 
 			// Interaction
@@ -71,6 +73,7 @@
 			let isInteriorOn = true;
 			let isExteriorOn = false;
 			let streetView = false;
+			let isCut = false;
 
 
 			// ------ ATMOS PLATFORM --------
@@ -97,6 +100,11 @@
 				const ambientLight = new THREE.AmbientLight( 0xffffff );
 				scene.add( ambientLight );
 
+
+				// clipping planes
+				topPlane = new THREE.Plane(new THREE.Vector3(0, -1, 0), 100);
+				bottomPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 100);
+
 				view_mode = null;
 				current_camera = null;
 
@@ -104,7 +112,7 @@
 				const gui = new GUI()
 				const folderToggles = gui.addFolder( 'Toggles' )
 
-				const cutProps = {
+				const streetProps = {
 
 						get 'Street'() {
 							return streetView;
@@ -122,7 +130,27 @@
 						}
 					};
 
-				folderToggles.add( cutProps, 'Street' );
+				folderToggles.add( streetProps, 'Street' );
+
+				const cutProps = {
+
+						get 'Cut'() {
+							return isCut;
+						},
+
+						set 'Cut'( v ) {
+
+							if (isCut) {
+								update_view_level(null);
+							} else {
+								update_view_level('2');
+							}
+							isCut = v;
+
+						}
+					};
+
+				folderToggles.add( cutProps, 'Cut' );
 
 				const intSelectionProps = {
 
@@ -172,6 +200,9 @@
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
 
+				// clipping planes
+				renderer.localClippingEnabled = true;
+
                 document.addEventListener( 'pointermove', onDocumentMouseMove, false );
                 document.addEventListener( 'pointerdown', onDocumentMouseDown, false );
                 document.addEventListener( 'pointerup', onDocumentMouseClick, false );
@@ -202,6 +233,12 @@
 				if (data.type == 'view_mode'){
 					console.log('platform -> iframe, received - view_mode updated', data.mode);
 					update_view_mode(data.mode);
+				};
+
+				// Change the view level
+				if (data.type == 'view_level'){
+					console.log('platform -> iframe, received - view_level updated', data.level);
+					update_view_level(data.level);
 				};
 
 				// Update the models currently displayed
@@ -363,7 +400,21 @@
 				return sprite;
 			}
 
+			function update_view_level(lvl){
 
+				if (!('levels' in scene_info)) {
+					return;
+				}
+
+				if (lvl in scene_info['levels']){
+					topPlane.constant = scene_info['levels'][lvl][1];
+					bottomPlane.constant = -scene_info['levels'][lvl][0];
+				} else {
+					topPlane.constant=100;
+					bottomPlane.constant=100;
+				};
+
+			}
 
 			function update_view_mode(mode){
 
@@ -882,6 +933,7 @@
 							var mat_keys = Object.keys(mtl.materials);
 							// ASSUME: only one material
 							scene_materials[material_name] = mtl.materials[mat_keys[0]]
+							scene_materials[material_name].clippingPlanes = [topPlane, bottomPlane];
 							// console.log('mtl loaded, assigning');
 							scene_meshes[mesh_name].material = scene_materials[material_name]
 
@@ -996,7 +1048,10 @@
 					if (intersects[i].object.visible){
 						// check if special object
 						if (intersects[i].object.userData.obj_name != 'ignore'){
-							return intersects[i];
+							// check if within clipping planes
+							if (intersects[i].point.y < topPlane.constant){
+								return intersects[i];
+							};
 						};
 					};
 				};

@@ -1005,7 +1005,9 @@
 					if (intersects[i].object.visible){
 						// check if special object
 						if (intersects[i].object.userData.obj_name != 'ignore'){
-							return intersects[i];
+							if (intersects[i].point.y < localPlane.constant){
+								return intersects[i];
+							};
 						};
 					};
 				};
@@ -1056,7 +1058,7 @@
 				// Uncomment below if you want intersection only in edit mode
 				// if (view_mode == 'edit'){
 					raycaster.setFromCamera( mouse, current_camera );
-					var intersects = raycaster.intersectObjects( scene.children );
+					var intersects = raycaster.intersectObjects( scene.children )
 					var first_intersect = first_visible_intersect(intersects);
 					
 					if ( first_intersect != null ) {
