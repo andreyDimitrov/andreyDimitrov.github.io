@@ -45,7 +45,7 @@
 			var texture_loader = new THREE.TextureLoader();
 
 			// scene vars
-			let scene_dir = 'models/exampleA/';
+			let scene_dir = 'models/ext_int_0/';
 			let models = {};
 			let active_models = [];
 
@@ -75,6 +75,7 @@
 			let streetView = false;
 			let isCut = false;
 			let isDiningA = true;
+			let isThird = true;
 
 
 			// ------ ATMOS PLATFORM --------
@@ -144,7 +145,7 @@
 							if (isCut) {
 								update_view_level(null);
 							} else {
-								update_view_level('2');
+								update_view_level('1');
 							}
 							isCut = v;
 
@@ -162,9 +163,9 @@
 					set 'Interior'( v ) {
 
 						if (isInteriorOn) {
-							switch_active_model('int3', null)	
+							switch_active_model('int', null)	
 						} else {
-							switch_active_model(null, 'int3')
+							switch_active_model(null, 'int')
 						};
 						isInteriorOn = v;
 					}
@@ -191,23 +192,41 @@
 
 				const layoutSelectionProps = {
 
-					get 'Layout'() {
+					get 'Layout Dining'() {
 						return isDiningA;
 					},
 
-					set 'Layout'( v ) {
+					set 'Layout Dining'( v ) {
 
 						if (isDiningA) {
-							assign_structural_option('fh2', 'dining', 'diningB');
-							assign_structural_option('int3', 'dining', 'diningB');
+							assign_structural_option_to_all('dining', 'diningB');
 						} else {
-							assign_structural_option('fh2', 'dining', 'diningA');
-							assign_structural_option('int3', 'dining', 'diningA');
+							assign_structural_option_to_all('dining', 'diningA');
 						};
 						isDiningA = v;
 					}
 				};
-				folderToggles.add( layoutSelectionProps, 'Layout' );
+				folderToggles.add( layoutSelectionProps, 'Layout Dining' );
+
+				const thirdSelectionProps = {
+
+					get 'Third'() {
+						return isThird;
+					},
+
+					set 'Third'( v ) {
+
+						if (isThird) {
+							switch_active_model('fh3', 'fh2');
+							assign_structural_option('int', 'third', 'f3none');
+						} else {
+							switch_active_model('fh2', 'fh3');
+							assign_structural_option('int', 'third', 'f3rec');
+						};
+						isThird = v;
+					}
+				};
+				folderToggles.add( thirdSelectionProps, 'Third' );
 
 
 
@@ -276,7 +295,7 @@
 				// Change a structural option
 				if (data.type == 'structural_option'){
 					console.log('platform -> iframe, received - structural_option updated', data.group, data.selection);
-					assign_structural_option(data.model, data.option, data.selection);
+					assign_structural_option_to_all(data.option, data.selection);
 				};
 
 				// Change a material
@@ -334,11 +353,6 @@
 							prepare_model(models[model_names[i]], scene_info['structural_options'][model_names[i]]);
 						};
 						
-						// if ('surrounding' in scene_info){
-						// 	surrounding = {'info': scene_info['surrounding']};
-						// 	prepare_model(surrounding, null);
-						// };
-
 
 						// Initialize active models
 						active_models.push(scene_info['preset_selections']['model']);
@@ -395,9 +409,10 @@
 				if (marker['type'] == 'spin') {
 
 					var geometry = new THREE.PlaneGeometry( 1,1,1 );
-					var material = new THREE.MeshBasicMaterial(
+					var sprite_material = new THREE.MeshBasicMaterial(
 						{ map: texture_loader.load( scene_dir + marker['icon'] ), color: 0xffffff, side: THREE.DoubleSide, transparent: true } );
-					sprite = new THREE.Mesh( geometry, material );
+
+					sprite = new THREE.Mesh( geometry, sprite_material );
 					sprite.rotation.x = Math.PI/2;
 
 				} else {
@@ -406,7 +421,9 @@
 							{ map: texture_loader.load( scene_dir + marker['icon'] ), color: 0xffffff } )
 
 					sprite = new THREE.Sprite(sprite_material);
-				}
+				};
+
+				sprite_material.clippingPlanes = [topPlane, bottomPlane];
 
 
 				
@@ -660,24 +677,7 @@
 					};
 				};
 				
-				
-
-				// // in surrounding
-				// if (surrounding != null){
-				// 	selections = surrounding['selections']
-				// 	for (const [g, group_selection] of Object.entries(selections)) {
-				// 		if (group_selection[0] != null) {
-				// 			var lps = affected_part_layouts(g, group_selection[0], surrounding);
-				// 			for (var i = 0; i < lps.length; i++) {
-				// 				for (var j = 0; j < lps[i]['meshes'].length; j++) {
-				// 					if (scene_meshes[lps[i]['meshes'][j]] != null){
-				// 						scene_meshes[lps[i]['meshes'][j]].visible = true;
-				// 					};
-				// 				};
-				// 			};
-				// 		};
-				// 	};
-				// };
+			
 
 
 				// update markers
@@ -865,6 +865,19 @@
 					update_lot(view_mode);
 				}
 				
+			}
+
+			function assign_structural_option_to_all(option_name, selection){
+
+				var model_names = Object.keys(models)
+
+				for (var i = 0; i < model_names.length; i++) {
+					if (option_name in models[model_names[i]]['structural_options']) {
+						assign_structural_option(model_names[i], option_name, selection)
+
+					}
+				}
+
 			}
 
 
@@ -1204,7 +1217,7 @@
 						var marker = scene_markers[focused_marker]
 						payload = {
 							'event_type': marker['type'],
-							'name': marker['name'],
+							'actions': marker['actions'],
 							'mouseX': offsetX,
 							'mouseY': offsetY,
 						};
