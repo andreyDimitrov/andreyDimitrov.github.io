@@ -39,7 +39,7 @@
 			var texture_loader = new THREE.TextureLoader();
 
 			// scene vars
-			let scene_dir = 'models/elements_roof_metalSeam/';
+			let scene_dir = 'models/elements_floor_woodDeck/';
 			let models = {};
 			let active_model = null;
 			let scene_materials = {};
@@ -340,20 +340,20 @@
 						prepare_views()
 						
 
-						var model_names = Object.keys(scene_info['architectural_styles'])
+						var model_names = Object.keys(scene_info['models'])
 						for (var i = 0; i < model_names.length; i++) {
 							models[model_names[i]] = {
 								'info': {}
 							};
-							models[model_names[i]]['info'] = scene_info['architectural_styles'][model_names[i]]
+							models[model_names[i]]['info'] = scene_info['models'][model_names[i]]
 							prepare_model(models[model_names[i]]);
 						}
 						
-						active_model = scene_info['preset_selections']['architectural_style'];
+						active_model = scene_info['preset_selections']['model'];
 
 
 						// show part
-						var preset_selections = scene_info['preset_selections']['edit'][active_model]
+						var preset_selections = scene_info['preset_selections']['materials'][active_model]
 						for (const [group_name, selection] of Object.entries(preset_selections)) {
 							if (selection[0] == null){
 								assign_style(group_name, null, null);

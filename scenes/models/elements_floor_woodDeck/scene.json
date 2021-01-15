@@ -1,0 +1,85 @@
+{
+    "markers": [],
+    "levels": {},
+    "clickable": {
+        "templates": {
+            "lot": false,
+            "floor": true
+        }
+    },
+    "preset_selections": {
+        "model": "templates",
+        "materials": {
+            "templates": {
+                "lot": [
+                    "edit",
+                    "grid"
+                ],
+                "floor": [
+                    "woodDeck",
+                    "light1"
+                ]
+            }
+        }
+    },
+    "models": {
+        "templates": {
+            "lot": {
+                "base": {
+                    "edit": {
+                        "x": {
+                            "meshes": [
+                                "models/elements_floor_woodDeck/objs/templates-lot-base-edit-x-base.obj",
+                                "models/elements_floor_woodDeck/objs/templates-lot-base-edit-x-scaffold.obj"
+                            ],
+                            "materials": {
+                                "grid": [
+                                    "models/elements_floor_woodDeck/mtls/templates-lot-base-edit-x-base-grid.mtl",
+                                    "models/elements_floor_woodDeck/mtls/templates-lot-base-edit-x-scaffold-grid.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "floor": {
+                "base": {
+                    "woodDeck": {
+                        "x": {
+                            "meshes": [
+                                "models/elements_floor_woodDeck/objs/templates-floor-base-woodDeck-x-surface.obj"
+                            ],
+                            "materials": {
+                                "light1": [
+                                    "models/elements_floor_woodDeck/mtls/templates-floor-base-woodDeck-x-surface-light1.mtl"
+                                ],
+                                "dark1": [
+                                    "models/elements_floor_woodDeck/mtls/templates-floor-base-woodDeck-x-surface-dark1.mtl"
+                                ],
+                                "white": [
+                                    "models/elements_floor_woodDeck/mtls/templates-floor-base-woodDeck-x-surface-white.mtl"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "views": {
+        "edit": {
+            "camera": {
+                "position": [
+                    20,
+                    15,
+                    20
+                ],
+                "target": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        }
+    }
+}
