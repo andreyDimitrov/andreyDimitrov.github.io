@@ -1,4 +1,6 @@
 {
+    "markers": [],
+    "levels": {},
     "clickable": {
         "templates": {
             "lot": false,
@@ -6,8 +8,8 @@
         }
     },
     "preset_selections": {
-        "architectural_style": "templates",
-        "edit": {
+        "model": "templates",
+        "materials": {
             "templates": {
                 "lot": [
                     "edit",
@@ -20,7 +22,7 @@
             }
         }
     },
-    "architectural_styles": {
+    "models": {
         "templates": {
             "lot": {
                 "base": {

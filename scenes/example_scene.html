@@ -45,7 +45,7 @@
 			var texture_loader = new THREE.TextureLoader();
 
 			// scene vars
-			let scene_dir = 'models/ext_int_1/';
+			let scene_dir = 'models/ext_int_2/';
 			let models = {};
 			let active_models = [];
 
@@ -124,8 +124,10 @@
 
 							if (streetView) {
 								update_view_mode('edit');
+								// assign_material_option('fh3', 'roof', 'shingles', 'light');
 							} else {
 								update_view_mode('street');
+								// assign_material_option('fh3', 'roof', 'shingles', 'dark');
 							}
 							streetView = v;
 
@@ -181,9 +183,9 @@
 					set 'Exterior'( v ) {
 
 						if (isExteriorOn) {
-							switch_active_model('fh2', null)	
+							switch_active_model('fh3', 'md3')	
 						} else {
-							switch_active_model(null, 'fh2')
+							switch_active_model('md3', 'fh3')
 						};
 						isExteriorOn = v;
 					}
@@ -199,8 +201,10 @@
 					set 'Layout Dining'( v ) {
 
 						if (isDiningA) {
+							assign_structural_option_to_all('third', 'f3rec');
 							assign_structural_option_to_all('dining', 'diningB');
 						} else {
+							assign_structural_option_to_all('third', 'f3bed');
 							assign_structural_option_to_all('dining', 'diningA');
 						};
 						isDiningA = v;
@@ -217,10 +221,10 @@
 					set 'Third'( v ) {
 
 						if (isThird) {
-							switch_active_model('fh3', 'fh2');
+							switch_active_model('md3', 'md2');
 							assign_structural_option('int', 'third', 'f3none');
 						} else {
-							switch_active_model('fh2', 'fh3');
+							switch_active_model('md2', 'md3');
 							assign_structural_option('int', 'third', 'f3rec');
 						};
 						isThird = v;
