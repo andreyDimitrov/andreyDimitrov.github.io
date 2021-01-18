@@ -1,4 +1,4 @@
-{ 
+{
     "markers":[
         {
             "type": "spin",
@@ -142,7 +142,8 @@
             "icon": "sprites/spin.svg",
             "position": [12.4, 21.9, -190.7],
             "scale": 1,
-            "model": "int"
+            "model": "int",
+            "structural_option": ["third", "f3rec"]
         },
         {
             "type": "spin",
@@ -150,7 +151,17 @@
             "icon": "sprites/spin.svg",
             "position": [13.3, 21.9, -185],
             "scale": 1,
-            "model": "int"
+            "model": "int",
+            "structural_option": ["third", "f3rec"]
+        },
+        {
+            "type": "spin",
+            "actions": [["go_to_spin", "3_b_1"]],
+            "icon": "sprites/spin.svg",
+            "position": [13.3, 21.9, -185],
+            "scale": 1,
+            "model": "int",
+            "structural_option": ["third", "f3bed"]
         },
         {
             "type": "spin",
@@ -158,7 +169,8 @@
             "icon": "sprites/spin.svg",
             "position": [16.6, 21.9, -180.4],
             "scale": 1,
-            "model": "int"
+            "model": "int",
+            "structural_option": ["third", "f3rec"]
         },
         {
             "type": "spin",
@@ -166,7 +178,8 @@
             "icon": "sprites/spin.svg",
             "position": [10.9, 21.9, -180.1],
             "scale": 1,
-            "model": "int"
+            "model": "int",
+            "structural_option": ["third", "f3rec"]
         },
         {
             "type": "spin",
@@ -174,7 +187,8 @@
             "icon": "sprites/spin.svg",
             "position": [17.7, 21.9, -171],
             "scale": 1,
-            "model": "int"
+            "model": "int",
+            "structural_option": ["third", "f3rec"]
         },
         {
             "type": "spin",
@@ -182,7 +196,44 @@
             "icon": "sprites/spin.svg",
             "position": [11.1, 21.9, -173.8],
             "scale": 1,
-            "model": "int"
+            "model": "int",
+            "structural_option": ["third", "f3rec"]
+        },
+        {
+            "type": "spin",
+            "actions": [["go_to_spin", "3_x_1"]],
+            "icon": "sprites/spin.svg",
+            "position": [16.6, 21.9, -180.4],
+            "scale": 1,
+            "model": "int",
+            "structural_option": ["third", "f3bed"]
+        },
+        {
+            "type": "spin",
+            "actions": [["go_to_spin", "3_x_2"]],
+            "icon": "sprites/spin.svg",
+            "position": [10.9, 21.9, -180.1],
+            "scale": 1,
+            "model": "int",
+            "structural_option": ["third", "f3bed"]
+        },
+        {
+            "type": "spin",
+            "actions": [["go_to_spin", "3_x_3"]],
+            "icon": "sprites/spin.svg",
+            "position": [17.7, 21.9, -171],
+            "scale": 1,
+            "model": "int",
+            "structural_option": ["third", "f3bed"]
+        },
+        {
+            "type": "spin",
+            "actions": [["go_to_spin", "3_x_4"]],
+            "icon": "sprites/spin.svg",
+            "position": [11.1, 21.9, -173.8],
+            "scale": 1,
+            "model": "int",
+            "structural_option": ["third", "f3bed"]
         },
         {
             "type": "switch_model",
@@ -2928,8 +2979,8 @@
                     "lon": 90
                 }
             },
-            "pano_background": "models/ext_int_2/pano_background.jpg",
-            "pano_foreground": "models/ext_int_2/pano_foreground_lr.png"
+            "pano_background": "models/ext_int_2/pano_warm_background.jpg",
+            "pano_foreground": "models/ext_int_2/pano_warm_forekground.png"
         }
     }
 }
