@@ -45,7 +45,7 @@
 			var texture_loader = new THREE.TextureLoader();
 
 			// scene vars
-			let scene_dir = 'models/ext_int_2/';
+			let scene_dir = 'models/ext_int_3/';
 			let models = {};
 			let active_models = [];
 
@@ -125,9 +125,11 @@
 							if (streetView) {
 								update_view_mode('edit');
 								// assign_material_option('fh3', 'roof', 'shingles', 'light');
+								// assign_material_option('int', 'windows', 'standard', 'dark');
 							} else {
 								update_view_mode('street');
 								// assign_material_option('fh3', 'roof', 'shingles', 'dark');
+								// assign_material_option('int', 'windows', 'modern', 'dark');
 							}
 							streetView = v;
 
