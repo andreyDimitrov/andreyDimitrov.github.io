@@ -3060,7 +3060,7 @@
                 }
             },
             "pano_background": "models/ext_int_2/pano_warm_background.jpg",
-            "pano_foreground": "models/ext_int_2/pano_warm_forekground.png"
+            "pano_foreground": "models/ext_int_2/pano_warm_foreground.png"
         }
     }
 }
