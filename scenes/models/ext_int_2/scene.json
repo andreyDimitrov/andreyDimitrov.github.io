@@ -308,7 +308,7 @@
             "roof": true,
             "siding": true,
             "sidingFront": true,
-            "windows": false,
+            "windows": true,
             "soffits": false,
             "porches": true,
             "trim": false,
@@ -1473,6 +1473,34 @@
                                 ]
                             }
                         }
+                    },
+                    "minimal": {
+                        "x": {
+                            "meshes": [
+                                "models/ext_int_2/objs/fh2-windows-base-minimal-x-glass.obj",
+                                "models/ext_int_2/objs/fh2-windows-base-minimal-x-frame.obj"
+                            ],
+                            "materials": {
+                                "dark": [
+                                    "models/ext_int_2/mtls/fh2-windows-base-minimal-x-glass-dark.mtl",
+                                    "models/ext_int_2/mtls/fh2-windows-base-minimal-x-frame-dark.mtl"
+                                ]
+                            }
+                        }
+                    },
+                    "modern": {
+                        "x": {
+                            "meshes": [
+                                "models/ext_int_2/objs/fh2-windows-base-modern-x-glass.obj",
+                                "models/ext_int_2/objs/fh2-windows-base-modern-x-frame.obj"
+                            ],
+                            "materials": {
+                                "dark": [
+                                    "models/ext_int_2/mtls/fh2-windows-base-modern-x-glass-dark.mtl",
+                                    "models/ext_int_2/mtls/fh2-windows-base-modern-x-frame-dark.mtl"
+                                ]
+                            }
+                        }
                     }
                 },
                 "sides": {
@@ -1498,6 +1526,58 @@
                                 "dark": [
                                     "models/ext_int_2/mtls/fh2-windows-sides-standard-diningB-glass-dark.mtl",
                                     "models/ext_int_2/mtls/fh2-windows-sides-standard-diningB-frame-dark.mtl"
+                                ]
+                            }
+                        }
+                    },
+                    "minimal": {
+                        "diningA": {
+                            "meshes": [
+                                "models/ext_int_2/objs/fh2-windows-sides-minimal-diningA-glass.obj",
+                                "models/ext_int_2/objs/fh2-windows-sides-minimal-diningA-frame.obj"
+                            ],
+                            "materials": {
+                                "dark": [
+                                    "models/ext_int_2/mtls/fh2-windows-sides-minimal-diningA-glass-dark.mtl",
+                                    "models/ext_int_2/mtls/fh2-windows-sides-minimal-diningA-frame-dark.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/ext_int_2/objs/fh2-windows-sides-minimal-diningB-glass.obj",
+                                "models/ext_int_2/objs/fh2-windows-sides-minimal-diningB-frame.obj"
+                            ],
+                            "materials": {
+                                "dark": [
+                                    "models/ext_int_2/mtls/fh2-windows-sides-minimal-diningB-glass-dark.mtl",
+                                    "models/ext_int_2/mtls/fh2-windows-sides-minimal-diningB-frame-dark.mtl"
+                                ]
+                            }
+                        }
+                    },
+                    "modern": {
+                        "diningA": {
+                            "meshes": [
+                                "models/ext_int_2/objs/fh2-windows-sides-modern-diningA-glass.obj",
+                                "models/ext_int_2/objs/fh2-windows-sides-modern-diningA-frame.obj"
+                            ],
+                            "materials": {
+                                "dark": [
+                                    "models/ext_int_2/mtls/fh2-windows-sides-modern-diningA-glass-dark.mtl",
+                                    "models/ext_int_2/mtls/fh2-windows-sides-modern-diningA-frame-dark.mtl"
+                                ]
+                            }
+                        },
+                        "diningB": {
+                            "meshes": [
+                                "models/ext_int_2/objs/fh2-windows-sides-modern-diningB-glass.obj",
+                                "models/ext_int_2/objs/fh2-windows-sides-modern-diningB-frame.obj"
+                            ],
+                            "materials": {
+                                "dark": [
+                                    "models/ext_int_2/mtls/fh2-windows-sides-modern-diningB-glass-dark.mtl",
+                                    "models/ext_int_2/mtls/fh2-windows-sides-modern-diningB-frame-dark.mtl"
                                 ]
                             }
                         }
