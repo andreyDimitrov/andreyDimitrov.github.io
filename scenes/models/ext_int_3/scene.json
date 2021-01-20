@@ -429,7 +429,7 @@
                 ],
                 "windows": [
                     "standard",
-                    "dark"
+                    "white"
                 ],
                 "doors": [
                     "standard",
@@ -1176,7 +1176,7 @@
                                 "models/ext_int_3/objs/int-windows-base-standard-x-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-base-standard-x-frame-white.mtl"
                                 ]
                             }
@@ -1188,7 +1188,7 @@
                                 "models/ext_int_3/objs/int-windows-base-minimal-x-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-base-minimal-x-frame-white.mtl"
                                 ]
                             }
@@ -1200,7 +1200,7 @@
                                 "models/ext_int_3/objs/int-windows-base-modern-x-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-base-modern-x-frame-white.mtl"
                                 ]
                             }
@@ -1214,7 +1214,7 @@
                                 "models/ext_int_3/objs/int-windows-f1d-standard-diningA-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f1d-standard-diningA-frame-white.mtl"
                                 ]
                             }
@@ -1224,7 +1224,7 @@
                                 "models/ext_int_3/objs/int-windows-f1d-standard-diningB-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f1d-standard-diningB-frame-white.mtl"
                                 ]
                             }
@@ -1236,7 +1236,7 @@
                                 "models/ext_int_3/objs/int-windows-f1d-minimal-diningA-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f1d-minimal-diningA-frame-white.mtl"
                                 ]
                             }
@@ -1246,7 +1246,7 @@
                                 "models/ext_int_3/objs/int-windows-f1d-minimal-diningB-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f1d-minimal-diningB-frame-white.mtl"
                                 ]
                             }
@@ -1258,7 +1258,7 @@
                                 "models/ext_int_3/objs/int-windows-f1d-modern-diningA-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f1d-modern-diningA-frame-white.mtl"
                                 ]
                             }
@@ -1268,7 +1268,7 @@
                                 "models/ext_int_3/objs/int-windows-f1d-modern-diningB-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f1d-modern-diningB-frame-white.mtl"
                                 ]
                             }
@@ -1282,7 +1282,7 @@
                                 "models/ext_int_3/objs/int-windows-f3-standard-f3rec-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f3-standard-f3rec-frame-white.mtl"
                                 ]
                             }
@@ -1292,7 +1292,7 @@
                                 "models/ext_int_3/objs/int-windows-f3-standard-f3bed-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f3-standard-f3bed-frame-white.mtl"
                                 ]
                             }
@@ -1304,7 +1304,7 @@
                                 "models/ext_int_3/objs/int-windows-f3-minimal-f3rec-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f3-minimal-f3rec-frame-white.mtl"
                                 ]
                             }
@@ -1314,7 +1314,7 @@
                                 "models/ext_int_3/objs/int-windows-f3-minimal-f3bed-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f3-minimal-f3bed-frame-white.mtl"
                                 ]
                             }
@@ -1326,7 +1326,7 @@
                                 "models/ext_int_3/objs/int-windows-f3-modern-f3rec-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f3-modern-f3rec-frame-white.mtl"
                                 ]
                             }
@@ -1336,7 +1336,7 @@
                                 "models/ext_int_3/objs/int-windows-f3-modern-f3bed-frame.obj"
                             ],
                             "materials": {
-                                "dark": [
+                                "white": [
                                     "models/ext_int_3/mtls/int-windows-f3-modern-f3bed-frame-white.mtl"
                                 ]
                             }

@@ -185,7 +185,8 @@
 					set 'Exterior'( v ) {
 
 						if (isExteriorOn) {
-							switch_active_model('fh3', 'md3')	
+							switch_active_model('fh3', 'md3')
+							assign_material_option('fh3', 'sidingFront', 'board', 'waterloo');
 						} else {
 							switch_active_model('md3', 'fh3')
 						};
