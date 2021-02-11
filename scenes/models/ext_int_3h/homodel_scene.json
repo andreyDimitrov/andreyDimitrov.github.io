@@ -1,0 +1,185 @@
+{
+    "markers": [
+        {
+            "type": "spin",
+            "spin": "1_x_1",
+            "icon": "sprites/spin.svg",
+            "position": [
+                20.2,
+                2.4,
+                -203.3
+            ],
+            "scale": 1,
+            "expression": {
+                "AND": [
+                    ["camera_type", "edit_camera"],
+                    ["interior_visibility", "interior_on"] 
+                ]
+            }
+        },
+        {
+            "type": "spin",
+            "spin": "3_x_3",
+            "icon": "sprites/spin.svg",
+            "position": [
+                17.7,
+                21.9,
+                -171
+            ],
+            "scale": 1,
+            "expression": {
+                "AND": [
+                    ["camera_type", "edit_camera"],
+                    ["interior_visibility", "interior_on"],
+                    ["structural_option_third", "structural_option_f3bed"]  
+                ]
+            }
+        },
+        {
+            "type": "layout_selections",
+            "layout_selections": ["3floors"],
+            "icon": "sprites/add.svg",
+            "position": [
+                14,
+                30,
+                -185
+            ],
+            "scale": 2,
+            "expression": {
+                "AND": [
+                    ["camera_type", "edit_camera"],
+                    ["exterior_visibility", "exterior_on"],
+                    ["num_floors", "2floors"]
+                ]
+            }
+        },
+        {
+            "type": "layout_selections",
+            "layout_selections": ["2floors"],
+            "icon": "sprites/remove.svg",
+            "position": [
+                14,
+                39.5,
+                -185
+            ],
+            "scale": 2,
+            "expression": {
+                "AND": [
+                    ["camera_type", "edit_camera"],
+                    ["exterior_visibility", "exterior_on"],
+                    ["num_floors", "3floors"]
+                ]
+            }
+        }
+    ],
+    "levels": {
+        "level_1": [
+            2,
+            12
+        ],
+        "level_2": [
+            11,
+            21.5
+        ],
+        "level_3": [
+            20.5,
+            100
+        ]
+    },
+    "clickable": {
+        "roof": {
+            "OR": [
+                {
+                    "AND": [
+                        ["exterior_visibility", "exterior_on"],
+                        ["arch_style", "farmhouse"],
+                        ["num_floors", "2floors"]
+                    ]
+                },
+                {
+                    "AND": [
+                        ["exterior_visibility", "exterior_on"],
+                        ["arch_style", "farmhouse"],
+                        ["num_floors", "3floors"]
+                    ]
+                }
+            ]
+        }
+    },
+    "elements":{
+        "0001": {
+            "type": "geometry",
+            "mesh": "models/ext_int_3h/objs/int-counters-base-standard-x-surface.obj",
+            "material": "models/ext_int_3h/mtls/int-counters-base-standard-x-surface-white.mtl",
+            "expression": {
+                "AND": [
+                    ["interior_visibility", "interior_on"],
+                    ["counters_mat_types", "counters_standard"],
+                    ["counters_standard_colors", "counters_standard_white"]  
+                ]
+            },
+            "component": "counters"
+        },
+        "0002": {
+            "type": "geometry",
+            "mesh": "models/ext_int_3h/objs/fh2-roof-base-metalSeam-x-surface.obj",
+            "material": "models/ext_int_3h/mtls/fh2-roof-base-metalSeam-x-surface-dark.mtl",
+            "expression": {
+                "AND": [
+                    ["exterior_visibility", "exterior_on"],
+                    ["arch_style", "farmhouse"],
+                    ["num_floors", "2floors"],
+                    ["roof_mat_types", "roof_metalSeam"],
+                    ["roof_metalSeam_colors", "roof_metalSeam_dark"]  
+                ]
+            },
+            "component": "roof"
+        },
+        "0003": {
+            "type": "geometry",
+            "mesh": "models/ext_int_3h/objs/fh3-roof-base-metalSeam-x-surface.obj",
+            "material": "models/ext_int_3h/mtls/fh3-roof-base-metalSeam-x-surface-dark.mtl",
+            "expression": {
+                "AND": [
+                    ["exterior_visibility", "exterior_on"],
+                    ["arch_style", "farmhouse"],
+                    ["num_floors", "3floors"],
+                    ["roof_mat_types", "roof_metalSeam"],
+                    ["roof_metalSeam_colors", "roof_metalSeam_dark"]
+                ]
+            },
+            "component": "roof"
+        }
+    },
+    "views": {
+        "edit": {
+            "camera": {
+                "position": [
+                    -51,
+                    50,
+                    -242
+                ],
+                "target": [
+                    12,
+                    10,
+                    -190
+                ]
+            }
+        },
+        "street": {
+            "camera": {
+                "position": [
+                    9,
+                    9,
+                    -260
+                ],
+                "target": {
+                    "lat": 0,
+                    "lon": 90
+                }
+            },
+            "pano_background": "models/ext_int_3h/pano_warm_background.jpg",
+            "pano_foreground": "models/ext_int_3h/pano_warm_foreground.png"
+        }
+    }
+}

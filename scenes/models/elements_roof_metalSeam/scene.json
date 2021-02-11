@@ -1,17 +1,36 @@
 {
+    "views": {
+        "edit": {
+            "camera": {
+                "position": [
+                    20,
+                    15,
+                    -20
+                ],
+                "target": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        }
+    },
     "markers": [],
     "levels": {},
     "clickable": {
         "templates": {
-            "lot": false,
+            "extRoofProp": false,
             "roof": true
         }
     },
     "preset_selections": {
         "model": "templates",
+        "structural_options": {
+            "templates": {}
+        },
         "materials": {
             "templates": {
-                "lot": [
+                "extRoofProp": [
                     "edit",
                     "grid"
                 ],
@@ -24,18 +43,18 @@
     },
     "models": {
         "templates": {
-            "lot": {
+            "extRoofProp": {
                 "base": {
                     "edit": {
                         "x": {
                             "meshes": [
-                                "models/elements_roof_metalSeam/objs/templates-lot-base-edit-x-base.obj",
-                                "models/elements_roof_metalSeam/objs/templates-lot-base-edit-x-scaffold.obj"
+                                "models/elements_roof_metalSeam/objs/templates-extRoofProp-base-edit-x-base.obj",
+                                "models/elements_roof_metalSeam/objs/templates-extRoofProp-base-edit-x-scaffold.obj"
                             ],
                             "materials": {
                                 "grid": [
-                                    "models/elements_roof_metalSeam/mtls/templates-lot-base-edit-x-base-grid.mtl",
-                                    "models/elements_roof_metalSeam/mtls/templates-lot-base-edit-x-scaffold-grid.mtl"
+                                    "models/elements_roof_metalSeam/mtls/templates-extRoofProp-base-edit-x-base-grid.mtl",
+                                    "models/elements_roof_metalSeam/mtls/templates-extRoofProp-base-edit-x-scaffold-grid.mtl"
                                 ]
                             }
                         }
@@ -55,6 +74,9 @@
                                 ],
                                 "light": [
                                     "models/elements_roof_metalSeam/mtls/templates-roof-base-metalSeam-x-surface-light.mtl"
+                                ],
+                                "white": [
+                                    "models/elements_roof_metalSeam/mtls/templates-roof-base-metalSeam-x-surface-white.mtl"
                                 ]
                             }
                         }
@@ -63,20 +85,7 @@
             }
         }
     },
-    "views": {
-        "edit": {
-            "camera": {
-                "position": [
-                    20,
-                    15,
-                    20
-                ],
-                "target": [
-                    0,
-                    0,
-                    0
-                ]
-            }
-        }
+    "structural_options": {
+        "templates": {}
     }
 }
