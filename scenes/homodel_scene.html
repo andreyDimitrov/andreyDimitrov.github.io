@@ -111,11 +111,17 @@
 				// 	set 'State'( v ) {
 
 				// 		if (isState1) {
-				// 			scene_state = state0
-				// 			update_scene()	
+				// 			var strMime = "image/jpeg";
+				// 			var imgData = renderer.domElement.toDataURL(strMime);
+				// 			console.log(imgData)
+				// 			// scene_state = state0
+				// 			// update_scene()	
 				// 		} else {
-				// 			scene_state = state1
-				// 			update_scene()
+				// 			var strMime = "image/jpeg";
+				// 			var imgData = renderer.domElement.toDataURL(strMime);
+				// 			console.log(imgData)
+				// 			// scene_state = state1
+				// 			// update_scene()
 				// 		};
 				// 		isState1 = v;
 				// 	}
@@ -126,7 +132,10 @@
 				// load scene info
 				init_scene();
 
-				renderer = new THREE.WebGLRenderer({antialias: true, alpha: true });
+				renderer = new THREE.WebGLRenderer({
+					antialias: true, alpha: true,
+					preserveDrawingBuffer: true
+				});
 				renderer.shadowMap.enabled = true;
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
@@ -163,6 +172,13 @@
 					console.log('platform -> iframe, received - state', data.state);
 					scene_state = data.state
 					update_scene();
+				};
+
+				// Ask for snapshot
+				if (data.type == 'snapshot'){
+					console.log('platform -> iframe, received - snapshot');
+					var imgData = renderer.domElement.toDataURL("image/jpeg");
+					post_iframe_message(imgData)
 				};
 
 			};
