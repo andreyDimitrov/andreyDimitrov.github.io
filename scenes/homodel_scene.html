@@ -26,7 +26,7 @@
 			let windowHalfY = window.innerHeight / 2;
 
 			let controls, scene, renderer;
-			let current_camera, street_camera, edit_camera;
+			let current_camera, street_camera, edit_camera, snapshot_camera;
 			let base_pano, mask_pano;
 
 			// street view vars
@@ -111,9 +111,13 @@
 				// 	set 'State'( v ) {
 
 				// 		if (isState1) {
-				// 			var strMime = "image/jpeg";
-				// 			var imgData = renderer.domElement.toDataURL(strMime);
-				// 			console.log(imgData)
+				// 			var strMime = "image/png";
+				// 			var w = window.open('', '');
+    // 						w.document.title = "Screenshot";
+				// 			var img = new Image();
+				// 			renderer.render(scene, snapshot_camera);
+				// 			img.src = renderer.domElement.toDataURL(strMime);
+				// 			w.document.body.appendChild(img);
 				// 			// scene_state = state0
 				// 			// update_scene()	
 				// 		} else {
@@ -134,7 +138,7 @@
 
 				renderer = new THREE.WebGLRenderer({
 					antialias: true, alpha: true,
-					preserveDrawingBuffer: true
+					preserveDrawingBuffer: false
 				});
 				renderer.shadowMap.enabled = true;
 				renderer.setPixelRatio( window.devicePixelRatio );
@@ -177,7 +181,8 @@
 				// Ask for snapshot
 				if (data.type == 'snapshot'){
 					console.log('platform -> iframe, received - snapshot');
-					var imgData = renderer.domElement.toDataURL("image/jpeg");
+					renderer.render(scene, snapshot_camera);
+					var imgData = renderer.domElement.toDataURL("image/png");
 					post_iframe_message(imgData)
 				};
 
@@ -407,6 +412,20 @@
 				saved_edit_target.x = controls.target.x;
 				saved_edit_target.y = controls.target.y;
 				saved_edit_target.z = controls.target.z;
+
+				// Build snapshot view
+				snapshot_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				cam_pos = scene_info['views']['edit']['camera']['position']
+				snapshot_camera.position.x = cam_pos[0];
+				snapshot_camera.position.y = cam_pos[1];
+				snapshot_camera.position.z = cam_pos[2];
+				scene.add( snapshot_camera );
+
+				target.x = cam_target[0];
+				target.y = cam_target[1];
+				target.z = cam_target[2];
+				snapshot_camera.lookAt( target );
+
 			}
 
 
@@ -686,6 +705,9 @@
 				
 				edit_camera.aspect = window.innerWidth / window.innerHeight;
 				edit_camera.updateProjectionMatrix();
+
+				snapshot_camera.aspect = window.innerWidth / window.innerHeight;
+				snapshot_camera.updateProjectionMatrix();
 				
 				street_camera.aspect = window.innerWidth / window.innerHeight;
 				street_camera.updateProjectionMatrix();
