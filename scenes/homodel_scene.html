@@ -245,6 +245,9 @@
 						scene_state = state_default
 						update_scene()
 
+						// Send message that scene is ready
+						post_iframe_message({'status': 'ready'})
+
 
 					}, onProgress, onError );
 			}

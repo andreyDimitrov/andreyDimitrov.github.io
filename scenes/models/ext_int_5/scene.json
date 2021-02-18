@@ -764,6 +764,10 @@
                     [
                         "num_floors",
                         "2floors"
+                    ],
+                    [
+                        "lot_visibility",
+                        "lot_on"
                     ]
                 ]
             }
@@ -793,6 +797,10 @@
                     [
                         "num_floors",
                         "3floors"
+                    ],
+                    [
+                        "lot_visibility",
+                        "lot_on"
                     ]
                 ]
             }
@@ -6187,6 +6195,10 @@
                         "exterior_on"
                     ],
                     [
+                        "lot_visibility",
+                        "lot_on"
+                    ],
+                    [
                         "lot_mat_types",
                         "lot_edit"
                     ],
@@ -9399,6 +9411,10 @@
                         "exterior_on"
                     ],
                     [
+                        "lot_visibility",
+                        "lot_on"
+                    ],
+                    [
                         "lot_mat_types",
                         "lot_edit"
                     ],
@@ -11363,6 +11379,10 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "lot_visibility",
+                        "lot_on"
                     ],
                     [
                         "lot_mat_types",
@@ -13695,6 +13715,10 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "lot_visibility",
+                        "lot_on"
                     ],
                     [
                         "lot_mat_types",
