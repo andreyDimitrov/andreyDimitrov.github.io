@@ -90,6 +90,7 @@
 
 				const ambientLight = new THREE.AmbientLight( 0xffffff );
 				scene.add( ambientLight );
+				ambientLight.layers.enableAll()
 
 				// clipping planes
 				topPlane = new THREE.Plane(new THREE.Vector3(0, -1, 0), 100);
@@ -98,39 +99,39 @@
 				view_mode = null;
 				current_camera = null;
 
-				// // Gui - for standalone testing
-				// const gui = new GUI()
-				// const folderToggles = gui.addFolder( 'Toggles' )
+				// Gui - for standalone testing
+				const gui = new GUI()
+				const folderToggles = gui.addFolder( 'Toggles' )
 
-				// const stateProps = {
+				const stateProps = {
 
-				// 	get 'State'() {
-				// 		return isState1;
-				// 	},
+					get 'State'() {
+						return isState1;
+					},
 
-				// 	set 'State'( v ) {
+					set 'State'( v ) {
 
-				// 		if (isState1) {
-				// 			var strMime = "image/png";
-				// 			var w = window.open('', '');
-    // 						w.document.title = "Screenshot";
-				// 			var img = new Image();
-				// 			renderer.render(scene, snapshot_camera);
-				// 			img.src = renderer.domElement.toDataURL(strMime);
-				// 			w.document.body.appendChild(img);
-				// 			// scene_state = state0
-				// 			// update_scene()	
-				// 		} else {
-				// 			var strMime = "image/jpeg";
-				// 			var imgData = renderer.domElement.toDataURL(strMime);
-				// 			console.log(imgData)
-				// 			// scene_state = state1
-				// 			// update_scene()
-				// 		};
-				// 		isState1 = v;
-				// 	}
-				// };
-				// folderToggles.add( stateProps, 'State' );
+						if (isState1) {
+							var strMime = "image/png";
+							var w = window.open('', '');
+    						w.document.title = "Screenshot";
+							var img = new Image();
+							renderer.render(scene, snapshot_camera);
+							img.src = renderer.domElement.toDataURL(strMime);
+							w.document.body.appendChild(img);
+							// scene_state = state0
+							// update_scene()	
+						} else {
+							var strMime = "image/jpeg";
+							var imgData = renderer.domElement.toDataURL(strMime);
+							console.log(imgData)
+							// scene_state = state1
+							// update_scene()
+						};
+						isState1 = v;
+					}
+				};
+				folderToggles.add( stateProps, 'State' );
 
 
 				// load scene info
@@ -283,6 +284,8 @@
 				sprite.userData = {'type': 'marker'};
 				sprite.visible = false;
 
+				sprite.layers.set(0);
+
 				return sprite;
 			}
 
@@ -353,6 +356,7 @@
 						new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
 					);
 				base_pano.userData = {'type': 'ignore'}
+				base_pano.layers.set(1)
 				scene.add(base_pano)
 
 				mask_pano = new THREE.Mesh(
@@ -360,11 +364,13 @@
 					new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
 				);
 				mask_pano.userData = {'type': 'ignore'}
+				mask_pano.layers.set(1)
 				scene.add(mask_pano)
 
 				if ('street' in scene_info['views']){
 					// Build pano view
 					street_camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 2000);
+					street_camera.layers.set( 1 );
 					var cam_pos = scene_info['views']['street']['camera']['position']
 					street_camera.position.x = cam_pos[0];
 					street_camera.position.y = cam_pos[1];
@@ -396,6 +402,7 @@
 
 				// Build edit view
 				edit_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				edit_camera.layers.set( 0 );
 				cam_pos = scene_info['views']['edit']['camera']['position']
 				edit_camera.position.x = cam_pos[0];
 				edit_camera.position.y = cam_pos[1];
@@ -428,6 +435,7 @@
 				target.y = cam_target[1];
 				target.z = cam_target[2];
 				snapshot_camera.lookAt( target );
+				snapshot_camera.layers.set( 2 );
 
 			}
 
@@ -547,6 +555,7 @@
 							scene_meshes[mesh_name] = obj.children[0];
 							scene_meshes[mesh_name].userData['type'] = 'geometry'
 							scene_meshes[mesh_name].userData['component'] = element['component'];
+							scene_meshes[mesh_name].layers.enableAll()
 							scene.add( scene_meshes[mesh_name] );
 							
 							// material

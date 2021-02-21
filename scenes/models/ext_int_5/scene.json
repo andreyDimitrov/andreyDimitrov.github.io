@@ -3,9 +3,9 @@
         "edit": {
             "camera": {
                 "position": [
-                    -47.29622560523857,
-                    50,
-                    -248.93220188994124
+                    -32.55254520849316,
+                    25,
+                    -259.3063952734591
                 ],
                 "target": [
                     14.194218069531786,
@@ -44,10 +44,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ]
@@ -66,10 +62,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -90,10 +82,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ]
@@ -112,10 +100,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -136,10 +120,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ]
@@ -158,10 +138,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -182,10 +158,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ]
@@ -204,10 +176,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -228,10 +196,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ]
@@ -250,10 +214,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -274,10 +234,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ]
@@ -297,10 +253,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ]
@@ -319,10 +271,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -347,10 +295,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ],
@@ -373,10 +317,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -401,10 +341,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ],
@@ -427,10 +363,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -455,10 +387,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ],
@@ -481,10 +409,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -509,10 +433,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ],
@@ -535,10 +455,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -563,10 +479,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ],
@@ -589,10 +501,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -617,10 +525,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ],
@@ -643,10 +547,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -671,10 +571,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ],
@@ -698,10 +594,6 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "interior_visibility",
                         "interior_on"
                     ],
@@ -724,10 +616,6 @@
             "scale": 1,
             "expression": {
                 "AND": [
-                    [
-                        "camera_type",
-                        "edit_camera"
-                    ],
                     [
                         "interior_visibility",
                         "interior_on"
@@ -754,20 +642,12 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "exterior_visibility",
                         "exterior_on"
                     ],
                     [
                         "num_floors",
                         "2floors"
-                    ],
-                    [
-                        "lot_visibility",
-                        "lot_on"
                     ]
                 ]
             }
@@ -787,20 +667,12 @@
             "expression": {
                 "AND": [
                     [
-                        "camera_type",
-                        "edit_camera"
-                    ],
-                    [
                         "exterior_visibility",
                         "exterior_on"
                     ],
                     [
                         "num_floors",
                         "3floors"
-                    ],
-                    [
-                        "lot_visibility",
-                        "lot_on"
                     ]
                 ]
             }
@@ -828,6 +700,14 @@
                         [
                             "interior_visibility",
                             "interior_on"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
                         ]
                     ]
                 },
@@ -860,6 +740,14 @@
                         [
                             "exterior_visibility",
                             "exterior_on"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
                         ]
                     ]
                 },
@@ -892,6 +780,14 @@
                         [
                             "exterior_visibility",
                             "exterior_on"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
                         ]
                     ]
                 }
@@ -928,6 +824,14 @@
                         [
                             "exterior_visibility",
                             "exterior_on"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
                         ]
                     ]
                 }
@@ -964,6 +868,14 @@
                         [
                             "exterior_visibility",
                             "exterior_on"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
                         ]
                     ]
                 }
@@ -1000,6 +912,14 @@
                         [
                             "exterior_visibility",
                             "exterior_on"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
                         ]
                     ]
                 },
@@ -1032,6 +952,14 @@
                         [
                             "exterior_visibility",
                             "exterior_on"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
                         ]
                     ]
                 }
@@ -1068,6 +996,14 @@
                         [
                             "exterior_visibility",
                             "exterior_on"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
                         ]
                     ]
                 },
@@ -1100,6 +1036,14 @@
                         [
                             "exterior_visibility",
                             "exterior_on"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
+                        ],
+                        [
+                            "num_floors",
+                            "3floors"
                         ]
                     ]
                 }
@@ -1115,6 +1059,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "backsplash_mat_types",
@@ -1139,6 +1091,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "cabinets_mat_types",
                         "cabinets_standard"
                     ],
@@ -1159,6 +1119,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "counters_mat_types",
@@ -1183,6 +1151,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "windows_mat_types",
                         "windows_standard"
                     ],
@@ -1203,6 +1179,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "windows_mat_types",
@@ -1227,6 +1211,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "windows_mat_types",
                         "windows_modern"
                     ],
@@ -1247,6 +1239,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -1275,6 +1275,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -1299,6 +1307,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -1327,6 +1343,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -1351,6 +1375,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -1379,6 +1411,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -1403,6 +1443,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -1431,6 +1479,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -1455,6 +1511,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -1483,6 +1547,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -1507,6 +1579,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -1535,6 +1615,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -1559,6 +1647,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -1587,6 +1683,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -1611,6 +1715,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -1639,6 +1751,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -1663,6 +1783,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -1691,6 +1819,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -1717,6 +1853,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "lights_mat_types",
                         "lights_standard"
                     ],
@@ -1739,6 +1883,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "lights_mat_types",
                         "lights_standard"
                     ],
@@ -1759,6 +1911,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -1787,6 +1947,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -1811,6 +1979,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -1839,6 +2015,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -1863,6 +2047,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -1891,6 +2083,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -1915,6 +2115,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -1943,6 +2151,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -1967,6 +2183,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -1995,6 +2219,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3bed"
                     ],
@@ -2019,6 +2251,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -2047,6 +2287,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -2071,6 +2319,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -2099,6 +2355,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3none"
                     ],
@@ -2125,6 +2389,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "trim_mat_types",
                         "trim_standard"
                     ],
@@ -2145,6 +2417,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -2173,6 +2453,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -2197,6 +2485,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -2225,6 +2521,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -2249,6 +2553,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -2277,6 +2589,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -2303,6 +2623,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "walls_mat_types",
                         "walls_paint"
                     ],
@@ -2323,6 +2651,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -2351,6 +2687,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -2375,6 +2719,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -2403,6 +2755,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -2427,6 +2787,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -2455,6 +2823,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -2479,6 +2855,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -2507,6 +2891,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "ceiling_mat_types",
                         "ceiling_standard"
                     ],
@@ -2527,6 +2919,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -2555,6 +2955,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -2579,6 +2987,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -2607,6 +3023,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -2631,6 +3055,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -2659,6 +3091,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -2683,6 +3123,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -2711,6 +3159,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "floors_mat_types",
                         "floors_hardwood"
                     ],
@@ -2731,6 +3187,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -2759,6 +3223,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -2783,6 +3255,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -2811,6 +3291,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -2835,6 +3323,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -2863,6 +3359,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -2887,6 +3391,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -2915,6 +3427,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "bathFloors_mat_types",
                         "bathFloors_tile"
                     ],
@@ -2935,6 +3455,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -2963,6 +3491,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -2987,6 +3523,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -3015,6 +3559,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -3039,6 +3591,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -3067,6 +3627,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -3093,6 +3661,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "railing_mat_types",
                         "railing_standard"
                     ],
@@ -3115,6 +3691,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "railing_mat_types",
                         "railing_standard"
                     ],
@@ -3135,6 +3719,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -3163,6 +3755,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3bed"
                     ],
@@ -3187,6 +3787,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -3215,6 +3823,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -3239,6 +3855,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -3267,6 +3891,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3none"
                     ],
@@ -3293,6 +3925,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "doors_mat_types",
                         "doors_standard"
                     ],
@@ -3315,6 +3955,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "doors_mat_types",
                         "doors_standard"
                     ],
@@ -3335,6 +3983,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -3363,6 +4019,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -3387,6 +4051,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -3415,6 +4087,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -3439,6 +4119,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -3467,6 +4155,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -3491,6 +4187,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -3519,6 +4223,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -3543,6 +4255,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -3571,6 +4291,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3bed"
                     ],
@@ -3597,6 +4325,14 @@
                         "interior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -3621,6 +4357,14 @@
                     [
                         "interior_visibility",
                         "interior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -6229,6 +6973,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "roof_mat_types",
                         "roof_metalSeam"
                     ],
@@ -6257,6 +7009,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "roof_mat_types",
@@ -6289,6 +7049,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "roof_mat_types",
                         "roof_shingles"
                     ],
@@ -6317,6 +7085,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "roof_mat_types",
@@ -6349,6 +7125,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "siding_mat_types",
                         "siding_lap"
                     ],
@@ -6379,6 +7163,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "siding_mat_types",
                         "siding_lap"
                     ],
@@ -6407,6 +7199,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_kitchen",
@@ -6443,6 +7243,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_kitchen",
                         "structural_option_kitchenA"
                     ],
@@ -6475,6 +7283,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -6511,6 +7327,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -6543,6 +7367,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -6579,6 +7411,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -6611,6 +7451,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -6647,6 +7495,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -6679,6 +7535,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -6715,6 +7579,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -6747,6 +7619,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -6783,6 +7663,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3bed"
                     ],
@@ -6815,6 +7703,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -6851,6 +7747,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -6885,6 +7789,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "sidingFront_mat_types",
                         "sidingFront_lap"
                     ],
@@ -6913,6 +7825,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "sidingFront_mat_types",
@@ -6945,6 +7865,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "sidingFront_mat_types",
                         "sidingFront_board"
                     ],
@@ -6973,6 +7901,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "sidingFront_mat_types",
@@ -7005,6 +7941,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "windows_mat_types",
                         "windows_standard"
                     ],
@@ -7033,6 +7977,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "windows_mat_types",
@@ -7065,6 +8017,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "windows_mat_types",
                         "windows_minimal"
                     ],
@@ -7093,6 +8053,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "windows_mat_types",
@@ -7125,6 +8093,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "windows_mat_types",
                         "windows_modern"
                     ],
@@ -7155,6 +8131,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "windows_mat_types",
                         "windows_modern"
                     ],
@@ -7183,6 +8167,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -7219,6 +8211,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -7251,6 +8251,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -7287,6 +8295,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -7319,6 +8335,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -7355,6 +8379,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -7387,6 +8419,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -7423,6 +8463,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -7455,6 +8503,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -7491,6 +8547,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -7523,6 +8587,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -7559,6 +8631,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -7591,6 +8671,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -7627,6 +8715,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -7659,6 +8755,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -7695,6 +8799,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -7727,6 +8839,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -7763,6 +8883,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -7795,6 +8923,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -7831,6 +8967,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -7863,6 +9007,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -7899,6 +9051,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -7931,6 +9091,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -7967,6 +9135,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -7999,6 +9175,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -8035,6 +9219,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -8067,6 +9259,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -8103,6 +9303,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -8135,6 +9343,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -8171,6 +9387,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -8205,6 +9429,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "soffits_mat_types",
                         "soffits_standard"
                     ],
@@ -8233,6 +9465,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "soffits_mat_types",
@@ -8265,6 +9505,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "soffits_mat_types",
                         "soffits_standard"
                     ],
@@ -8293,6 +9541,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "soffits_mat_types",
@@ -8325,6 +9581,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -8353,6 +9617,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -8385,6 +9657,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -8413,6 +9693,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -8445,6 +9733,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -8473,6 +9769,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -8505,6 +9809,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -8533,6 +9845,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -8565,6 +9885,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -8593,6 +9921,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -8625,6 +9961,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -8653,6 +9997,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -8685,6 +10037,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -8713,6 +10073,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -8745,6 +10113,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -8773,6 +10149,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -8805,6 +10189,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -8833,6 +10225,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -8865,6 +10265,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "trim_mat_types",
                         "trim_standard"
                     ],
@@ -8893,6 +10301,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_kitchen",
@@ -8929,6 +10345,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -8961,6 +10385,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -8997,6 +10429,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -9029,6 +10469,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -9065,6 +10513,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -9099,6 +10555,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "base_mat_types",
                         "base_concrete"
                     ],
@@ -9127,6 +10591,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "doors_mat_types",
@@ -9159,6 +10631,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "doors_mat_types",
                         "doors_standard"
                     ],
@@ -9189,6 +10669,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "doors_mat_types",
                         "doors_standard"
                     ],
@@ -9217,6 +10705,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_kitchen",
@@ -9253,6 +10749,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_kitchen",
                         "structural_option_kitchenA"
                     ],
@@ -9285,6 +10789,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_kitchen",
@@ -9321,6 +10833,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "doors_mat_types",
                         "doors_standard"
                     ],
@@ -9349,6 +10869,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "doors_mat_types",
@@ -9381,6 +10909,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "doors_mat_types",
                         "doors_standard"
                     ],
@@ -9409,6 +10945,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "lot_visibility",
@@ -11415,6 +12959,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "roof_mat_types",
                         "roof_rubber"
                     ],
@@ -11443,6 +12995,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "roof_mat_types",
@@ -11475,6 +13035,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "siding_mat_types",
                         "siding_lap"
                     ],
@@ -11503,6 +13071,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_kitchen",
@@ -11539,6 +13115,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -11571,6 +13155,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -11607,6 +13199,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -11639,6 +13239,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -11675,6 +13283,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3bed"
                     ],
@@ -11707,6 +13323,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -11743,6 +13367,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "sidingFront_mat_types",
                         "sidingFront_wood"
                     ],
@@ -11771,6 +13403,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "sidingFront_mat_types",
@@ -11803,6 +13443,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "windows_mat_types",
                         "windows_standard"
                     ],
@@ -11831,6 +13479,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "windows_mat_types",
@@ -11863,6 +13519,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "windows_mat_types",
                         "windows_minimal"
                     ],
@@ -11891,6 +13555,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "windows_mat_types",
@@ -11923,6 +13595,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "windows_mat_types",
                         "windows_modern"
                     ],
@@ -11953,6 +13633,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "windows_mat_types",
                         "windows_modern"
                     ],
@@ -11981,6 +13669,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -12017,6 +13713,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -12049,6 +13753,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -12085,6 +13797,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -12117,6 +13837,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -12153,6 +13881,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -12185,6 +13921,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -12221,6 +13965,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -12253,6 +14005,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -12289,6 +14049,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -12321,6 +14089,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -12357,6 +14133,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningB"
                     ],
@@ -12389,6 +14173,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -12425,6 +14217,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -12457,6 +14257,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -12493,6 +14301,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -12525,6 +14341,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -12561,6 +14385,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -12593,6 +14425,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -12629,6 +14469,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -12661,6 +14509,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -12697,6 +14553,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -12729,6 +14593,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -12765,6 +14637,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_2bed"
                     ],
@@ -12797,6 +14677,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -12833,6 +14721,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -12865,6 +14761,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -12901,6 +14805,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -12933,6 +14845,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_third",
@@ -12969,6 +14889,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -13003,6 +14931,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "soffits_mat_types",
                         "soffits_standard"
                     ],
@@ -13031,6 +14967,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "soffits_mat_types",
@@ -13063,6 +15007,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -13091,6 +15043,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -13123,6 +15083,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -13151,6 +15119,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -13183,6 +15159,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -13211,6 +15195,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -13243,6 +15235,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -13271,6 +15271,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -13303,6 +15311,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "porches_mat_types",
                         "porches_standard"
                     ],
@@ -13331,6 +15347,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "porches_mat_types",
@@ -13363,6 +15387,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "trim_mat_types",
                         "trim_standard"
                     ],
@@ -13391,6 +15423,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_kitchen",
@@ -13427,6 +15467,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_dining",
                         "structural_option_diningA"
                     ],
@@ -13459,6 +15507,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_dining",
@@ -13495,6 +15551,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_second",
                         "structural_option_1bed"
                     ],
@@ -13527,6 +15591,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "structural_option_second",
@@ -13563,6 +15635,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "structural_option_third",
                         "structural_option_f3rec"
                     ],
@@ -13597,6 +15677,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "base_mat_types",
                         "base_concrete"
                     ],
@@ -13625,6 +15713,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "doors_mat_types",
@@ -13657,6 +15753,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "doors_mat_types",
                         "doors_standard"
                     ],
@@ -13687,6 +15791,14 @@
                         "exterior_on"
                     ],
                     [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
                         "doors_mat_types",
                         "doors_standard"
                     ],
@@ -13715,6 +15827,14 @@
                     [
                         "exterior_visibility",
                         "exterior_on"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
+                    ],
+                    [
+                        "num_floors",
+                        "3floors"
                     ],
                     [
                         "lot_visibility",
