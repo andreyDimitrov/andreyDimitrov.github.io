@@ -112,14 +112,17 @@
 				// 	set 'State'( v ) {
 
 				// 		if (isState1) {
-				// 			// var strMime = "image/png";
-				// 			// var w = window.open('', '');
-    // 			// 			w.document.title = "Screenshot";
-				// 			// var img = new Image();
-				// 			// renderer.render(scene, snapshot_camera);
-				// 			// img.src = renderer.domElement.toDataURL(strMime);
-				// 			// w.document.body.appendChild(img);
-				// 			scene_state = state0
+				// 			var strMime = "image/png";
+				// 			var w = window.open('', '');
+    // 						w.document.title = "Screenshot";
+				// 			var img = new Image();
+				// 			// var renderTarget = new THREE.WebGLRenderTarget(300, 300)
+				// 			// renderer.setRenderTarget(renderTarget);
+				// 			renderer.render(scene, snapshot_camera);
+				// 			// renderer.setRenderTarget(null);
+				// 			img.src = renderer.domElement.toDataURL(strMime);
+				// 			w.document.body.appendChild(img);
+				// 			scene_state = state1
 				// 			update_scene()	
 				// 		} else {
 				// 			// var strMime = "image/jpeg";
@@ -424,7 +427,8 @@
 				saved_edit_target.z = controls.target.z;
 
 				// Build snapshot view
-				snapshot_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				// snapshot_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				snapshot_camera = new THREE.PerspectiveCamera( 45, 1, 1, 2000 );
 				cam_pos = scene_info['views']['edit']['camera']['position']
 				snapshot_camera.position.x = cam_pos[0];
 				snapshot_camera.position.y = cam_pos[1];
@@ -718,8 +722,8 @@
 				edit_camera.aspect = window.innerWidth / window.innerHeight;
 				edit_camera.updateProjectionMatrix();
 
-				snapshot_camera.aspect = window.innerWidth / window.innerHeight;
-				snapshot_camera.updateProjectionMatrix();
+				// snapshot_camera.aspect = window.innerWidth / window.innerHeight;
+				// snapshot_camera.updateProjectionMatrix();
 				
 				street_camera.aspect = window.innerWidth / window.innerHeight;
 				street_camera.updateProjectionMatrix();
