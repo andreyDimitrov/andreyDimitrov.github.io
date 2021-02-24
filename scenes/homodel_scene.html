@@ -184,7 +184,7 @@
 					console.log('platform -> iframe, received - snapshot');
 					renderer.render(scene, snapshot_camera);
 					var imgData = renderer.domElement.toDataURL("image/png");
-					post_iframe_message({ event_type: 'snapshot', data: imgData })
+					post_iframe_message({ event_type: 'snapshot', snapshot: imgData });
 				};
 
 			};
