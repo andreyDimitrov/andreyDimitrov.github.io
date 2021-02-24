@@ -112,21 +112,21 @@
 				// 	set 'State'( v ) {
 
 				// 		if (isState1) {
-				// 			var strMime = "image/png";
-				// 			var w = window.open('', '');
-    // 						w.document.title = "Screenshot";
-				// 			var img = new Image();
-				// 			renderer.render(scene, snapshot_camera);
-				// 			img.src = renderer.domElement.toDataURL(strMime);
-				// 			w.document.body.appendChild(img);
-				// 			// scene_state = state0
-				// 			// update_scene()	
+				// 			// var strMime = "image/png";
+				// 			// var w = window.open('', '');
+    // 			// 			w.document.title = "Screenshot";
+				// 			// var img = new Image();
+				// 			// renderer.render(scene, snapshot_camera);
+				// 			// img.src = renderer.domElement.toDataURL(strMime);
+				// 			// w.document.body.appendChild(img);
+				// 			scene_state = state0
+				// 			update_scene()	
 				// 		} else {
-				// 			var strMime = "image/jpeg";
-				// 			var imgData = renderer.domElement.toDataURL(strMime);
-				// 			console.log(imgData)
-				// 			// scene_state = state1
-				// 			// update_scene()
+				// 			// var strMime = "image/jpeg";
+				// 			// var imgData = renderer.domElement.toDataURL(strMime);
+				// 			// console.log(imgData)
+				// 			scene_state = state1
+				// 			update_scene()
 				// 		};
 				// 		isState1 = v;
 				// 	}
@@ -184,7 +184,7 @@
 					console.log('platform -> iframe, received - snapshot');
 					renderer.render(scene, snapshot_camera);
 					var imgData = renderer.domElement.toDataURL("image/png");
-					post_iframe_message(imgData)
+					post_iframe_message({ event_type: 'snapshot', data: imgData })
 				};
 
 			};
