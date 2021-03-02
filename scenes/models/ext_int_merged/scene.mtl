@@ -1,0 +1,3960 @@
+newmtl md2-doors-base-standard-x-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-doors-base-standard-x-frame-white.jpg
+newmtl fh2-sidingFront-base-lap-x-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-sidingFront-base-lap-x-surface-snowbound.jpg
+newmtl fh3-porches-terrace-standard-x-railing-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-terrace-standard-x-railing-hill_country.jpg
+newmtl int-windows-f3-standard-f3bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f3-standard-f3bed-frame-dark.jpg
+newmtl int-lights-f3-standard-f3bed-hardware-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-lights-f3-standard-f3bed-hardware-dark.jpg
+newmtl fh2-porches-back-standard-x-railing-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-back-standard-x-railing-mountain_ash.jpg
+newmtl fh2-porches-front-standard-x-top-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-front-standard-x-top-mountain_ash.jpg
+newmtl fh3-soffits-base-standard-x-facia-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-soffits-base-standard-x-facia-white.jpg
+newmtl fh3-windows-f2b-minimal-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-sidingFront-base-board-x-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-sidingFront-base-board-x-surface-snowbound.jpg
+newmtl fh2-windows-sides-standard-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-sides-standard-diningA-frame-dark.jpg
+newmtl md3-doors-base-standard-x-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-doors-base-standard-x-frame-white.jpg
+newmtl md2-trim-base-standard-x-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-trim-base-standard-x-surface-white.jpg
+newmtl fh3-windows-f2b-modern-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-windows-f2b-modern-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-windows-upperside-standard-f3rec-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-trim-upperside-standard-f3rec-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-trim-upperside-standard-f3rec-surface-white.jpg
+newmtl int-doors-f3-standard-f3rec-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f3-standard-f3rec-frame-white.jpg
+newmtl md2-base-base-concrete-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-base-base-concrete-x-surface-light.jpg
+newmtl md3-sidingFront-base-wood-x-surface-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-sidingFront-base-wood-x-surface-mountain_ash.jpg
+newmtl int-walls-f3-paint-f3none-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-walls-f3-paint-f3none-surface-white.jpg
+newmtl fh2-trim-porch-standard-kitchenA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-trim-porch-standard-kitchenA-surface-white.jpg
+newmtl fh3-windows-sides-modern-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-sides-modern-diningA-frame-dark.jpg
+newmtl fh3-sidingFront-base-lap-x-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-sidingFront-base-lap-x-surface-waterloo.jpg
+newmtl int-lights-f2b-standard-2bed-hardware-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-lights-f2b-standard-2bed-hardware-dark.jpg
+newmtl fh3-porches-back-standard-x-deck-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-back-standard-x-deck-hill_country.jpg
+newmtl fh3-doors-front-standard-x-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-doors-front-standard-x-frame-white.jpg
+newmtl md2-windows-sides-standard-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-windows-f2b-standard-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-f2b-standard-2bed-frame-dark.jpg
+newmtl fh3-siding-upperside-lap-f3rec-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-upperside-lap-f3rec-surface-snowbound.jpg
+newmtl int-doors-f3-standard-f3bed-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f3-standard-f3bed-hardware-white.jpg
+newmtl md2-porches-base-standard-x-deck-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-porches-base-standard-x-deck-mountain_ash.jpg
+newmtl int-windows-f1d-modern-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f1d-modern-diningA-frame-dark.jpg
+newmtl int-lights-base-standard-x-hardware-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-lights-base-standard-x-hardware-dark.jpg
+newmtl fh3-doors-porch-standard-kitchenA-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-doors-porch-standard-kitchenA-hardware-white.jpg
+newmtl md3-windows-sides-minimal-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-sides-minimal-diningA-frame-dark.jpg
+newmtl int-windows-f2b-minimal-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f2b-minimal-2bed-frame-dark.jpg
+newmtl fh3-lot-base-edit-x-surface-setbacks
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-lot-base-edit-x-surface-setbacks.jpg
+newmtl int-walls-base-paint-x-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-walls-base-paint-x-surface-white.jpg
+newmtl fh3-doors-front-standard-x-glass-white
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-porches-back-standard-x-top-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-back-standard-x-top-hill_country.jpg
+newmtl fh2-windows-sides-minimal-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-sides-minimal-diningB-frame-dark.jpg
+newmtl fh3-windows-sides-standard-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-windows-f2b-standard-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-f2b-standard-2bed-frame-dark.jpg
+newmtl md2-windows-base-standard-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-base-standard-x-frame-dark.jpg
+newmtl int-trim-f3-standard-f3bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-trim-f3-standard-f3bed-surface-white.jpg
+newmtl int-windows-f3-modern-f3bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f3-modern-f3bed-frame-dark.jpg
+newmtl md2-doors-base-standard-x-glass-white
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-railing-f3-standard-f3none-posts-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-railing-f3-standard-f3none-posts-white.jpg
+newmtl md2-lot-base-edit-x-surface-setbacks
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-lot-base-edit-x-surface-setbacks.jpg
+newmtl md3-windows-sides-modern-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-sides-modern-diningA-frame-dark.jpg
+newmtl int-windows-f3-minimal-f3bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f3-minimal-f3bed-frame-dark.jpg
+newmtl fh2-siding-f2b-lap-1bed-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-f2b-lap-1bed-surface-waterloo.jpg
+newmtl fh2-windows-f2b-minimal-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-walls-f3-paint-f3rec-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-walls-f3-paint-f3rec-surface-white.jpg
+newmtl fh2-soffits-base-standard-x-facia-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-soffits-base-standard-x-facia-white.jpg
+newmtl md3-doors-base-standard-x-glass-white
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-siding-sides-lap-diningA-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-sides-lap-diningA-surface-waterloo.jpg
+newmtl md3-windows-sides-standard-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-sides-standard-diningA-frame-dark.jpg
+newmtl int-trim-f2b-standard-2bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-trim-f2b-standard-2bed-surface-white.jpg
+newmtl int-railing-f3-standard-f3none-top-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-railing-f3-standard-f3none-top-white.jpg
+newmtl md2-windows-base-standard-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-trim-f2b-standard-2bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-trim-f2b-standard-2bed-surface-white.jpg
+newmtl int-lights-f2b-standard-1bed-light-dark
+Ka 1 1 1
+Kd 0.9900 0.9900 0.9000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl fh2-windows-f2b-standard-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-windows-sides-standard-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-sides-standard-diningA-frame-dark.jpg
+newmtl int-trim-f1d-standard-diningA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-trim-f1d-standard-diningA-surface-white.jpg
+newmtl fh2-windows-sides-minimal-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-soffits-base-standard-x-soffit-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-soffits-base-standard-x-soffit-white.jpg
+newmtl int-ceiling-f1d-standard-diningA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-ceiling-f1d-standard-diningA-surface-white.jpg
+newmtl fh3-doors-terrace-standard-x-glass-white
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-windows-sides-minimal-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-porches-front-standard-x-top-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-front-standard-x-top-mountain_ash.jpg
+newmtl md3-siding-base-lap-x-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-siding-base-lap-x-surface-dark.jpg
+newmtl md3-windows-sides-standard-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-windows-f2b-standard-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f2b-standard-2bed-frame-dark.jpg
+newmtl int-counters-base-standard-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-counters-base-standard-x-surface-light.jpg
+newmtl md3-porches-base-standard-x-deck-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-porches-base-standard-x-deck-mountain_ash.jpg
+newmtl md2-roof-base-rubber-x-cap-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-roof-base-rubber-x-cap-light.jpg
+newmtl int-windows-f3-standard-f3rec-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f3-standard-f3rec-frame-dark.jpg
+newmtl fh3-roof-base-shingles-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-roof-base-shingles-x-surface-light.jpg
+newmtl fh2-windows-f2b-minimal-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-f2b-minimal-2bed-frame-dark.jpg
+newmtl md3-windows-sides-modern-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-porches-back-standard-x-deck-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-back-standard-x-deck-hill_country.jpg
+newmtl int-cabinets-base-standard-x-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-cabinets-base-standard-x-surface-white.jpg
+newmtl md3-windows-f2b-modern-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-f2b-modern-1bed-frame-dark.jpg
+newmtl fh3-windows-f2b-modern-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-f2b-modern-2bed-frame-dark.jpg
+newmtl fh3-soffits-base-standard-x-gutter-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-soffits-base-standard-x-gutter-white.jpg
+newmtl md3-lot-base-edit-x-surface-setbacks
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-lot-base-edit-x-surface-setbacks.jpg
+newmtl fh3-windows-f2b-minimal-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-f2b-minimal-2bed-frame-dark.jpg
+newmtl fh2-windows-sides-standard-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-siding-sides-lap-diningA-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-sides-lap-diningA-surface-snowbound.jpg
+newmtl int-windows-f3-minimal-f3rec-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f3-minimal-f3rec-frame-dark.jpg
+newmtl fh2-lot-base-edit-x-surface-setbacks
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-lot-base-edit-x-surface-setbacks.jpg
+newmtl md3-trim-porch-standard-kitchenA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-trim-porch-standard-kitchenA-surface-white.jpg
+newmtl int-windows-f3-modern-f3rec-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f3-modern-f3rec-frame-dark.jpg
+newmtl fh3-siding-back-lap-kitchenA-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-back-lap-kitchenA-surface-snowbound.jpg
+newmtl md3-windows-f2b-standard-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md2-windows-sides-standard-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-sides-standard-diningA-frame-dark.jpg
+newmtl fh2-siding-sides-lap-diningA-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-sides-lap-diningA-surface-waterloo.jpg
+newmtl md3-trim-f2b-standard-2bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-trim-f2b-standard-2bed-surface-white.jpg
+newmtl fh3-porches-back-standard-x-top-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-back-standard-x-top-mountain_ash.jpg
+newmtl md2-soffits-base-standard-x-soffit-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-soffits-base-standard-x-soffit-white.jpg
+newmtl fh3-siding-base-lap-x-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-base-lap-x-surface-waterloo.jpg
+newmtl md2-doors-base-standard-x-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-doors-base-standard-x-hardware-white.jpg
+newmtl fh3-windows-sides-modern-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-windows-f1d-standard-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f1d-standard-diningA-frame-dark.jpg
+newmtl fh3-doors-terrace-standard-x-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-doors-terrace-standard-x-frame-white.jpg
+newmtl md3-windows-upperside-standard-f3rec-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-upperside-standard-f3rec-frame-dark.jpg
+newmtl int-railing-base-standard-x-top-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-railing-base-standard-x-top-white.jpg
+newmtl int-lights-f2b-standard-2bed-light-dark
+Ka 1 1 1
+Kd 0.9900 0.9900 0.9000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl md2-porches-base-standard-x-posts-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-porches-base-standard-x-posts-hill_country.jpg
+newmtl fh2-windows-f2b-standard-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-railing-f3-standard-f3bed-top-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-railing-f3-standard-f3bed-top-white.jpg
+newmtl md2-windows-sides-standard-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md2-sidingFront-base-wood-x-surface-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-sidingFront-base-wood-x-surface-hill_country.jpg
+newmtl md2-siding-sides-lap-diningA-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-siding-sides-lap-diningA-surface-dark.jpg
+newmtl fh2-windows-base-standard-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-windows-f1d-modern-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f1d-modern-diningB-frame-dark.jpg
+newmtl int-trim-f1d-standard-diningB-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-trim-f1d-standard-diningB-surface-white.jpg
+newmtl fh2-roof-base-metalSeam-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-roof-base-metalSeam-x-surface-light.jpg
+newmtl int-trim-f3-standard-f3rec-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-trim-f3-standard-f3rec-surface-white.jpg
+newmtl fh3-trim-upperside-standard-f3rec-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-trim-upperside-standard-f3rec-surface-white.jpg
+newmtl fh3-windows-upperside-standard-f3rec-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-lights-f3-standard-f3rec-light-dark
+Ka 1 1 1
+Kd 0.9900 0.9900 0.9000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl fh3-windows-upperside-modern-f3rec-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-upperside-modern-f3rec-frame-dark.jpg
+newmtl int-doors-f1d-standard-diningB-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f1d-standard-diningB-hardware-white.jpg
+newmtl fh2-siding-base-lap-x-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-base-lap-x-surface-snowbound.jpg
+newmtl fh3-windows-sides-modern-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-sides-modern-diningB-frame-dark.jpg
+newmtl int-ceiling-f1d-standard-diningB-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-ceiling-f1d-standard-diningB-surface-white.jpg
+newmtl md2-porches-base-standard-x-concrete-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-porches-base-standard-x-concrete-mountain_ash.jpg
+newmtl int-walls-f3-paint-f3bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-walls-f3-paint-f3bed-surface-white.jpg
+newmtl fh2-windows-sides-standard-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-sides-standard-diningB-frame-dark.jpg
+newmtl int-windows-f2b-standard-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f2b-standard-1bed-frame-dark.jpg
+newmtl int-windows-base-minimal-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-base-minimal-x-frame-dark.jpg
+newmtl fh3-siding-back-lap-kitchenA-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-back-lap-kitchenA-surface-waterloo.jpg
+newmtl fh3-porches-back-standard-x-railing-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-back-standard-x-railing-hill_country.jpg
+newmtl int-walls-f2b-paint-2bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-walls-f2b-paint-2bed-surface-white.jpg
+newmtl fh2-windows-f2b-minimal-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-f2b-minimal-1bed-frame-dark.jpg
+newmtl int-lights-f3-standard-f3none-light-dark
+Ka 1 1 1
+Kd 0.9900 0.9900 0.9000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl fh3-siding-upperside-lap-f3bed-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-upperside-lap-f3bed-surface-snowbound.jpg
+newmtl md3-windows-upperside-modern-f3rec-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-porches-terrace-standard-x-top-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-terrace-standard-x-top-hill_country.jpg
+newmtl int-bathFloors-f2b-tile-1bed-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-bathFloors-f2b-tile-1bed-surface-dark.jpg
+newmtl md3-porches-base-standard-x-concrete-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-porches-base-standard-x-concrete-mountain_ash.jpg
+newmtl md3-windows-f2b-modern-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-f2b-modern-2bed-frame-dark.jpg
+newmtl fh3-windows-f2b-modern-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-f2b-modern-1bed-frame-dark.jpg
+newmtl fh3-windows-f2b-minimal-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-f2b-minimal-1bed-frame-dark.jpg
+newmtl int-doors-f2b-standard-1bed-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f2b-standard-1bed-hardware-white.jpg
+newmtl md3-windows-sides-standard-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-sides-standard-diningB-frame-dark.jpg
+newmtl int-bathFloors-f2b-tile-2bed-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-bathFloors-f2b-tile-2bed-surface-dark.jpg
+newmtl md3-windows-sides-modern-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-sides-modern-diningB-frame-dark.jpg
+newmtl md3-porches-base-standard-x-wires-hill_country
+Ka 1 1 1
+Kd 0.1000 0.1000 0.1000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl int-lights-f3-standard-f3rec-hardware-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-lights-f3-standard-f3rec-hardware-dark.jpg
+newmtl int-bathFloors-f1d-tile-diningB-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-bathFloors-f1d-tile-diningB-surface-dark.jpg
+newmtl fh3-roof-base-metalSeam-x-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-roof-base-metalSeam-x-surface-dark.jpg
+newmtl fh3-siding-base-lap-x-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-base-lap-x-surface-snowbound.jpg
+newmtl fh2-windows-sides-minimal-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-sides-minimal-diningA-frame-dark.jpg
+newmtl md3-siding-sides-lap-diningA-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-siding-sides-lap-diningA-surface-dark.jpg
+newmtl md3-windows-f2b-standard-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-windows-sides-standard-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-windows-sides-minimal-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-sides-minimal-diningB-frame-dark.jpg
+newmtl md3-windows-upperside-minimal-f3rec-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-floors-f2b-hardwood-2bed-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-floors-f2b-hardwood-2bed-surface-light.jpg
+newmtl fh3-porches-front-standard-x-deck-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-front-standard-x-deck-mountain_ash.jpg
+newmtl fh3-roof-base-metalSeam-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-roof-base-metalSeam-x-surface-light.jpg
+newmtl fh2-siding-f2b-lap-2bed-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-f2b-lap-2bed-surface-snowbound.jpg
+newmtl fh3-porches-terrace-standard-x-deck-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-terrace-standard-x-deck-mountain_ash.jpg
+newmtl md3-windows-sides-modern-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-siding-sides-lap-diningB-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-sides-lap-diningB-surface-snowbound.jpg
+newmtl fh3-windows-f2b-minimal-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-windows-sides-standard-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-windows-f2b-modern-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-windows-f2b-modern-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-trim-base-standard-x-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-trim-base-standard-x-surface-white.jpg
+newmtl int-lights-f3-standard-f3bed-light-dark
+Ka 1 1 1
+Kd 0.9900 0.9900 0.9000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl fh2-base-base-concrete-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-base-base-concrete-x-surface-light.jpg
+newmtl md3-porches-base-standard-x-posts-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-porches-base-standard-x-posts-mountain_ash.jpg
+newmtl md2-siding-base-lap-x-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-siding-base-lap-x-surface-dark.jpg
+newmtl fh2-siding-f2b-lap-2bed-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-f2b-lap-2bed-surface-waterloo.jpg
+newmtl md3-windows-upperside-minimal-f3rec-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-upperside-minimal-f3rec-frame-dark.jpg
+newmtl md3-windows-sides-minimal-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-trim-f2b-standard-1bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-trim-f2b-standard-1bed-surface-white.jpg
+newmtl fh2-siding-back-lap-kitchenA-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-back-lap-kitchenA-surface-waterloo.jpg
+newmtl fh3-windows-sides-standard-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-sides-standard-diningB-frame-dark.jpg
+newmtl md3-windows-f2b-standard-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-f2b-standard-1bed-frame-dark.jpg
+newmtl int-windows-base-standard-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-base-standard-x-frame-dark.jpg
+newmtl fh2-windows-sides-minimal-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-porches-front-standard-x-railing-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-front-standard-x-railing-mountain_ash.jpg
+newmtl md2-trim-f2b-standard-1bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-trim-f2b-standard-1bed-surface-white.jpg
+newmtl fh3-windows-sides-modern-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-windows-f1d-standard-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f1d-standard-diningB-frame-dark.jpg
+newmtl fh3-windows-upperside-modern-f3rec-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-windows-upperside-standard-f3rec-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-upperside-standard-f3rec-frame-dark.jpg
+newmtl int-windows-f2b-minimal-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f2b-minimal-1bed-frame-dark.jpg
+newmtl int-railing-f3-standard-f3rec-posts-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-railing-f3-standard-f3rec-posts-white.jpg
+newmtl fh2-porches-front-standard-x-deck-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-front-standard-x-deck-hill_country.jpg
+newmtl fh3-doors-terrace-standard-x-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-doors-terrace-standard-x-hardware-white.jpg
+newmtl int-ceiling-f3-standard-f3none-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-ceiling-f3-standard-f3none-surface-white.jpg
+newmtl fh2-windows-base-standard-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-base-standard-x-frame-dark.jpg
+newmtl fh2-porches-front-standard-x-railing-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-front-standard-x-railing-mountain_ash.jpg
+newmtl int-doors-f1d-standard-diningB-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f1d-standard-diningB-frame-white.jpg
+newmtl md2-windows-sides-standard-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-sides-standard-diningB-frame-dark.jpg
+newmtl fh2-windows-f2b-standard-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-f2b-standard-1bed-frame-dark.jpg
+newmtl int-lights-f3-standard-f3none-hardware-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-lights-f3-standard-f3none-hardware-dark.jpg
+newmtl md3-porches-base-standard-x-top-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-porches-base-standard-x-top-hill_country.jpg
+newmtl fh3-siding-f2b-lap-2bed-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-f2b-lap-2bed-surface-snowbound.jpg
+newmtl int-ceiling-f2b-standard-1bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-ceiling-f2b-standard-1bed-surface-white.jpg
+newmtl md3-windows-upperside-modern-f3rec-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-upperside-modern-f3rec-frame-dark.jpg
+newmtl fh2-windows-f2b-minimal-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-trim-base-standard-x-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-trim-base-standard-x-surface-white.jpg
+newmtl md2-porches-base-standard-x-wires-mountain_ash
+Ka 1 1 1
+Kd 0.1000 0.1000 0.1000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl fh2-windows-sides-standard-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-doors-f1d-standard-diningA-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f1d-standard-diningA-hardware-white.jpg
+newmtl int-railing-f3-standard-f3rec-top-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-railing-f3-standard-f3rec-top-white.jpg
+newmtl md2-windows-sides-minimal-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-windows-base-standard-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-base-standard-x-frame-dark.jpg
+newmtl fh2-soffits-base-standard-x-gutter-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-soffits-base-standard-x-gutter-white.jpg
+newmtl md2-sidingFront-base-wood-x-surface-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-sidingFront-base-wood-x-surface-mountain_ash.jpg
+newmtl int-floors-base-hardwood-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-floors-base-hardwood-x-surface-light.jpg
+newmtl int-ceiling-base-standard-x-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-ceiling-base-standard-x-surface-white.jpg
+newmtl md3-windows-base-modern-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md2-windows-base-minimal-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-base-minimal-x-frame-dark.jpg
+newmtl int-ceiling-f2b-standard-2bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-ceiling-f2b-standard-2bed-surface-white.jpg
+newmtl md2-porches-base-standard-x-posts-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-porches-base-standard-x-posts-mountain_ash.jpg
+newmtl int-bathFloors-base-tile-x-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-bathFloors-base-tile-x-surface-dark.jpg
+newmtl fh2-doors-porch-standard-kitchenA-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-doors-porch-standard-kitchenA-hardware-white.jpg
+newmtl int-bathFloors-f1d-tile-diningA-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-bathFloors-f1d-tile-diningA-surface-dark.jpg
+newmtl fh3-windows-upperside-minimal-f3rec-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-windows-sides-minimal-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-windows-base-minimal-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-base-minimal-x-frame-dark.jpg
+newmtl fh3-siding-upperside-lap-f3bed-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-upperside-lap-f3bed-surface-waterloo.jpg
+newmtl md2-trim-f2b-standard-2bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-trim-f2b-standard-2bed-surface-white.jpg
+newmtl fh2-windows-base-modern-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md2-windows-f2b-standard-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-porches-back-standard-x-railing-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-back-standard-x-railing-mountain_ash.jpg
+newmtl int-windows-f1d-minimal-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f1d-minimal-diningA-frame-dark.jpg
+newmtl md3-windows-f2b-minimal-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-f2b-minimal-1bed-frame-dark.jpg
+newmtl int-ceiling-f3-standard-f3bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-ceiling-f3-standard-f3bed-surface-white.jpg
+newmtl md3-siding-sides-lap-diningB-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-siding-sides-lap-diningB-surface-dark.jpg
+newmtl fh3-windows-base-minimal-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-base-minimal-x-frame-dark.jpg
+newmtl md2-porches-base-standard-x-concrete-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-porches-base-standard-x-concrete-hill_country.jpg
+newmtl md2-siding-back-lap-kitchenA-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-siding-back-lap-kitchenA-surface-dark.jpg
+newmtl fh3-trim-sides-standard-diningA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-trim-sides-standard-diningA-surface-white.jpg
+newmtl int-bathFloors-f3-tile-f3bed-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-bathFloors-f3-tile-f3bed-surface-dark.jpg
+newmtl fh3-porches-terrace-standard-x-top-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-terrace-standard-x-top-mountain_ash.jpg
+newmtl fh3-soffits-base-standard-x-pCeiling-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-soffits-base-standard-x-pCeiling-white.jpg
+newmtl md3-doors-base-standard-x-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-doors-base-standard-x-hardware-white.jpg
+newmtl fh2-windows-sides-modern-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-windows-base-minimal-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-base-minimal-x-frame-dark.jpg
+newmtl fh2-siding-sides-lap-diningB-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-sides-lap-diningB-surface-snowbound.jpg
+newmtl fh3-doors-porch-standard-kitchenA-glass-white
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-soffits-base-standard-x-soffit-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-soffits-base-standard-x-soffit-white.jpg
+newmtl fh2-windows-f2b-modern-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md2-windows-f2b-modern-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-trim-base-standard-x-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-trim-base-standard-x-surface-white.jpg
+newmtl fh3-windows-f2b-standard-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-trim-f2b-standard-2bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-trim-f2b-standard-2bed-surface-white.jpg
+newmtl md2-siding-sides-lap-diningB-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-siding-sides-lap-diningB-surface-dark.jpg
+newmtl int-railing-base-standard-x-posts-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-railing-base-standard-x-posts-white.jpg
+newmtl md3-porches-base-standard-x-concrete-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-porches-base-standard-x-concrete-hill_country.jpg
+newmtl md3-siding-back-lap-kitchenA-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-siding-back-lap-kitchenA-surface-dark.jpg
+newmtl md2-windows-f2b-minimal-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-f2b-minimal-1bed-frame-dark.jpg
+newmtl md3-siding-upperside-lap-f3bed-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-siding-upperside-lap-f3bed-surface-dark.jpg
+newmtl fh3-windows-base-modern-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-base-modern-x-frame-dark.jpg
+newmtl md3-porches-base-standard-x-wires-mountain_ash
+Ka 1 1 1
+Kd 0.1000 0.1000 0.1000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl fh2-soffits-base-standard-x-soffit-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-soffits-base-standard-x-soffit-white.jpg
+newmtl md2-trim-sides-standard-diningA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-trim-sides-standard-diningA-surface-white.jpg
+newmtl fh3-doors-porch-standard-kitchenA-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-doors-porch-standard-kitchenA-frame-white.jpg
+newmtl md2-roof-base-rubber-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-roof-base-rubber-x-surface-light.jpg
+newmtl int-walls-f1d-paint-diningB-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-walls-f1d-paint-diningB-surface-white.jpg
+newmtl int-doors-f3-standard-f3bed-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f3-standard-f3bed-frame-white.jpg
+newmtl md2-windows-sides-modern-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-base-base-concrete-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-base-base-concrete-x-surface-light.jpg
+newmtl md2-windows-base-modern-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-base-modern-x-frame-dark.jpg
+newmtl fh3-porches-front-standard-x-deck-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-front-standard-x-deck-hill_country.jpg
+newmtl md3-roof-base-rubber-x-cap-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-roof-base-rubber-x-cap-light.jpg
+newmtl fh3-porches-terrace-standard-x-deck-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-terrace-standard-x-deck-hill_country.jpg
+newmtl fh2-roof-base-metalSeam-x-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-roof-base-metalSeam-x-surface-dark.jpg
+newmtl fh3-windows-base-modern-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md2-windows-f2b-minimal-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-windows-f2b-standard-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-f2b-standard-2bed-frame-dark.jpg
+newmtl int-floors-f2b-hardwood-1bed-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-floors-f2b-hardwood-1bed-surface-light.jpg
+newmtl md2-windows-f2b-modern-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-f2b-modern-2bed-frame-dark.jpg
+newmtl fh2-windows-f2b-modern-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-f2b-modern-1bed-frame-dark.jpg
+newmtl md2-windows-base-modern-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-trim-sides-standard-diningA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-trim-sides-standard-diningA-surface-white.jpg
+newmtl fh2-doors-porch-standard-kitchenA-glass-white
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-siding-f2b-lap-1bed-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-f2b-lap-1bed-surface-waterloo.jpg
+newmtl md3-porches-base-standard-x-posts-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-porches-base-standard-x-posts-hill_country.jpg
+newmtl md2-windows-sides-modern-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-sides-modern-diningA-frame-dark.jpg
+newmtl int-doors-base-standard-x-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-base-standard-x-hardware-white.jpg
+newmtl fh3-porches-front-standard-x-railing-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-front-standard-x-railing-hill_country.jpg
+newmtl int-backsplash-base-standard-x-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-backsplash-base-standard-x-surface-white.jpg
+newmtl md3-windows-base-minimal-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-roof-base-rubber-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-roof-base-rubber-x-surface-light.jpg
+newmtl int-lights-f1d-standard-diningB-hardware-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-lights-f1d-standard-diningB-hardware-dark.jpg
+newmtl fh3-windows-upperside-minimal-f3rec-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-upperside-minimal-f3rec-frame-dark.jpg
+newmtl fh2-doors-porch-standard-kitchenA-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-doors-porch-standard-kitchenA-frame-white.jpg
+newmtl fh3-windows-sides-minimal-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-sides-minimal-diningA-frame-dark.jpg
+newmtl md3-trim-sides-standard-diningA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-trim-sides-standard-diningA-surface-white.jpg
+newmtl md3-windows-base-modern-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-base-modern-x-frame-dark.jpg
+newmtl md2-windows-base-minimal-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-walls-f2b-paint-1bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-walls-f2b-paint-1bed-surface-white.jpg
+newmtl fh2-porches-front-standard-x-railing-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-front-standard-x-railing-hill_country.jpg
+newmtl int-floors-f1d-hardwood-diningA-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-floors-f1d-hardwood-diningA-surface-light.jpg
+newmtl int-lights-f1d-standard-diningB-light-dark
+Ka 1 1 1
+Kd 0.9900 0.9900 0.9000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl fh3-windows-base-standard-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-porches-front-standard-x-deck-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-front-standard-x-deck-mountain_ash.jpg
+newmtl md2-windows-sides-minimal-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-sides-minimal-diningB-frame-dark.jpg
+newmtl fh2-sidingFront-base-lap-x-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-sidingFront-base-lap-x-surface-waterloo.jpg
+newmtl fh3-siding-upperside-lap-f3rec-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-upperside-lap-f3rec-surface-waterloo.jpg
+newmtl fh2-windows-base-minimal-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-windows-sides-modern-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-sides-modern-diningA-frame-dark.jpg
+newmtl int-floors-f3-hardwood-f3bed-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-floors-f3-hardwood-f3bed-surface-light.jpg
+newmtl md3-porches-base-standard-x-top-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-porches-base-standard-x-top-mountain_ash.jpg
+newmtl fh3-windows-base-minimal-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md2-porches-base-standard-x-wires-hill_country
+Ka 1 1 1
+Kd 0.1000 0.1000 0.1000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl md3-windows-f2b-minimal-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-windows-f2b-modern-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f2b-modern-1bed-frame-dark.jpg
+newmtl md2-windows-f2b-standard-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-f2b-standard-2bed-frame-dark.jpg
+newmtl fh2-windows-base-modern-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-base-modern-x-frame-dark.jpg
+newmtl fh2-porches-front-standard-x-top-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-front-standard-x-top-hill_country.jpg
+newmtl fh2-porches-back-standard-x-railing-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-back-standard-x-railing-hill_country.jpg
+newmtl fh2-siding-sides-lap-diningB-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-sides-lap-diningB-surface-waterloo.jpg
+newmtl fh2-windows-sides-modern-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-porches-terrace-standard-x-railing-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-terrace-standard-x-railing-mountain_ash.jpg
+newmtl md3-trim-f2b-standard-1bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-trim-f2b-standard-1bed-surface-white.jpg
+newmtl md2-windows-f2b-minimal-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-doors-front-standard-x-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-doors-front-standard-x-hardware-white.jpg
+newmtl fh3-windows-f2b-standard-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-f2b-standard-1bed-frame-dark.jpg
+newmtl int-windows-f1d-minimal-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f1d-minimal-diningB-frame-dark.jpg
+newmtl md2-siding-f2b-lap-2bed-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-siding-f2b-lap-2bed-surface-dark.jpg
+newmtl md2-windows-f2b-modern-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-f2b-modern-1bed-frame-dark.jpg
+newmtl fh2-windows-f2b-modern-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-f2b-modern-2bed-frame-dark.jpg
+newmtl fh3-porches-back-standard-x-deck-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-back-standard-x-deck-mountain_ash.jpg
+newmtl fh3-roof-base-shingles-x-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-roof-base-shingles-x-surface-dark.jpg
+newmtl fh2-trim-sides-standard-diningB-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-trim-sides-standard-diningB-surface-white.jpg
+newmtl fh3-windows-sides-minimal-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-sidingFront-base-wood-x-surface-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-sidingFront-base-wood-x-surface-hill_country.jpg
+newmtl fh3-siding-f2b-lap-1bed-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-f2b-lap-1bed-surface-snowbound.jpg
+newmtl fh2-siding-base-lap-x-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-base-lap-x-surface-waterloo.jpg
+newmtl int-doors-base-standard-x-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-base-standard-x-frame-white.jpg
+newmtl md2-windows-sides-minimal-diningA-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-roof-base-shingles-x-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-roof-base-shingles-x-surface-dark.jpg
+newmtl md2-porches-base-standard-x-deck-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-porches-base-standard-x-deck-hill_country.jpg
+newmtl int-floors-f3-hardwood-f3none-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-floors-f3-hardwood-f3none-surface-light.jpg
+newmtl fh2-soffits-base-standard-x-pCeiling-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-soffits-base-standard-x-pCeiling-white.jpg
+newmtl fh3-sidingFront-base-board-x-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-sidingFront-base-board-x-surface-waterloo.jpg
+newmtl md2-soffits-base-standard-x-ceiling-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-soffits-base-standard-x-ceiling-white.jpg
+newmtl int-lights-f1d-standard-diningA-hardware-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-lights-f1d-standard-diningA-hardware-dark.jpg
+newmtl md2-windows-sides-modern-diningB-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-lights-base-standard-x-light-dark
+Ka 1 1 1
+Kd 0.9900 0.9900 0.9000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl int-doors-f2b-standard-1bed-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f2b-standard-1bed-frame-white.jpg
+newmtl fh2-siding-back-lap-kitchenA-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-back-lap-kitchenA-surface-snowbound.jpg
+newmtl md3-trim-sides-standard-diningB-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-trim-sides-standard-diningB-surface-white.jpg
+newmtl fh2-siding-f2b-lap-1bed-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-siding-f2b-lap-1bed-surface-snowbound.jpg
+newmtl md2-trim-porch-standard-kitchenA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-trim-porch-standard-kitchenA-surface-white.jpg
+newmtl int-floors-f1d-hardwood-diningB-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-floors-f1d-hardwood-diningB-surface-light.jpg
+newmtl md3-windows-base-standard-x-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-soffits-base-standard-x-ceiling-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-soffits-base-standard-x-ceiling-white.jpg
+newmtl fh2-porches-back-standard-x-top-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-back-standard-x-top-mountain_ash.jpg
+newmtl md2-siding-f2b-lap-1bed-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-siding-f2b-lap-1bed-surface-dark.jpg
+newmtl fh2-trim-f2b-standard-1bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-trim-f2b-standard-1bed-surface-white.jpg
+newmtl fh3-siding-sides-lap-diningA-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-sides-lap-diningA-surface-snowbound.jpg
+newmtl fh3-siding-f2b-lap-2bed-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-f2b-lap-2bed-surface-waterloo.jpg
+newmtl int-doors-f1d-standard-diningA-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f1d-standard-diningA-frame-white.jpg
+newmtl fh2-roof-base-shingles-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-roof-base-shingles-x-surface-light.jpg
+newmtl fh3-doors-front-standard-x-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-doors-front-standard-x-hardware-white.jpg
+newmtl md3-windows-f2b-minimal-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl int-windows-f2b-modern-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-f2b-modern-2bed-frame-dark.jpg
+newmtl int-ceiling-f3-standard-f3rec-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-ceiling-f3-standard-f3rec-surface-white.jpg
+newmtl md2-windows-f2b-standard-1bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-f2b-standard-1bed-frame-dark.jpg
+newmtl fh3-trim-porch-standard-kitchenA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-trim-porch-standard-kitchenA-surface-white.jpg
+newmtl md3-windows-base-standard-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-base-standard-x-frame-dark.jpg
+newmtl int-doors-f3-standard-f3rec-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f3-standard-f3rec-hardware-white.jpg
+newmtl fh3-porches-front-standard-x-top-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-front-standard-x-top-hill_country.jpg
+newmtl fh2-doors-front-standard-x-glass-white
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md2-windows-sides-modern-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-sides-modern-diningB-frame-dark.jpg
+newmtl int-windows-base-modern-x-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-windows-base-modern-x-frame-dark.jpg
+newmtl fh3-siding-sides-lap-diningB-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-siding-sides-lap-diningB-surface-waterloo.jpg
+newmtl md3-siding-upperside-lap-f3rec-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-siding-upperside-lap-f3rec-surface-dark.jpg
+newmtl int-railing-f3-standard-f3bed-posts-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-railing-f3-standard-f3bed-posts-white.jpg
+newmtl int-trim-f2b-standard-1bed-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-trim-f2b-standard-1bed-surface-white.jpg
+newmtl md3-porches-base-standard-x-deck-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-porches-base-standard-x-deck-hill_country.jpg
+newmtl md2-windows-f2b-standard-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh3-sidingFront-base-lap-x-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-sidingFront-base-lap-x-surface-snowbound.jpg
+newmtl md3-windows-f2b-minimal-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-windows-f2b-minimal-2bed-frame-dark.jpg
+newmtl fh2-sidingFront-base-board-x-surface-waterloo
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-sidingFront-base-board-x-surface-waterloo.jpg
+newmtl int-doors-f2b-standard-2bed-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f2b-standard-2bed-frame-white.jpg
+newmtl fh2-porches-back-standard-x-deck-mountain_ash
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-porches-back-standard-x-deck-mountain_ash.jpg
+newmtl int-floors-f3-hardwood-f3rec-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-floors-f3-hardwood-f3rec-surface-light.jpg
+newmtl fh3-trim-sides-standard-diningB-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-trim-sides-standard-diningB-surface-white.jpg
+newmtl fh2-sidingFront-base-board-x-surface-snowbound
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-sidingFront-base-board-x-surface-snowbound.jpg
+newmtl int-doors-f2b-standard-2bed-hardware-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-doors-f2b-standard-2bed-hardware-white.jpg
+newmtl md3-siding-f2b-lap-2bed-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-siding-f2b-lap-2bed-surface-dark.jpg
+newmtl md3-trim-base-standard-x-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-trim-base-standard-x-surface-white.jpg
+newmtl fh2-windows-f2b-modern-2bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md2-windows-f2b-modern-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl md3-siding-f2b-lap-1bed-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-siding-f2b-lap-1bed-surface-dark.jpg
+newmtl int-lights-f2b-standard-1bed-hardware-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-lights-f2b-standard-1bed-hardware-dark.jpg
+newmtl fh3-windows-f2b-standard-1bed-glass-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl fh2-windows-sides-modern-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-windows-sides-modern-diningB-frame-dark.jpg
+newmtl md2-windows-f2b-minimal-2bed-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-f2b-minimal-2bed-frame-dark.jpg
+newmtl md2-trim-sides-standard-diningB-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-trim-sides-standard-diningB-surface-white.jpg
+newmtl int-lights-f1d-standard-diningA-light-dark
+Ka 1 1 1
+Kd 0.9900 0.9900 0.9000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+newmtl int-walls-f1d-paint-diningA-surface-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-walls-f1d-paint-diningA-surface-white.jpg
+newmtl md2-windows-sides-minimal-diningA-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md2-windows-sides-minimal-diningA-frame-dark.jpg
+newmtl fh2-doors-front-standard-x-frame-white
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh2-doors-front-standard-x-frame-white.jpg
+newmtl fh3-windows-sides-minimal-diningB-frame-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-windows-sides-minimal-diningB-frame-dark.jpg
+newmtl int-bathFloors-f3-tile-f3rec-surface-dark
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/int-bathFloors-f3-tile-f3rec-surface-dark.jpg
+newmtl md3-base-base-concrete-x-surface-light
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/md3-base-base-concrete-x-surface-light.jpg
+newmtl fh3-porches-back-standard-x-top-hill_country
+Ns 0
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd textures/fh3-porches-back-standard-x-top-hill_country.jpg
