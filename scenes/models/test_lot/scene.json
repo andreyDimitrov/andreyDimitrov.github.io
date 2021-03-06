@@ -1,0 +1,68 @@
+{
+    "views": {
+        "edit": {
+            "camera": {
+                "target": [
+                    -372.50398555384066,
+                    -48.0,
+                    1776.950123371588
+                ],
+                "position": [
+                    -1724.133870617155,
+                    1333.522947574289,
+                    -777.1581113729943
+                ]
+            }
+        }
+    },
+    "markers": [],
+    "levels": {
+        "level_1": [
+            2,
+            12
+        ],
+        "level_2": [
+            11,
+            21.5
+        ]
+    },
+    "clickable": {},
+    "elements": {
+        "0000": {
+            "type": "geometry",
+            "component": "terrainBox",
+            "expression": {
+                "AND": [
+                    [
+                        "terrainBox_mat_types",
+                        "terrainBox_default"
+                    ],
+                    [
+                        "terrainBox_default_colors",
+                        "terrainBox_default_white"
+                    ]
+                ]
+            },
+            "mesh": "models/test_lot/objs/elc-terrainBox-base-default-x-surface.obj",
+            "material": "models/test_lot/mtls/elc-terrainBox-base-default-x-surface-white.mtl"
+        },
+        "0001": {
+            "type": "geometry",
+            "component": "terrain",
+            "expression": {
+                "AND": [
+                    [
+                        "terrain_mat_types",
+                        "terrain_topo"
+                    ],
+                    [
+                        "terrain_topo_colors",
+                        "terrain_topo_setbacks"
+                    ]
+                ]
+            },
+            "mesh": "models/test_lot/objs/elc-terrain-base-topo-x-surface.obj",
+            "material": "models/test_lot/mtls/elc-terrain-base-topo-x-surface-setbacks.mtl"
+        }
+    }
+}

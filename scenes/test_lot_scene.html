@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Atmos Experience</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		<div id="info">
+		</div>
+
+		<script type="module">
+
+			import * as THREE from '../build/three.module.js';
+
+			import { MTLLoader } from './jsm/loaders/MTLLoader.js';
+			import { OBJLoader } from './jsm/loaders/OBJLoader.js';
+
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+
+			import { GUI } from './jsm/libs/dat.gui.module.js';
+
+			let windowHalfX = window.innerWidth / 2;
+			let windowHalfY = window.innerHeight / 2;
+
+			let controls, scene, renderer;
+			let current_camera, street_camera, edit_camera, snapshot_camera;
+			let base_pano, mask_pano;
+
+			// street view vars
+			let saved_edit_target = new THREE.Vector3();
+			let saved_edit_position = new THREE.Vector3();
+			let view_mode;
+			let lon, lat, onPointerDownLon, onPointerDownLat;
+			let isUserDragging;
+			const target = new THREE.Vector3();
+
+			// loaders
+			const loader = new THREE.FileLoader();
+			const mtl_loader = new MTLLoader();
+			const obj_loader = new OBJLoader();
+			var texture_loader = new THREE.TextureLoader();
+
+			// scene vars
+			let scene_dir = 'models/test_lot/';
+			let scene_info = {};
+			let scene_state = {};
+			let scene_elements = {};
+			let scene_materials = {};
+			let scene_meshes = {};
+			let scene_meshes_loading = {};
+			let scene_markers = [];
+
+			// Clipping planes
+			let topPlane, bottomPlane;
+
+			// Interaction
+			const raycaster = new THREE.Raycaster();
+			const mouse = new THREE.Vector2();
+			const mouse_down = new THREE.Vector2();
+			let focused_component = null;
+			let focused_marker = null;
+
+			// GUI
+			let isState1 = true;
+			let isLot = true;
+			let isFloor = true;
+
+			// test states
+			let state_default = {
+				'exterior_visibility': 'exterior_off', 
+				'interior_visibility': 'interior_off', 
+				'lot_visibility': 'lot_off', 
+				'camera_type': 'edit_camera', 
+				'view_levels': 'level_all', 
+				'terrainBox_mat_types': 'terrainBox_default', 
+				'terrainBox_default_colors': 'terrainBox_default_white', 
+				'terrain_mat_types': 'terrain_topo', 
+				'terrain_topo_colors': 'terrain_topo_setbacks'
+			}
+
+			// ------------------------------
+
+			init();
+			animate();
+
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				// scene
+				scene = new THREE.Scene();
+
+				const ambientLight = new THREE.AmbientLight( 0xffffff );
+				scene.add( ambientLight );
+				ambientLight.layers.enableAll()
+
+				// clipping planes
+				topPlane = new THREE.Plane(new THREE.Vector3(0, -1, 0), 10000);
+				bottomPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 10000);
+
+				view_mode = null;
+				current_camera = null;
+
+
+				// load scene info
+				init_scene();
+
+				renderer = new THREE.WebGLRenderer({
+					antialias: true, alpha: true,
+					preserveDrawingBuffer: false
+				});
+				renderer.shadowMap.enabled = true;
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				// clipping planes
+				renderer.localClippingEnabled = true;
+
+                document.addEventListener( 'pointermove', onDocumentMouseMove, false );
+                document.addEventListener( 'pointerdown', onDocumentMouseDown, false );
+                document.addEventListener( 'pointerup', onDocumentMouseClick, false );
+				window.addEventListener( 'resize', onWindowResize, false );
+
+				// Atmos platform -> iframe communication
+				window.addEventListener("message", (data) => {
+					mainEventHandler(data);
+				}, false);
+
+			}
+
+			// Post message to parent (Atmos platform)
+			function post_iframe_message(payload) {
+				console.log('iframe -> platform, posting', payload);
+				window.parent.postMessage(payload, '*');
+			}
+
+			// Handles all events coming in from Atmos platform
+			function mainEventHandler(event) {
+				console.log('platform -> iframe, received');
+				var data = event.data;
+
+				// Update with state
+				if (data.type == 'state'){
+					console.log('platform -> iframe, received - state', data.state);
+					scene_state = data.state
+					update_scene();
+				};
+
+				// Ask for snapshot
+				if (data.type == 'snapshot'){
+					console.log('platform -> iframe, received - snapshot');
+					renderer.render(scene, snapshot_camera);
+					var imgData = renderer.domElement.toDataURL("image/png");
+					post_iframe_message({ event_type: 'snapshot', snapshot: imgData });
+				};
+
+			};
+
+
+			function init_scene() {
+
+				loader.load(
+					scene_dir + 'scene.json',
+
+					function ( text ) {
+
+						scene_info = JSON.parse(text);
+
+						// Generate the scene views
+						prepare_views()
+
+						// Prepare elements
+						scene_elements = scene_info['elements']
+						console.log(scene_elements)
+
+						for (const [key, element] of Object.entries(scene_elements)) {
+							if (element['type'] == 'geometry') {
+								scene_meshes[element['mesh']] = null;
+								scene_meshes_loading[element['mesh']] = null;
+								scene_materials[element['material']] = null;
+							}
+						}
+
+						/*
+
+						Example element
+						
+						{
+							"0001": {
+								"type": "geometry",
+								"mesh": "path_to_obj",
+								"material": "path_to_mtl",
+								"expression": {
+									"AND": [
+										["num_levels", "3levels"],
+										["arch_style", "farmhouse"]
+									]
+								},
+								"component": "windows"
+							}
+						}
+
+						*/
+
+						// Initialize markers
+						scene_markers = scene_info['markers'];
+						for (var i = 0; i < scene_markers.length; i++) {
+							scene_markers[i]['sprite'] = make_sprite(scene_markers[i]);
+							scene_markers[i]['sprite'].userData['id'] = i;
+						}
+
+						// Start with default
+						scene_state = state_default
+						update_scene()
+
+						// Send message that scene is ready
+						post_iframe_message({'status': 'ready'})
+
+
+					}, onProgress, onError );
+			}
+
+			function make_sprite(marker){
+
+				var sprite = null;
+
+				if (marker['type'] == 'spin') {
+
+					var geometry = new THREE.PlaneGeometry( 1,1,1 );
+					var sprite_material = new THREE.MeshBasicMaterial(
+						{ map: texture_loader.load( scene_dir + marker['icon'] ), color: 0xffffff, side: THREE.DoubleSide, transparent: true } );
+
+					sprite = new THREE.Mesh( geometry, sprite_material );
+					sprite.rotation.x = Math.PI/2;
+
+				} else {
+					
+					var sprite_material = new THREE.SpriteMaterial(
+							{ map: texture_loader.load( scene_dir + marker['icon'] ), color: 0xffffff } )
+
+					sprite = new THREE.Sprite(sprite_material);
+				};
+
+				sprite_material.clippingPlanes = [topPlane, bottomPlane];
+			
+				sprite.scale.set(marker['scale'], marker['scale'], marker['scale'])
+				scene.add( sprite );
+				sprite.position.x = marker['position'][0];
+				sprite.position.y = marker['position'][1];
+				sprite.position.z = marker['position'][2];
+				sprite.userData = {'type': 'marker'};
+				sprite.visible = false;
+
+				sprite.layers.set(10);
+
+				return sprite;
+			}
+
+			function update_view_level(lvl){
+
+				if (!('levels' in scene_info)) {
+					return;
+				}
+
+				if (lvl in scene_info['levels']){
+					topPlane.constant = scene_info['levels'][lvl][1];
+					bottomPlane.constant = -scene_info['levels'][lvl][0];
+				} else {
+					topPlane.constant=10000;
+					bottomPlane.constant=10000;
+				};
+
+			}
+
+			function update_view_mode(mode){
+
+				if (view_mode == mode) {return;}
+				
+				view_mode = mode;
+
+				if (view_mode == 'edit_camera'){
+
+					// set previously saved camera state
+					edit_camera.position.set(saved_edit_position.x, saved_edit_position.y, saved_edit_position.z);
+					controls.update();
+					controls.target.set(saved_edit_target.x, saved_edit_target.y, saved_edit_target.z);
+					controls.update();
+					
+					// set camera
+					current_camera = edit_camera;
+
+					// update background
+					base_pano.visible = false;
+					mask_pano.visible = false;
+
+				};
+
+				if (view_mode == 'street_camera'){
+					
+					// set camera
+					current_camera = street_camera;
+
+					// save camera state
+					saved_edit_position.x = edit_camera.position.x;
+					saved_edit_position.y = edit_camera.position.y;
+					saved_edit_position.z = edit_camera.position.z;
+					saved_edit_target.x = controls.target.x;
+					saved_edit_target.y = controls.target.y;
+					saved_edit_target.z = controls.target.z;
+					
+					// update background
+					base_pano.visible = true;
+					mask_pano.visible = true;
+	
+				};
+			}
+
+
+			function prepare_views(){
+
+				base_pano = new THREE.Mesh(
+						new THREE.SphereGeometry( 200, 50, 50),
+						new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
+					);
+				base_pano.userData = {'type': 'ignore'}
+				base_pano.layers.set(1)
+				scene.add(base_pano)
+
+				mask_pano = new THREE.Mesh(
+					new THREE.SphereGeometry( 2, 100, 100),
+					new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
+				);
+				mask_pano.userData = {'type': 'ignore'}
+				mask_pano.layers.set(1)
+				scene.add(mask_pano)
+
+				if ('street' in scene_info['views']){
+					// Build pano view
+					street_camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 2000);
+					street_camera.layers.set( 1 );
+					var cam_pos = scene_info['views']['street']['camera']['position']
+					street_camera.position.x = cam_pos[0];
+					street_camera.position.y = cam_pos[1];
+					street_camera.position.z = cam_pos[2];
+					scene.add( street_camera );
+
+					lon = scene_info['views']['street']['camera']['target']['lon'];
+					lat = scene_info['views']['street']['camera']['target']['lat'];
+					onPointerDownLon = lon;
+					onPointerDownLat = lat;
+					isUserDragging = false;
+
+					base_pano.position.x = street_camera.position.x;
+					base_pano.position.y = street_camera.position.y;
+					base_pano.position.z = street_camera.position.z;
+
+					var base_texture = texture_loader.load(scene_info['views']['street']['pano_background'])
+					base_pano.material.map = base_texture;
+
+					mask_pano.position.x = street_camera.position.x;
+					mask_pano.position.y = street_camera.position.y;
+					mask_pano.position.z = street_camera.position.z;
+
+					var mask_texture = texture_loader.load(scene_info['views']['street']['pano_foreground'])
+					mask_pano.material.map = mask_texture;
+					mask_pano.material.transparent = true;
+
+				}
+
+				// Build edit view
+				edit_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 20000 );
+				edit_camera.layers.set( 0 );
+				cam_pos = scene_info['views']['edit']['camera']['position']
+				edit_camera.position.x = cam_pos[0];
+				edit_camera.position.y = cam_pos[1];
+				edit_camera.position.z = cam_pos[2];
+				saved_edit_position.x = edit_camera.position.x;
+				saved_edit_position.y = edit_camera.position.y;
+				saved_edit_position.z = edit_camera.position.z;
+				scene.add( edit_camera );
+
+				controls = new OrbitControls( edit_camera, renderer.domElement );
+				controls.maxPolarAngle = Math.PI * 0.5;
+				controls.minDistance = 1;
+				controls.maxDistance = 6000;
+				var cam_target = scene_info['views']['edit']['camera']['target']
+				controls.target.set(cam_target[0], cam_target[1], cam_target[2]);
+				controls.update();
+				saved_edit_target.x = controls.target.x;
+				saved_edit_target.y = controls.target.y;
+				saved_edit_target.z = controls.target.z;
+
+				// Build snapshot view
+				// snapshot_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+				snapshot_camera = new THREE.PerspectiveCamera( 45, 1, 1, 2000 );
+				cam_pos = scene_info['views']['edit']['camera']['position']
+				snapshot_camera.position.x = cam_pos[0];
+				snapshot_camera.position.y = cam_pos[1];
+				snapshot_camera.position.z = cam_pos[2];
+				scene.add( snapshot_camera );
+
+				target.x = cam_target[0];
+				target.y = cam_target[1];
+				target.z = cam_target[2];
+				snapshot_camera.lookAt( target );
+				snapshot_camera.layers.set( 2 );
+
+			}
+
+
+			function update_scene() {
+
+				console.log('updating scene with')
+				console.log(scene_state)
+
+				// set view state
+				update_view_mode(scene_state['camera_type'])
+				update_view_level(scene_state['view_levels'])
+
+				// set everything to visible false
+				for (const [key, element] of Object.entries(scene_elements)) {
+					if (element['type'] == 'geometry') {
+						if (scene_meshes[element['mesh']] != null){
+							scene_meshes[element['mesh']].visible = false;
+						}
+					}
+				}
+
+				// activate elements that satisfy expressions
+				for (const [key, element] of Object.entries(scene_elements)) {
+					if (element['type'] == 'geometry') {
+						if (evaluate_expression(scene_state, element['expression'])) {
+							activate_geometry_element(element)
+						}
+					}
+				}
+
+				// update markers
+				for (var i = 0; i < scene_markers.length; i++) {
+
+					scene_markers[i]['sprite'].visible = evaluate_expression(
+						scene_state, scene_markers[i]['expression'])
+
+				}
+
+			};
+
+			function evaluate_expression(state, expression){
+				// Given a state, evaluates a boolean expression
+
+				/*
+
+				Example state:
+				{
+					"arch_style": "farmhouse",
+					"num_floors": "3levels"
+				}
+
+				Example expression:
+				{
+					"OR": [
+						{
+							"AND": [
+								["num_levels", "3levels"],
+								["arch_style", "farmhouse"]
+							]
+						},
+						["num_levels", "2levels"]
+					]
+				}
+
+				*/
+
+				if (Array.isArray(expression)) {
+					// evaluate if the state matches
+					return state[expression[0]] == expression[1];
+				
+				} else {
+
+					if ("OR" in expression) {
+						for (var i = 0; i < expression["OR"].length; i++) {
+							if (evaluate_expression(state, expression["OR"][i])) {
+								return true;
+							}
+						}
+						return false;
+
+					} else if ("AND" in expression) {
+						for (var i = 0; i < expression["AND"].length; i++) {
+							if (!evaluate_expression(state, expression["AND"][i])) {
+								return false;
+							}
+						}
+						return true;
+
+					} else {
+						console.log("boolean operator not recognized!")
+					}
+
+				}
+
+			}
+
+			function activate_geometry_element(element) {
+
+				var mesh_name = element['mesh']
+				var material_name = element['material']
+
+				// if the mesh is being loaded, do nothing and let that process finish
+				if (scene_meshes_loading[mesh_name] == true) {
+					return;
+				}
+
+				// mesh is not being loaded. If null, load, otherwise update material
+				if (scene_meshes[mesh_name] == null) {
+
+					// lock
+					scene_meshes_loading[mesh_name] = true;
+					obj_loader.load( mesh_name,
+
+						function ( obj ) {
+
+							scene_meshes[mesh_name] = obj.children[0];
+							scene_meshes[mesh_name].userData['type'] = 'geometry'
+							scene_meshes[mesh_name].userData['component'] = element['component'];
+							scene_meshes[mesh_name].layers.enableAll()
+							scene.add( scene_meshes[mesh_name] );
+							
+							// material
+							assign_material(mesh_name, material_name);
+
+							// unlock
+							scene_meshes_loading[mesh_name] = false;
+							
+							
+
+						}, onProgress, onError );
+
+				} else {
+
+					scene_meshes[mesh_name].visible = true;
+					assign_material(mesh_name, material_name);
+
+				};
+
+			};
+
+			function assign_material(mesh_name, material_name) {
+
+				// If null, load, otherwise update material
+				if (scene_materials[material_name] == null) {
+
+					mtl_loader.load( material_name,
+					
+						function ( mtl ) {
+
+							mtl.preload();
+							var mat_keys = Object.keys(mtl.materials);
+							// ASSUME: only one material
+							scene_materials[material_name] = mtl.materials[mat_keys[0]]
+							scene_materials[material_name].clippingPlanes = [topPlane, bottomPlane];
+							// console.log('mtl loaded, assigning');
+							scene_meshes[mesh_name].material = scene_materials[material_name]
+
+						}, onProgress, onError );
+
+				} else {
+					// console.log('mtl exists, assigning');
+					scene_meshes[mesh_name].material = scene_materials[material_name]
+				};
+
+			}
+
+			function update_highlights(object){
+
+				// clear all highlights
+				turn_off_highlights()
+				focused_component = null;
+				focused_marker = null;
+
+				// exit early if no object to highlight
+				if (object == null){return;}
+
+				var otype = object.userData['type'];
+
+				// if object is a special ignore
+				if (otype == 'ignore'){
+					return;
+				}
+
+				// if object is a marker
+				if (otype == 'marker'){
+					focused_marker = object.userData['id'];
+					return;
+				}
+
+				if (otype == 'geometry'){
+
+					var component_name = object.userData['component']
+
+					// check if clickable
+					if (component_name in scene_info['clickable']){
+						var expression = scene_info['clickable'][component_name]
+						if (!evaluate_expression(scene_state, expression)){
+							return;
+						}
+					} else {
+						return;
+					}
+
+					//turn on group only
+					for (const [key, mesh] of Object.entries(scene_meshes)) {
+						if (mesh != null){
+							if (mesh.userData['type'] == 'geometry') {
+								if (mesh.userData['component'] == component_name) {
+									if (mesh.visible == true){
+										mesh.material.emissive.r = 0.2;
+										mesh.material.emissive.g = 0.2;
+										mesh.material.emissive.b = 0.2;
+									}
+								}
+							}
+						}
+					};
+
+					focused_component = component_name;
+
+					return;
+				}
+
+			}
+
+			function turn_off_highlights(){
+
+				for (const [key, info] of Object.entries(scene_meshes)) {
+					if (scene_meshes[key] != null) {
+						scene_meshes[key].material.emissive.r = 0;
+						scene_meshes[key].material.emissive.g = 0;
+						scene_meshes[key].material.emissive.b = 0;
+					}
+				};
+			
+			}
+
+			function first_visible_intersect(intersects){
+
+				
+				// exit early if no intersects
+				if (intersects.length == 0){
+					return null;
+				};
+
+				// try to find a visible object
+				for (var i = 0; i < intersects.length; i++) {
+					if (intersects[i].object.visible){
+						// check if special object
+						if (intersects[i].object.userData.type != 'ignore'){
+							// check if within clipping planes
+							if (intersects[i].point.y < topPlane.constant){
+								return intersects[i];
+							};
+						};
+					};
+				};
+
+				// if none were found, exit with null
+				return null;
+			}
+
+			function onProgress( xhr ) {
+
+				if ( xhr.lengthComputable ) {
+					const percentComplete = xhr.loaded / xhr.total * 100;
+					// console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+				}
+
+			};
+
+			function onError() { };
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+				
+				edit_camera.aspect = window.innerWidth / window.innerHeight;
+				edit_camera.updateProjectionMatrix();
+
+				// snapshot_camera.aspect = window.innerWidth / window.innerHeight;
+				// snapshot_camera.updateProjectionMatrix();
+				
+				street_camera.aspect = window.innerWidth / window.innerHeight;
+				street_camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentMouseMove( event ) {
+
+				event.preventDefault();
+				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+				if ( isUserDragging == true ) {
+
+					lon = ( mouse_down.x - event.clientX ) * 0.1 + onPointerDownLon;
+					lat = ( event.clientY - mouse_down.y ) * 0.1 + onPointerDownLat;
+
+				}
+
+				raycaster.setFromCamera( mouse, current_camera );
+				var intersects = raycaster.intersectObjects( scene.children );
+				var first_intersect = first_visible_intersect(intersects);
+				
+				if ( first_intersect != null ) {
+					
+					update_highlights(first_intersect.object);
+					
+					if (focused_component != null){
+						document.body.style.cursor = 'pointer';
+					} else if (focused_marker != null){
+						document.body.style.cursor = 'pointer';
+					} else {
+						document.body.style.cursor = 'auto';
+					};
+
+				} else {
+					update_highlights(null);
+					document.body.style.cursor = 'auto';
+	            }
+
+			}
+
+			function onDocumentMouseDown( event ) {
+				event.preventDefault();
+
+				// drag camera rotation interaction
+				
+				mouse_down.x = event.clientX;
+				mouse_down.y = event.clientY;
+
+				if (view_mode == 'street_camera'){
+					isUserDragging = true;
+					onPointerDownLon = lon;
+					onPointerDownLat = lat;
+				}
+
+			}
+
+			function checkMoved(event) {
+
+				var diffX = Math.abs(mouse_down.x - event.clientX)
+				var diffY = Math.abs(mouse_down.y - event.clientY)
+				var diff = diffX + diffY
+
+				return diff > 3
+
+			}
+
+			function onDocumentMouseClick( event ) {
+				event.preventDefault();
+
+				const {offsetX, offsetY} = event;
+				var payload = {};
+
+				isUserDragging = false;
+
+				if (!checkMoved(event)) {
+
+					// If component clicked
+					if (focused_component != null){
+
+						payload = {
+							'event_type': 'material_selection',
+							'component': focused_component,
+							'mouseX': offsetX,
+							'mouseY': offsetY,
+						};
+					}
+					// If marker clicked
+					else if (focused_marker != null) {
+
+						var marker = scene_markers[focused_marker]
+						payload = {
+							'event_type': 'marker',
+							'marker_type': marker['type'],
+							'mouseX': offsetX,
+							'mouseY': offsetY,
+						};
+						payload[marker['type']] = marker[marker['type']];
+
+					}
+					// If nothing important is clicked
+					else {
+
+						payload = {
+							'event_type': 'empty_click',
+							'mouseX': offsetX,
+							'mouseY': offsetY,
+						}
+					};
+
+					post_iframe_message(payload);
+				}
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+
+				if (view_mode == 'street_camera'){
+					
+					//horizontal rotation
+					var theta = THREE.Math.degToRad( lon );
+					target.x = current_camera.position.x + Math.cos( theta );
+					target.z = current_camera.position.z + Math.sin( theta );
+
+					//vertical rotation
+					lat = Math.max( - 85, Math.min( 85, lat ) );
+					var phi = THREE.Math.degToRad( 90 - lat );
+					target.y = current_camera.position.y + Math.cos( phi );
+
+					current_camera.lookAt( target );
+					current_camera.updateProjectionMatrix();
+
+				};
+
+				if (current_camera != null){
+					renderer.render( scene, current_camera );
+				}
+			}
+
+		</script>
+
+	</body>
+</html>
