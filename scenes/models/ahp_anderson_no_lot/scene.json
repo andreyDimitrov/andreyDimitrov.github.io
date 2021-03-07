@@ -1,0 +1,1087 @@
+{
+    "views": {
+        "edit": {
+            "camera": {
+                "target": [
+                    -92.41001849130204,
+                    78.21905740737127,
+                    63.44720835709427
+                ],
+                "position": [
+                    -870.3003205544694,
+                    709.0087877850867,
+                    -1180.9443439308293
+                ]
+            }
+        }
+    },
+    "markers": [],
+    "levels": {
+        "level_1": [
+            2,
+            12
+        ],
+        "level_2": [
+            11,
+            21.5
+        ]
+    },
+    "clickable": {
+        "roof": {
+            "OR": [
+                {
+                    "AND": [
+                        [
+                            "exterior_visibility",
+                            "exterior_on"
+                        ]
+                    ]
+                }
+            ]
+        },
+        "roofOverhangs": {
+            "OR": [
+                {
+                    "AND": [
+                        [
+                            "exterior_visibility",
+                            "exterior_on"
+                        ]
+                    ]
+                }
+            ]
+        },
+        "siding": {
+            "OR": [
+                {
+                    "AND": [
+                        [
+                            "exterior_visibility",
+                            "exterior_on"
+                        ]
+                    ]
+                }
+            ]
+        },
+        "sidingFront": {
+            "OR": [
+                {
+                    "AND": [
+                        [
+                            "exterior_visibility",
+                            "exterior_on"
+                        ]
+                    ]
+                }
+            ]
+        },
+        "porches": {
+            "OR": [
+                {
+                    "AND": [
+                        [
+                            "exterior_visibility",
+                            "exterior_on"
+                        ]
+                    ]
+                }
+            ]
+        }
+    },
+    "elements": {
+        "0000": {
+            "type": "geometry",
+            "component": "roof",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "roof_mat_types",
+                        "roof_metalSeam"
+                    ],
+                    [
+                        "roof_metalSeam_colors",
+                        "roof_metalSeam_light"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-roof-base-metalSeam-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-roof-base-metalSeam-x-surface-light.mtl"
+        },
+        "0001": {
+            "type": "geometry",
+            "component": "roof",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "roof_mat_types",
+                        "roof_metalSeam"
+                    ],
+                    [
+                        "roof_metalSeam_colors",
+                        "roof_metalSeam_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-roof-base-metalSeam-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-roof-base-metalSeam-x-surface-dark.mtl"
+        },
+        "0002": {
+            "type": "geometry",
+            "component": "roof",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "roof_mat_types",
+                        "roof_shingles"
+                    ],
+                    [
+                        "roof_shingles_colors",
+                        "roof_shingles_light"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-roof-base-shingles-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-roof-base-shingles-x-surface-light.mtl"
+        },
+        "0003": {
+            "type": "geometry",
+            "component": "roof",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "roof_mat_types",
+                        "roof_shingles"
+                    ],
+                    [
+                        "roof_shingles_colors",
+                        "roof_shingles_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-roof-base-shingles-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-roof-base-shingles-x-surface-dark.mtl"
+        },
+        "0004": {
+            "type": "geometry",
+            "component": "roofOverhangs",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "roofOverhangs_mat_types",
+                        "roofOverhangs_metalSeam"
+                    ],
+                    [
+                        "roofOverhangs_metalSeam_colors",
+                        "roofOverhangs_metalSeam_light"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-roofOverhangs-base-metalSeam-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-roofOverhangs-base-metalSeam-x-surface-light.mtl"
+        },
+        "0005": {
+            "type": "geometry",
+            "component": "roofOverhangs",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "roofOverhangs_mat_types",
+                        "roofOverhangs_metalSeam"
+                    ],
+                    [
+                        "roofOverhangs_metalSeam_colors",
+                        "roofOverhangs_metalSeam_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-roofOverhangs-base-metalSeam-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-roofOverhangs-base-metalSeam-x-surface-dark.mtl"
+        },
+        "0006": {
+            "type": "geometry",
+            "component": "siding",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "siding_mat_types",
+                        "siding_lap"
+                    ],
+                    [
+                        "siding_lap_colors",
+                        "siding_lap_snowbound"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-siding-base-lap-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-siding-base-lap-x-surface-snowbound.mtl"
+        },
+        "0007": {
+            "type": "geometry",
+            "component": "siding",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "siding_mat_types",
+                        "siding_lap"
+                    ],
+                    [
+                        "siding_lap_colors",
+                        "siding_lap_waterloo"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-siding-base-lap-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-siding-base-lap-x-surface-waterloo.mtl"
+        },
+        "0008": {
+            "type": "geometry",
+            "component": "sidingFront",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "sidingFront_mat_types",
+                        "sidingFront_board"
+                    ],
+                    [
+                        "sidingFront_board_colors",
+                        "sidingFront_board_snowbound"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-sidingFront-base-board-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-sidingFront-base-board-x-surface-snowbound.mtl"
+        },
+        "0009": {
+            "type": "geometry",
+            "component": "sidingFront",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "sidingFront_mat_types",
+                        "sidingFront_board"
+                    ],
+                    [
+                        "sidingFront_board_colors",
+                        "sidingFront_board_waterloo"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-sidingFront-base-board-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-sidingFront-base-board-x-surface-waterloo.mtl"
+        },
+        "0010": {
+            "type": "geometry",
+            "component": "windows",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "windows_mat_types",
+                        "windows_minimal"
+                    ],
+                    [
+                        "windows_minimal_colors",
+                        "windows_minimal_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-windows-base-minimal-x-glass.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-windows-base-minimal-x-glass-dark.mtl"
+        },
+        "0011": {
+            "type": "geometry",
+            "component": "windows",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "windows_mat_types",
+                        "windows_minimal"
+                    ],
+                    [
+                        "windows_minimal_colors",
+                        "windows_minimal_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-windows-base-minimal-x-frame.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-windows-base-minimal-x-frame-dark.mtl"
+        },
+        "0012": {
+            "type": "geometry",
+            "component": "soffits",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "soffits_mat_types",
+                        "soffits_standard"
+                    ],
+                    [
+                        "soffits_standard_colors",
+                        "soffits_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-soffits-base-standard-x-facia.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-soffits-base-standard-x-facia-white.mtl"
+        },
+        "0013": {
+            "type": "geometry",
+            "component": "soffits",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "soffits_mat_types",
+                        "soffits_standard"
+                    ],
+                    [
+                        "soffits_standard_colors",
+                        "soffits_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-soffits-base-standard-x-soffit.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-soffits-base-standard-x-soffit-white.mtl"
+        },
+        "0014": {
+            "type": "geometry",
+            "component": "soffits",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "soffits_mat_types",
+                        "soffits_standard"
+                    ],
+                    [
+                        "soffits_standard_colors",
+                        "soffits_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-soffits-base-standard-x-gutter.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-soffits-base-standard-x-gutter-white.mtl"
+        },
+        "0015": {
+            "type": "geometry",
+            "component": "soffits",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "soffits_mat_types",
+                        "soffits_standard"
+                    ],
+                    [
+                        "soffits_standard_colors",
+                        "soffits_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-soffits-base-standard-x-pCeiling.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-soffits-base-standard-x-pCeiling-white.mtl"
+        },
+        "0016": {
+            "type": "geometry",
+            "component": "porches",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "porches_mat_types",
+                        "porches_standard"
+                    ],
+                    [
+                        "porches_standard_colors",
+                        "porches_standard_mountain_ash"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-porches-front-standard-x-deck.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-porches-front-standard-x-deck-mountain_ash.mtl"
+        },
+        "0017": {
+            "type": "geometry",
+            "component": "porches",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "porches_mat_types",
+                        "porches_standard"
+                    ],
+                    [
+                        "porches_standard_colors",
+                        "porches_standard_mountain_ash"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-porches-front-standard-x-railing.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-porches-front-standard-x-railing-mountain_ash.mtl"
+        },
+        "0018": {
+            "type": "geometry",
+            "component": "porches",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "porches_mat_types",
+                        "porches_standard"
+                    ],
+                    [
+                        "porches_standard_colors",
+                        "porches_standard_mountain_ash"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-porches-front-standard-x-top.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-porches-front-standard-x-top-mountain_ash.mtl"
+        },
+        "0019": {
+            "type": "geometry",
+            "component": "porches",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "porches_mat_types",
+                        "porches_standard"
+                    ],
+                    [
+                        "porches_standard_colors",
+                        "porches_standard_hill_country"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-porches-front-standard-x-deck.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-porches-front-standard-x-deck-hill_country.mtl"
+        },
+        "0020": {
+            "type": "geometry",
+            "component": "porches",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "porches_mat_types",
+                        "porches_standard"
+                    ],
+                    [
+                        "porches_standard_colors",
+                        "porches_standard_hill_country"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-porches-front-standard-x-railing.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-porches-front-standard-x-railing-hill_country.mtl"
+        },
+        "0021": {
+            "type": "geometry",
+            "component": "porches",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "porches_mat_types",
+                        "porches_standard"
+                    ],
+                    [
+                        "porches_standard_colors",
+                        "porches_standard_hill_country"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-porches-front-standard-x-top.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-porches-front-standard-x-top-hill_country.mtl"
+        },
+        "0022": {
+            "type": "geometry",
+            "component": "trim",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "trim_mat_types",
+                        "trim_standard"
+                    ],
+                    [
+                        "trim_standard_colors",
+                        "trim_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-trim-base-standard-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-trim-base-standard-x-surface-white.mtl"
+        },
+        "0023": {
+            "type": "geometry",
+            "component": "base",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "base_mat_types",
+                        "base_concrete"
+                    ],
+                    [
+                        "base_concrete_colors",
+                        "base_concrete_light"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-base-base-concrete-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-base-base-concrete-x-surface-light.mtl"
+        },
+        "0024": {
+            "type": "geometry",
+            "component": "facadeBase",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "facadeBase_mat_types",
+                        "facadeBase_stone"
+                    ],
+                    [
+                        "facadeBase_stone_colors",
+                        "facadeBase_stone_light"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-facadeBase-base-stone-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-facadeBase-base-stone-x-surface-light.mtl"
+        },
+        "0025": {
+            "type": "geometry",
+            "component": "doors",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "doors_mat_types",
+                        "doors_standard"
+                    ],
+                    [
+                        "doors_standard_colors",
+                        "doors_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-doors-front-standard-x-glass.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-doors-front-standard-x-glass-white.mtl"
+        },
+        "0026": {
+            "type": "geometry",
+            "component": "doors",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "doors_mat_types",
+                        "doors_standard"
+                    ],
+                    [
+                        "doors_standard_colors",
+                        "doors_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-doors-front-standard-x-frame.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-doors-front-standard-x-frame-white.mtl"
+        },
+        "0027": {
+            "type": "geometry",
+            "component": "garageDoor",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "garageDoor_mat_types",
+                        "garageDoor_standard"
+                    ],
+                    [
+                        "garageDoor_standard_colors",
+                        "garageDoor_standard_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-garageDoor-base-standard-x-glass.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-garageDoor-base-standard-x-glass-dark.mtl"
+        },
+        "0028": {
+            "type": "geometry",
+            "component": "garageDoor",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "garageDoor_mat_types",
+                        "garageDoor_standard"
+                    ],
+                    [
+                        "garageDoor_standard_colors",
+                        "garageDoor_standard_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-garageDoor-base-standard-x-frame.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-garageDoor-base-standard-x-frame-dark.mtl"
+        },
+        "0029": {
+            "type": "geometry",
+            "component": "lot",
+            "expression": {
+                "AND": [
+                    [
+                        "exterior_visibility",
+                        "exterior_on"
+                    ],
+                    [
+                        "lot_visibility",
+                        "lot_on"
+                    ],
+                    [
+                        "lot_mat_types",
+                        "lot_edit"
+                    ],
+                    [
+                        "lot_edit_colors",
+                        "lot_edit_setbacks"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/fh2-lot-base-edit-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/fh2-lot-base-edit-x-surface-setbacks.mtl"
+        },
+        "0030": {
+            "type": "geometry",
+            "component": "backsplash",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "backsplash_mat_types",
+                        "backsplash_standard"
+                    ],
+                    [
+                        "backsplash_standard_colors",
+                        "backsplash_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-backsplash-base-standard-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-backsplash-base-standard-x-surface-white.mtl"
+        },
+        "0031": {
+            "type": "geometry",
+            "component": "cabinets",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "cabinets_mat_types",
+                        "cabinets_standard"
+                    ],
+                    [
+                        "cabinets_standard_colors",
+                        "cabinets_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-cabinets-base-standard-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-cabinets-base-standard-x-surface-white.mtl"
+        },
+        "0032": {
+            "type": "geometry",
+            "component": "counters",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "counters_mat_types",
+                        "counters_standard"
+                    ],
+                    [
+                        "counters_standard_colors",
+                        "counters_standard_light"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-counters-base-standard-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-counters-base-standard-x-surface-light.mtl"
+        },
+        "0033": {
+            "type": "geometry",
+            "component": "windows",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "windows_mat_types",
+                        "windows_minimal"
+                    ],
+                    [
+                        "windows_minimal_colors",
+                        "windows_minimal_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-windows-base-minimal-x-frame.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-windows-base-minimal-x-frame-dark.mtl"
+        },
+        "0034": {
+            "type": "geometry",
+            "component": "lights",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "lights_mat_types",
+                        "lights_standard"
+                    ],
+                    [
+                        "lights_standard_colors",
+                        "lights_standard_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-lights-base-standard-x-light.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-lights-base-standard-x-light-dark.mtl"
+        },
+        "0035": {
+            "type": "geometry",
+            "component": "lights",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "lights_mat_types",
+                        "lights_standard"
+                    ],
+                    [
+                        "lights_standard_colors",
+                        "lights_standard_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-lights-base-standard-x-hardware.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-lights-base-standard-x-hardware-dark.mtl"
+        },
+        "0036": {
+            "type": "geometry",
+            "component": "trim",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "trim_mat_types",
+                        "trim_standard"
+                    ],
+                    [
+                        "trim_standard_colors",
+                        "trim_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-trim-base-standard-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-trim-base-standard-x-surface-white.mtl"
+        },
+        "0037": {
+            "type": "geometry",
+            "component": "walls",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "walls_mat_types",
+                        "walls_paint"
+                    ],
+                    [
+                        "walls_paint_colors",
+                        "walls_paint_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-walls-base-paint-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-walls-base-paint-x-surface-white.mtl"
+        },
+        "0038": {
+            "type": "geometry",
+            "component": "ceiling",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "ceiling_mat_types",
+                        "ceiling_standard"
+                    ],
+                    [
+                        "ceiling_standard_colors",
+                        "ceiling_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-ceiling-base-standard-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-ceiling-base-standard-x-surface-white.mtl"
+        },
+        "0039": {
+            "type": "geometry",
+            "component": "floors",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "floors_mat_types",
+                        "floors_hardwood"
+                    ],
+                    [
+                        "floors_hardwood_colors",
+                        "floors_hardwood_light"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-floors-base-hardwood-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-floors-base-hardwood-x-surface-light.mtl"
+        },
+        "0040": {
+            "type": "geometry",
+            "component": "bathFloors",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "bathFloors_mat_types",
+                        "bathFloors_standard"
+                    ],
+                    [
+                        "bathFloors_standard_colors",
+                        "bathFloors_standard_dark"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-bathFloors-base-standard-x-surface.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-bathFloors-base-standard-x-surface-dark.mtl"
+        },
+        "0041": {
+            "type": "geometry",
+            "component": "railing",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "railing_mat_types",
+                        "railing_standard"
+                    ],
+                    [
+                        "railing_standard_colors",
+                        "railing_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-railing-base-standard-x-posts.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-railing-base-standard-x-posts-white.mtl"
+        },
+        "0042": {
+            "type": "geometry",
+            "component": "railing",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "railing_mat_types",
+                        "railing_standard"
+                    ],
+                    [
+                        "railing_standard_colors",
+                        "railing_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-railing-base-standard-x-top.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-railing-base-standard-x-top-white.mtl"
+        },
+        "0043": {
+            "type": "geometry",
+            "component": "doors",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "doors_mat_types",
+                        "doors_standard"
+                    ],
+                    [
+                        "doors_standard_colors",
+                        "doors_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-doors-base-standard-x-hardware.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-doors-base-standard-x-hardware-white.mtl"
+        },
+        "0044": {
+            "type": "geometry",
+            "component": "doors",
+            "expression": {
+                "AND": [
+                    [
+                        "interior_visibility",
+                        "interior_on"
+                    ],
+                    [
+                        "doors_mat_types",
+                        "doors_standard"
+                    ],
+                    [
+                        "doors_standard_colors",
+                        "doors_standard_white"
+                    ]
+                ]
+            },
+            "mesh": "models/ahp_anderson_no_lot/objs/int-doors-base-standard-x-frame.obj",
+            "material": "models/ahp_anderson_no_lot/mtls/int-doors-base-standard-x-frame-white.mtl"
+        }
+    }
+}
