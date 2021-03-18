@@ -1,0 +1,400 @@
+{
+    "scene": {
+        "markers": [],
+        "envs": [],
+        "lights": [
+            {
+                "asset": "ambientQA",
+                "structure": null
+            },
+            {
+                "asset": "directionalQA",
+                "structure": null,
+                "position": [
+                    1,
+                    1,
+                    1
+                ]
+            }
+        ],
+        "cameras": [
+            {
+                "asset": "platformEditDefault",
+                "embedded_asset": null,
+                "structure": null,
+                "position": [
+                    688.4885296961243,
+                    829.8709480094899,
+                    -2973.2589352989667
+                ],
+                "target": [
+                    486.0748343330929,
+                    0.0,
+                    -1790.0841824202068
+                ],
+                "layout_expression": null
+            }
+        ],
+        "layouts": [
+            {
+                "asset": "archStyle",
+                "embedded_asset": null,
+                "structure": "main",
+                "variant": "farmhouse"
+            },
+            {
+                "asset": null,
+                "embedded_asset": {
+                    "name": "Building Placement",
+                    "description": "Placement of the main building.",
+                    "versions": {
+                        "optimal": {
+                            "name": "Optimal Placement",
+                            "description": "Placement based on algorithmic optimiation."
+                        }
+                    }
+                },
+                "structure": null,
+                "variant": "optimal"
+            }
+        ],
+        "structures": [],
+        "levels": [],
+        "spaces": [],
+        "space_connections": [],
+        "modification_groups": [
+            {
+                "asset": "terrain",
+                "embedded_asset": null,
+                "structure": null,
+                "modifications": null
+            },
+            {
+                "asset": "porches",
+                "embedded_asset": null,
+                "structure": "main",
+                "modifications": null
+            }
+        ],
+        "building_components": [
+            {
+                "asset": "terrainGeneric",
+                "embedded_asset": null,
+                "modification_group": 0,
+                "layout_expression": null,
+                "quantity": 3000.0
+            },
+            {
+                "asset": "porchGeneric",
+                "embedded_asset": null,
+                "modification_group": 1,
+                "layout_expression": {
+                    "AND": [
+                        0,
+                        1
+                    ]
+                },
+                "quantity": 1.0
+            }
+        ],
+        "meshes": [
+            {
+                "building_component": 0,
+                "variant": "graphic",
+                "theme": "analysis",
+                "region": "exterior",
+                "obj": "0000",
+                "mtl": "0000_analysis"
+            },
+            {
+                "building_component": 0,
+                "variant": "graphic",
+                "theme": "analysis",
+                "region": "exterior",
+                "obj": "0001",
+                "mtl": "0001_analysis"
+            },
+            {
+                "building_component": 1,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "0002",
+                "mtl": "0002_mountain_ash"
+            },
+            {
+                "building_component": 1,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "0002",
+                "mtl": "0002_hill_country"
+            }
+        ]
+    },
+    "assets": {
+        "cameras": {
+            "platformEditDefault": {
+                "name": "Edit Camara",
+                "description": "A default edit camera used on the Atmos platform.",
+                "type": "edit",
+                "cam": {
+                    "fov": 45,
+                    "near": 1,
+                    "far": 20000
+                }
+            }
+        },
+        "lights": {
+            "ambientQA": {
+                "name": "Ambient Light",
+                "description": "Light used for QA environment.",
+                "type": "ambient",
+                "color": [
+                    1,
+                    1,
+                    1
+                ],
+                "intensity": 1
+            },
+            "directionalQA": {
+                "name": "Directional Light",
+                "description": "Light used for QA environment.",
+                "type": "directional",
+                "color": [
+                    1,
+                    1,
+                    1
+                ],
+                "intensity": 0.3
+            }
+        },
+        "layouts": {
+            "archStyle": {
+                "name": "Architectural Style",
+                "description": "Choose the architectural style.",
+                "versions": {
+                    "farmhouse": {
+                        "name": "Farmhouse",
+                        "description": "This is the farmhouse style."
+                    },
+                    "contemporary": {
+                        "name": "Contemporary",
+                        "description": "This is the contemporary style."
+                    },
+                    "modern": {
+                        "name": "Modern",
+                        "description": "This is the modern style."
+                    }
+                }
+            }
+        },
+        "modification_groups": {
+            "terrain": {
+                "name": "Terrain",
+                "description": "Use this to modify the terrain look."
+            },
+            "porches": {
+                "name": "Porches",
+                "description": "Use this to modify the porches look."
+            }
+        },
+        "building_components": {
+            "terrainGeneric": {
+                "name": "Terrain",
+                "description": "A terrain building component.",
+                "takeoff": {
+                    "unit": "SF",
+                    "type": "AREA",
+                    "section": "site"
+                },
+                "variants": {
+                    "massing": {
+                        "variant_name": "Massing",
+                        "variant_description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "variant_name": "Bake",
+                                "variant_description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "graphic-pattern-solid",
+                                            "gray"
+                                        ],
+                                        "box": [
+                                            "sh",
+                                            "graphic-pattern-solid",
+                                            "white"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior"
+                            },
+                            "box": {
+                                "region": "exterior"
+                            }
+                        }
+                    },
+                    "graphic": {
+                        "variant_name": "Graphic",
+                        "variant_description": "Variant used for graphic renderings.",
+                        "uv_mode": "h_bbox",
+                        "themes": {
+                            "analysis": {
+                                "variant_name": "Analysis",
+                                "variant_description": "Theme showing site analysis including setbacks.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "local",
+                                            "terrain-graphic",
+                                            "setbacks"
+                                        ],
+                                        "box": [
+                                            "sh",
+                                            "graphic-pattern-solid",
+                                            "white"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior"
+                            },
+                            "box": {
+                                "region": "exterior"
+                            }
+                        }
+                    }
+                }
+            },
+            "porchGeneric": {
+                "name": "Porch",
+                "description": "A porch building component.",
+                "takeoff": {
+                    "unit": "SF",
+                    "type": "AREA",
+                    "section": "accesory"
+                },
+                "variants": {
+                    "massing": {
+                        "variant_name": "Massing",
+                        "variant_description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "variant_name": "Bake",
+                                "variant_description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "deck": [
+                                            "sh",
+                                            "trim-wood-ext01",
+                                            "mountainAsh"
+                                        ],
+                                        "railing": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "top": [
+                                            "sh",
+                                            "floor-woodDeck-6in01",
+                                            "mountainAsh"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "deck": {
+                                "region": "exterior"
+                            },
+                            "railing": {
+                                "region": "exterior"
+                            },
+                            "top": {
+                                "region": "exterior"
+                            }
+                        }
+                    },
+                    "wood": {
+                        "variant_name": "Wood",
+                        "variant_description": "Wood variant of porch.",
+                        "themes": {
+                            "mountain_ash": {
+                                "variant_name": "Mountain Ash",
+                                "variant_description": "Mountain ash theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "deck": [
+                                            "sh",
+                                            "trim-wood-ext01",
+                                            "mountainAsh"
+                                        ],
+                                        "railing": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "top": [
+                                            "sh",
+                                            "floor-woodDeck-6in01",
+                                            "mountainAsh"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            },
+                            "hill_country": {
+                                "variant_name": "Hill Country",
+                                "variant_description": "Hill country theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "deck": [
+                                            "sh",
+                                            "trim-wood-ext01",
+                                            "hillCountry"
+                                        ],
+                                        "railing": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "top": [
+                                            "sh",
+                                            "floor-woodDeck-6in01",
+                                            "hillCountry"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "deck": {
+                                "region": "exterior"
+                            },
+                            "railing": {
+                                "region": "exterior"
+                            },
+                            "top": {
+                                "region": "exterior"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

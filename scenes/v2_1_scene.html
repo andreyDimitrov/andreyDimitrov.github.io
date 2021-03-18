@@ -22,17 +22,16 @@
 
 			import { GUI } from './jsm/libs/dat.gui.module.js';
 
-			let windowHalfX = window.innerWidth / 2;
-			let windowHalfY = window.innerHeight / 2;
 
 			let controls, scene, renderer;
-			let current_camera, street_camera, edit_camera, snapshot_camera;
+			let street_camera, edit_camera, snapshot_camera;
+			let current_camera = null;
 			let base_pano, mask_pano;
 
 			// street view vars
 			let saved_edit_target = new THREE.Vector3();
 			let saved_edit_position = new THREE.Vector3();
-			let view_mode;
+			let view_mode = null;
 			let lon, lat, onPointerDownLon, onPointerDownLat;
 			let isUserDragging;
 			const target = new THREE.Vector3();
@@ -44,7 +43,7 @@
 			var texture_loader = new THREE.TextureLoader();
 
 			// scene vars
-			let scene_dir = 'models/ext_int_merged/';
+			let scene_dir = 'models/v2_1_qa/';
 			let scene_info = {};
 			let scene_state = {};
 			let scene_elements = {};
@@ -70,71 +69,7 @@
 			let isFloor = true;
 
 			// test states
-			let state_default = {
-				"exterior_visibility": "exterior_on",
-			    "interior_visibility": "interior_on",
-			    "lot_visibility": "lot_off",
-			    "camera_type": "edit_camera",
-			    "view_levels": "level_all",
-			    "arch_style": "farmhouse",
-			    "num_floors": "3floors",
-			    "structural_option_dining": "structural_option_diningB",
-			    "structural_option_kitchen": "structural_option_kitchenA",
-			    "structural_option_third": "structural_option_f3rec",
-			    "structural_option_second": "structural_option_2bed",
-			    "backsplash_mat_types": "backsplash_standard",
-			    "backsplash_standard_colors": "backsplash_standard_white",
-			    "cabinets_mat_types": "cabinets_standard",
-			    "cabinets_standard_colors": "cabinets_standard_white",
-			    "counters_mat_types": "counters_standard",
-			    "counters_standard_colors": "counters_standard_light",
-			    "windows_mat_types": "windows_minimal",
-			    "windows_standard_colors": "windows_standard_dark",
-			    "windows_minimal_colors": "windows_minimal_dark",
-			    "windows_modern_colors": "windows_modern_dark",
-			    "lights_mat_types": "lights_standard",
-			    "lights_standard_colors": "lights_standard_dark",
-			    "trim_mat_types": "trim_standard",
-			    "trim_standard_colors": "trim_standard_white",
-			    "walls_mat_types": "walls_paint",
-			    "walls_paint_colors": "walls_paint_white",
-			    "ceiling_mat_types": "ceiling_standard",
-			    "ceiling_standard_colors": "ceiling_standard_white",
-			    "floors_mat_types": "floors_hardwood",
-			    "floors_hardwood_colors": "floors_hardwood_light",
-			    "bathFloors_mat_types": "bathFloors_tile",
-			    "bathFloors_tile_colors": "bathFloors_tile_dark",
-			    "railing_mat_types": "railing_standard",
-			    "railing_standard_colors": "railing_standard_white",
-			    "doors_mat_types": "doors_standard",
-			    "doors_standard_colors": "doors_standard_white",
-			    "roof_mat_types": "roof_metalSeam",
-			    "roof_metalSeam_colors": "roof_metalSeam_dark",
-			    "roof_shingles_colors": "roof_shingles_dark",
-			    "siding_mat_types": "siding_lap",
-			    "siding_lap_colors": "siding_lap_snowbound",
-			    "sidingFront_mat_types": "sidingFront_board",
-			    "sidingFront_lap_colors": "sidingFront_lap_waterloo",
-			    "sidingFront_board_colors": "sidingFront_board_snowbound",
-			    "soffits_mat_types": "soffits_standard",
-			    "soffits_standard_colors": "soffits_standard_white",
-			    "porches_mat_types": "porches_standard",
-			    "porches_standard_colors": "porches_standard_hill_country",
-			    "base_mat_types": "base_concrete",
-			    "base_concrete_colors": "base_concrete_light",
-			    "lot_mat_types": "lot_edit",
-			    "lot_edit_colors": "lot_edit_setbacks",
-			    "roof_rubber_colors": "roof_rubber_light",
-			    "sidingFront_wood_colors": "sidingFront_wood_hill_country",
-			    "im_shower_floor_colors": "im_shower_floor_arctic_white",
-			    "im_wall_colors": "im_wall_agreeable_gray",
-			    "im_wall2_colors": "im_wall2_green_trance",
-			    "im_backsplash_colors": "im_backsplash_black",
-			    "im_carpet_colors": "im_carpet_columbia_series",
-			    "im_countertops_colors": "im_countertops_carolina_calcutta",
-			    "im_cupboard_colors": "im_cupboard_stone_gray",
-			    "im_floor_colors": "im_wood_floor_hickory"
-			}
+			let state_default = {}
 
 
 			// ------------------------------
@@ -148,23 +83,12 @@
 				const container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
-				// scene
-				scene = new THREE.Scene();
-
-				const ambientLight = new THREE.AmbientLight( 0xffffff );
-				scene.add( ambientLight );
-				ambientLight.layers.enableAll()
-
-				// clipping planes
-				topPlane = new THREE.Plane(new THREE.Vector3(0, -1, 0), 100);
-				bottomPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 100);
-
-				view_mode = null;
-				current_camera = null;
-
-				// load scene info
 				init_scene();
 
+				// load scene info
+				load_scene();
+
+				// rendering settings
 				renderer = new THREE.WebGLRenderer({
 					antialias: true, alpha: true,
 					preserveDrawingBuffer: false
@@ -174,9 +98,9 @@
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
 
-				// clipping planes
 				renderer.localClippingEnabled = true;
 
+                // interaction
                 document.addEventListener( 'pointermove', onDocumentMouseMove, false );
                 document.addEventListener( 'pointerdown', onDocumentMouseDown, false );
                 document.addEventListener( 'pointerup', onDocumentMouseClick, false );
@@ -218,7 +142,7 @@
 			};
 
 
-			function init_scene() {
+			function load_scene() {
 
 				loader.load(
 					scene_dir + 'scene.json',
@@ -227,44 +151,38 @@
 
 						scene_info = JSON.parse(text);
 
-						// Generate the scene views
+						// Generate the scene views based on camera and
+						// env objects
 						prepare_views()
 
-						// Prepare elements
-						scene_elements = scene_info['elements']
-						console.log(scene_elements)
+						// Generate lights based on lights objects
+						prapare_lights()
 
-						for (const [key, element] of Object.entries(scene_elements)) {
-							if (element['type'] == 'geometry') {
-								scene_meshes[element['mesh']] = null;
-								scene_meshes_added[element['mesh']] = false;
-								scene_materials[element['material']] = null;
-							}
+						// Prepare meshes
+						console.log(scene_info['scene']['meshes'])
+
+						// initialize loaded geometry and materials
+						for (var i = 0; i < scene_info['scene']['meshes'].length; i++) {
+							var m = scene_info['scene']['meshes'][i]
+							scene_meshes[m['obj']] = null;
+							scene_meshes_added[m['obj']] = false;
+							scene_materials[m['mtl']] = null;
 						}
 
 						/*
-
-						Example element
-						
+						Example mesh:
 						{
-							"0001": {
-								"type": "geometry",
-								"mesh": "path_to_obj",
-								"material": "path_to_mtl",
-								"expression": {
-									"AND": [
-										["num_levels", "3levels"],
-										["arch_style", "farmhouse"]
-									]
-								},
-								"component": "windows"
-							}
-						}
-
+			                "building_component": 1,
+			                "variant": "wood",
+			                "theme": "mountain_ash",
+			                "region": "exterior",
+			                "obj": "0002",
+			                "mtl": "0002_mountain_ash"
+			            }
 						*/
 
 						// Initialize markers
-						scene_markers = scene_info['markers'];
+						scene_markers = scene_info['scene']['markers'];
 						for (var i = 0; i < scene_markers.length; i++) {
 							scene_markers[i]['sprite'] = make_sprite(scene_markers[i]);
 							scene_markers[i]['sprite'].userData['id'] = i;
@@ -277,8 +195,6 @@
 
 							console.log(mtl)
 							scene_mtl = mtl
-
-							// make_material(mtl.materialsInfo['fh2-base-base-concrete-x-surface-light'])
 
 							obj_loader.load( scene_dir + 'scene.obj',
 
@@ -295,7 +211,6 @@
 									} else {
 										// console.log(obj.children[i])
 										var mesh_name = obj.children[i].name
-										
 										
 										scene_meshes[mesh_name] = obj.children[i];
 										// // console.log('added1')
@@ -319,7 +234,6 @@
 								// Start with default
 								scene_state = state_default
 								console.log('updating scene')
-								console.log(scene_meshes)
 								update_scene()
 
 								// Send message that scene is ready
@@ -338,11 +252,81 @@
 					}, onProgress, onError );
 			}
 
+			function init_scene(){
+				// Initialize the scene with default objects
+
+				// scene
+				scene = new THREE.Scene();
+
+				// clipping planes
+				topPlane = new THREE.Plane(new THREE.Vector3(0, -1, 0), 10000);
+				bottomPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 10000);
+
+				// Create spheres to be used in a street view if avaiable
+				base_pano = new THREE.Mesh(
+						new THREE.SphereGeometry( 200, 50, 50),
+						new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
+					);
+				base_pano.userData = {'type': 'ignore'}
+				base_pano.layers.set(1)
+				scene.add(base_pano)
+
+				mask_pano = new THREE.Mesh(
+					new THREE.SphereGeometry( 2, 100, 100),
+					new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
+				);
+				mask_pano.userData = {'type': 'ignore'}
+				mask_pano.layers.set(1)
+				scene.add(mask_pano)
+
+			}
+
+			function prapare_lights(){
+				// Creates lights objects from scene_info
+
+				if (scene_info['scene']['lights'].length == 0) {
+					// Add a default ambient light
+					var color = new THREE.Color().setRGB(255, 255, 255);
+					var light = new THREE.AmbientLight( color, 1 );
+					scene.add( light );
+					light.layers.enableAll()
+
+				} else {
+					for (var i = 0; i < scene_info['scene']['lights'].length; i++) {
+						
+						// get light info
+						var li = scene_info['scene']['lights'][i]
+						if (li['asset'] != null){
+							var la = scene_info['assets']['lights'][li['asset']]
+						} else {
+							var la = li['embedded_asset']
+						}
+							
+						// make light objects and add to scene
+						if (la['type'] == 'directional') {
+							var color = new THREE.Color().setRGB(la['color'][0], la['color'][1], la['color'][2]);
+							var light = new THREE.DirectionalLight(color, la['intensity']);
+							scene.add( light );
+							light.position.set( li['position'][0], li['position'][1], li['position'][2])
+							light.layers.enableAll()
+						}
+						if (la['type'] == 'ambient') {
+							var color = new THREE.Color().setRGB(la['color'][0], la['color'][1], la['color'][2]);
+							var light = new THREE.AmbientLight( color, la['intensity'] );
+							scene.add( light );
+							light.layers.enableAll()
+						}
+					}
+				}
+
+			
+			}
+
 			function make_material(mat_info){
 
 				// create a new material
 				var mat = new THREE.MeshPhongMaterial( {side: THREE.FrontSide } )
-				console.log(mat_info)
+				// console.log(mat_info)
 				// add lines here to update all the atributes we want
 				if (mat_info.kd !== undefined){
 					mat.color.r = mat_info.kd[0]
@@ -362,14 +346,12 @@
 					if (mat.opacity != 1) mat.transparent = true;
 				}
 				if (mat_info.map_kd !== undefined){
-					mat.map = texture_loader.load(scene_dir + 'mtls/' + mat_info.map_kd)
+					mat.map = texture_loader.load(scene_dir + mat_info.map_kd)
 				}
 				if (mat_info.size !== undefined){
-					console.log('SIIIIIZEEEEE')
-					console.log(mat)
 					mat.map.wrapS = THREE.RepeatWrapping;
 					mat.map.wrapT = THREE.RepeatWrapping;
-					mat.map.repeat.set( 40, 40 );
+					mat.map.repeat.set( 1/mat_info.size, 1/mat_info.size );
 				}
 				
 
@@ -381,34 +363,36 @@
 
 				var sprite = null;
 
-				if (marker['type'] == 'spin') {
+				// TODO: refactor this whole thing ...
 
-					var geometry = new THREE.PlaneGeometry( 1,1,1 );
-					var sprite_material = new THREE.MeshBasicMaterial(
-						{ map: texture_loader.load( scene_dir + marker['icon'] ), color: 0xffffff, side: THREE.DoubleSide, transparent: true } );
+				// if (marker['type'] == 'spin') {
 
-					sprite = new THREE.Mesh( geometry, sprite_material );
-					sprite.rotation.x = Math.PI/2;
+				// 	var geometry = new THREE.PlaneGeometry( 1,1,1 );
+				// 	var sprite_material = new THREE.MeshBasicMaterial(
+				// 		{ map: texture_loader.load( scene_dir + marker['icon'] ), color: 0xffffff, side: THREE.DoubleSide, transparent: true } );
 
-				} else {
+				// 	sprite = new THREE.Mesh( geometry, sprite_material );
+				// 	sprite.rotation.x = Math.PI/2;
+
+				// } else {
 					
-					var sprite_material = new THREE.SpriteMaterial(
-							{ map: texture_loader.load( scene_dir + marker['icon'] ), color: 0xffffff } )
+				// 	var sprite_material = new THREE.SpriteMaterial(
+				// 			{ map: texture_loader.load( scene_dir + marker['icon'] ), color: 0xffffff } )
 
-					sprite = new THREE.Sprite(sprite_material);
-				};
+				// 	sprite = new THREE.Sprite(sprite_material);
+				// };
 
-				sprite_material.clippingPlanes = [topPlane, bottomPlane];
+				// sprite_material.clippingPlanes = [topPlane, bottomPlane];
 			
-				sprite.scale.set(marker['scale'], marker['scale'], marker['scale'])
-				scene.add( sprite );
-				sprite.position.x = marker['position'][0];
-				sprite.position.y = marker['position'][1];
-				sprite.position.z = marker['position'][2];
-				sprite.userData = {'type': 'marker'};
-				sprite.visible = false;
+				// sprite.scale.set(marker['scale'], marker['scale'], marker['scale'])
+				// scene.add( sprite );
+				// sprite.position.x = marker['position'][0];
+				// sprite.position.y = marker['position'][1];
+				// sprite.position.z = marker['position'][2];
+				// sprite.userData = {'type': 'marker'};
+				// sprite.visible = false;
 
-				sprite.layers.set(10);
+				// sprite.layers.set(10);
 
 				return sprite;
 			}
@@ -474,63 +458,67 @@
 
 
 			function prepare_views(){
+				// Creates views based on cameras in scene_info
 
-				base_pano = new THREE.Mesh(
-						new THREE.SphereGeometry( 200, 50, 50),
-						new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
-					);
-				base_pano.userData = {'type': 'ignore'}
-				base_pano.layers.set(1)
-				scene.add(base_pano)
+				if (scene_info['scene']['cameras'].length == 0) {
+					// make a default camera (edit and snapshot)
+					var cam_props = {
+						"position": [-4000, 3000, -3000],
+						"target": [0, 0, -2000],
+						"fov": 45, "near": 1, "far": 20000
+					}
+					make_edit_view(cam_props)
 
-				mask_pano = new THREE.Mesh(
-					new THREE.SphereGeometry( 2, 100, 100),
-					new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
-				);
-				mask_pano.userData = {'type': 'ignore'}
-				mask_pano.layers.set(1)
-				scene.add(mask_pano)
+				} else {
 
-				if ('street' in scene_info['views']){
-					// Build pano view
-					street_camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 2000);
-					street_camera.layers.set( 1 );
-					var cam_pos = scene_info['views']['street']['camera']['position']
-					street_camera.position.x = cam_pos[0];
-					street_camera.position.y = cam_pos[1];
-					street_camera.position.z = cam_pos[2];
-					scene.add( street_camera );
+					
+					for (var i = 0; i < scene_info['scene']['cameras'].length; i++) {
+						var ci = scene_info['scene']['cameras'][i]
+						// find asset
+						if (ci['asset'] != null){
+							var ca = scene_info['assets']['cameras'][ci['asset']]
+						} else {
+							var ca = ci['embedded_asset']
+						}
 
-					lon = scene_info['views']['street']['camera']['target']['lon'];
-					lat = scene_info['views']['street']['camera']['target']['lat'];
-					onPointerDownLon = lon;
-					onPointerDownLat = lat;
-					isUserDragging = false;
+						var cam_props = {
+							"position": ci['position'],
+							"target": ci['target'],
+							"fov": ca['cam']['fov'],
+							"near": ca['cam']['near'],
+							"far": ca['cam']['far']
+						}
 
-					base_pano.position.x = street_camera.position.x;
-					base_pano.position.y = street_camera.position.y;
-					base_pano.position.z = street_camera.position.z;
+						if (ca['type'] == 'edit'){
+							make_edit_view(cam_props)
+						}
+						// TODO: implement other camera types
+						// TODO: set up street view if there is a street type camera
+						// and pano type env objects
 
-					var base_texture = texture_loader.load(scene_info['views']['street']['pano_background'])
-					base_pano.material.map = base_texture;
 
-					mask_pano.position.x = street_camera.position.x;
-					mask_pano.position.y = street_camera.position.y;
-					mask_pano.position.z = street_camera.position.z;
+					}
 
-					var mask_texture = texture_loader.load(scene_info['views']['street']['pano_foreground'])
-					mask_pano.material.map = mask_texture;
-					mask_pano.material.transparent = true;
 
 				}
+			}
 
-				// Build edit view
-				edit_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+
+			function make_edit_view(cam_props){
+				// Creates the edit view camera and corresponding snapshot camera
+
+				console.log(cam_props)
+
+				var edit_cam_pos = cam_props['position']
+				var edit_cam_target = cam_props['target']
+				edit_camera = new THREE.PerspectiveCamera(
+					cam_props['fov'], window.innerWidth / window.innerHeight,
+					cam_props['near'], cam_props['far'] );
 				edit_camera.layers.set( 0 );
-				cam_pos = scene_info['views']['edit']['camera']['position']
-				edit_camera.position.x = cam_pos[0];
-				edit_camera.position.y = cam_pos[1];
-				edit_camera.position.z = cam_pos[2];
+				
+				edit_camera.position.x = edit_cam_pos[0];
+				edit_camera.position.y = edit_cam_pos[1];
+				edit_camera.position.z = edit_cam_pos[2];
 				saved_edit_position.x = edit_camera.position.x;
 				saved_edit_position.y = edit_camera.position.y;
 				saved_edit_position.z = edit_camera.position.z;
@@ -539,26 +527,26 @@
 				controls = new OrbitControls( edit_camera, renderer.domElement );
 				controls.maxPolarAngle = Math.PI * 0.5;
 				controls.minDistance = 1;
-				controls.maxDistance = 200;
-				var cam_target = scene_info['views']['edit']['camera']['target']
-				controls.target.set(cam_target[0], cam_target[1], cam_target[2]);
+				controls.maxDistance = 10000;
+				
+				controls.target.set(edit_cam_target[0], edit_cam_target[1], edit_cam_target[2]);
 				controls.update();
 				saved_edit_target.x = controls.target.x;
 				saved_edit_target.y = controls.target.y;
 				saved_edit_target.z = controls.target.z;
 
 				// Build snapshot view
-				// snapshot_camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-				snapshot_camera = new THREE.PerspectiveCamera( 45, 1, 1, 2000 );
-				cam_pos = scene_info['views']['edit']['camera']['position']
-				snapshot_camera.position.x = cam_pos[0];
-				snapshot_camera.position.y = cam_pos[1];
-				snapshot_camera.position.z = cam_pos[2];
+				snapshot_camera = new THREE.PerspectiveCamera(
+					cam_props['fov'], 1,
+					cam_props['near'], cam_props['far'] );
+				snapshot_camera.position.x = edit_cam_pos[0];
+				snapshot_camera.position.y = edit_cam_pos[1];
+				snapshot_camera.position.z = edit_cam_pos[2];
 				scene.add( snapshot_camera );
 
-				target.x = cam_target[0];
-				target.y = cam_target[1];
-				target.z = cam_target[2];
+				target.x = edit_cam_target[0];
+				target.y = edit_cam_target[1];
+				target.z = edit_cam_target[2];
 				snapshot_camera.lookAt( target );
 				snapshot_camera.layers.set( 2 );
 
@@ -570,36 +558,36 @@
 				console.log('updating scene with')
 				console.log(scene_state)
 
-				// set view state
-				update_view_mode(scene_state['camera_type'])
-				update_view_level(scene_state['view_levels'])
+				// TODO: set view state, hardcoded now
+				update_view_mode('edit_camera')
+				// update_view_level(scene_state['view_levels'])
 
 				// set everything to visible false
-				for (const [key, element] of Object.entries(scene_elements)) {
-					if (element['type'] == 'geometry') {
-						if (scene_meshes[element['mesh']] != null){
-							scene_meshes[element['mesh']].visible = false;
-						}
+				for (var i = 0; i < scene_info['scene']['meshes'].length; i++) {
+					var m = scene_info['scene']['meshes'][i]
+					if (scene_meshes[m['obj']] != null){
+						scene_meshes[m['obj']].visible = false;
+						activate_mesh(m)
 					}
 				}
 
-				// activate elements that satisfy expressions
-				for (const [key, element] of Object.entries(scene_elements)) {
-					if (element['type'] == 'geometry') {
-						if (evaluate_expression(scene_state, element['expression'])) {
-							// console.log('activating ...', element)
-							activate_geometry_element(element)
-						}
-					}
-				}
+				// // activate elements that satisfy expressions
+				// for (const [key, element] of Object.entries(scene_elements)) {
+				// 	if (element['type'] == 'geometry') {
+				// 		if (evaluate_expression(scene_state, element['expression'])) {
+				// 			// console.log('activating ...', element)
+				// 			activate_geometry_element(element)
+				// 		}
+				// 	}
+				// }
 
-				// update markers
-				for (var i = 0; i < scene_markers.length; i++) {
+				// // update markers
+				// for (var i = 0; i < scene_markers.length; i++) {
 
-					scene_markers[i]['sprite'].visible = evaluate_expression(
-						scene_state, scene_markers[i]['expression'])
+				// 	scene_markers[i]['sprite'].visible = evaluate_expression(
+				// 		scene_state, scene_markers[i]['expression'])
 
-				}
+				// }
 
 			};
 
@@ -659,53 +647,18 @@
 
 			}
 
-			function activate_geometry_element(element) {
+			function activate_mesh(m) {
 
-				var mesh_name = element['mesh']
-				var material_name = element['material']
+				var mesh_name = m['obj']
+				var material_name = m['mtl']
 
 				if (scene_meshes_added[mesh_name] == false) {
 					scene.add( scene_meshes[mesh_name] );
 					scene_meshes_added[mesh_name] = true;
 				}
-
-				// if the mesh is being loaded, do nothing and let that process finish
-				// if (scene_meshes_loading[mesh_name] == true) {
-				// 	return;
-				// }
-
-				// // mesh is not being loaded. If null, load, otherwise update material
-				// if (scene_meshes[mesh_name] == null) {
-
-				// 	// lock
-				// 	scene_meshes_loading[mesh_name] = true;
-				// 	obj_loader.load( mesh_name,
-
-				// 		function ( obj ) {
-
-				// 			scene_meshes[mesh_name] = obj.children[0];
-				// 			scene_meshes[mesh_name].userData['type'] = 'geometry'
-				// 			scene_meshes[mesh_name].userData['component'] = element['component'];
-				// 			scene_meshes[mesh_name].layers.enableAll()
-				// 			scene.add( scene_meshes[mesh_name] );
-							
-				// 			// material
-				// 			assign_material(mesh_name, material_name);
-
-				// 			// unlock
-				// 			scene_meshes_loading[mesh_name] = false;
-							
-							
-
-				// 		}, onProgress, onError );
-
-				// } else {
-				// console.log('reaching ...',mesh_name, scene_meshes[mesh_name])
 				scene_meshes[mesh_name].visible = true;
 				// console.log('assigning ...',mesh_name, material_name)
 				assign_material(mesh_name, material_name);
-
-				// };
 
 			};
 
@@ -836,17 +789,12 @@
 
 			function onWindowResize() {
 
-				windowHalfX = window.innerWidth / 2;
-				windowHalfY = window.innerHeight / 2;
-				
 				edit_camera.aspect = window.innerWidth / window.innerHeight;
 				edit_camera.updateProjectionMatrix();
 
-				// snapshot_camera.aspect = window.innerWidth / window.innerHeight;
-				// snapshot_camera.updateProjectionMatrix();
 				
-				street_camera.aspect = window.innerWidth / window.innerHeight;
-				street_camera.updateProjectionMatrix();
+				// street_camera.aspect = window.innerWidth / window.innerHeight;
+				// street_camera.updateProjectionMatrix();
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
 			}
