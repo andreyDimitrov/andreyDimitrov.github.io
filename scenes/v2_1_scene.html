@@ -296,10 +296,11 @@
 						
 						// get light info
 						var li = scene_info['scene']['lights'][i]
-						if (li['asset'] != null){
-							var la = scene_info['assets']['lights'][li['asset']]
-						} else {
+						if (li['embedded_asset'] != null){
 							var la = li['embedded_asset']
+						} else {
+							
+							var la = scene_info['assets']['lights'][li['asset']]
 						}
 							
 						// make light objects and add to scene
@@ -323,10 +324,10 @@
 			}
 
 			function make_material(mat_info){
+				// Reads in mtl and builds material
 
 				// create a new material
 				var mat = new THREE.MeshPhongMaterial( {side: THREE.FrontSide } )
-				// console.log(mat_info)
 				// add lines here to update all the atributes we want
 				if (mat_info.kd !== undefined){
 					mat.color.r = mat_info.kd[0]
@@ -354,44 +355,52 @@
 					mat.map.repeat.set( 1/mat_info.size, 1/mat_info.size );
 				}
 				
-
 				return mat
 
 			}
 
 			function make_sprite(marker){
+				// Creates all marker sprites
 
 				var sprite = null;
 
-				// TODO: refactor this whole thing ...
+				// TODO: what to do when there is an embedded asset?
+				var asset = scene_info['assets']['markers'][marker['asset']]
+				var icon_path = scene_dir + 'assets/markers/' + marker['asset'] + '/' + asset['icon']
 
-				// if (marker['type'] == 'spin') {
 
-				// 	var geometry = new THREE.PlaneGeometry( 1,1,1 );
-				// 	var sprite_material = new THREE.MeshBasicMaterial(
-				// 		{ map: texture_loader.load( scene_dir + marker['icon'] ), color: 0xffffff, side: THREE.DoubleSide, transparent: true } );
+				if (asset['sprite_type'] == 'horizontal') {
 
-				// 	sprite = new THREE.Mesh( geometry, sprite_material );
-				// 	sprite.rotation.x = Math.PI/2;
+					var geometry = new THREE.PlaneGeometry( 1,1,1 );
+					var sprite_material = new THREE.MeshBasicMaterial(
+						{ map: texture_loader.load( icon_path ), color: 0xffffff, side: THREE.DoubleSide, transparent: true } );
 
-				// } else {
-					
-				// 	var sprite_material = new THREE.SpriteMaterial(
-				// 			{ map: texture_loader.load( scene_dir + marker['icon'] ), color: 0xffffff } )
+					sprite = new THREE.Mesh( geometry, sprite_material );
+					sprite.rotation.x = Math.PI/2;
 
-				// 	sprite = new THREE.Sprite(sprite_material);
-				// };
+				} else {
+					// assume it's omni
+					var sprite_material = new THREE.SpriteMaterial(
+							{ map: texture_loader.load( icon_path ), color: 0xffffff } )
 
-				// sprite_material.clippingPlanes = [topPlane, bottomPlane];
+					sprite = new THREE.Sprite(sprite_material);
+				};
+
+				// TODO: update how we handle clipping planes
+				sprite_material.clippingPlanes = [topPlane, bottomPlane];
 			
-				// sprite.scale.set(marker['scale'], marker['scale'], marker['scale'])
-				// scene.add( sprite );
-				// sprite.position.x = marker['position'][0];
-				// sprite.position.y = marker['position'][1];
-				// sprite.position.z = marker['position'][2];
-				// sprite.userData = {'type': 'marker'};
-				// sprite.visible = false;
+				// place marker
+				sprite.scale.set(asset['scale'], asset['scale'], asset['scale'])
+				scene.add( sprite );
+				sprite.position.x = marker['position'][0];
+				sprite.position.y = marker['position'][1];
+				sprite.position.z = marker['position'][2];
 
+				// TODO: update user data and visibility
+				sprite.userData = {'type': 'marker'};
+				sprite.visible = true;
+
+				// TODO: redo the layer system
 				// sprite.layers.set(10);
 
 				return sprite;
@@ -475,10 +484,10 @@
 					for (var i = 0; i < scene_info['scene']['cameras'].length; i++) {
 						var ci = scene_info['scene']['cameras'][i]
 						// find asset
-						if (ci['asset'] != null){
-							var ca = scene_info['assets']['cameras'][ci['asset']]
-						} else {
+						if (ci['embedded_asset'] != null){
 							var ca = ci['embedded_asset']
+						} else {
+							var ca = scene_info['assets']['cameras'][ci['asset']]
 						}
 
 						var cam_props = {
@@ -592,58 +601,58 @@
 			};
 
 			function evaluate_expression(state, expression){
-				// Given a state, evaluates a boolean expression
+				// // Given a state, evaluates a boolean expression
 
-				/*
+				// /*
 
-				Example state:
-				{
-					"arch_style": "farmhouse",
-					"num_floors": "3levels"
-				}
+				// Example state:
+				// {
+				// 	"arch_style": "farmhouse",
+				// 	"num_floors": "3levels"
+				// }
 
-				Example expression:
-				{
-					"OR": [
-						{
-							"AND": [
-								["num_levels", "3levels"],
-								["arch_style", "farmhouse"]
-							]
-						},
-						["num_levels", "2levels"]
-					]
-				}
+				// Example expression:
+				// {
+				// 	"OR": [
+				// 		{
+				// 			"AND": [
+				// 				["num_levels", "3levels"],
+				// 				["arch_style", "farmhouse"]
+				// 			]
+				// 		},
+				// 		["num_levels", "2levels"]
+				// 	]
+				// }
 
-				*/
+				// */
 
-				if (Array.isArray(expression)) {
-					// evaluate if the state matches
-					return state[expression[0]] == expression[1];
+				// if (Array.isArray(expression)) {
+				// 	// evaluate if the state matches
+				// 	return state[expression[0]] == expression[1];
 				
-				} else {
+				// } else {
 
-					if ("OR" in expression) {
-						for (var i = 0; i < expression["OR"].length; i++) {
-							if (evaluate_expression(state, expression["OR"][i])) {
-								return true;
-							}
-						}
-						return false;
+				// 	if ("OR" in expression) {
+				// 		for (var i = 0; i < expression["OR"].length; i++) {
+				// 			if (evaluate_expression(state, expression["OR"][i])) {
+				// 				return true;
+				// 			}
+				// 		}
+				// 		return false;
 
-					} else if ("AND" in expression) {
-						for (var i = 0; i < expression["AND"].length; i++) {
-							if (!evaluate_expression(state, expression["AND"][i])) {
-								return false;
-							}
-						}
-						return true;
+				// 	} else if ("AND" in expression) {
+				// 		for (var i = 0; i < expression["AND"].length; i++) {
+				// 			if (!evaluate_expression(state, expression["AND"][i])) {
+				// 				return false;
+				// 			}
+				// 		}
+				// 		return true;
 
-					} else {
-						console.log("boolean operator not recognized!")
-					}
+				// 	} else {
+				// 		console.log("boolean operator not recognized!")
+				// 	}
 
-				}
+				// }
 
 			}
 
@@ -887,12 +896,11 @@
 						var marker = scene_markers[focused_marker]
 						payload = {
 							'event_type': 'marker',
-							'marker_type': marker['type'],
+							'marker_type': marker['asset'],
+							'marker_instruction': marker['instruction'],
 							'mouseX': offsetX,
 							'mouseY': offsetY,
 						};
-						payload[marker['type']] = marker[marker['type']];
-
 					}
 					// If nothing important is clicked
 					else {
