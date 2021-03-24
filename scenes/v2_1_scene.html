@@ -407,18 +407,25 @@
 			}
 
 			function update_view_level(lvl){
+				// Moves clipping planes to isolate one level
 
-				if (!('levels' in scene_info)) {
+				// resets planes if level is null
+				if (lvl == null){
+					topPlane.constant=10000;
+					bottomPlane.constant=10000;
 					return;
 				}
 
-				if (lvl in scene_info['levels']){
-					topPlane.constant = scene_info['levels'][lvl][1];
-					bottomPlane.constant = -scene_info['levels'][lvl][0];
-				} else {
-					topPlane.constant=100;
-					bottomPlane.constant=100;
-				};
+				// lvl should be an index pointing to the level we want to isolate
+				var lvl = scene_info['scene']['levels'][lvl]
+
+				// pad levels by 10 inches to show slighly above and below the
+				// floor and ceiling
+				topPlane.constant = lvl['top'] + 10;
+				bottomPlane.constant = -lvl['bottom'] + 10;
+
+				return;
+
 
 			}
 
