@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Atmos Experience</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		<div id="info">
+		</div>
+
+		<script type="module">
+
+			import * as THREE from '../build/three.module.js';
+
+			import { MTLLoader } from './jsm/loaders/MTLLoader.js';
+			import { OBJLoader } from './jsm/loaders/OBJLoader.js';
+
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+
+			import { GUI } from './jsm/libs/dat.gui.module.js';
+
+
+			let controls, scene, renderer;
+			let street_camera, edit_camera, snapshot_camera;
+			let current_camera = null;
+			let base_pano, mask_pano;
+
+			// street view vars
+			let saved_edit_target = new THREE.Vector3();
+			let saved_edit_position = new THREE.Vector3();
+			let view_mode = null;
+			let lon, lat, onPointerDownLon, onPointerDownLat;
+			let isUserDragging;
+			const target = new THREE.Vector3();
+
+			// loaders
+			const loader = new THREE.FileLoader();
+			const mtl_loader = new MTLLoader();
+			const obj_loader = new OBJLoader();
+			var texture_loader = new THREE.TextureLoader();
+
+			// scene vars
+			let scene_dir = 'models/v2_1_baked/';
+			let scene_info = {};
+			let scene_state = {};
+			let scene_elements = {};
+			let scene_mtl = null;
+			let scene_materials = {};
+			let scene_meshes = {};
+			let scene_meshes_added = {};
+			let scene_markers = [];
+
+			// Clipping planes
+			let topPlane, bottomPlane;
+
+			// Interaction
+			const raycaster = new THREE.Raycaster();
+			const mouse = new THREE.Vector2();
+			const mouse_down = new THREE.Vector2();
+			let focused_component = null;
+			let focused_marker = null;
+
+			// GUI
+			let isState1 = true;
+			let isLot = true;
+			let isFloor = true;
+
+			// test states
+			let state_default = {}
+
+
+			// ------------------------------
+
+			init();
+			animate();
+
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				init_scene();
+
+				// load scene info
+				load_scene();
+
+				// rendering settings
+				renderer = new THREE.WebGLRenderer({
+					antialias: true, alpha: true,
+					preserveDrawingBuffer: false
+				});
+				renderer.shadowMap.enabled = true;
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				renderer.localClippingEnabled = true;
+
+                // interaction
+                document.addEventListener( 'pointermove', onDocumentMouseMove, false );
+                document.addEventListener( 'pointerdown', onDocumentMouseDown, false );
+                document.addEventListener( 'pointerup', onDocumentMouseClick, false );
+				window.addEventListener( 'resize', onWindowResize, false );
+
+				// Atmos platform -> iframe communication
+				window.addEventListener("message", (data) => {
+					mainEventHandler(data);
+				}, false);
+
+			}
+
+			// Post message to parent (Atmos platform)
+			function post_iframe_message(payload) {
+				console.log('iframe -> platform, posting', payload);
+				window.parent.postMessage(payload, '*');
+			}
+
+			// Handles all events coming in from Atmos platform
+			function mainEventHandler(event) {
+				console.log('platform -> iframe, received');
+				var data = event.data;
+
+				// Update with state
+				if (data.type == 'state'){
+					console.log('platform -> iframe, received - state', data.state);
+					scene_state = data.state
+					update_scene();
+				};
+
+				// Ask for snapshot
+				if (data.type == 'snapshot'){
+					console.log('platform -> iframe, received - snapshot');
+					renderer.render(scene, snapshot_camera);
+					var imgData = renderer.domElement.toDataURL("image/png");
+					post_iframe_message({ event_type: 'snapshot', snapshot: imgData });
+				};
+
+			};
+
+
+			function load_scene() {
+
+				loader.load(
+					scene_dir + 'scene.json',
+
+					function ( text ) {
+
+						scene_info = JSON.parse(text);
+
+						// Generate the scene views based on camera and
+						// env objects
+						prepare_views()
+
+						// Generate lights based on lights objects
+						prapare_lights()
+
+						// Prepare meshes
+						console.log(scene_info['scene']['meshes'])
+
+						// initialize loaded geometry and materials
+						for (var i = 0; i < scene_info['scene']['meshes'].length; i++) {
+							var m = scene_info['scene']['meshes'][i]
+							scene_meshes[m['obj']] = null;
+							scene_meshes_added[m['obj']] = false;
+							scene_materials[m['mtl']] = null;
+						}
+
+						/*
+						Example mesh:
+						{
+			                "building_component": 1,
+			                "variant": "wood",
+			                "theme": "mountain_ash",
+			                "region": "exterior",
+			                "obj": "0002",
+			                "mtl": "0002_mountain_ash"
+			            }
+						*/
+
+						// Initialize markers
+						scene_markers = scene_info['scene']['markers'];
+						for (var i = 0; i < scene_markers.length; i++) {
+							scene_markers[i]['sprite'] = make_sprite(scene_markers[i]);
+							scene_markers[i]['sprite'].userData['id'] = i;
+						}
+
+						// parse mtl and show
+						mtl_loader.load( scene_dir + 'scene.mtl',
+					
+						function ( mtl ) {
+
+							console.log(mtl)
+							scene_mtl = mtl
+
+							obj_loader.load( scene_dir + 'scene.obj',
+
+							function ( obj ) {
+
+								// console.log(obj.children.length)
+								// console.log(obj.children[200])
+								var ol = obj.children.length;
+								// console.log(ol)
+								for (var i = 0; i < ol; i++) {
+									
+									if (obj.children[i] === undefined){
+										console.log('undefined', i)
+									} else {
+										// console.log(obj.children[i])
+										var mesh_name = obj.children[i].name
+										
+										scene_meshes[mesh_name] = obj.children[i];
+										// // console.log('added1')
+										scene_meshes[mesh_name].userData['type'] = 'geometry';
+										// // console.log('added2')
+										// // scene_meshes[mesh_name].userData['component'] = element['component'];
+										scene_meshes[mesh_name].layers.enableAll();
+										// // console.log('added3')
+										scene_meshes[mesh_name].visible = false;
+										// // console.log('added4')
+										// scene.add( scene_meshes[mesh_name] );
+										// // console.log('added5')
+
+									}
+									
+								}
+								console.log(scene_meshes)
+
+								// update components ...
+
+								// Start with default
+								scene_state = state_default
+								console.log('updating scene')
+								update_scene()
+
+								// Send message that scene is ready
+								post_iframe_message({'status': 'ready'})
+										
+
+
+							}, onProgress, onError );
+
+							
+
+						}, onProgress, onError );
+
+						
+
+					}, onProgress, onError );
+			}
+
+			function init_scene(){
+				// Initialize the scene with default objects
+
+				// scene
+				scene = new THREE.Scene();
+
+				// clipping planes
+				topPlane = new THREE.Plane(new THREE.Vector3(0, -1, 0), 10000);
+				bottomPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 10000);
+
+				// Create spheres to be used in a street view if avaiable
+				base_pano = new THREE.Mesh(
+						new THREE.SphereGeometry( 200, 50, 50),
+						new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
+					);
+				base_pano.userData = {'type': 'ignore'}
+				base_pano.layers.set(1)
+				scene.add(base_pano)
+
+				mask_pano = new THREE.Mesh(
+					new THREE.SphereGeometry( 2, 100, 100),
+					new THREE.MeshBasicMaterial( {side: THREE.DoubleSide } )
+				);
+				mask_pano.userData = {'type': 'ignore'}
+				mask_pano.layers.set(1)
+				scene.add(mask_pano)
+
+			}
+
+			function prapare_lights(){
+				// Creates lights objects from scene_info
+
+				if (scene_info['scene']['lights'].length == 0) {
+					// Add a default ambient light
+					var color = new THREE.Color().setRGB(255, 255, 255);
+					var light = new THREE.AmbientLight( color, 1 );
+					scene.add( light );
+					light.layers.enableAll()
+
+				} else {
+					for (var i = 0; i < scene_info['scene']['lights'].length; i++) {
+						
+						// get light info
+						var li = scene_info['scene']['lights'][i]
+						if (li['embedded_asset'] != null){
+							var la = li['embedded_asset']
+						} else {
+							
+							var la = scene_info['assets']['lights'][li['asset']]
+						}
+							
+						// make light objects and add to scene
+						if (la['type'] == 'directional') {
+							var color = new THREE.Color().setRGB(la['color'][0], la['color'][1], la['color'][2]);
+							var light = new THREE.DirectionalLight(color, la['intensity']);
+							scene.add( light );
+							light.position.set( li['position'][0], li['position'][1], li['position'][2])
+							light.layers.enableAll()
+						}
+						if (la['type'] == 'ambient') {
+							var color = new THREE.Color().setRGB(la['color'][0], la['color'][1], la['color'][2]);
+							var light = new THREE.AmbientLight( color, la['intensity'] );
+							scene.add( light );
+							light.layers.enableAll()
+						}
+					}
+				}
+
+			
+			}
+
+			function make_material(mat_info){
+				// Reads in mtl and builds material
+
+				// create a new material
+				var mat = new THREE.MeshPhongMaterial( {side: THREE.FrontSide } )
+				// add lines here to update all the atributes we want
+				if (mat_info.kd !== undefined){
+					mat.color.r = mat_info.kd[0]
+					mat.color.g = mat_info.kd[1]
+					mat.color.b = mat_info.kd[2]
+				}
+				if (mat_info.ks !== undefined){
+					mat.specular.r = mat_info.ks[0]
+					mat.specular.g = mat_info.ks[1]
+					mat.specular.b = mat_info.ks[2]
+				}
+				if (mat_info.ns !== undefined){
+					mat.shininess = parseFloat(mat_info.ns)
+				}
+				if (mat_info.d !== undefined){
+					mat.opacity = parseFloat(mat_info.d)
+					if (mat.opacity != 1) mat.transparent = true;
+				}
+				if (mat_info.map_kd !== undefined){
+					mat.map = texture_loader.load(scene_dir + mat_info.map_kd)
+				}
+				if (mat_info.size !== undefined){
+					mat.map.wrapS = THREE.RepeatWrapping;
+					mat.map.wrapT = THREE.RepeatWrapping;
+					mat.map.repeat.set( 1/mat_info.size, 1/mat_info.size );
+				}
+				
+				return mat
+
+			}
+
+			function make_sprite(marker){
+				// Creates all marker sprites
+
+				var sprite = null;
+
+				// TODO: what to do when there is an embedded asset?
+				var asset = scene_info['assets']['markers'][marker['asset']]
+				var icon_path = scene_dir + 'assets/markers/' + marker['asset'] + '/' + asset['icon']
+
+
+				if (asset['sprite_type'] == 'horizontal') {
+
+					var geometry = new THREE.PlaneGeometry( 1,1,1 );
+					var sprite_material = new THREE.MeshBasicMaterial(
+						{ map: texture_loader.load( icon_path ), color: 0xffffff, side: THREE.DoubleSide, transparent: true } );
+
+					sprite = new THREE.Mesh( geometry, sprite_material );
+					sprite.rotation.x = Math.PI/2;
+
+				} else {
+					// assume it's omni
+					var sprite_material = new THREE.SpriteMaterial(
+							{ map: texture_loader.load( icon_path ), color: 0xffffff } )
+
+					sprite = new THREE.Sprite(sprite_material);
+				};
+
+				// TODO: update how we handle clipping planes
+				sprite_material.clippingPlanes = [topPlane, bottomPlane];
+			
+				// place marker
+				sprite.scale.set(asset['scale'], asset['scale'], asset['scale'])
+				scene.add( sprite );
+				sprite.position.x = marker['position'][0];
+				sprite.position.y = marker['position'][1];
+				sprite.position.z = marker['position'][2];
+
+				// TODO: update user data and visibility
+				sprite.userData = {'type': 'marker'};
+				sprite.visible = true;
+
+				// TODO: redo the layer system
+				// sprite.layers.set(10);
+
+				return sprite;
+			}
+
+			function update_view_level(lvl){
+				// Moves clipping planes to isolate one level
+
+				// resets planes if level is null
+				if (lvl == null){
+					topPlane.constant=10000;
+					bottomPlane.constant=10000;
+					return;
+				}
+
+				// lvl should be an index pointing to the level we want to isolate
+				var lvl = scene_info['scene']['levels'][lvl]
+
+				// pad levels by 10 inches to show slighly above and below the
+				// floor and ceiling
+				topPlane.constant = lvl['top'] + 10;
+				bottomPlane.constant = -lvl['bottom'] + 10;
+
+				return;
+
+
+			}
+
+			function update_view_mode(mode){
+
+				if (view_mode == mode) {return;}
+				
+				view_mode = mode;
+
+				if (view_mode == 'edit_camera'){
+
+					// set previously saved camera state
+					edit_camera.position.set(saved_edit_position.x, saved_edit_position.y, saved_edit_position.z);
+					controls.update();
+					controls.target.set(saved_edit_target.x, saved_edit_target.y, saved_edit_target.z);
+					controls.update();
+					
+					// set camera
+					current_camera = edit_camera;
+
+					// update background
+					base_pano.visible = false;
+					mask_pano.visible = false;
+
+				};
+
+				if (view_mode == 'street_camera'){
+					
+					// set camera
+					current_camera = street_camera;
+
+					// save camera state
+					saved_edit_position.x = edit_camera.position.x;
+					saved_edit_position.y = edit_camera.position.y;
+					saved_edit_position.z = edit_camera.position.z;
+					saved_edit_target.x = controls.target.x;
+					saved_edit_target.y = controls.target.y;
+					saved_edit_target.z = controls.target.z;
+					
+					// update background
+					base_pano.visible = true;
+					mask_pano.visible = true;
+	
+				};
+			}
+
+
+			function prepare_views(){
+				// Creates views based on cameras in scene_info
+
+				if (scene_info['scene']['cameras'].length == 0) {
+					// make a default camera (edit and snapshot)
+					var cam_props = {
+						"position": [-4000, 3000, -3000],
+						"target": [0, 0, -2000],
+						"fov": 45, "near": 1, "far": 20000
+					}
+					make_edit_view(cam_props)
+
+				} else {
+
+					
+					for (var i = 0; i < scene_info['scene']['cameras'].length; i++) {
+						var ci = scene_info['scene']['cameras'][i]
+						// find asset
+						if (ci['embedded_asset'] != null){
+							var ca = ci['embedded_asset']
+						} else {
+							var ca = scene_info['assets']['cameras'][ci['asset']]
+						}
+
+						var cam_props = {
+							"position": ci['position'],
+							"target": ci['target'],
+							"fov": ca['cam']['fov'],
+							"near": ca['cam']['near'],
+							"far": ca['cam']['far']
+						}
+
+						if (ca['type'] == 'edit'){
+							make_edit_view(cam_props)
+						}
+						// TODO: implement other camera types
+						// TODO: set up street view if there is a street type camera
+						// and pano type env objects
+
+
+					}
+
+
+				}
+			}
+
+
+			function make_edit_view(cam_props){
+				// Creates the edit view camera and corresponding snapshot camera
+
+				console.log(cam_props)
+
+				var edit_cam_pos = cam_props['position']
+				var edit_cam_target = cam_props['target']
+				edit_camera = new THREE.PerspectiveCamera(
+					cam_props['fov'], window.innerWidth / window.innerHeight,
+					cam_props['near'], cam_props['far'] );
+				edit_camera.layers.set( 0 );
+				
+				edit_camera.position.x = edit_cam_pos[0];
+				edit_camera.position.y = edit_cam_pos[1];
+				edit_camera.position.z = edit_cam_pos[2];
+				saved_edit_position.x = edit_camera.position.x;
+				saved_edit_position.y = edit_camera.position.y;
+				saved_edit_position.z = edit_camera.position.z;
+				scene.add( edit_camera );
+
+				controls = new OrbitControls( edit_camera, renderer.domElement );
+				controls.maxPolarAngle = Math.PI * 0.5;
+				controls.minDistance = 1;
+				controls.maxDistance = 10000;
+				
+				controls.target.set(edit_cam_target[0], edit_cam_target[1], edit_cam_target[2]);
+				controls.update();
+				saved_edit_target.x = controls.target.x;
+				saved_edit_target.y = controls.target.y;
+				saved_edit_target.z = controls.target.z;
+
+				// Build snapshot view
+				snapshot_camera = new THREE.PerspectiveCamera(
+					cam_props['fov'], 1,
+					cam_props['near'], cam_props['far'] );
+				snapshot_camera.position.x = edit_cam_pos[0];
+				snapshot_camera.position.y = edit_cam_pos[1];
+				snapshot_camera.position.z = edit_cam_pos[2];
+				scene.add( snapshot_camera );
+
+				target.x = edit_cam_target[0];
+				target.y = edit_cam_target[1];
+				target.z = edit_cam_target[2];
+				snapshot_camera.lookAt( target );
+				snapshot_camera.layers.set( 2 );
+
+			}
+
+
+			function update_scene() {
+
+				console.log('updating scene with')
+				console.log(scene_state)
+
+				// TODO: set view state, hardcoded now
+				update_view_mode('edit_camera')
+				// update_view_level(scene_state['view_levels'])
+
+				// set everything to visible false
+				for (var i = 0; i < scene_info['scene']['meshes'].length; i++) {
+					var m = scene_info['scene']['meshes'][i]
+					if (scene_meshes[m['obj']] != null){
+						scene_meshes[m['obj']].visible = false;
+						activate_mesh(m)
+					}
+				}
+
+				// // activate elements that satisfy expressions
+				// for (const [key, element] of Object.entries(scene_elements)) {
+				// 	if (element['type'] == 'geometry') {
+				// 		if (evaluate_expression(scene_state, element['expression'])) {
+				// 			// console.log('activating ...', element)
+				// 			activate_geometry_element(element)
+				// 		}
+				// 	}
+				// }
+
+				// // update markers
+				// for (var i = 0; i < scene_markers.length; i++) {
+
+				// 	scene_markers[i]['sprite'].visible = evaluate_expression(
+				// 		scene_state, scene_markers[i]['expression'])
+
+				// }
+
+			};
+
+			function evaluate_expression(state, expression){
+				// // Given a state, evaluates a boolean expression
+
+				// /*
+
+				// Example state:
+				// {
+				// 	"arch_style": "farmhouse",
+				// 	"num_floors": "3levels"
+				// }
+
+				// Example expression:
+				// {
+				// 	"OR": [
+				// 		{
+				// 			"AND": [
+				// 				["num_levels", "3levels"],
+				// 				["arch_style", "farmhouse"]
+				// 			]
+				// 		},
+				// 		["num_levels", "2levels"]
+				// 	]
+				// }
+
+				// */
+
+				// if (Array.isArray(expression)) {
+				// 	// evaluate if the state matches
+				// 	return state[expression[0]] == expression[1];
+				
+				// } else {
+
+				// 	if ("OR" in expression) {
+				// 		for (var i = 0; i < expression["OR"].length; i++) {
+				// 			if (evaluate_expression(state, expression["OR"][i])) {
+				// 				return true;
+				// 			}
+				// 		}
+				// 		return false;
+
+				// 	} else if ("AND" in expression) {
+				// 		for (var i = 0; i < expression["AND"].length; i++) {
+				// 			if (!evaluate_expression(state, expression["AND"][i])) {
+				// 				return false;
+				// 			}
+				// 		}
+				// 		return true;
+
+				// 	} else {
+				// 		console.log("boolean operator not recognized!")
+				// 	}
+
+				// }
+
+			}
+
+			function activate_mesh(m) {
+
+				var mesh_name = m['obj']
+				var material_name = m['mtl']
+
+				if (scene_meshes_added[mesh_name] == false) {
+					scene.add( scene_meshes[mesh_name] );
+					scene_meshes_added[mesh_name] = true;
+				}
+				scene_meshes[mesh_name].visible = true;
+				// console.log('assigning ...',mesh_name, material_name)
+				assign_material(mesh_name, material_name);
+
+			};
+
+			function assign_material(mesh_name, material_name) {
+
+				// If null, load, otherwise update material
+				if (scene_materials[material_name] == null) {
+
+					scene_materials[material_name] = make_material(scene_mtl.materialsInfo[material_name])
+					scene_materials[material_name].clippingPlanes = [topPlane, bottomPlane];
+					// console.log('mtl loaded, assigning');
+					scene_meshes[mesh_name].material = scene_materials[material_name]
+
+
+				} else {
+					// console.log('mtl exists, assigning');
+					scene_meshes[mesh_name].material = scene_materials[material_name]
+				};
+
+			}
+
+			function update_highlights(object){
+
+				// clear all highlights
+				turn_off_highlights()
+				focused_component = null;
+				focused_marker = null;
+
+				// exit early if no object to highlight
+				if (object == null){return;}
+
+				var otype = object.userData['type'];
+
+				// if object is a special ignore
+				if (otype == 'ignore'){
+					return;
+				}
+
+				// if object is a marker
+				if (otype == 'marker'){
+					focused_marker = object.userData['id'];
+					return;
+				}
+
+				if (otype == 'geometry'){
+
+					var component_name = object.userData['component']
+
+					// check if clickable
+					if (component_name in scene_info['clickable']){
+						var expression = scene_info['clickable'][component_name]
+						if (!evaluate_expression(scene_state, expression)){
+							return;
+						}
+					} else {
+						return;
+					}
+
+					//turn on group only
+					for (const [key, mesh] of Object.entries(scene_meshes)) {
+						if (mesh != null){
+							if (mesh.userData['type'] == 'geometry') {
+								if (mesh.userData['component'] == component_name) {
+									if (mesh.visible == true){
+										mesh.material.emissive.r = 0.2;
+										mesh.material.emissive.g = 0.2;
+										mesh.material.emissive.b = 0.2;
+									}
+								}
+							}
+						}
+					};
+
+					focused_component = component_name;
+
+					return;
+				}
+
+			}
+
+			function turn_off_highlights(){
+
+				for (const [key, info] of Object.entries(scene_meshes)) {
+					if (scene_meshes[key] != null) {
+						scene_meshes[key].material.emissive.r = 0;
+						scene_meshes[key].material.emissive.g = 0;
+						scene_meshes[key].material.emissive.b = 0;
+					}
+				};
+			
+			}
+
+			function first_visible_intersect(intersects){
+
+				
+				// exit early if no intersects
+				if (intersects.length == 0){
+					return null;
+				};
+
+				// try to find a visible object
+				for (var i = 0; i < intersects.length; i++) {
+					if (intersects[i].object.visible){
+						// check if special object
+						if (intersects[i].object.userData.type != 'ignore'){
+							// check if within clipping planes
+							if (intersects[i].point.y < topPlane.constant){
+								return intersects[i];
+							};
+						};
+					};
+				};
+
+				// if none were found, exit with null
+				return null;
+			}
+
+			function onProgress( xhr ) {
+
+				if ( xhr.lengthComputable ) {
+					const percentComplete = xhr.loaded / xhr.total * 100;
+					// console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+				}
+
+			};
+
+			function onError() { };
+
+			function onWindowResize() {
+
+				edit_camera.aspect = window.innerWidth / window.innerHeight;
+				edit_camera.updateProjectionMatrix();
+
+				
+				// street_camera.aspect = window.innerWidth / window.innerHeight;
+				// street_camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentMouseMove( event ) {
+
+				event.preventDefault();
+				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+				if ( isUserDragging == true ) {
+
+					lon = ( mouse_down.x - event.clientX ) * 0.1 + onPointerDownLon;
+					lat = ( event.clientY - mouse_down.y ) * 0.1 + onPointerDownLat;
+
+				}
+
+				raycaster.setFromCamera( mouse, current_camera );
+				var intersects = raycaster.intersectObjects( scene.children );
+				var first_intersect = first_visible_intersect(intersects);
+				
+				if ( first_intersect != null ) {
+					
+					update_highlights(first_intersect.object);
+					
+					if (focused_component != null){
+						document.body.style.cursor = 'pointer';
+					} else if (focused_marker != null){
+						document.body.style.cursor = 'pointer';
+					} else {
+						document.body.style.cursor = 'auto';
+					};
+
+				} else {
+					update_highlights(null);
+					document.body.style.cursor = 'auto';
+	            }
+
+			}
+
+			function onDocumentMouseDown( event ) {
+				event.preventDefault();
+
+				// drag camera rotation interaction
+				
+				mouse_down.x = event.clientX;
+				mouse_down.y = event.clientY;
+
+				if (view_mode == 'street_camera'){
+					isUserDragging = true;
+					onPointerDownLon = lon;
+					onPointerDownLat = lat;
+				}
+
+			}
+
+			function checkMoved(event) {
+
+				var diffX = Math.abs(mouse_down.x - event.clientX)
+				var diffY = Math.abs(mouse_down.y - event.clientY)
+				var diff = diffX + diffY
+
+				return diff > 3
+
+			}
+
+			function onDocumentMouseClick( event ) {
+				event.preventDefault();
+
+				const {offsetX, offsetY} = event;
+				var payload = {};
+
+				isUserDragging = false;
+
+				if (!checkMoved(event)) {
+
+					// If component clicked
+					if (focused_component != null){
+
+						payload = {
+							'event_type': 'material_selection',
+							'component': focused_component,
+							'mouseX': offsetX,
+							'mouseY': offsetY,
+						};
+					}
+					// If marker clicked
+					else if (focused_marker != null) {
+
+						var marker = scene_markers[focused_marker]
+						payload = {
+							'event_type': 'marker',
+							'marker_type': marker['asset'],
+							'marker_instruction': marker['instruction'],
+							'mouseX': offsetX,
+							'mouseY': offsetY,
+						};
+					}
+					// If nothing important is clicked
+					else {
+
+						payload = {
+							'event_type': 'empty_click',
+							'mouseX': offsetX,
+							'mouseY': offsetY,
+						}
+					};
+
+					post_iframe_message(payload);
+				}
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+
+				if (view_mode == 'street_camera'){
+					
+					//horizontal rotation
+					var theta = THREE.Math.degToRad( lon );
+					target.x = current_camera.position.x + Math.cos( theta );
+					target.z = current_camera.position.z + Math.sin( theta );
+
+					//vertical rotation
+					lat = Math.max( - 85, Math.min( 85, lat ) );
+					var phi = THREE.Math.degToRad( 90 - lat );
+					target.y = current_camera.position.y + Math.cos( phi );
+
+					current_camera.lookAt( target );
+					current_camera.updateProjectionMatrix();
+
+				};
+
+				if (current_camera != null){
+					renderer.render( scene, current_camera );
+				}
+			}
+
+		</script>
+
+	</body>
+</html>
