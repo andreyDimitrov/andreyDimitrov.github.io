@@ -1175,7 +1175,11 @@
                     419.797674640572,
                     -1755.6037937945187
                 ],
-                "instruction": "home marker added from lot",
+                "instruction": {
+                    "AND": [
+                        0
+                    ]
+                },
                 "layout_expression": null
             },
             {
@@ -1187,7 +1191,7 @@
                     5.349905344127443,
                     -1991.6628417325292
                 ],
-                "instruction": "IM_spin_A_B_C",
+                "instruction": "id_IM_spin_A_B_C",
                 "layout_expression": null
             },
             {
@@ -1199,7 +1203,12 @@
                     402.35440037409575,
                     -1760.748375452389
                 ],
-                "instruction": "home marker",
+                "instruction": {
+                    "AND": [
+                        0,
+                        1
+                    ]
+                },
                 "layout_expression": null
             }
         ],
@@ -1290,10 +1299,11 @@
                 "asset": "porches",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "porchGeneric",
                 "modifications": {
                     "wood": [
-                        "hill_country",
-                        "mountain_ash"
+                        "mountain_ash",
+                        "hill_country"
                     ]
                 }
             },
@@ -1301,6 +1311,7 @@
                 "asset": "windows",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "windowGeneric",
                 "modifications": {
                     "minimal": [
                         "dark"
@@ -1311,6 +1322,7 @@
                 "asset": "siding",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "sidingGeneric",
                 "modifications": {
                     "lap": [
                         "snowbound"
@@ -1318,20 +1330,22 @@
                 }
             },
             {
-                "asset": "sidingFront",
+                "asset": "sidingAccent1",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "sidingGeneric",
                 "modifications": {
                     "board": [
-                        "waterloo",
-                        "snowbound"
+                        "snowbound",
+                        "waterloo"
                     ]
                 }
             },
             {
-                "asset": "sidingBase",
+                "asset": "sidingAccent2",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "sidingMasonry",
                 "modifications": {
                     "stone": [
                         "white"
@@ -1342,6 +1356,7 @@
                 "asset": "doorsInterior",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "doorInteriorGeneric",
                 "modifications": {
                     "standard": [
                         "white"
@@ -1352,6 +1367,7 @@
                 "asset": "doorsExterior",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "doorGeneric",
                 "modifications": {
                     "glass": [
                         "white"
@@ -1362,6 +1378,7 @@
                 "asset": "doorsGarage",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "doorGarage",
                 "modifications": {
                     "country": [
                         "white"
@@ -1372,6 +1389,7 @@
                 "asset": "base",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "baseGeneric",
                 "modifications": {
                     "stucco": [
                         "concrete"
@@ -1382,6 +1400,7 @@
                 "asset": "trimInterior",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "trimInterior",
                 "modifications": {
                     "standard": [
                         "white"
@@ -1392,6 +1411,7 @@
                 "asset": "trim",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "trimGeneric",
                 "modifications": {
                     "standard": [
                         "white"
@@ -1402,6 +1422,7 @@
                 "asset": "soffits",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "soffitGeneric",
                 "modifications": {
                     "standard": [
                         "white"
@@ -1412,14 +1433,15 @@
                 "asset": "roof",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "roofingGeneric",
                 "modifications": {
                     "metalSeam": [
-                        "dark",
-                        "light"
+                        "light",
+                        "dark"
                     ],
                     "shingles": [
-                        "dark",
-                        "light"
+                        "light",
+                        "dark"
                     ]
                 }
             },
@@ -1427,10 +1449,11 @@
                 "asset": "roofOverhangs",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "roofingGeneric",
                 "modifications": {
                     "metalSeam": [
-                        "dark",
-                        "light"
+                        "light",
+                        "dark"
                     ]
                 }
             },
@@ -1438,6 +1461,7 @@
                 "asset": "lightsInterior",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "lightPod",
                 "modifications": {
                     "standard": [
                         "dark"
@@ -1448,6 +1472,7 @@
                 "asset": "wallInterior",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "wallInterior",
                 "modifications": {
                     "paint": [
                         "white"
@@ -1458,6 +1483,7 @@
                 "asset": "backsplash",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "wallInterior",
                 "modifications": {
                     "tile": [
                         "white4x6"
@@ -1468,6 +1494,7 @@
                 "asset": "cabinets",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "cabinetGeneric",
                 "modifications": {
                     "standard": [
                         "white"
@@ -1478,6 +1505,7 @@
                 "asset": "counters",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "counterGeneric",
                 "modifications": {
                     "ceramic": [
                         "quartzLight"
@@ -1488,6 +1516,7 @@
                 "asset": "railingInterior",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "railingInterior",
                 "modifications": {
                     "standard": [
                         "white"
@@ -1498,6 +1527,7 @@
                 "asset": "ceilings",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "ceilingGeneric",
                 "modifications": {
                     "paint": [
                         "white"
@@ -1508,6 +1538,7 @@
                 "asset": "floorInteriorMain",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "floorInterior",
                 "modifications": {
                     "hardwood": [
                         "cottonKnit8by3"
@@ -1518,6 +1549,7 @@
                 "asset": "floorInteriorBath",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "floorInterior",
                 "modifications": {
                     "tile": [
                         "hex_dark"
@@ -1528,6 +1560,7 @@
                 "asset": "floorInteriorGarage",
                 "embedded_asset": null,
                 "structure": 1,
+                "bc_asset": "floorInterior",
                 "modifications": {
                     "roughConcrete": [
                         "raw"
@@ -1538,6 +1571,7 @@
                 "asset": "terrain",
                 "embedded_asset": null,
                 "structure": 0,
+                "bc_asset": "terrainGeneric",
                 "modifications": {
                     "graphic": [
                         "analysis"
@@ -2238,39 +2272,39 @@
                 "variant": "metalSeam",
                 "theme": "light",
                 "region": "exterior",
-                "obj": "l_0027",
-                "mtl": "l_0027-light"
+                "obj": "l_0026",
+                "mtl": "l_0026-light"
             },
             {
                 "building_component": 14,
                 "variant": "metalSeam",
                 "theme": "dark",
                 "region": "exterior",
+                "obj": "l_0026",
+                "mtl": "l_0026-dark"
+            },
+            {
+                "building_component": 25,
+                "variant": "graphic",
+                "theme": "analysis",
+                "region": "exterior",
                 "obj": "l_0027",
-                "mtl": "l_0027-dark"
+                "mtl": "l_0027-analysis"
             },
             {
                 "building_component": 25,
                 "variant": "graphic",
                 "theme": "analysis",
                 "region": "exterior",
-                "obj": "l_0029",
-                "mtl": "l_0029-analysis"
-            },
-            {
-                "building_component": 25,
-                "variant": "graphic",
-                "theme": "analysis",
-                "region": "exterior",
-                "obj": "l_0030",
-                "mtl": "l_0030-analysis"
+                "obj": "l_0028",
+                "mtl": "l_0028-analysis"
             }
         ]
     },
     "assets": {
         "cameras": {
             "platformStreetDefault": {
-                "name": "Street Camara",
+                "name": "Street Camera",
                 "description": "A default streetview camera used on the Atmos platform.",
                 "type": "street",
                 "cam": {
@@ -2280,7 +2314,7 @@
                 }
             },
             "platformEditDefault": {
-                "name": "Edit Camara",
+                "name": "Edit Camera",
                 "description": "A default edit camera used on the Atmos platform.",
                 "type": "edit",
                 "cam": {
@@ -2472,13 +2506,13 @@
                 "name": "Siding",
                 "description": "Use this to modify the siding."
             },
-            "sidingFront": {
-                "name": "Front Siding",
-                "description": "Use this to modify the front siding."
+            "sidingAccent1": {
+                "name": "Siding Accent 1",
+                "description": "Use this to modify the accent siding."
             },
-            "sidingBase": {
-                "name": "Siding Base",
-                "description": "Use this to modify the base of the siding."
+            "sidingAccent2": {
+                "name": "Siding Accent 2",
+                "description": "Use this to modify the accent siding."
             },
             "doorsInterior": {
                 "name": "Interior Doors",

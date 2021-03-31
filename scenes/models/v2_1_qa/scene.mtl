@@ -444,7 +444,7 @@ d 1
 illum 2
 size 120.0000
 map_Kd textures/l_0025-dark.jpg
-newmtl l_0027-light
+newmtl l_0026-light
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -453,8 +453,8 @@ Ni 1
 d 1
 illum 2
 size 120.0000
-map_Kd textures/l_0027-light.jpg
-newmtl l_0027-dark
+map_Kd textures/l_0026-light.jpg
+newmtl l_0026-dark
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -463,8 +463,8 @@ Ni 1
 d 1
 illum 2
 size 120.0000
-map_Kd textures/l_0027-dark.jpg
-newmtl l_0029-analysis
+map_Kd textures/l_0026-dark.jpg
+newmtl l_0027-analysis
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -472,8 +472,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0029-analysis.jpg
-newmtl l_0030-analysis
+map_Kd textures/l_0027-analysis.jpg
+newmtl l_0028-analysis
 Ka 1 1 1
 Kd 1.0000 1.0000 1.0000
 Ks 0 0 0
