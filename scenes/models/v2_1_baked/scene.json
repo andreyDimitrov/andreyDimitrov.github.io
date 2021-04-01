@@ -1305,8 +1305,8 @@
                 "structure": 1,
                 "modifications": {
                     "board": [
-                        "waterloo",
-                        "snowbound"
+                        "snowbound",
+                        "waterloo"
                     ]
                 }
             },
@@ -1396,12 +1396,12 @@
                 "structure": 1,
                 "modifications": {
                     "metalSeam": [
-                        "dark",
-                        "light"
+                        "light",
+                        "dark"
                     ],
                     "shingles": [
-                        "dark",
-                        "light"
+                        "light",
+                        "dark"
                     ]
                 }
             },
@@ -1411,8 +1411,8 @@
                 "structure": 1,
                 "modifications": {
                     "metalSeam": [
-                        "dark",
-                        "light"
+                        "light",
+                        "dark"
                     ]
                 }
             },
@@ -2252,7 +2252,7 @@
     "assets": {
         "cameras": {
             "platformStreetDefault": {
-                "name": "Street Camara",
+                "name": "Street Camera",
                 "description": "A default streetview camera used on the Atmos platform.",
                 "type": "street",
                 "cam": {
@@ -2262,7 +2262,7 @@
                 }
             },
             "platformEditDefault": {
-                "name": "Edit Camara",
+                "name": "Edit Camera",
                 "description": "A default edit camera used on the Atmos platform.",
                 "type": "edit",
                 "cam": {
