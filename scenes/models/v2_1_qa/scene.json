@@ -962,7 +962,7 @@
                     -83.24936632859567
                 ],
                 "lat": -30.98391153528752,
-                "lon": 56.960426912282266,
+                "lon": -123.03957308771774,
                 "env": null,
                 "layout_expression": null
             }
@@ -1038,6 +1038,142 @@
                 }
             },
             {
+                "asset": "windows",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "windowGeneric",
+                "modifications": {
+                    "minimal": [
+                        "dark"
+                    ]
+                }
+            },
+            {
+                "asset": "doorsInterior",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "doorInteriorGeneric",
+                "modifications": {
+                    "standard": [
+                        "white"
+                    ]
+                }
+            },
+            {
+                "asset": "doorHardware1",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "doorHardwareInterior",
+                "modifications": {
+                    "standard": [
+                        "black",
+                        "chrome",
+                        "satinNickel"
+                    ]
+                }
+            },
+            {
+                "asset": "doorsGarage",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "doorGarage",
+                "modifications": {
+                    "modern": [
+                        "white",
+                        "hill_country"
+                    ]
+                }
+            },
+            {
+                "asset": "trimInterior",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "trimInterior",
+                "modifications": {
+                    "standard": [
+                        "white"
+                    ]
+                }
+            },
+            {
+                "asset": "backsplash",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "wallInterior",
+                "modifications": {
+                    "tile": [
+                        "subway4in16inWhite"
+                    ]
+                }
+            },
+            {
+                "asset": "floorInterior9",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "floorInterior",
+                "modifications": {
+                    "roughConcrete": [
+                        "raw"
+                    ]
+                }
+            },
+            {
+                "asset": "cabinets",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "cabinetGeneric",
+                "modifications": {
+                    "standard": [
+                        "white",
+                        "frappe"
+                    ]
+                }
+            },
+            {
+                "asset": "counters",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "counterGeneric",
+                "modifications": {
+                    "ceramic": [
+                        "quartzLight"
+                    ]
+                }
+            },
+            {
+                "asset": "railingInterior",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "railingInterior",
+                "modifications": {
+                    "metalWire": [
+                        "black"
+                    ]
+                }
+            },
+            {
+                "asset": "ceilings",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "ceilingGeneric",
+                "modifications": {
+                    "paint": [
+                        "white"
+                    ]
+                }
+            },
+            {
+                "asset": "lightsInterior",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "lightPod",
+                "modifications": {
+                    "standard": [
+                        "dark"
+                    ]
+                }
+            },
+            {
                 "asset": "soffits",
                 "embedded_asset": null,
                 "structure": 1,
@@ -1060,24 +1196,14 @@
                 }
             },
             {
-                "asset": "windows",
-                "embedded_asset": null,
-                "structure": 1,
-                "bc_asset": "windowGeneric",
-                "modifications": {
-                    "minimal": [
-                        "dark"
-                    ]
-                }
-            },
-            {
                 "asset": "roof",
                 "embedded_asset": null,
                 "structure": 1,
                 "bc_asset": "roofingFlat",
                 "modifications": {
                     "rubber": [
-                        "light"
+                        "light",
+                        "dark"
                     ]
                 }
             },
@@ -1121,6 +1247,7 @@
                 "bc_asset": "trimGeneric",
                 "modifications": {
                     "standard": [
+                        "white",
                         "black"
                     ]
                 }
@@ -1132,18 +1259,181 @@
                 "bc_asset": "doorGeneric",
                 "modifications": {
                     "glass": [
+                        "white",
                         "hill_country"
                     ]
                 }
             },
             {
-                "asset": "doorsGarage",
+                "asset": "doorHardware2",
                 "embedded_asset": null,
                 "structure": 1,
-                "bc_asset": "doorGarage",
+                "bc_asset": "doorHardwareExterior",
                 "modifications": {
-                    "modern": [
-                        "hill_country"
+                    "standard": [
+                        "black",
+                        "chrome",
+                        "satinNickel"
+                    ]
+                }
+            },
+            {
+                "asset": "wallInterior2",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "wallInterior",
+                "modifications": {
+                    "paint": [
+                        "snowbound",
+                        "naturalLinen",
+                        "reposeGray"
+                    ]
+                }
+            },
+            {
+                "asset": "wallInterior3",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "wallInterior",
+                "modifications": {
+                    "paint": [
+                        "snowbound",
+                        "naturalLinen",
+                        "reposeGray"
+                    ]
+                }
+            },
+            {
+                "asset": "wallInterior1",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "wallInterior",
+                "modifications": {
+                    "paint": [
+                        "snowbound",
+                        "naturalLinen",
+                        "reposeGray"
+                    ]
+                }
+            },
+            {
+                "asset": "wallInterior4",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "wallInterior",
+                "modifications": {
+                    "tile": [
+                        "subway4in16inWhite"
+                    ]
+                }
+            },
+            {
+                "asset": "wallInterior5",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "wallInterior",
+                "modifications": {
+                    "tile": [
+                        "subway4in16inWhite"
+                    ]
+                }
+            },
+            {
+                "asset": "wallInterior6",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "wallInterior",
+                "modifications": {
+                    "tile": [
+                        "subway4in16inWhite"
+                    ]
+                }
+            },
+            {
+                "asset": "floorInterior1",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "floorInterior",
+                "modifications": {
+                    "hardwood": [
+                        "cottonKnit8by3"
+                    ]
+                }
+            },
+            {
+                "asset": "floorInterior2",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "floorInterior",
+                "modifications": {
+                    "hardwood": [
+                        "cottonKnit8by3"
+                    ]
+                }
+            },
+            {
+                "asset": "floorInterior3",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "floorInterior",
+                "modifications": {
+                    "tile": [
+                        "hex_dark"
+                    ]
+                }
+            },
+            {
+                "asset": "floorInterior4",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "floorInterior",
+                "modifications": {
+                    "tile": [
+                        "hex_dark"
+                    ]
+                }
+            },
+            {
+                "asset": "floorInterior5",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "floorInterior",
+                "modifications": {
+                    "tile": [
+                        "hex_dark"
+                    ]
+                }
+            },
+            {
+                "asset": "floorInterior6",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "floorInterior",
+                "modifications": {
+                    "tile": [
+                        "hex_dark"
+                    ]
+                }
+            },
+            {
+                "asset": "floorInterior7",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "floorInterior",
+                "modifications": {
+                    "carpet": [
+                        "shawPavement"
+                    ]
+                }
+            },
+            {
+                "asset": "floorInterior8",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "floorInterior",
+                "modifications": {
+                    "carpet": [
+                        "shawPavement"
                     ]
                 }
             }
@@ -1178,73 +1468,248 @@
                 "layout_expression": null
             },
             {
-                "asset": "soffitGeneric",
+                "asset": "windowGeneric",
                 "embedded_asset": null,
                 "modification_group": 4,
-                "quantity": 1000.0,
+                "quantity": 10.0,
                 "layout_expression": null
             },
             {
-                "asset": "baseGeneric",
+                "asset": "doorInteriorGeneric",
                 "embedded_asset": null,
                 "modification_group": 5,
-                "quantity": 1000.0,
+                "quantity": 10.0,
                 "layout_expression": null
             },
             {
-                "asset": "windowGeneric",
+                "asset": "doorHardwareInterior",
                 "embedded_asset": null,
                 "modification_group": 6,
                 "quantity": 10.0,
                 "layout_expression": null
             },
             {
-                "asset": "roofingFlat",
+                "asset": "doorGarage",
                 "embedded_asset": null,
                 "modification_group": 7,
-                "quantity": 1000.0,
+                "quantity": 10.0,
                 "layout_expression": null
             },
             {
-                "asset": "sidingGeneric",
+                "asset": "trimInterior",
                 "embedded_asset": null,
                 "modification_group": 8,
                 "quantity": 1000.0,
                 "layout_expression": null
             },
             {
-                "asset": "sidingGeneric",
+                "asset": "wallInterior",
                 "embedded_asset": null,
                 "modification_group": 9,
                 "quantity": 1000.0,
                 "layout_expression": null
             },
             {
-                "asset": "sidingMasonry",
+                "asset": "floorInterior",
                 "embedded_asset": null,
                 "modification_group": 10,
                 "quantity": 1000.0,
                 "layout_expression": null
             },
             {
-                "asset": "trimGeneric",
+                "asset": "cabinetGeneric",
                 "embedded_asset": null,
                 "modification_group": 11,
                 "quantity": 1000.0,
                 "layout_expression": null
             },
             {
-                "asset": "doorGeneric",
+                "asset": "counterGeneric",
                 "embedded_asset": null,
                 "modification_group": 12,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "railingInterior",
+                "embedded_asset": null,
+                "modification_group": 13,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "ceilingGeneric",
+                "embedded_asset": null,
+                "modification_group": 14,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "lightPod",
+                "embedded_asset": null,
+                "modification_group": 15,
                 "quantity": 10.0,
                 "layout_expression": null
             },
             {
-                "asset": "doorGarage",
+                "asset": "soffitGeneric",
                 "embedded_asset": null,
-                "modification_group": 13,
+                "modification_group": 16,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "baseGeneric",
+                "embedded_asset": null,
+                "modification_group": 17,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "roofingFlat",
+                "embedded_asset": null,
+                "modification_group": 18,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "sidingGeneric",
+                "embedded_asset": null,
+                "modification_group": 19,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "sidingGeneric",
+                "embedded_asset": null,
+                "modification_group": 20,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "sidingMasonry",
+                "embedded_asset": null,
+                "modification_group": 21,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "trimGeneric",
+                "embedded_asset": null,
+                "modification_group": 22,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "doorGeneric",
+                "embedded_asset": null,
+                "modification_group": 23,
                 "quantity": 10.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "doorHardwareExterior",
+                "embedded_asset": null,
+                "modification_group": 24,
+                "quantity": 1.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "wallInterior",
+                "embedded_asset": null,
+                "modification_group": 25,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "wallInterior",
+                "embedded_asset": null,
+                "modification_group": 26,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "wallInterior",
+                "embedded_asset": null,
+                "modification_group": 27,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "wallInterior",
+                "embedded_asset": null,
+                "modification_group": 28,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "wallInterior",
+                "embedded_asset": null,
+                "modification_group": 29,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "wallInterior",
+                "embedded_asset": null,
+                "modification_group": 30,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "floorInterior",
+                "embedded_asset": null,
+                "modification_group": 31,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "floorInterior",
+                "embedded_asset": null,
+                "modification_group": 32,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "floorInterior",
+                "embedded_asset": null,
+                "modification_group": 33,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "floorInterior",
+                "embedded_asset": null,
+                "modification_group": 34,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "floorInterior",
+                "embedded_asset": null,
+                "modification_group": 35,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "floorInterior",
+                "embedded_asset": null,
+                "modification_group": 36,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "floorInterior",
+                "embedded_asset": null,
+                "modification_group": 37,
+                "quantity": 1000.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "floorInterior",
+                "embedded_asset": null,
+                "modification_group": 38,
+                "quantity": 1000.0,
                 "layout_expression": null
             }
         ],
@@ -1258,132 +1723,540 @@
                 "mtl": "0000-white"
             },
             {
-                "building_component": 4,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
+                "building_component": 27,
+                "variant": "paint",
+                "theme": "snowbound",
+                "region": "interior",
                 "obj": "0001",
-                "mtl": "0001-white"
+                "mtl": "0001-snowbound"
+            },
+            {
+                "building_component": 27,
+                "variant": "paint",
+                "theme": "naturalLinen",
+                "region": "interior",
+                "obj": "0001",
+                "mtl": "0001-naturalLinen"
+            },
+            {
+                "building_component": 27,
+                "variant": "paint",
+                "theme": "reposeGray",
+                "region": "interior",
+                "obj": "0001",
+                "mtl": "0001-reposeGray"
+            },
+            {
+                "building_component": 28,
+                "variant": "tile",
+                "theme": "subway4in16inWhite",
+                "region": "interior",
+                "obj": "0002",
+                "mtl": "0002-subway4in16inWhite"
+            },
+            {
+                "building_component": 29,
+                "variant": "tile",
+                "theme": "subway4in16inWhite",
+                "region": "interior",
+                "obj": "0003",
+                "mtl": "0003-subway4in16inWhite"
+            },
+            {
+                "building_component": 30,
+                "variant": "tile",
+                "theme": "subway4in16inWhite",
+                "region": "interior",
+                "obj": "0004",
+                "mtl": "0004-subway4in16inWhite"
+            },
+            {
+                "building_component": 31,
+                "variant": "hardwood",
+                "theme": "cottonKnit8by3",
+                "region": "interior",
+                "obj": "0005",
+                "mtl": "0005-cottonKnit8by3"
+            },
+            {
+                "building_component": 32,
+                "variant": "hardwood",
+                "theme": "cottonKnit8by3",
+                "region": "interior",
+                "obj": "0006",
+                "mtl": "0006-cottonKnit8by3"
+            },
+            {
+                "building_component": 33,
+                "variant": "tile",
+                "theme": "hex_dark",
+                "region": "interior",
+                "obj": "0007",
+                "mtl": "0007-hex_dark"
+            },
+            {
+                "building_component": 34,
+                "variant": "tile",
+                "theme": "hex_dark",
+                "region": "interior",
+                "obj": "0008",
+                "mtl": "0008-hex_dark"
+            },
+            {
+                "building_component": 35,
+                "variant": "tile",
+                "theme": "hex_dark",
+                "region": "interior",
+                "obj": "0009",
+                "mtl": "0009-hex_dark"
+            },
+            {
+                "building_component": 4,
+                "variant": "minimal",
+                "theme": "dark",
+                "region": "interior",
+                "obj": "0010",
+                "mtl": "0010-dark"
             },
             {
                 "building_component": 5,
-                "variant": "concrete",
-                "theme": "unfinished",
-                "region": "exterior",
-                "obj": "0002",
-                "mtl": "0002-unfinished"
+                "variant": "standard",
+                "theme": "white",
+                "region": "interior",
+                "obj": "0011",
+                "mtl": "0011-white"
             },
             {
                 "building_component": 6,
-                "variant": "minimal",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "0003",
-                "mtl": "0003-dark"
-            },
-            {
-                "building_component": 6,
-                "variant": "minimal",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "0004",
-                "mtl": "0004-dark"
-            },
-            {
-                "building_component": 7,
-                "variant": "rubber",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "0005",
-                "mtl": "0005-light"
-            },
-            {
-                "building_component": 7,
-                "variant": "rubber",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "0006",
-                "mtl": "0006-light"
-            },
-            {
-                "building_component": 8,
-                "variant": "lapFiberCement",
-                "theme": "teak",
-                "region": "exterior",
-                "obj": "0007",
-                "mtl": "0007-teak"
-            },
-            {
-                "building_component": 9,
-                "variant": "stucco",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "0008",
-                "mtl": "0008-white"
-            },
-            {
-                "building_component": 9,
-                "variant": "stucco",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "0009",
-                "mtl": "0009-white"
-            },
-            {
-                "building_component": 10,
-                "variant": "brick",
-                "theme": "6inchBlackWhite",
-                "region": "exterior",
-                "obj": "0010",
-                "mtl": "0010-6inchBlackWhite"
-            },
-            {
-                "building_component": 11,
                 "variant": "standard",
                 "theme": "black",
-                "region": "exterior",
-                "obj": "0011",
-                "mtl": "0011-black"
-            },
-            {
-                "building_component": 12,
-                "variant": "glass",
-                "theme": "hill_country",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "0012",
-                "mtl": "0012-hill_country"
+                "mtl": "0012-black"
             },
             {
-                "building_component": 12,
-                "variant": "glass",
+                "building_component": 6,
+                "variant": "standard",
+                "theme": "chrome",
+                "region": "interior",
+                "obj": "0012",
+                "mtl": "0012-chrome"
+            },
+            {
+                "building_component": 6,
+                "variant": "standard",
+                "theme": "satinNickel",
+                "region": "interior",
+                "obj": "0012",
+                "mtl": "0012-satinNickel"
+            },
+            {
+                "building_component": 7,
+                "variant": "modern",
+                "theme": "white",
+                "region": "interior",
+                "obj": "0013",
+                "mtl": "0013-white"
+            },
+            {
+                "building_component": 7,
+                "variant": "modern",
                 "theme": "hill_country",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "0013",
                 "mtl": "0013-hill_country"
             },
             {
+                "building_component": 8,
+                "variant": "standard",
+                "theme": "white",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-white"
+            },
+            {
+                "building_component": 9,
+                "variant": "tile",
+                "theme": "subway4in16inWhite",
+                "region": "interior",
+                "obj": "0015",
+                "mtl": "0015-subway4in16inWhite"
+            },
+            {
+                "building_component": 10,
+                "variant": "roughConcrete",
+                "theme": "raw",
+                "region": "interior",
+                "obj": "0016",
+                "mtl": "0016-raw"
+            },
+            {
+                "building_component": 11,
+                "variant": "standard",
+                "theme": "white",
+                "region": "interior",
+                "obj": "0017",
+                "mtl": "0017-white"
+            },
+            {
+                "building_component": 11,
+                "variant": "standard",
+                "theme": "frappe",
+                "region": "interior",
+                "obj": "0017",
+                "mtl": "0017-frappe"
+            },
+            {
                 "building_component": 12,
+                "variant": "ceramic",
+                "theme": "quartzLight",
+                "region": "interior",
+                "obj": "0018",
+                "mtl": "0018-quartzLight"
+            },
+            {
+                "building_component": 13,
+                "variant": "metalWire",
+                "theme": "black",
+                "region": "interior",
+                "obj": "0019",
+                "mtl": "0019-black"
+            },
+            {
+                "building_component": 36,
+                "variant": "tile",
+                "theme": "hex_dark",
+                "region": "interior",
+                "obj": "0020",
+                "mtl": "0020-hex_dark"
+            },
+            {
+                "building_component": 37,
+                "variant": "carpet",
+                "theme": "shawPavement",
+                "region": "interior",
+                "obj": "0021",
+                "mtl": "0021-shawPavement"
+            },
+            {
+                "building_component": 38,
+                "variant": "carpet",
+                "theme": "shawPavement",
+                "region": "interior",
+                "obj": "0022",
+                "mtl": "0022-shawPavement"
+            },
+            {
+                "building_component": 24,
+                "variant": "standard",
+                "theme": "black",
+                "region": "interior",
+                "obj": "0023",
+                "mtl": "0023-black"
+            },
+            {
+                "building_component": 24,
+                "variant": "standard",
+                "theme": "chrome",
+                "region": "interior",
+                "obj": "0023",
+                "mtl": "0023-chrome"
+            },
+            {
+                "building_component": 24,
+                "variant": "standard",
+                "theme": "satinNickel",
+                "region": "interior",
+                "obj": "0023",
+                "mtl": "0023-satinNickel"
+            },
+            {
+                "building_component": 13,
+                "variant": "metalWire",
+                "theme": "black",
+                "region": "interior",
+                "obj": "0024",
+                "mtl": "0024-black"
+            },
+            {
+                "building_component": 13,
+                "variant": "metalWire",
+                "theme": "black",
+                "region": "interior",
+                "obj": "0025",
+                "mtl": "0025-black"
+            },
+            {
+                "building_component": 14,
+                "variant": "paint",
+                "theme": "white",
+                "region": "interior",
+                "obj": "0026",
+                "mtl": "0026-white"
+            },
+            {
+                "building_component": 15,
+                "variant": "standard",
+                "theme": "dark",
+                "region": "interior",
+                "obj": "0027",
+                "mtl": "0027-dark"
+            },
+            {
+                "building_component": 15,
+                "variant": "standard",
+                "theme": "dark",
+                "region": "interior",
+                "obj": "0028",
+                "mtl": "0028-dark"
+            },
+            {
+                "building_component": 16,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0029",
+                "mtl": "0029-white"
+            },
+            {
+                "building_component": 17,
+                "variant": "concrete",
+                "theme": "unfinished",
+                "region": "exterior",
+                "obj": "0030",
+                "mtl": "0030-unfinished"
+            },
+            {
+                "building_component": 4,
+                "variant": "minimal",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "0031",
+                "mtl": "0031-dark"
+            },
+            {
+                "building_component": 4,
+                "variant": "minimal",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "0032",
+                "mtl": "0032-dark"
+            },
+            {
+                "building_component": 18,
+                "variant": "rubber",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "0033",
+                "mtl": "0033-light"
+            },
+            {
+                "building_component": 18,
+                "variant": "rubber",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "0033",
+                "mtl": "0033-dark"
+            },
+            {
+                "building_component": 18,
+                "variant": "rubber",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "0034",
+                "mtl": "0034-light"
+            },
+            {
+                "building_component": 18,
+                "variant": "rubber",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "0034",
+                "mtl": "0034-dark"
+            },
+            {
+                "building_component": 19,
+                "variant": "lapFiberCement",
+                "theme": "teak",
+                "region": "exterior",
+                "obj": "0035",
+                "mtl": "0035-teak"
+            },
+            {
+                "building_component": 20,
+                "variant": "stucco",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0036",
+                "mtl": "0036-white"
+            },
+            {
+                "building_component": 20,
+                "variant": "stucco",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0037",
+                "mtl": "0037-white"
+            },
+            {
+                "building_component": 21,
+                "variant": "brick",
+                "theme": "6inchBlackWhite",
+                "region": "exterior",
+                "obj": "0038",
+                "mtl": "0038-6inchBlackWhite"
+            },
+            {
+                "building_component": 22,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0039",
+                "mtl": "0039-white"
+            },
+            {
+                "building_component": 22,
+                "variant": "standard",
+                "theme": "black",
+                "region": "exterior",
+                "obj": "0039",
+                "mtl": "0039-black"
+            },
+            {
+                "building_component": 23,
+                "variant": "glass",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0040",
+                "mtl": "0040-white"
+            },
+            {
+                "building_component": 23,
                 "variant": "glass",
                 "theme": "hill_country",
                 "region": "exterior",
-                "obj": "0014",
-                "mtl": "0014-hill_country"
+                "obj": "0040",
+                "mtl": "0040-hill_country"
             },
             {
-                "building_component": 13,
+                "building_component": 23,
+                "variant": "glass",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0041",
+                "mtl": "0041-white"
+            },
+            {
+                "building_component": 23,
+                "variant": "glass",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "0041",
+                "mtl": "0041-hill_country"
+            },
+            {
+                "building_component": 24,
+                "variant": "standard",
+                "theme": "black",
+                "region": "exterior",
+                "obj": "0042",
+                "mtl": "0042-black"
+            },
+            {
+                "building_component": 24,
+                "variant": "standard",
+                "theme": "chrome",
+                "region": "exterior",
+                "obj": "0042",
+                "mtl": "0042-chrome"
+            },
+            {
+                "building_component": 24,
+                "variant": "standard",
+                "theme": "satinNickel",
+                "region": "exterior",
+                "obj": "0042",
+                "mtl": "0042-satinNickel"
+            },
+            {
+                "building_component": 7,
+                "variant": "modern",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0043",
+                "mtl": "0043-white"
+            },
+            {
+                "building_component": 7,
                 "variant": "modern",
                 "theme": "hill_country",
                 "region": "exterior",
-                "obj": "0015",
-                "mtl": "0015-hill_country"
+                "obj": "0043",
+                "mtl": "0043-hill_country"
             },
             {
-                "building_component": 13,
+                "building_component": 7,
+                "variant": "modern",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0044",
+                "mtl": "0044-white"
+            },
+            {
+                "building_component": 7,
                 "variant": "modern",
                 "theme": "hill_country",
                 "region": "exterior",
-                "obj": "0016",
-                "mtl": "0016-hill_country"
+                "obj": "0044",
+                "mtl": "0044-hill_country"
+            },
+            {
+                "building_component": 25,
+                "variant": "paint",
+                "theme": "snowbound",
+                "region": "interior",
+                "obj": "0045",
+                "mtl": "0045-snowbound"
+            },
+            {
+                "building_component": 25,
+                "variant": "paint",
+                "theme": "naturalLinen",
+                "region": "interior",
+                "obj": "0045",
+                "mtl": "0045-naturalLinen"
+            },
+            {
+                "building_component": 25,
+                "variant": "paint",
+                "theme": "reposeGray",
+                "region": "interior",
+                "obj": "0045",
+                "mtl": "0045-reposeGray"
+            },
+            {
+                "building_component": 26,
+                "variant": "paint",
+                "theme": "snowbound",
+                "region": "interior",
+                "obj": "0046",
+                "mtl": "0046-snowbound"
+            },
+            {
+                "building_component": 26,
+                "variant": "paint",
+                "theme": "naturalLinen",
+                "region": "interior",
+                "obj": "0046",
+                "mtl": "0046-naturalLinen"
+            },
+            {
+                "building_component": 26,
+                "variant": "paint",
+                "theme": "reposeGray",
+                "region": "interior",
+                "obj": "0046",
+                "mtl": "0046-reposeGray"
             }
         ]
     },
@@ -1396,7 +2269,7 @@
                 "cam": {
                     "fov": 45,
                     "near": 1,
-                    "far": 20000
+                    "far": 100000
                 }
             }
         },
@@ -1555,6 +2428,54 @@
                 "name": "Main Kitchen Oven",
                 "description": "Use this to modify the main kitchen oven."
             },
+            "windows": {
+                "name": "Windows",
+                "description": "Use this to modify the windows."
+            },
+            "doorsInterior": {
+                "name": "Interior Doors",
+                "description": "Use this to modify the interior doors."
+            },
+            "doorHardware1": {
+                "name": "Door Hardware",
+                "description": "Use this to modify the door hardware."
+            },
+            "doorsGarage": {
+                "name": "Garage Doors",
+                "description": "Use this to modify the garage doors."
+            },
+            "trimInterior": {
+                "name": "Trim",
+                "description": "Use this to modify the interior trim."
+            },
+            "backsplash": {
+                "name": "Backsplash",
+                "description": "Use this to modify the backsplash."
+            },
+            "floorInterior9": {
+                "name": "Interior Floors",
+                "description": "Use this to modify the interior floor finish."
+            },
+            "cabinets": {
+                "name": "Cabinets",
+                "description": "Use this to modify the cabinets finish."
+            },
+            "counters": {
+                "name": "Counters",
+                "description": "Use this to modify the counter finish."
+            },
+            "railingInterior": {
+                "name": "Railing",
+                "description": "Use this to modify the interior railing."
+            },
+            "ceilings": {
+                "name": "Ceilings",
+                "description": "Use this to modify the ceiling finish."
+            },
+            "lightsInterior": {
+                "name": "Lights",
+                "description": "Use this to modify the interior lights."
+            },
             "soffits": {
                 "name": "Soffits",
                 "description": "Use this to modify the soffits."
@@ -1562,10 +2483,6 @@
             "base": {
                 "name": "Foundation Base",
                 "description": "Use this to modify the foundation base finish."
-            },
-            "windows": {
-                "name": "Windows",
-                "description": "Use this to modify the windows."
             },
             "roof": {
                 "name": "Roof",
@@ -1591,9 +2508,65 @@
                 "name": "Exterior Doors",
                 "description": "Use this to modify the exterior doors."
             },
-            "doorsGarage": {
-                "name": "Garage Doors",
-                "description": "Use this to modify the garage doors."
+            "doorHardware2": {
+                "name": "Door Hardware",
+                "description": "Use this to modify the door hardware."
+            },
+            "wallInterior2": {
+                "name": "Interior Walls",
+                "description": "Use this to modify the interior walls."
+            },
+            "wallInterior3": {
+                "name": "Interior Walls",
+                "description": "Use this to modify the interior walls."
+            },
+            "wallInterior1": {
+                "name": "Interior Walls",
+                "description": "Use this to modify the interior walls."
+            },
+            "wallInterior4": {
+                "name": "Interior Walls",
+                "description": "Use this to modify the interior walls."
+            },
+            "wallInterior5": {
+                "name": "Interior Walls",
+                "description": "Use this to modify the interior walls."
+            },
+            "wallInterior6": {
+                "name": "Interior Walls",
+                "description": "Use this to modify the interior walls."
+            },
+            "floorInterior1": {
+                "name": "Interior Floors",
+                "description": "Use this to modify the interior floor finish."
+            },
+            "floorInterior2": {
+                "name": "Interior Floors",
+                "description": "Use this to modify the interior floor finish."
+            },
+            "floorInterior3": {
+                "name": "Interior Floors",
+                "description": "Use this to modify the interior floor finish."
+            },
+            "floorInterior4": {
+                "name": "Interior Floors",
+                "description": "Use this to modify the interior floor finish."
+            },
+            "floorInterior5": {
+                "name": "Interior Floors",
+                "description": "Use this to modify the interior floor finish."
+            },
+            "floorInterior6": {
+                "name": "Interior Floors",
+                "description": "Use this to modify the interior floor finish."
+            },
+            "floorInterior7": {
+                "name": "Interior Floors",
+                "description": "Use this to modify the interior floor finish."
+            },
+            "floorInterior8": {
+                "name": "Interior Floors",
+                "description": "Use this to modify the interior floor finish."
             }
         },
         "building_components": {
@@ -1747,6 +2720,1250 @@
                             }
                         },
                         "layer_props": {}
+                    }
+                }
+            },
+            "windowGeneric": {
+                "name": "Window",
+                "description": "A window building component.",
+                "takeoff": {
+                    "unit": "",
+                    "type": "COUNT",
+                    "section": "windows"
+                },
+                "baking_properties": {
+                    "affected_by_externals": true
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_frame": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "int_calk": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "black"
+                                        ],
+                                        "ext_frame": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_calk": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "black"
+                                        ],
+                                        "ext_glass": [
+                                            "sh",
+                                            "abstract-glass-simple",
+                                            null
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "int_frame": {
+                                "region": "interior"
+                            },
+                            "int_calk": {
+                                "region": "interior"
+                            },
+                            "int_glass": {
+                                "region": "interior"
+                            },
+                            "ext_frame": {
+                                "region": "exterior"
+                            },
+                            "ext_calk": {
+                                "region": "exterior"
+                            },
+                            "ext_glass": {
+                                "region": "exterior"
+                            }
+                        }
+                    },
+                    "minimal": {
+                        "name": "Minimal",
+                        "description": "Minimal style window.",
+                        "themes": {
+                            "dark": {
+                                "name": "Dark",
+                                "description": "Dark theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_frame": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "int_calk": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "black"
+                                        ],
+                                        "ext_frame": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_calk": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "black"
+                                        ],
+                                        "ext_glass": [
+                                            "sh",
+                                            "abstract-glass-simple",
+                                            null
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "int_frame": {
+                                "region": "interior"
+                            },
+                            "int_calk": {
+                                "region": "interior"
+                            },
+                            "int_glass": {
+                                "region": "interior"
+                            },
+                            "ext_frame": {
+                                "region": "exterior"
+                            },
+                            "ext_calk": {
+                                "region": "exterior"
+                            },
+                            "ext_glass": {
+                                "region": "exterior"
+                            }
+                        }
+                    }
+                }
+            },
+            "doorInteriorGeneric": {
+                "name": "Interior Door",
+                "description": "An interior door building component.",
+                "takeoff": {
+                    "unit": "",
+                    "type": "COUNT",
+                    "section": "doors"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_frame": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "int_frame": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "standard": {
+                        "name": "Standard",
+                        "description": "Standard interior door.",
+                        "themes": {
+                            "white": {
+                                "name": "White",
+                                "description": "White theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_frame": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "int_frame": {
+                                "region": "interior"
+                            }
+                        }
+                    }
+                }
+            },
+            "doorHardwareInterior": {
+                "name": "Interior Door Hardware",
+                "description": "An interior door hardware building component.",
+                "takeoff": {
+                    "unit": "",
+                    "type": "COUNT",
+                    "section": "hardware"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "int_hardware": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "standard": {
+                        "name": "Standard",
+                        "description": "Standard interior door.",
+                        "themes": {
+                            "black": {
+                                "name": "Black",
+                                "description": "Black theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            },
+                            "chrome": {
+                                "name": "Chrome",
+                                "description": "Chrome theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "silver"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            },
+                            "satinNickel": {
+                                "name": "Satin Nickel",
+                                "description": "Satin nickel theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "nickel"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "int_hardware": {
+                                "region": "interior"
+                            }
+                        }
+                    }
+                }
+            },
+            "doorGarage": {
+                "name": "Garage Door",
+                "description": "A garage door building component.",
+                "takeoff": {
+                    "unit": "",
+                    "type": "COUNT",
+                    "section": "doors"
+                },
+                "baking_properties": {
+                    "affected_by_externals": true
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_frame": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "int_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_frame": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "ext_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_glass": [
+                                            "sh",
+                                            "abstract-glass-simple",
+                                            null
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "int_frame": {
+                                "region": "interior"
+                            },
+                            "int_hardware": {
+                                "region": "interior"
+                            },
+                            "ext_frame": {
+                                "region": "exterior"
+                            },
+                            "ext_hardware": {
+                                "region": "exterior"
+                            },
+                            "ext_glass": {
+                                "region": "exterior"
+                            }
+                        }
+                    },
+                    "country": {
+                        "name": "Country",
+                        "description": "Country style garage door.",
+                        "themes": {
+                            "white": {
+                                "name": "White",
+                                "description": "White theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_frame": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "int_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_frame": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "ext_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_glass": [
+                                            "sh",
+                                            "abstract-glass-simple",
+                                            null
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "int_frame": {
+                                "region": "interior"
+                            },
+                            "int_hardware": {
+                                "region": "interior"
+                            },
+                            "ext_frame": {
+                                "region": "exterior"
+                            },
+                            "ext_hardware": {
+                                "region": "exterior"
+                            },
+                            "ext_glass": {
+                                "region": "exterior"
+                            }
+                        }
+                    },
+                    "modern": {
+                        "name": "Modern",
+                        "description": "Modern style garage door.",
+                        "themes": {
+                            "white": {
+                                "name": "White",
+                                "description": "White theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_frame": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "int_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_frame": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "ext_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_glass": [
+                                            "sh",
+                                            "abstract-glass-simple",
+                                            null
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            },
+                            "hill_country": {
+                                "name": "Hill Country",
+                                "description": "Hill country theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "int_frame": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "int_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_frame": [
+                                            "sh",
+                                            "trim-wood-ext01",
+                                            "hillCountry"
+                                        ],
+                                        "ext_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_glass": [
+                                            "sh",
+                                            "abstract-glass-simple",
+                                            null
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "int_frame": {
+                                "region": "interior"
+                            },
+                            "int_hardware": {
+                                "region": "interior"
+                            },
+                            "ext_frame": {
+                                "region": "exterior"
+                            },
+                            "ext_hardware": {
+                                "region": "exterior"
+                            },
+                            "ext_glass": {
+                                "region": "exterior"
+                            }
+                        }
+                    }
+                }
+            },
+            "trimInterior": {
+                "name": "Trim",
+                "description": "An interior trim building component.",
+                "takeoff": {
+                    "unit": "FT",
+                    "type": "LENGTH",
+                    "section": "trim"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "standard": {
+                        "name": "Standard",
+                        "description": "Standard trim style.",
+                        "themes": {
+                            "white": {
+                                "name": "White",
+                                "description": "White theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    }
+                }
+            },
+            "wallInterior": {
+                "name": "Wall",
+                "description": "An interior wall building component.",
+                "takeoff": {
+                    "unit": "SF",
+                    "type": "AREA",
+                    "section": "finishes"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "paint": {
+                        "name": "Painted Wall",
+                        "description": "Painted wall style.",
+                        "themes": {
+                            "snowbound": {
+                                "name": "Snowbound",
+                                "description": "Snowbound theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            },
+                            "naturalLinen": {
+                                "name": "Natural Linen",
+                                "description": "Natural Linen.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "naturalLinen"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            },
+                            "reposeGray": {
+                                "name": "Repose Gray",
+                                "description": "Repose gray theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "reposeGray"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "tile": {
+                        "name": "Tile Wall",
+                        "description": "Tile wall style.",
+                        "themes": {
+                            "subway4in16inWhite": {
+                                "name": "White 4x16 Subway Tile",
+                                "description": "White 4x16 subway tiles theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "millwork-backsplash-subway4in16in",
+                                            "white"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    }
+                }
+            },
+            "floorInterior": {
+                "name": "Floor",
+                "description": "An interior floor building component.",
+                "takeoff": {
+                    "unit": "SF",
+                    "type": "AREA",
+                    "section": "finishes"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "floor-hardwood-8in3ftv",
+                                            "cottonKnit"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "hardwood": {
+                        "name": "Hardwood Floor",
+                        "description": "Hardwood floor style.",
+                        "themes": {
+                            "cottonKnit8by3": {
+                                "name": "Cotton Knit",
+                                "description": "Cotton knit 8inch by 3 ft theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "floor-hardwood-8in3ftv",
+                                            "cottonKnit"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "tile": {
+                        "name": "Tile Floor",
+                        "description": "Tile floor style.",
+                        "themes": {
+                            "hex_dark": {
+                                "name": "Dark Hexagonal",
+                                "description": "Dark hexagonal tiles theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "floor-tile-hex01",
+                                            "02"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "carpet": {
+                        "name": "Carpet Floor",
+                        "description": "Carpet floor style.",
+                        "themes": {
+                            "shawPavement": {
+                                "name": "Shaw Pavement",
+                                "description": "Shaw Pavement theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "floor-carpets-cpt01",
+                                            "shawPavement"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "roughConcrete": {
+                        "name": "Rough Concrete",
+                        "description": "Rough concrete finish style.",
+                        "themes": {
+                            "raw": {
+                                "name": "Raw",
+                                "description": "Raw concrete theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "floor-concrete-cast01",
+                                            "light"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    }
+                }
+            },
+            "cabinetGeneric": {
+                "name": "Cabinets",
+                "description": "An cabinet building component.",
+                "takeoff": {
+                    "unit": "LF",
+                    "type": "LENGTH",
+                    "section": "cabinetry"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "standard": {
+                        "name": "Standard",
+                        "description": "Standard cabinet style.",
+                        "themes": {
+                            "white": {
+                                "name": "White",
+                                "description": "White theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            },
+                            "frappe": {
+                                "name": "Frappe",
+                                "description": "Frappe theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "millwork-cabinetry-wood01",
+                                            "frappe"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    }
+                }
+            },
+            "counterGeneric": {
+                "name": "Counters",
+                "description": "An counter building component.",
+                "takeoff": {
+                    "unit": "SF",
+                    "type": "AREA",
+                    "section": "cabinetry"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "millwork-counters-qtz02",
+                                            "light01"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "ceramic": {
+                        "name": "Caramic",
+                        "description": "Ceramic counters.",
+                        "themes": {
+                            "quartzLight": {
+                                "name": "Quartz Light",
+                                "description": "Quartz light theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "millwork-counters-qtz02",
+                                            "light01"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    }
+                }
+            },
+            "railingInterior": {
+                "name": "Railing",
+                "description": "An interior railing building component.",
+                "takeoff": {
+                    "unit": "FT",
+                    "type": "LENGTH",
+                    "section": "trim"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "posts": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "top": [
+                                            "sh",
+                                            "trim-wood-int01",
+                                            "hillCountry"
+                                        ],
+                                        "hardware": [
+                                            "sh",
+                                            "abstract-oglSolid-010",
+                                            null
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "posts": {
+                                "region": "interior"
+                            },
+                            "top": {
+                                "region": "interior"
+                            },
+                            "hardware": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "standard": {
+                        "name": "Standard",
+                        "description": "Standard railing style.",
+                        "themes": {
+                            "white": {
+                                "name": "White",
+                                "description": "White theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "posts": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "top": [
+                                            "sh",
+                                            "trim-wood-int01",
+                                            "hillCountry"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "posts": {
+                                "region": "interior"
+                            },
+                            "top": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "metalWire": {
+                        "name": "Metal Wire",
+                        "description": "Metal wire railing style.",
+                        "themes": {
+                            "black": {
+                                "name": "Black",
+                                "description": "Black theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "posts": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "top": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "hardware": [
+                                            "sh",
+                                            "abstract-oglSolid-010",
+                                            null
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "posts": {
+                                "region": "interior"
+                            },
+                            "top": {
+                                "region": "interior"
+                            },
+                            "hardware": {
+                                "region": "interior"
+                            }
+                        }
+                    }
+                }
+            },
+            "ceilingGeneric": {
+                "name": "Ceiling",
+                "description": "An interior ceiling building component.",
+                "takeoff": {
+                    "unit": "SF",
+                    "type": "AREA",
+                    "section": "finishes"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "paint": {
+                        "name": "Painted Wall",
+                        "description": "Painted wall style.",
+                        "themes": {
+                            "white": {
+                                "name": "White",
+                                "description": "White theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    }
+                }
+            },
+            "lightPod": {
+                "name": "Pod Light",
+                "description": "A pod light building component.",
+                "takeoff": {
+                    "unit": "",
+                    "type": "COUNT",
+                    "section": "lighting"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "light": [
+                                            "sh",
+                                            "abstract-lights-podWarm01",
+                                            null
+                                        ],
+                                        "hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "light": {
+                                "region": "interior"
+                            },
+                            "hardware": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "standard": {
+                        "name": "Standard",
+                        "description": "Standard pod light.",
+                        "themes": {
+                            "dark": {
+                                "name": "Dark",
+                                "description": "Dark theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "light": [
+                                            "sh",
+                                            "abstract-lights-podWarm01",
+                                            null
+                                        ],
+                                        "hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "light": {
+                                "region": "interior"
+                            },
+                            "hardware": {
+                                "region": "interior"
+                            }
+                        }
                     }
                 }
             },
@@ -1920,140 +4137,6 @@
                         },
                         "layer_props": {
                             "surface": {
-                                "region": "exterior"
-                            }
-                        }
-                    }
-                }
-            },
-            "windowGeneric": {
-                "name": "Window",
-                "description": "A window building component.",
-                "takeoff": {
-                    "unit": "",
-                    "type": "COUNT",
-                    "section": "windows"
-                },
-                "baking_properties": {
-                    "affected_by_externals": true
-                },
-                "variants": {
-                    "massing": {
-                        "name": "Massing",
-                        "description": "Massing for baking.",
-                        "themes": {
-                            "bake": {
-                                "name": "Bake",
-                                "description": "Theme for baking.",
-                                "rendering_materials": {
-                                    "bake": {
-                                        "int_frame": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
-                                        "int_calk": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "black"
-                                        ],
-                                        "ext_frame": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
-                                        "ext_calk": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "black"
-                                        ],
-                                        "ext_glass": [
-                                            "sh",
-                                            "abstract-glass-simple",
-                                            null
-                                        ]
-                                    }
-                                },
-                                "thumbnail": "local url to image"
-                            }
-                        },
-                        "layer_props": {
-                            "int_frame": {
-                                "region": "interior"
-                            },
-                            "int_calk": {
-                                "region": "interior"
-                            },
-                            "int_glass": {
-                                "region": "interior"
-                            },
-                            "ext_frame": {
-                                "region": "exterior"
-                            },
-                            "ext_calk": {
-                                "region": "exterior"
-                            },
-                            "ext_glass": {
-                                "region": "exterior"
-                            }
-                        }
-                    },
-                    "minimal": {
-                        "name": "Minimal",
-                        "description": "Minimal style window.",
-                        "themes": {
-                            "dark": {
-                                "name": "Dark",
-                                "description": "Dark theme.",
-                                "rendering_materials": {
-                                    "bake": {
-                                        "int_frame": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
-                                        "int_calk": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "black"
-                                        ],
-                                        "ext_frame": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
-                                        "ext_calk": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "black"
-                                        ],
-                                        "ext_glass": [
-                                            "sh",
-                                            "abstract-glass-simple",
-                                            null
-                                        ]
-                                    }
-                                },
-                                "thumbnail": "local url to image"
-                            }
-                        },
-                        "layer_props": {
-                            "int_frame": {
-                                "region": "interior"
-                            },
-                            "int_calk": {
-                                "region": "interior"
-                            },
-                            "int_glass": {
-                                "region": "interior"
-                            },
-                            "ext_frame": {
-                                "region": "exterior"
-                            },
-                            "ext_calk": {
-                                "region": "exterior"
-                            },
-                            "ext_glass": {
                                 "region": "exterior"
                             }
                         }
@@ -2520,20 +4603,10 @@
                                             "wall-paint-ext01",
                                             "snowbound"
                                         ],
-                                        "int_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
                                         "ext_frame": [
                                             "sh",
                                             "wall-paint-ext01",
                                             "snowbound"
-                                        ],
-                                        "ext_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
                                         ],
                                         "ext_glass": [
                                             "sh",
@@ -2549,13 +4622,7 @@
                             "int_frame": {
                                 "region": "interior"
                             },
-                            "int_hardware": {
-                                "region": "interior"
-                            },
                             "ext_frame": {
-                                "region": "exterior"
-                            },
-                            "ext_hardware": {
                                 "region": "exterior"
                             },
                             "ext_glass": {
@@ -2577,20 +4644,10 @@
                                             "wall-paint-ext01",
                                             "snowbound"
                                         ],
-                                        "int_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
                                         "ext_frame": [
                                             "sh",
                                             "wall-paint-ext01",
                                             "snowbound"
-                                        ],
-                                        "ext_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
                                         ],
                                         "ext_glass": [
                                             "sh",
@@ -2611,20 +4668,10 @@
                                             "wall-paint-ext01",
                                             "snowbound"
                                         ],
-                                        "int_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
                                         "ext_frame": [
                                             "sh",
                                             "trim-wood-ext01",
                                             "hillCountry"
-                                        ],
-                                        "ext_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
                                         ],
                                         "ext_glass": [
                                             "sh",
@@ -2640,13 +4687,7 @@
                             "int_frame": {
                                 "region": "interior"
                             },
-                            "int_hardware": {
-                                "region": "interior"
-                            },
                             "ext_frame": {
-                                "region": "exterior"
-                            },
-                            "ext_hardware": {
                                 "region": "exterior"
                             },
                             "ext_glass": {
@@ -2656,16 +4697,16 @@
                     }
                 }
             },
-            "doorGarage": {
-                "name": "Garage Door",
-                "description": "A garage door building component.",
+            "doorHardwareExterior": {
+                "name": "Exterior Door Hardware",
+                "description": "An exterior door hardware building component.",
                 "takeoff": {
                     "unit": "",
                     "type": "COUNT",
-                    "section": "doors"
+                    "section": "hardware"
                 },
                 "baking_properties": {
-                    "affected_by_externals": true
+                    "affected_by_externals": false
                 },
                 "variants": {
                     "massing": {
@@ -2677,30 +4718,15 @@
                                 "description": "Theme for baking.",
                                 "rendering_materials": {
                                     "bake": {
-                                        "int_frame": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "snowbound"
-                                        ],
-                                        "int_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
-                                        "ext_frame": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "snowbound"
-                                        ],
                                         "ext_hardware": [
                                             "sh",
                                             "millwork-hardware-diffuse",
                                             "dark"
                                         ],
-                                        "ext_glass": [
+                                        "int_hardware": [
                                             "sh",
-                                            "abstract-glass-simple",
-                                            null
+                                            "millwork-hardware-diffuse",
+                                            "dark"
                                         ]
                                     }
                                 },
@@ -2708,56 +4734,70 @@
                             }
                         },
                         "layer_props": {
-                            "int_frame": {
-                                "region": "interior"
-                            },
-                            "int_hardware": {
-                                "region": "interior"
-                            },
-                            "ext_frame": {
-                                "region": "exterior"
-                            },
                             "ext_hardware": {
                                 "region": "exterior"
                             },
-                            "ext_glass": {
-                                "region": "exterior"
+                            "int_hardware": {
+                                "region": "interior"
                             }
                         }
                     },
-                    "country": {
-                        "name": "Country",
-                        "description": "Country style garage door.",
+                    "standard": {
+                        "name": "Standard",
+                        "description": "Standard interior door.",
                         "themes": {
-                            "white": {
-                                "name": "White",
-                                "description": "White theme.",
+                            "black": {
+                                "name": "Black",
+                                "description": "Black theme.",
                                 "rendering_materials": {
                                     "bake": {
-                                        "int_frame": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "snowbound"
-                                        ],
-                                        "int_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
-                                        "ext_frame": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "snowbound"
-                                        ],
                                         "ext_hardware": [
                                             "sh",
                                             "millwork-hardware-diffuse",
                                             "dark"
                                         ],
-                                        "ext_glass": [
+                                        "int_hardware": [
                                             "sh",
-                                            "abstract-glass-simple",
-                                            null
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            },
+                            "chrome": {
+                                "name": "Chrome",
+                                "description": "Chrome theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "ext_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "silver"
+                                        ],
+                                        "int_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "silver"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            },
+                            "satinNickel": {
+                                "name": "Satin Nickel",
+                                "description": "Satin nickel theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "ext_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "nickel"
+                                        ],
+                                        "int_hardware": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "nickel"
                                         ]
                                     }
                                 },
@@ -2765,111 +4805,11 @@
                             }
                         },
                         "layer_props": {
-                            "int_frame": {
-                                "region": "interior"
-                            },
-                            "int_hardware": {
-                                "region": "interior"
-                            },
-                            "ext_frame": {
-                                "region": "exterior"
-                            },
                             "ext_hardware": {
                                 "region": "exterior"
                             },
-                            "ext_glass": {
-                                "region": "exterior"
-                            }
-                        }
-                    },
-                    "modern": {
-                        "name": "Modern",
-                        "description": "Modern style garage door.",
-                        "themes": {
-                            "white": {
-                                "name": "White",
-                                "description": "White theme.",
-                                "rendering_materials": {
-                                    "bake": {
-                                        "int_frame": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "snowbound"
-                                        ],
-                                        "int_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
-                                        "ext_frame": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "snowbound"
-                                        ],
-                                        "ext_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
-                                        "ext_glass": [
-                                            "sh",
-                                            "abstract-glass-simple",
-                                            null
-                                        ]
-                                    }
-                                },
-                                "thumbnail": "local url to image"
-                            },
-                            "hill_country": {
-                                "name": "Hill Country",
-                                "description": "Hill country theme.",
-                                "rendering_materials": {
-                                    "bake": {
-                                        "int_frame": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "snowbound"
-                                        ],
-                                        "int_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
-                                        "ext_frame": [
-                                            "sh",
-                                            "trim-wood-ext01",
-                                            "hillCountry"
-                                        ],
-                                        "ext_hardware": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "dark"
-                                        ],
-                                        "ext_glass": [
-                                            "sh",
-                                            "abstract-glass-simple",
-                                            null
-                                        ]
-                                    }
-                                },
-                                "thumbnail": "local url to image"
-                            }
-                        },
-                        "layer_props": {
-                            "int_frame": {
-                                "region": "interior"
-                            },
                             "int_hardware": {
                                 "region": "interior"
-                            },
-                            "ext_frame": {
-                                "region": "exterior"
-                            },
-                            "ext_hardware": {
-                                "region": "exterior"
-                            },
-                            "ext_glass": {
-                                "region": "exterior"
                             }
                         }
                     }
