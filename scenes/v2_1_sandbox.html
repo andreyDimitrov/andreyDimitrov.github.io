@@ -529,7 +529,7 @@
 				var edit_cam_target = cam_props['target']
 				edit_camera = new THREE.PerspectiveCamera(
 					cam_props['fov'], window.innerWidth / window.innerHeight,
-					cam_props['near'], cam_props['far'] );
+					1, 20000 );
 				edit_camera.layers.set( 0 );
 				
 				edit_camera.position.x = edit_cam_pos[0];
@@ -554,7 +554,7 @@
 				// Build snapshot view
 				snapshot_camera = new THREE.PerspectiveCamera(
 					cam_props['fov'], 1,
-					cam_props['near'], cam_props['far'] );
+					1, 20000 );
 				snapshot_camera.position.x = edit_cam_pos[0];
 				snapshot_camera.position.y = edit_cam_pos[1];
 				snapshot_camera.position.z = edit_cam_pos[2];
