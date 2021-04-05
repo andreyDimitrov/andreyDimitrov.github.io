@@ -24,15 +24,15 @@
                 "asset": "levelGround",
                 "embedded_asset": null,
                 "structure": 1,
-                "top": 121.12499999999997,
-                "bottom": -4.263256414560601e-14
+                "top": 35.47891384257696,
+                "bottom": -85.64608615742304
             },
             {
                 "asset": "levelGeneric",
                 "embedded_asset": null,
                 "structure": 1,
-                "top": 247.1250000000003,
-                "bottom": 137.87499999999997
+                "top": 161.4789138425773,
+                "bottom": 52.22891384257696
             }
         ],
         "spaces": [
@@ -972,7 +972,7 @@
                 "structure": 1,
                 "position": [
                     3731.620588140254,
-                    1.0470361191966404,
+                    -84.59905003822637,
                     -3149.046038916019
                 ],
                 "instruction": "id_IM_spin_A_B_C",
@@ -1063,6 +1063,31 @@
         ],
         "modification_groups": [
             {
+                "asset": "base1",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "baseGeneric",
+                "modifications": {
+                    "concrete": [
+                        "unfinished"
+                    ]
+                }
+            },
+            {
+                "asset": "porch1",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "porchGeneric",
+                "modifications": {
+                    "wood": [
+                        "mountain_ash",
+                        "hill_country",
+                        "mountain_ash_dark_rail",
+                        "hill_country_dark_rail"
+                    ]
+                }
+            },
+            {
                 "asset": "kitchenRefirgeratorMain",
                 "embedded_asset": null,
                 "structure": 1,
@@ -1092,31 +1117,6 @@
                 "modifications": {
                     "ge_profile_30_inch_built_in_combination_microwave": [
                         "stainless"
-                    ]
-                }
-            },
-            {
-                "asset": "base1",
-                "embedded_asset": null,
-                "structure": 1,
-                "bc_asset": "baseGeneric",
-                "modifications": {
-                    "concrete": [
-                        "unfinished"
-                    ]
-                }
-            },
-            {
-                "asset": "porch1",
-                "embedded_asset": null,
-                "structure": 1,
-                "bc_asset": "porchGeneric",
-                "modifications": {
-                    "wood": [
-                        "mountain_ash",
-                        "hill_country",
-                        "mountain_ash_dark_rail",
-                        "hill_country_dark_rail"
                     ]
                 }
             },
@@ -1555,30 +1555,9 @@
         ],
         "building_components": [
             {
-                "asset": "applianceRefrigeratorFull36Standalone",
-                "embedded_asset": null,
-                "modification_group": 0,
-                "quantity": 1,
-                "layout_expression": null
-            },
-            {
-                "asset": "applianceCookTop36BuiltIn",
-                "embedded_asset": null,
-                "modification_group": 1,
-                "quantity": 1,
-                "layout_expression": null
-            },
-            {
-                "asset": "applianceOven30BuiltIn",
-                "embedded_asset": null,
-                "modification_group": 2,
-                "quantity": 1,
-                "layout_expression": null
-            },
-            {
                 "asset": "baseGeneric",
                 "embedded_asset": null,
-                "modification_group": 3,
+                "modification_group": 0,
                 "quantity": 1028.0,
                 "layout_expression": {
                     "AND": [
@@ -1589,7 +1568,50 @@
             {
                 "asset": "porchGeneric",
                 "embedded_asset": null,
+                "modification_group": 1,
+                "quantity": 0.0,
+                "layout_expression": {
+                    "AND": [
+                        0
+                    ]
+                }
+            },
+            {
+                "asset": "applianceRefrigeratorFull36Standalone",
+                "embedded_asset": null,
+                "modification_group": 2,
+                "quantity": 1,
+                "layout_expression": null
+            },
+            {
+                "asset": "applianceCookTop36BuiltIn",
+                "embedded_asset": null,
+                "modification_group": 3,
+                "quantity": 1,
+                "layout_expression": null
+            },
+            {
+                "asset": "applianceOven30BuiltIn",
+                "embedded_asset": null,
                 "modification_group": 4,
+                "quantity": 1,
+                "layout_expression": null
+            },
+            {
+                "asset": "baseGeneric",
+                "embedded_asset": null,
+                "modification_group": 0,
+                "quantity": 1028.0,
+                "layout_expression": {
+                    "AND": [
+                        0
+                    ]
+                }
+            },
+            {
+                "asset": "porchGeneric",
+                "embedded_asset": null,
+                "modification_group": 1,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
@@ -1600,7 +1622,7 @@
             {
                 "asset": "porchGeneric",
                 "embedded_asset": null,
-                "modification_group": 4,
+                "modification_group": 1,
                 "quantity": 382.0,
                 "layout_expression": null
             },
@@ -1859,76 +1881,28 @@
         ],
         "meshes": [
             {
-                "building_component": 22,
+                "building_component": 24,
                 "variant": "standard",
                 "theme": "dark",
                 "region": "interior",
-                "obj": "0000",
-                "mtl": "0000-dark"
+                "obj": "0002",
+                "mtl": "0002-dark"
             },
             {
-                "building_component": 23,
+                "building_component": 25,
                 "variant": "paint",
                 "theme": "white",
                 "region": "interior",
-                "obj": "0001",
-                "mtl": "0001-white"
+                "obj": "0003",
+                "mtl": "0003-white"
             },
             {
-                "building_component": 24,
+                "building_component": 26,
                 "variant": "standard",
                 "theme": "white",
                 "region": "interior",
-                "obj": "0002",
-                "mtl": "0002-white"
-            },
-            {
-                "building_component": 25,
-                "variant": "paint",
-                "theme": "snowbound",
-                "region": "interior",
-                "obj": "0003",
-                "mtl": "0003-snowbound"
-            },
-            {
-                "building_component": 25,
-                "variant": "paint",
-                "theme": "naturalLinen",
-                "region": "interior",
-                "obj": "0003",
-                "mtl": "0003-naturalLinen"
-            },
-            {
-                "building_component": 25,
-                "variant": "paint",
-                "theme": "reposeGray",
-                "region": "interior",
-                "obj": "0003",
-                "mtl": "0003-reposeGray"
-            },
-            {
-                "building_component": 26,
-                "variant": "paint",
-                "theme": "snowbound",
-                "region": "interior",
                 "obj": "0004",
-                "mtl": "0004-snowbound"
-            },
-            {
-                "building_component": 26,
-                "variant": "paint",
-                "theme": "naturalLinen",
-                "region": "interior",
-                "obj": "0004",
-                "mtl": "0004-naturalLinen"
-            },
-            {
-                "building_component": 26,
-                "variant": "paint",
-                "theme": "reposeGray",
-                "region": "interior",
-                "obj": "0004",
-                "mtl": "0004-reposeGray"
+                "mtl": "0004-white"
             },
             {
                 "building_component": 27,
@@ -1956,19 +1930,51 @@
             },
             {
                 "building_component": 28,
-                "variant": "tile",
-                "theme": "subway4in16inWhite",
+                "variant": "paint",
+                "theme": "snowbound",
                 "region": "interior",
                 "obj": "0006",
-                "mtl": "0006-subway4in16inWhite"
+                "mtl": "0006-snowbound"
+            },
+            {
+                "building_component": 28,
+                "variant": "paint",
+                "theme": "naturalLinen",
+                "region": "interior",
+                "obj": "0006",
+                "mtl": "0006-naturalLinen"
+            },
+            {
+                "building_component": 28,
+                "variant": "paint",
+                "theme": "reposeGray",
+                "region": "interior",
+                "obj": "0006",
+                "mtl": "0006-reposeGray"
             },
             {
                 "building_component": 29,
-                "variant": "tile",
-                "theme": "subway4in16inWhite",
+                "variant": "paint",
+                "theme": "snowbound",
                 "region": "interior",
                 "obj": "0007",
-                "mtl": "0007-subway4in16inWhite"
+                "mtl": "0007-snowbound"
+            },
+            {
+                "building_component": 29,
+                "variant": "paint",
+                "theme": "naturalLinen",
+                "region": "interior",
+                "obj": "0007",
+                "mtl": "0007-naturalLinen"
+            },
+            {
+                "building_component": 29,
+                "variant": "paint",
+                "theme": "reposeGray",
+                "region": "interior",
+                "obj": "0007",
+                "mtl": "0007-reposeGray"
             },
             {
                 "building_component": 30,
@@ -1980,131 +1986,83 @@
             },
             {
                 "building_component": 31,
+                "variant": "tile",
+                "theme": "subway4in16inWhite",
+                "region": "interior",
+                "obj": "0009",
+                "mtl": "0009-subway4in16inWhite"
+            },
+            {
+                "building_component": 32,
+                "variant": "tile",
+                "theme": "subway4in16inWhite",
+                "region": "interior",
+                "obj": "0010",
+                "mtl": "0010-subway4in16inWhite"
+            },
+            {
+                "building_component": 33,
                 "variant": "hardwood",
                 "theme": "cottonKnit8by3",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-cottonKnit8by3"
+                "obj": "0021",
+                "mtl": "0021-cottonKnit8by3"
             },
             {
-                "building_component": 31,
+                "building_component": 33,
                 "variant": "hardwood",
                 "theme": "compassOak6by4",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-compassOak6by4"
+                "obj": "0021",
+                "mtl": "0021-compassOak6by4"
             },
             {
-                "building_component": 31,
+                "building_component": 33,
                 "variant": "hardwood",
                 "theme": "nauticalOak6by4",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-nauticalOak6by4"
+                "obj": "0021",
+                "mtl": "0021-nauticalOak6by4"
             },
             {
-                "building_component": 31,
+                "building_component": 33,
                 "variant": "hardwood",
                 "theme": "seasprayOak6by4",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-seasprayOak6by4"
+                "obj": "0021",
+                "mtl": "0021-seasprayOak6by4"
             },
             {
-                "building_component": 32,
+                "building_component": 34,
                 "variant": "hardwood",
                 "theme": "cottonKnit8by3",
                 "region": "interior",
-                "obj": "0020",
-                "mtl": "0020-cottonKnit8by3"
+                "obj": "0022",
+                "mtl": "0022-cottonKnit8by3"
             },
             {
-                "building_component": 32,
+                "building_component": 34,
                 "variant": "hardwood",
                 "theme": "compassOak6by4",
                 "region": "interior",
-                "obj": "0020",
-                "mtl": "0020-compassOak6by4"
+                "obj": "0022",
+                "mtl": "0022-compassOak6by4"
             },
             {
-                "building_component": 32,
+                "building_component": 34,
                 "variant": "hardwood",
                 "theme": "nauticalOak6by4",
                 "region": "interior",
-                "obj": "0020",
-                "mtl": "0020-nauticalOak6by4"
+                "obj": "0022",
+                "mtl": "0022-nauticalOak6by4"
             },
             {
-                "building_component": 32,
+                "building_component": 34,
                 "variant": "hardwood",
                 "theme": "seasprayOak6by4",
                 "region": "interior",
-                "obj": "0020",
-                "mtl": "0020-seasprayOak6by4"
-            },
-            {
-                "building_component": 33,
-                "variant": "tile",
-                "theme": "hex_dark",
-                "region": "interior",
-                "obj": "0021",
-                "mtl": "0021-hex_dark"
-            },
-            {
-                "building_component": 33,
-                "variant": "tile",
-                "theme": "nolitaGray18by36",
-                "region": "interior",
-                "obj": "0021",
-                "mtl": "0021-nolitaGray18by36"
-            },
-            {
-                "building_component": 33,
-                "variant": "tile",
-                "theme": "bariciBianco24by48",
-                "region": "interior",
-                "obj": "0021",
-                "mtl": "0021-bariciBianco24by48"
-            },
-            {
-                "building_component": 33,
-                "variant": "tile",
-                "theme": "pulpisGrayDiamond",
-                "region": "interior",
-                "obj": "0021",
-                "mtl": "0021-pulpisGrayDiamond"
-            },
-            {
-                "building_component": 34,
-                "variant": "tile",
-                "theme": "hex_dark",
-                "region": "interior",
                 "obj": "0022",
-                "mtl": "0022-hex_dark"
-            },
-            {
-                "building_component": 34,
-                "variant": "tile",
-                "theme": "nolitaGray18by36",
-                "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-nolitaGray18by36"
-            },
-            {
-                "building_component": 34,
-                "variant": "tile",
-                "theme": "bariciBianco24by48",
-                "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-bariciBianco24by48"
-            },
-            {
-                "building_component": 34,
-                "variant": "tile",
-                "theme": "pulpisGrayDiamond",
-                "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-pulpisGrayDiamond"
+                "mtl": "0022-seasprayOak6by4"
             },
             {
                 "building_component": 35,
@@ -2172,118 +2130,134 @@
             },
             {
                 "building_component": 37,
-                "variant": "carpet",
-                "theme": "shawPavement",
-                "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-shawPavement"
-            },
-            {
-                "building_component": 38,
-                "variant": "carpet",
-                "theme": "shawPavement",
-                "region": "interior",
-                "obj": "0026",
-                "mtl": "0026-shawPavement"
-            },
-            {
-                "building_component": 39,
-                "variant": "roughConcrete",
-                "theme": "raw",
-                "region": "interior",
-                "obj": "0027",
-                "mtl": "0027-raw"
-            },
-            {
-                "building_component": 40,
                 "variant": "tile",
                 "theme": "hex_dark",
                 "region": "interior",
-                "obj": "0028",
-                "mtl": "0028-hex_dark"
+                "obj": "0025",
+                "mtl": "0025-hex_dark"
             },
             {
-                "building_component": 40,
+                "building_component": 37,
                 "variant": "tile",
                 "theme": "nolitaGray18by36",
                 "region": "interior",
-                "obj": "0028",
-                "mtl": "0028-nolitaGray18by36"
+                "obj": "0025",
+                "mtl": "0025-nolitaGray18by36"
             },
             {
-                "building_component": 40,
+                "building_component": 37,
                 "variant": "tile",
                 "theme": "bariciBianco24by48",
                 "region": "interior",
-                "obj": "0028",
-                "mtl": "0028-bariciBianco24by48"
+                "obj": "0025",
+                "mtl": "0025-bariciBianco24by48"
             },
             {
-                "building_component": 40,
+                "building_component": 37,
                 "variant": "tile",
                 "theme": "pulpisGrayDiamond",
                 "region": "interior",
-                "obj": "0028",
-                "mtl": "0028-pulpisGrayDiamond"
+                "obj": "0025",
+                "mtl": "0025-pulpisGrayDiamond"
             },
             {
-                "building_component": 15,
+                "building_component": 38,
+                "variant": "tile",
+                "theme": "hex_dark",
+                "region": "interior",
+                "obj": "0026",
+                "mtl": "0026-hex_dark"
+            },
+            {
+                "building_component": 38,
+                "variant": "tile",
+                "theme": "nolitaGray18by36",
+                "region": "interior",
+                "obj": "0026",
+                "mtl": "0026-nolitaGray18by36"
+            },
+            {
+                "building_component": 38,
+                "variant": "tile",
+                "theme": "bariciBianco24by48",
+                "region": "interior",
+                "obj": "0026",
+                "mtl": "0026-bariciBianco24by48"
+            },
+            {
+                "building_component": 38,
+                "variant": "tile",
+                "theme": "pulpisGrayDiamond",
+                "region": "interior",
+                "obj": "0026",
+                "mtl": "0026-pulpisGrayDiamond"
+            },
+            {
+                "building_component": 39,
+                "variant": "carpet",
+                "theme": "shawPavement",
+                "region": "interior",
+                "obj": "0027",
+                "mtl": "0027-shawPavement"
+            },
+            {
+                "building_component": 40,
+                "variant": "carpet",
+                "theme": "shawPavement",
+                "region": "interior",
+                "obj": "0028",
+                "mtl": "0028-shawPavement"
+            },
+            {
+                "building_component": 41,
+                "variant": "roughConcrete",
+                "theme": "raw",
+                "region": "interior",
+                "obj": "0029",
+                "mtl": "0029-raw"
+            },
+            {
+                "building_component": 42,
+                "variant": "tile",
+                "theme": "hex_dark",
+                "region": "interior",
+                "obj": "0030",
+                "mtl": "0030-hex_dark"
+            },
+            {
+                "building_component": 42,
+                "variant": "tile",
+                "theme": "nolitaGray18by36",
+                "region": "interior",
+                "obj": "0030",
+                "mtl": "0030-nolitaGray18by36"
+            },
+            {
+                "building_component": 42,
+                "variant": "tile",
+                "theme": "bariciBianco24by48",
+                "region": "interior",
+                "obj": "0030",
+                "mtl": "0030-bariciBianco24by48"
+            },
+            {
+                "building_component": 42,
+                "variant": "tile",
+                "theme": "pulpisGrayDiamond",
+                "region": "interior",
+                "obj": "0030",
+                "mtl": "0030-pulpisGrayDiamond"
+            },
+            {
+                "building_component": 17,
                 "variant": "standard",
                 "theme": "white",
                 "region": "interior",
-                "obj": "0041",
-                "mtl": "0041-white"
-            },
-            {
-                "building_component": 16,
-                "variant": "standard",
-                "theme": "black",
-                "region": "interior",
-                "obj": "0042",
-                "mtl": "0042-black"
-            },
-            {
-                "building_component": 16,
-                "variant": "standard",
-                "theme": "chrome",
-                "region": "interior",
-                "obj": "0042",
-                "mtl": "0042-chrome"
-            },
-            {
-                "building_component": 16,
-                "variant": "standard",
-                "theme": "satinNickel",
-                "region": "interior",
-                "obj": "0042",
-                "mtl": "0042-satinNickel"
-            },
-            {
-                "building_component": 17,
-                "variant": "standard",
-                "theme": "black",
-                "region": "exterior",
                 "obj": "0043",
-                "mtl": "0043-black"
+                "mtl": "0043-white"
             },
             {
-                "building_component": 17,
-                "variant": "standard",
-                "theme": "chrome",
-                "region": "exterior",
-                "obj": "0043",
-                "mtl": "0043-chrome"
-            },
-            {
-                "building_component": 17,
-                "variant": "standard",
-                "theme": "satinNickel",
-                "region": "exterior",
-                "obj": "0043",
-                "mtl": "0043-satinNickel"
-            },
-            {
-                "building_component": 17,
+                "building_component": 18,
                 "variant": "standard",
                 "theme": "black",
                 "region": "interior",
@@ -2291,7 +2265,7 @@
                 "mtl": "0044-black"
             },
             {
-                "building_component": 17,
+                "building_component": 18,
                 "variant": "standard",
                 "theme": "chrome",
                 "region": "interior",
@@ -2299,7 +2273,7 @@
                 "mtl": "0044-chrome"
             },
             {
-                "building_component": 17,
+                "building_component": 18,
                 "variant": "standard",
                 "theme": "satinNickel",
                 "region": "interior",
@@ -2307,23 +2281,55 @@
                 "mtl": "0044-satinNickel"
             },
             {
-                "building_component": 18,
-                "variant": "metalWire",
+                "building_component": 19,
+                "variant": "standard",
                 "theme": "black",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "0045",
                 "mtl": "0045-black"
             },
             {
-                "building_component": 18,
-                "variant": "metalWire",
+                "building_component": 19,
+                "variant": "standard",
+                "theme": "chrome",
+                "region": "exterior",
+                "obj": "0045",
+                "mtl": "0045-chrome"
+            },
+            {
+                "building_component": 19,
+                "variant": "standard",
+                "theme": "satinNickel",
+                "region": "exterior",
+                "obj": "0045",
+                "mtl": "0045-satinNickel"
+            },
+            {
+                "building_component": 19,
+                "variant": "standard",
                 "theme": "black",
                 "region": "interior",
                 "obj": "0046",
                 "mtl": "0046-black"
             },
             {
-                "building_component": 18,
+                "building_component": 19,
+                "variant": "standard",
+                "theme": "chrome",
+                "region": "interior",
+                "obj": "0046",
+                "mtl": "0046-chrome"
+            },
+            {
+                "building_component": 19,
+                "variant": "standard",
+                "theme": "satinNickel",
+                "region": "interior",
+                "obj": "0046",
+                "mtl": "0046-satinNickel"
+            },
+            {
+                "building_component": 20,
                 "variant": "metalWire",
                 "theme": "black",
                 "region": "interior",
@@ -2331,47 +2337,63 @@
                 "mtl": "0047-black"
             },
             {
-                "building_component": 19,
-                "variant": "ceramic",
-                "theme": "quartzLight",
+                "building_component": 20,
+                "variant": "metalWire",
+                "theme": "black",
                 "region": "interior",
                 "obj": "0048",
-                "mtl": "0048-quartzLight"
+                "mtl": "0048-black"
             },
             {
                 "building_component": 20,
-                "variant": "standard",
-                "theme": "white",
+                "variant": "metalWire",
+                "theme": "black",
                 "region": "interior",
                 "obj": "0049",
-                "mtl": "0049-white"
-            },
-            {
-                "building_component": 20,
-                "variant": "standard",
-                "theme": "frappe",
-                "region": "interior",
-                "obj": "0049",
-                "mtl": "0049-frappe"
+                "mtl": "0049-black"
             },
             {
                 "building_component": 21,
-                "variant": "tile",
-                "theme": "subway4in16inWhite",
+                "variant": "ceramic",
+                "theme": "quartzLight",
                 "region": "interior",
                 "obj": "0050",
-                "mtl": "0050-subway4in16inWhite"
+                "mtl": "0050-quartzLight"
             },
             {
                 "building_component": 22,
                 "variant": "standard",
-                "theme": "dark",
+                "theme": "white",
                 "region": "interior",
                 "obj": "0051",
-                "mtl": "0051-dark"
+                "mtl": "0051-white"
             },
             {
-                "building_component": 3,
+                "building_component": 22,
+                "variant": "standard",
+                "theme": "frappe",
+                "region": "interior",
+                "obj": "0051",
+                "mtl": "0051-frappe"
+            },
+            {
+                "building_component": 23,
+                "variant": "tile",
+                "theme": "subway4in16inWhite",
+                "region": "interior",
+                "obj": "0052",
+                "mtl": "0052-subway4in16inWhite"
+            },
+            {
+                "building_component": 24,
+                "variant": "standard",
+                "theme": "dark",
+                "region": "interior",
+                "obj": "0053",
+                "mtl": "0053-dark"
+            },
+            {
+                "building_component": 0,
                 "variant": "concrete",
                 "theme": "unfinished",
                 "region": "exterior",
@@ -2379,7 +2401,7 @@
                 "mtl": "l_0000-unfinished"
             },
             {
-                "building_component": 4,
+                "building_component": 1,
                 "variant": "wood",
                 "theme": "mountain_ash",
                 "region": "exterior",
@@ -2387,7 +2409,7 @@
                 "mtl": "l_0001-mountain_ash"
             },
             {
-                "building_component": 4,
+                "building_component": 1,
                 "variant": "wood",
                 "theme": "hill_country",
                 "region": "exterior",
@@ -2395,7 +2417,7 @@
                 "mtl": "l_0001-hill_country"
             },
             {
-                "building_component": 4,
+                "building_component": 1,
                 "variant": "wood",
                 "theme": "mountain_ash_dark_rail",
                 "region": "exterior",
@@ -2403,7 +2425,7 @@
                 "mtl": "l_0001-mountain_ash_dark_rail"
             },
             {
-                "building_component": 4,
+                "building_component": 1,
                 "variant": "wood",
                 "theme": "hill_country_dark_rail",
                 "region": "exterior",
@@ -2412,38 +2434,14 @@
             },
             {
                 "building_component": 5,
-                "variant": "wood",
-                "theme": "mountain_ash",
+                "variant": "concrete",
+                "theme": "unfinished",
                 "region": "exterior",
                 "obj": "l_0002",
-                "mtl": "l_0002-mountain_ash"
+                "mtl": "l_0002-unfinished"
             },
             {
-                "building_component": 5,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0002",
-                "mtl": "l_0002-hill_country"
-            },
-            {
-                "building_component": 5,
-                "variant": "wood",
-                "theme": "mountain_ash_dark_rail",
-                "region": "exterior",
-                "obj": "l_0002",
-                "mtl": "l_0002-mountain_ash_dark_rail"
-            },
-            {
-                "building_component": 5,
-                "variant": "wood",
-                "theme": "hill_country_dark_rail",
-                "region": "exterior",
-                "obj": "l_0002",
-                "mtl": "l_0002-hill_country_dark_rail"
-            },
-            {
-                "building_component": 5,
+                "building_component": 6,
                 "variant": "wood",
                 "theme": "mountain_ash",
                 "region": "exterior",
@@ -2451,7 +2449,7 @@
                 "mtl": "l_0003-mountain_ash"
             },
             {
-                "building_component": 5,
+                "building_component": 6,
                 "variant": "wood",
                 "theme": "hill_country",
                 "region": "exterior",
@@ -2459,7 +2457,7 @@
                 "mtl": "l_0003-hill_country"
             },
             {
-                "building_component": 5,
+                "building_component": 6,
                 "variant": "wood",
                 "theme": "mountain_ash_dark_rail",
                 "region": "exterior",
@@ -2467,7 +2465,7 @@
                 "mtl": "l_0003-mountain_ash_dark_rail"
             },
             {
-                "building_component": 5,
+                "building_component": 6,
                 "variant": "wood",
                 "theme": "hill_country_dark_rail",
                 "region": "exterior",
@@ -2475,7 +2473,7 @@
                 "mtl": "l_0003-hill_country_dark_rail"
             },
             {
-                "building_component": 5,
+                "building_component": 7,
                 "variant": "wood",
                 "theme": "mountain_ash",
                 "region": "exterior",
@@ -2483,7 +2481,7 @@
                 "mtl": "l_0004-mountain_ash"
             },
             {
-                "building_component": 5,
+                "building_component": 7,
                 "variant": "wood",
                 "theme": "hill_country",
                 "region": "exterior",
@@ -2491,7 +2489,7 @@
                 "mtl": "l_0004-hill_country"
             },
             {
-                "building_component": 5,
+                "building_component": 7,
                 "variant": "wood",
                 "theme": "mountain_ash_dark_rail",
                 "region": "exterior",
@@ -2499,7 +2497,7 @@
                 "mtl": "l_0004-mountain_ash_dark_rail"
             },
             {
-                "building_component": 5,
+                "building_component": 7,
                 "variant": "wood",
                 "theme": "hill_country_dark_rail",
                 "region": "exterior",
@@ -2507,228 +2505,292 @@
                 "mtl": "l_0004-hill_country_dark_rail"
             },
             {
-                "building_component": 6,
+                "building_component": 7,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0005",
+                "mtl": "l_0005-mountain_ash"
+            },
+            {
+                "building_component": 7,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0005",
+                "mtl": "l_0005-hill_country"
+            },
+            {
+                "building_component": 7,
+                "variant": "wood",
+                "theme": "mountain_ash_dark_rail",
+                "region": "exterior",
+                "obj": "l_0005",
+                "mtl": "l_0005-mountain_ash_dark_rail"
+            },
+            {
+                "building_component": 7,
+                "variant": "wood",
+                "theme": "hill_country_dark_rail",
+                "region": "exterior",
+                "obj": "l_0005",
+                "mtl": "l_0005-hill_country_dark_rail"
+            },
+            {
+                "building_component": 7,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0006",
+                "mtl": "l_0006-mountain_ash"
+            },
+            {
+                "building_component": 7,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0006",
+                "mtl": "l_0006-hill_country"
+            },
+            {
+                "building_component": 7,
+                "variant": "wood",
+                "theme": "mountain_ash_dark_rail",
+                "region": "exterior",
+                "obj": "l_0006",
+                "mtl": "l_0006-mountain_ash_dark_rail"
+            },
+            {
+                "building_component": 7,
+                "variant": "wood",
+                "theme": "hill_country_dark_rail",
+                "region": "exterior",
+                "obj": "l_0006",
+                "mtl": "l_0006-hill_country_dark_rail"
+            },
+            {
+                "building_component": 8,
                 "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
-                "obj": "l_0005",
-                "mtl": "l_0005-white"
+                "obj": "l_0007",
+                "mtl": "l_0007-white"
             },
             {
-                "building_component": 7,
+                "building_component": 9,
                 "variant": "minimal",
                 "theme": "dark",
                 "region": "interior",
-                "obj": "l_0006",
-                "mtl": "l_0006-dark"
-            },
-            {
-                "building_component": 7,
-                "variant": "minimal",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "l_0007",
-                "mtl": "l_0007-dark"
-            },
-            {
-                "building_component": 7,
-                "variant": "minimal",
-                "theme": "dark",
-                "region": "exterior",
                 "obj": "l_0008",
                 "mtl": "l_0008-dark"
             },
             {
-                "building_component": 8,
-                "variant": "rubber",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "l_0009",
-                "mtl": "l_0009-light"
-            },
-            {
-                "building_component": 8,
-                "variant": "rubber",
+                "building_component": 9,
+                "variant": "minimal",
                 "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0009",
                 "mtl": "l_0009-dark"
             },
             {
-                "building_component": 8,
-                "variant": "rubber",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "l_0010",
-                "mtl": "l_0010-light"
-            },
-            {
-                "building_component": 8,
-                "variant": "rubber",
+                "building_component": 9,
+                "variant": "minimal",
                 "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0010",
                 "mtl": "l_0010-dark"
             },
             {
-                "building_component": 9,
-                "variant": "lapFiberCement",
-                "theme": "teak",
+                "building_component": 10,
+                "variant": "rubber",
+                "theme": "light",
                 "region": "exterior",
                 "obj": "l_0011",
-                "mtl": "l_0011-teak"
+                "mtl": "l_0011-light"
             },
             {
                 "building_component": 10,
-                "variant": "stucco",
-                "theme": "white",
+                "variant": "rubber",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0011",
+                "mtl": "l_0011-dark"
+            },
+            {
+                "building_component": 10,
+                "variant": "rubber",
+                "theme": "light",
                 "region": "exterior",
                 "obj": "l_0012",
-                "mtl": "l_0012-white"
+                "mtl": "l_0012-light"
             },
             {
                 "building_component": 10,
-                "variant": "stucco",
-                "theme": "white",
+                "variant": "rubber",
+                "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0013",
-                "mtl": "l_0013-white"
+                "obj": "l_0012",
+                "mtl": "l_0012-dark"
             },
             {
                 "building_component": 11,
-                "variant": "brick",
-                "theme": "6inchBlackWhite",
+                "variant": "lapFiberCement",
+                "theme": "teak",
                 "region": "exterior",
-                "obj": "l_0014",
-                "mtl": "l_0014-6inchBlackWhite"
+                "obj": "l_0013",
+                "mtl": "l_0013-teak"
             },
             {
                 "building_component": 12,
-                "variant": "standard",
+                "variant": "stucco",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0014",
+                "mtl": "l_0014-white"
+            },
+            {
+                "building_component": 12,
+                "variant": "stucco",
                 "theme": "white",
                 "region": "exterior",
                 "obj": "l_0015",
                 "mtl": "l_0015-white"
             },
             {
-                "building_component": 12,
+                "building_component": 13,
+                "variant": "brick",
+                "theme": "6inchBlackWhite",
+                "region": "exterior",
+                "obj": "l_0016",
+                "mtl": "l_0016-6inchBlackWhite"
+            },
+            {
+                "building_component": 14,
                 "variant": "standard",
-                "theme": "black",
-                "region": "exterior",
-                "obj": "l_0015",
-                "mtl": "l_0015-black"
-            },
-            {
-                "building_component": 13,
-                "variant": "glass",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0016",
-                "mtl": "l_0016-white"
-            },
-            {
-                "building_component": 13,
-                "variant": "glass",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0016",
-                "mtl": "l_0016-hill_country"
-            },
-            {
-                "building_component": 13,
-                "variant": "glass",
                 "theme": "white",
                 "region": "exterior",
                 "obj": "l_0017",
                 "mtl": "l_0017-white"
             },
             {
-                "building_component": 13,
-                "variant": "glass",
-                "theme": "hill_country",
+                "building_component": 14,
+                "variant": "standard",
+                "theme": "black",
                 "region": "exterior",
                 "obj": "l_0017",
-                "mtl": "l_0017-hill_country"
+                "mtl": "l_0017-black"
             },
             {
-                "building_component": 13,
+                "building_component": 15,
                 "variant": "glass",
                 "theme": "white",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0018",
                 "mtl": "l_0018-white"
             },
             {
-                "building_component": 13,
+                "building_component": 15,
                 "variant": "glass",
                 "theme": "hill_country",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0018",
                 "mtl": "l_0018-hill_country"
             },
             {
-                "building_component": 14,
-                "variant": "modern",
+                "building_component": 15,
+                "variant": "glass",
                 "theme": "white",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0019",
                 "mtl": "l_0019-white"
             },
             {
-                "building_component": 14,
-                "variant": "modern",
+                "building_component": 15,
+                "variant": "glass",
                 "theme": "hill_country",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0019",
                 "mtl": "l_0019-hill_country"
             },
             {
-                "building_component": 14,
-                "variant": "modern",
+                "building_component": 15,
+                "variant": "glass",
                 "theme": "white",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0020",
                 "mtl": "l_0020-white"
             },
             {
-                "building_component": 14,
-                "variant": "modern",
+                "building_component": 15,
+                "variant": "glass",
                 "theme": "hill_country",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0020",
                 "mtl": "l_0020-hill_country"
             },
             {
-                "building_component": 14,
+                "building_component": 16,
                 "variant": "modern",
                 "theme": "white",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0021",
                 "mtl": "l_0021-white"
             },
             {
-                "building_component": 14,
+                "building_component": 16,
                 "variant": "modern",
                 "theme": "hill_country",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0021",
                 "mtl": "l_0021-hill_country"
             },
             {
-                "building_component": 41,
-                "variant": "graphic",
-                "theme": "analysis",
+                "building_component": 16,
+                "variant": "modern",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0022",
-                "mtl": "l_0022-analysis"
+                "mtl": "l_0022-white"
             },
             {
-                "building_component": 41,
+                "building_component": 16,
+                "variant": "modern",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0022",
+                "mtl": "l_0022-hill_country"
+            },
+            {
+                "building_component": 16,
+                "variant": "modern",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0023",
+                "mtl": "l_0023-white"
+            },
+            {
+                "building_component": 16,
+                "variant": "modern",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0023",
+                "mtl": "l_0023-hill_country"
+            },
+            {
+                "building_component": 43,
                 "variant": "graphic",
                 "theme": "analysis",
                 "region": "exterior",
-                "obj": "l_0023",
-                "mtl": "l_0023-analysis"
+                "obj": "l_0024",
+                "mtl": "l_0024-analysis"
+            },
+            {
+                "building_component": 43,
+                "variant": "graphic",
+                "theme": "analysis",
+                "region": "exterior",
+                "obj": "l_0025",
+                "mtl": "l_0025-analysis"
             }
         ]
     },
@@ -2906,6 +2968,14 @@
             }
         },
         "modification_groups": {
+            "base1": {
+                "name": "Foundation Base",
+                "description": "Use this to modify the foundation base finish."
+            },
+            "porch1": {
+                "name": "Porches",
+                "description": "Use this to modify the porches look."
+            },
             "kitchenRefirgeratorMain": {
                 "name": "Main Kitchen Refrigerator",
                 "description": "Use this to modify the main kitchen refrigerator."
@@ -2917,14 +2987,6 @@
             "kitchenOvenMain": {
                 "name": "Main Kitchen Oven",
                 "description": "Use this to modify the main kitchen oven."
-            },
-            "base1": {
-                "name": "Foundation Base",
-                "description": "Use this to modify the foundation base finish."
-            },
-            "porch1": {
-                "name": "Porches",
-                "description": "Use this to modify the porches look."
             },
             "soffits1": {
                 "name": "Soffits",
@@ -3072,99 +3134,6 @@
             }
         },
         "building_components": {
-            "applianceRefrigeratorFull36Standalone": {
-                "name": "Refrigerator",
-                "description": "A full size refrigerator building component.",
-                "takeoff": {
-                    "unit": null,
-                    "type": "COUNT",
-                    "section": "appliances"
-                },
-                "baking_properties": {
-                    "affected_by_externals": false
-                },
-                "variants": {
-                    "massing": {},
-                    "ge_es_28_7_french": {
-                        "name": "GE ES 28.7 French-Door Refrigerator",
-                        "description": "GE Energy Star 28.7 cu. ft. French-Door Refrigerator.",
-                        "urls": [
-                            "https://www.geappliances.com/appliance/GE-ENERGY-STAR-28-7-Cu-Ft-Fingerprint-Resistant-French-Door-Refrigerator-GNE29GYNFS"
-                        ],
-                        "themes": {
-                            "stainless": {
-                                "name": "Stainless Steel",
-                                "description": "Stainless Steel.",
-                                "rendering_materials": {},
-                                "thumbnail": "ge_es_28_7_french_stainless.png"
-                            }
-                        },
-                        "layer_props": {}
-                    }
-                }
-            },
-            "applianceCookTop36BuiltIn": {
-                "name": "Cooktop",
-                "description": "A cooktop building component.",
-                "takeoff": {
-                    "unit": null,
-                    "type": "COUNT",
-                    "section": "appliances"
-                },
-                "baking_properties": {
-                    "affected_by_externals": false
-                },
-                "variants": {
-                    "massing": {},
-                    "ge_profile_36_inch_built_in_knob_control": {
-                        "name": "GE Profile 36 inch Built-In Knob Control Cooktop",
-                        "description": "GE Profile 36 inch Built-In Knob Control Cooktop.",
-                        "urls": [
-                            "https://www.geappliances.com/appliance/GE-Profile-36-Built-In-Knob-Control-Cooktop-PP7036BMTS"
-                        ],
-                        "themes": {
-                            "stainless": {
-                                "name": "Stainless Steel",
-                                "description": "Stainless Steel.",
-                                "rendering_materials": {},
-                                "thumbnail": "ge_profile_36_inch_built_in_knob_control_stainless.png"
-                            }
-                        },
-                        "layer_props": {}
-                    }
-                }
-            },
-            "applianceOven30BuiltIn": {
-                "name": "Built-In Oven",
-                "description": "A built-in oven building component.",
-                "takeoff": {
-                    "unit": null,
-                    "type": "COUNT",
-                    "section": "appliances"
-                },
-                "baking_properties": {
-                    "affected_by_externals": false
-                },
-                "variants": {
-                    "massing": {},
-                    "ge_profile_30_inch_built_in_combination_microwave": {
-                        "name": "GE Profile 30 inch Built-In Combination Convection Microwave/Convection Wall Oven",
-                        "description": "GE Profile 30 inch Built-In Combination Convection Microwave/Convection Wall Oven.",
-                        "urls": [
-                            "https://www.geappliances.com/appliance/GE-Profile-30-Built-In-Combination-Convection-Microwave-Convection-Wall-Oven-PT7800SHSS"
-                        ],
-                        "themes": {
-                            "stainless": {
-                                "name": "Stainless Steel",
-                                "description": "Stainless Steel.",
-                                "rendering_materials": {},
-                                "thumbnail": "ge_profile_30_inch_built_in_combination_microwave_stainless.png"
-                            }
-                        },
-                        "layer_props": {}
-                    }
-                }
-            },
             "baseGeneric": {
                 "name": "Base Finish",
                 "description": "A base finish building component.",
@@ -3308,7 +3277,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "wood_mountain_ash.jpg"
                             },
                             "hill_country": {
                                 "name": "Hill Country",
@@ -3332,7 +3301,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "wood_hill_country.jpg"
                             },
                             "mountain_ash_dark_rail": {
                                 "name": "Mountain Ash",
@@ -3356,7 +3325,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "wood_mountain_ash_dark_rail.jpg"
                             },
                             "hill_country_dark_rail": {
                                 "name": "Hill Country",
@@ -3380,7 +3349,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "wood_hill_country_dark_rail.jpg"
                             }
                         },
                         "layer_props": {
@@ -3394,6 +3363,99 @@
                                 "region": "exterior"
                             }
                         }
+                    }
+                }
+            },
+            "applianceRefrigeratorFull36Standalone": {
+                "name": "Refrigerator",
+                "description": "A full size refrigerator building component.",
+                "takeoff": {
+                    "unit": null,
+                    "type": "COUNT",
+                    "section": "appliances"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {},
+                    "ge_es_28_7_french": {
+                        "name": "GE ES 28.7 French-Door Refrigerator",
+                        "description": "GE Energy Star 28.7 cu. ft. French-Door Refrigerator.",
+                        "urls": [
+                            "https://www.geappliances.com/appliance/GE-ENERGY-STAR-28-7-Cu-Ft-Fingerprint-Resistant-French-Door-Refrigerator-GNE29GYNFS"
+                        ],
+                        "themes": {
+                            "stainless": {
+                                "name": "Stainless Steel",
+                                "description": "Stainless Steel.",
+                                "rendering_materials": {},
+                                "thumbnail": "ge_es_28_7_french_stainless.png"
+                            }
+                        },
+                        "layer_props": {}
+                    }
+                }
+            },
+            "applianceCookTop36BuiltIn": {
+                "name": "Cooktop",
+                "description": "A cooktop building component.",
+                "takeoff": {
+                    "unit": null,
+                    "type": "COUNT",
+                    "section": "appliances"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {},
+                    "ge_profile_36_inch_built_in_knob_control": {
+                        "name": "GE Profile 36 inch Built-In Knob Control Cooktop",
+                        "description": "GE Profile 36 inch Built-In Knob Control Cooktop.",
+                        "urls": [
+                            "https://www.geappliances.com/appliance/GE-Profile-36-Built-In-Knob-Control-Cooktop-PP7036BMTS"
+                        ],
+                        "themes": {
+                            "stainless": {
+                                "name": "Stainless Steel",
+                                "description": "Stainless Steel.",
+                                "rendering_materials": {},
+                                "thumbnail": "ge_profile_36_inch_built_in_knob_control_stainless.png"
+                            }
+                        },
+                        "layer_props": {}
+                    }
+                }
+            },
+            "applianceOven30BuiltIn": {
+                "name": "Built-In Oven",
+                "description": "A built-in oven building component.",
+                "takeoff": {
+                    "unit": null,
+                    "type": "COUNT",
+                    "section": "appliances"
+                },
+                "baking_properties": {
+                    "affected_by_externals": false
+                },
+                "variants": {
+                    "massing": {},
+                    "ge_profile_30_inch_built_in_combination_microwave": {
+                        "name": "GE Profile 30 inch Built-In Combination Convection Microwave/Convection Wall Oven",
+                        "description": "GE Profile 30 inch Built-In Combination Convection Microwave/Convection Wall Oven.",
+                        "urls": [
+                            "https://www.geappliances.com/appliance/GE-Profile-30-Built-In-Combination-Convection-Microwave-Convection-Wall-Oven-PT7800SHSS"
+                        ],
+                        "themes": {
+                            "stainless": {
+                                "name": "Stainless Steel",
+                                "description": "Stainless Steel.",
+                                "rendering_materials": {},
+                                "thumbnail": "ge_profile_30_inch_built_in_combination_microwave_stainless.png"
+                            }
+                        },
+                        "layer_props": {}
                     }
                 }
             },
@@ -3489,7 +3551,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_white.jpg"
                             }
                         },
                         "layer_props": {
@@ -3612,7 +3674,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "minimal_dark.jpg"
                             }
                         },
                         "layer_props": {
@@ -3797,7 +3859,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "lap_snowbound.jpg"
                             }
                         },
                         "layer_props": {
@@ -3822,7 +3884,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "board_snowbound.jpg"
                             },
                             "waterloo": {
                                 "name": "Waterloo",
@@ -3836,7 +3898,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "board_waterloo.jpg"
                             }
                         },
                         "layer_props": {
@@ -3958,7 +4020,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "stone_white.jpg"
                             }
                         },
                         "layer_props": {
@@ -3983,7 +4045,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "brick_4inchblackWhite.jpg"
+                                "thumbnail": "brick_6inchBlackWhite.jpg"
                             }
                         },
                         "layer_props": {
@@ -4047,7 +4109,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_white.jpg"
                             },
                             "black": {
                                 "name": "Black",
@@ -4061,7 +4123,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_black.jpg"
                             }
                         },
                         "layer_props": {
@@ -4146,7 +4208,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "glass_white.jpg"
                             },
                             "hill_country": {
                                 "name": "Hill Country",
@@ -4170,7 +4232,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "glass_hill_country.jpg"
                             }
                         },
                         "layer_props": {
@@ -4287,7 +4349,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "country_white.jpg"
                             }
                         },
                         "layer_props": {
@@ -4344,7 +4406,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "modern_white.jpg"
                             },
                             "hill_country": {
                                 "name": "Hill Country",
@@ -4378,7 +4440,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "modern_hill_country.jpg"
                             }
                         },
                         "layer_props": {
@@ -4454,7 +4516,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_white.jpg"
                             }
                         },
                         "layer_props": {
@@ -4518,7 +4580,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_black.jpg"
                             },
                             "chrome": {
                                 "name": "Chrome",
@@ -4532,7 +4594,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_chrome.jpg"
                             },
                             "satinNickel": {
                                 "name": "Satin Nickel",
@@ -4546,7 +4608,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_satinNickel.jpg"
                             }
                         },
                         "layer_props": {
@@ -4623,7 +4685,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_black.jpg"
                             },
                             "chrome": {
                                 "name": "Chrome",
@@ -4642,7 +4704,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_chrome.jpg"
                             },
                             "satinNickel": {
                                 "name": "Satin Nickel",
@@ -4661,7 +4723,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_satinNickel.jpg"
                             }
                         },
                         "layer_props": {
@@ -4749,7 +4811,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_white.jpg"
                             }
                         },
                         "layer_props": {
@@ -4787,7 +4849,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "metalWire_black.jpg"
                             }
                         },
                         "layer_props": {
@@ -4857,7 +4919,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "ceramic_quartzLight.jpg"
                             }
                         },
                         "layer_props": {
@@ -4921,7 +4983,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_white.jpg"
                             },
                             "frappe": {
                                 "name": "Frappe",
@@ -4935,7 +4997,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_frappe.jpg"
                             }
                         },
                         "layer_props": {
@@ -4999,7 +5061,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "paint_snowbound.jpg"
                             },
                             "naturalLinen": {
                                 "name": "Natural Linen",
@@ -5013,7 +5075,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "paint_naturalLinen.jpg"
                             },
                             "reposeGray": {
                                 "name": "Repose Gray",
@@ -5027,7 +5089,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "paint_reposeGray.jpg"
                             }
                         },
                         "layer_props": {
@@ -5052,7 +5114,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "tile_subway4in16inWhite.jpg"
                             }
                         },
                         "layer_props": {
@@ -5129,7 +5191,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_dark.jpg"
                             }
                         },
                         "layer_props": {
@@ -5196,7 +5258,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "paint_white.jpg"
                             }
                         },
                         "layer_props": {
@@ -5260,7 +5322,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "standard_white.jpg"
                             }
                         },
                         "layer_props": {
@@ -5324,7 +5386,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "hardwood_cottonKnit8by3.jpg"
                             },
                             "compassOak6by4": {
                                 "name": "Compass Oak",
@@ -5338,7 +5400,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "hardwood_compassOak6by4.jpg"
                             },
                             "nauticalOak6by4": {
                                 "name": "Nautical Oak",
@@ -5352,7 +5414,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "hardwood_nauticalOak6by4.jpg"
                             },
                             "seasprayOak6by4": {
                                 "name": "Seaspray Oak",
@@ -5366,7 +5428,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "hardwood_seasprayOak6by4.jpg"
                             }
                         },
                         "layer_props": {
@@ -5391,7 +5453,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "tile_hex_dark.jpg"
                             },
                             "nolitaGray18by36": {
                                 "name": "Nolita Gray",
@@ -5405,7 +5467,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "tile_nolitaGray18by36.jpg"
                             },
                             "bariciBianco24by48": {
                                 "name": "Barici Bianco",
@@ -5419,7 +5481,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "tile_bariciBianco24by48.jpg"
                             },
                             "pulpisGrayDiamond": {
                                 "name": "Pulpis Gray Diamond",
@@ -5433,7 +5495,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "tile_pulpisGrayDiamond.jpg"
                             }
                         },
                         "layer_props": {
@@ -5458,7 +5520,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "carpet_shawPavement.jpg"
                             }
                         },
                         "layer_props": {
@@ -5483,7 +5545,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": "local url to image"
+                                "thumbnail": "roughConcrete_raw.jpg"
                             }
                         },
                         "layer_props": {
