@@ -6,6 +6,9 @@
 # Mac 
 .DS_Store
 
+# Some weird google drive thing
+*Icon\r
+
 
 # packages
 *.tar
