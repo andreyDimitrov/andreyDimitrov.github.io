@@ -1097,26 +1097,8 @@
         ],
         "lights": [
             {
-                "asset": "ambientQA",
+                "asset": "ambientBaked",
                 "structure": 0
-            },
-            {
-                "asset": "directionalQA0",
-                "structure": 0,
-                "position": [
-                    2,
-                    1,
-                    1
-                ]
-            },
-            {
-                "asset": "directionalQA1",
-                "structure": 0,
-                "position": [
-                    -2,
-                    1,
-                    -1
-                ]
             }
         ],
         "modification_groups": [
@@ -2636,38 +2618,21 @@
             }
         },
         "lights": {
-            "ambientQA": {
+            "sunDefault": {
+                "name": "Sun Light",
+                "description": "Light used for rendering outdoor environments.",
+                "type": "sun"
+            },
+            "ambientBaked": {
                 "name": "Ambient Light",
-                "description": "Light used for QA environment.",
+                "description": "Light used for Baked environment.",
                 "type": "ambient",
                 "color": [
                     1,
                     1,
                     1
                 ],
-                "intensity": 0.6
-            },
-            "directionalQA0": {
-                "name": "Directional Light",
-                "description": "Light used for QA environment.",
-                "type": "directional",
-                "color": [
-                    1,
-                    1,
-                    1
-                ],
-                "intensity": 0.3
-            },
-            "directionalQA1": {
-                "name": "Directional Light",
-                "description": "Light used for QA environment.",
-                "type": "directional",
-                "color": [
-                    1,
-                    1,
-                    1
-                ],
-                "intensity": 0.5
+                "intensity": 1.0
             }
         },
         "markers": {
@@ -2991,7 +2956,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": ""
+                                "thumbnail": "asphalt_dark.jpg"
                             }
                         },
                         "layer_props": {
@@ -3501,7 +3466,7 @@
                                         ]
                                     }
                                 },
-                                "thumbnail": ""
+                                "thumbnail": "shake_something.jpg"
                             }
                         },
                         "layer_props": {
