@@ -24,6 +24,7 @@
                 "asset": "levelGround",
                 "embedded_asset": null,
                 "structure": 1,
+                "name": "0",
                 "top": 35.47891384257696,
                 "bottom": -85.64608615742304
             },
@@ -31,6 +32,7 @@
                 "asset": "levelGeneric",
                 "embedded_asset": null,
                 "structure": 1,
+                "name": "1",
                 "top": 161.4789138425773,
                 "bottom": 52.22891384257696
             }
@@ -1195,7 +1197,7 @@
                 "modifications": {
                     "standard": [
                         "white",
-                        "black"
+                        "dark"
                     ]
                 }
             },
@@ -2675,10 +2677,10 @@
             {
                 "building_component": 14,
                 "variant": "standard",
-                "theme": "black",
+                "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0017",
-                "mtl": "l_0017-black"
+                "mtl": "l_0017-dark"
             },
             {
                 "building_component": 15,
@@ -3932,6 +3934,31 @@
                             }
                         }
                     },
+                    "shake": {
+                        "name": "Shake",
+                        "description": "Sake siding.",
+                        "themes": {
+                            "something": {
+                                "name": "something",
+                                "description": "something theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-wood-shake01",
+                                            "aspen"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "shake_something.jpg"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior"
+                            }
+                        }
+                    },
                     "stucco": {
                         "name": "Stucco",
                         "description": "Stucco siding.",
@@ -4111,15 +4138,15 @@
                                 },
                                 "thumbnail": "standard_white.jpg"
                             },
-                            "black": {
-                                "name": "Black",
-                                "description": "Black theme.",
+                            "dark": {
+                                "name": "Dark",
+                                "description": "Dark theme.",
                                 "rendering_materials": {
                                     "bake": {
                                         "surface": [
                                             "sh",
                                             "trim-paint-ext01",
-                                            "black"
+                                            "dark"
                                         ]
                                     }
                                 },
@@ -4808,6 +4835,11 @@
                                             "sh",
                                             "trim-wood-int01",
                                             "hillCountry"
+                                        ],
+                                        "hardware": [
+                                            "sh",
+                                            "abstract-oglSolid-010",
+                                            null
                                         ]
                                     }
                                 },
@@ -4819,6 +4851,9 @@
                                 "region": "interior"
                             },
                             "top": {
+                                "region": "interior"
+                            },
+                            "hardware": {
                                 "region": "interior"
                             }
                         }

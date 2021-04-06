@@ -948,7 +948,7 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/l_0017-white.jpg
-newmtl l_0017-black
+newmtl l_0017-dark
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -956,7 +956,7 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0017-black.jpg
+map_Kd textures/l_0017-dark.jpg
 newmtl l_0018-white
 Ka 1 1 1
 Kd 1 1 1

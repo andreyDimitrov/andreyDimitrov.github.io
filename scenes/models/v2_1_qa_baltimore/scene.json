@@ -24,6 +24,7 @@
                 "asset": "levelGround",
                 "embedded_asset": null,
                 "structure": 1,
+                "name": "0",
                 "top": 97.70714630471721,
                 "bottom": -10.29285369528284
             },
@@ -31,6 +32,7 @@
                 "asset": "levelGeneric",
                 "embedded_asset": null,
                 "structure": 1,
+                "name": "1",
                 "top": 204.38714630471705,
                 "bottom": 108.38714630471716
             }
@@ -1220,7 +1222,7 @@
                 "modifications": {
                     "standard": [
                         "white",
-                        "black"
+                        "dark"
                     ]
                 }
             },
@@ -2537,10 +2539,10 @@
             {
                 "building_component": 9,
                 "variant": "standard",
-                "theme": "black",
+                "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0016",
-                "mtl": "l_0016-black"
+                "mtl": "l_0016-dark"
             },
             {
                 "building_component": 10,
@@ -3841,15 +3843,15 @@
                                 },
                                 "thumbnail": "standard_white.jpg"
                             },
-                            "black": {
-                                "name": "Black",
-                                "description": "Black theme.",
+                            "dark": {
+                                "name": "Dark",
+                                "description": "Dark theme.",
                                 "rendering_materials": {
                                     "bake": {
                                         "surface": [
                                             "sh",
                                             "trim-paint-ext01",
-                                            "black"
+                                            "dark"
                                         ]
                                     }
                                 },
