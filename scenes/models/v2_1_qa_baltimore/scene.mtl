@@ -79,6 +79,15 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0006-gossamerVeil.jpg
+newmtl 0006-driftOfMist
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0006-driftOfMist.jpg
 newmtl 0007-snowbound
 Ka 1 1 1
 Kd 1 1 1
@@ -115,6 +124,15 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0007-gossamerVeil.jpg
+newmtl 0007-driftOfMist
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0007-driftOfMist.jpg
 newmtl 0008-snowbound
 Ka 1 1 1
 Kd 1 1 1
@@ -151,6 +169,15 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0008-gossamerVeil.jpg
+newmtl 0008-driftOfMist
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0008-driftOfMist.jpg
 newmtl 0009-darocaAtar12by24RB
 Ka 1 1 1
 Kd 1 1 1

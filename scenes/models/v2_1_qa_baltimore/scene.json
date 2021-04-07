@@ -1526,7 +1526,7 @@
                         "chrome"
                     ],
                     "thatcher": [
-                        "chrome"
+                        "black"
                     ]
                 }
             },
@@ -1537,7 +1537,7 @@
                 "bc_asset": "fixtureCabinetDoorHardware",
                 "modifications": {
                     "gatsby": [
-                        "chrome"
+                        "black"
                     ],
                     "hadly": [
                         "chrome"
@@ -1863,7 +1863,8 @@
                         "snowbound",
                         "reposeGray",
                         "cityLoft",
-                        "gossamerVeil"
+                        "gossamerVeil",
+                        "driftOfMist"
                     ]
                 }
             },
@@ -1877,7 +1878,8 @@
                         "snowbound",
                         "reposeGray",
                         "cityLoft",
-                        "gossamerVeil"
+                        "gossamerVeil",
+                        "driftOfMist"
                     ]
                 }
             },
@@ -1891,7 +1893,8 @@
                         "snowbound",
                         "reposeGray",
                         "cityLoft",
-                        "gossamerVeil"
+                        "gossamerVeil",
+                        "driftOfMist"
                     ]
                 }
             },
@@ -2779,6 +2782,1056 @@
                 "layout_expression": null
             }
         ],
+        "templates": [
+            {
+                "asset": "intBaseModern",
+                "embedded_asset": null,
+                "modifications": {
+                    "1": {
+                        "backsplash1": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "tile": [
+                                    "subway4in16inWhite"
+                                ]
+                            }
+                        },
+                        "cabinets1": {
+                            "bc_asset": "cabinetGeneric",
+                            "modifications": {
+                                "winstead": [
+                                    "stoneGray"
+                                ]
+                            }
+                        },
+                        "ceilings1": {
+                            "bc_asset": "ceilingGeneric",
+                            "modifications": {
+                                "paint": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "counters1": {
+                            "bc_asset": "counterGeneric",
+                            "modifications": {
+                                "ceramic": [
+                                    "quartzTofino"
+                                ]
+                            }
+                        },
+                        "doorsExterior1": {
+                            "bc_asset": "doorGeneric",
+                            "modifications": {
+                                "glass": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsExterior2": {
+                            "bc_asset": "doorFront",
+                            "modifications": {
+                                "msCraftsman3Panel": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsGarage1": {
+                            "bc_asset": "doorGarage",
+                            "modifications": {
+                                "country": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsHardware1": {
+                            "bc_asset": "doorHardwareInterior",
+                            "modifications": {
+                                "standard": [
+                                    "chrome"
+                                ]
+                            }
+                        },
+                        "doorsHardware2": {
+                            "bc_asset": "doorHardwareExterior",
+                            "modifications": {
+                                "standard": [
+                                    "chrome"
+                                ]
+                            }
+                        },
+                        "doorsInterior1": {
+                            "bc_asset": "doorInteriorGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesBathtubs1": {
+                            "bc_asset": "fixtureBathtubBuilIn",
+                            "modifications": {
+                                "aqTubShower260330S": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesFansLivingroom1": {
+                            "bc_asset": "fixtureFanGeneric",
+                            "modifications": {
+                                "maContractorPlusLED52Inch5Blade": [
+                                    "nickelWalnut"
+                                ]
+                            }
+                        },
+                        "fixturesFaucetsBathroom1": {
+                            "bc_asset": "fixtureFaucetBathroom",
+                            "modifications": {
+                                "moenGibson12SingleHole": [
+                                    "chrome"
+                                ]
+                            }
+                        },
+                        "fixturesFaucetsKitchen1": {
+                            "bc_asset": "fixtureFaucetKitchen",
+                            "modifications": {
+                                "vigoGreenwichSingleHolePreRincePulldown": [
+                                    "chrome"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareCabinetDoors1": {
+                            "bc_asset": "fixtureCabinetDrawerHardware",
+                            "modifications": {
+                                "slade": [
+                                    "chrome"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareDrawers1": {
+                            "bc_asset": "fixtureCabinetDoorHardware",
+                            "modifications": {
+                                "hadly": [
+                                    "chrome"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareShower1": {
+                            "bc_asset": "fixtureShowerHardware",
+                            "modifications": {
+                                "moenGibsonPosiTempTS": [
+                                    "chrome"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareShower2": {
+                            "bc_asset": "fixtureShowerHardware",
+                            "modifications": {
+                                "moenGibsonPosiTemp": [
+                                    "chrome"
+                                ]
+                            }
+                        },
+                        "fixturesLightsBedroom1": {
+                            "bc_asset": "fixtureLightFeature",
+                            "modifications": {
+                                "plInspire2Light13Drum": [
+                                    "nickel"
+                                ]
+                            }
+                        },
+                        "fixturesLightsDining1": {
+                            "bc_asset": "fixtureLightFeature",
+                            "modifications": {
+                                "kcWinslow5Light20": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesLightsIsland1": {
+                            "bc_asset": "fixtureLightKitchenPendant",
+                            "modifications": {
+                                "plMetalShade16Pendant": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesLightsVanity1": {
+                            "bc_asset": "fixtureLightVanity",
+                            "modifications": {
+                                "plReplay3Light22": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesLightsWafer1": {
+                            "bc_asset": "fixtureLightWafer",
+                            "modifications": {
+                                "mxWafer7LED": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesShowerPans1": {
+                            "bc_asset": "fixtureShowerPan",
+                            "modifications": {
+                                "khRely48x32": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesSinksKitchen1": {
+                            "bc_asset": "fixtureSinkKitchen",
+                            "modifications": {
+                                "be32UndermountDoubleBasin6040": [
+                                    "stainless"
+                                ]
+                            }
+                        },
+                        "fixturesVanity1": {
+                            "bc_asset": "fixtureVanitySolid",
+                            "modifications": {
+                                "dcMarble31x19": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "floorInterior1": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "hardwood": [
+                                    "darkCanyon6by4"
+                                ]
+                            }
+                        },
+                        "floorInterior10": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "darocaAtar12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior2": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "hardwood": [
+                                    "darkCanyon6by4"
+                                ]
+                            }
+                        },
+                        "floorInterior3": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "darocaAtar12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior4": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "darocaAtar12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior6": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "darocaAtar12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior7": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "carpet": [
+                                    "antiqueSilk"
+                                ]
+                            }
+                        },
+                        "floorInterior8": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "carpet": [
+                                    "antiqueSilk"
+                                ]
+                            }
+                        },
+                        "floorInterior9": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "roughConcrete": [
+                                    "raw"
+                                ]
+                            }
+                        },
+                        "lightsInterior1": {
+                            "bc_asset": "lightPod",
+                            "modifications": {
+                                "standard": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "railingInterior1": {
+                            "bc_asset": "railingInterior",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "trimInterior1": {
+                            "bc_asset": "trimInterior",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "wallInterior1": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "paint": [
+                                    "cityLoft"
+                                ]
+                            }
+                        },
+                        "wallInterior2": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "paint": [
+                                    "cityLoft"
+                                ]
+                            }
+                        },
+                        "wallInterior3": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "paint": [
+                                    "cityLoft"
+                                ]
+                            }
+                        },
+                        "wallInterior5": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "tile": [
+                                    "darocaAtar12by24RB"
+                                ]
+                            }
+                        },
+                        "windows1": {
+                            "bc_asset": "windowGeneric",
+                            "modifications": {
+                                "minimal": [
+                                    "dark"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "layouts": null,
+                "preview": null
+            },
+            {
+                "asset": "intBaseFarmhouse",
+                "embedded_asset": null,
+                "modifications": {
+                    "1": {
+                        "backsplash1": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "tile": [
+                                    "subway4in16inWhite"
+                                ]
+                            }
+                        },
+                        "cabinets1": {
+                            "bc_asset": "cabinetGeneric",
+                            "modifications": {
+                                "winstead": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "ceilings1": {
+                            "bc_asset": "ceilingGeneric",
+                            "modifications": {
+                                "paint": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "counters1": {
+                            "bc_asset": "counterGeneric",
+                            "modifications": {
+                                "ceramic": [
+                                    "graniteSteelGrey"
+                                ]
+                            }
+                        },
+                        "doorsExterior1": {
+                            "bc_asset": "doorGeneric",
+                            "modifications": {
+                                "glass": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsExterior2": {
+                            "bc_asset": "doorFront",
+                            "modifications": {
+                                "msCraftsman3Panel": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsGarage1": {
+                            "bc_asset": "doorGarage",
+                            "modifications": {
+                                "country": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsHardware1": {
+                            "bc_asset": "doorHardwareInterior",
+                            "modifications": {
+                                "standard": [
+                                    "black",
+                                    "chrome",
+                                    "satinNickel"
+                                ]
+                            }
+                        },
+                        "doorsHardware2": {
+                            "bc_asset": "doorHardwareExterior",
+                            "modifications": {
+                                "standard": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "doorsInterior1": {
+                            "bc_asset": "doorInteriorGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesBathtubs1": {
+                            "bc_asset": "fixtureBathtubBuilIn",
+                            "modifications": {
+                                "aqTubShower260330S": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesFansLivingroom1": {
+                            "bc_asset": "fixtureFanGeneric",
+                            "modifications": {
+                                "maContractorPlusLED52Inch5Blade": [
+                                    "coal"
+                                ]
+                            }
+                        },
+                        "fixturesFaucetsBathroom1": {
+                            "bc_asset": "fixtureFaucetBathroom",
+                            "modifications": {
+                                "moenGibson12SingleHole": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesFaucetsKitchen1": {
+                            "bc_asset": "fixtureFaucetKitchen",
+                            "modifications": {
+                                "moenEdwynSingleHandlePulldownSpray": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareCabinetDoors1": {
+                            "bc_asset": "fixtureCabinetDrawerHardware",
+                            "modifications": {
+                                "thatcher": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareDrawers1": {
+                            "bc_asset": "fixtureCabinetDoorHardware",
+                            "modifications": {
+                                "gatsby": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareShower1": {
+                            "bc_asset": "fixtureShowerHardware",
+                            "modifications": {
+                                "moenGibsonPosiTempTS": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareShower2": {
+                            "bc_asset": "fixtureShowerHardware",
+                            "modifications": {
+                                "moenGibsonPosiTemp": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesLightsBedroom1": {
+                            "bc_asset": "fixtureLightFeature",
+                            "modifications": {
+                                "plInspire2Light13Drum": [
+                                    "nickel"
+                                ]
+                            }
+                        },
+                        "fixturesLightsDining1": {
+                            "bc_asset": "fixtureLightFeature",
+                            "modifications": {
+                                "plReplay5Light21": [
+                                    "nickel"
+                                ]
+                            }
+                        },
+                        "fixturesLightsIsland1": {
+                            "bc_asset": "fixtureLightKitchenPendant",
+                            "modifications": {
+                                "plAtwell8Pendant": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesLightsVanity1": {
+                            "bc_asset": "fixtureLightVanity",
+                            "modifications": {
+                                "plReplay3Light22": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "fixturesLightsWafer1": {
+                            "bc_asset": "fixtureLightWafer",
+                            "modifications": {
+                                "mxWafer7LED": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesShowerPans1": {
+                            "bc_asset": "fixtureShowerPan",
+                            "modifications": {
+                                "khRely48x32": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesSinksKitchen1": {
+                            "bc_asset": "fixtureSinkKitchen",
+                            "modifications": {
+                                "be32UndermountDoubleBasin6040": [
+                                    "stainless"
+                                ]
+                            }
+                        },
+                        "fixturesVanity1": {
+                            "bc_asset": "fixtureVanitySolid",
+                            "modifications": {
+                                "dcMarble31x19": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "floorInterior1": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "hardwood": [
+                                    "ashleeGrey6by4"
+                                ]
+                            }
+                        },
+                        "floorInterior10": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "trovataII12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior2": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "hardwood": [
+                                    "ashleeGrey6by4"
+                                ]
+                            }
+                        },
+                        "floorInterior3": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "trovataII12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior4": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "trovataII12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior6": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "trovataII12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior7": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "carpet": [
+                                    "translateFossil"
+                                ]
+                            }
+                        },
+                        "floorInterior8": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "carpet": [
+                                    "translateFossil"
+                                ]
+                            }
+                        },
+                        "floorInterior9": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "roughConcrete": [
+                                    "raw"
+                                ]
+                            }
+                        },
+                        "lightsInterior1": {
+                            "bc_asset": "lightPod",
+                            "modifications": {
+                                "standard": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "railingInterior1": {
+                            "bc_asset": "railingInterior",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "trimInterior1": {
+                            "bc_asset": "trimInterior",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "wallInterior1": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "paint": [
+                                    "gossamerVeil"
+                                ]
+                            }
+                        },
+                        "wallInterior2": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "paint": [
+                                    "gossamerVeil"
+                                ]
+                            }
+                        },
+                        "wallInterior3": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "paint": [
+                                    "gossamerVeil"
+                                ]
+                            }
+                        },
+                        "wallInterior5": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "tile": [
+                                    "trovataII12by24RB"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "layouts": null,
+                "preview": null
+            },
+            {
+                "asset": "intBaseTraditional",
+                "embedded_asset": null,
+                "modifications": {
+                    "1": {
+                        "backsplash1": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "tile": [
+                                    "subway4in16inWhite"
+                                ]
+                            }
+                        },
+                        "cabinets1": {
+                            "bc_asset": "cabinetGeneric",
+                            "modifications": {
+                                "winstead": [
+                                    "birchFlagstone"
+                                ]
+                            }
+                        },
+                        "ceilings1": {
+                            "bc_asset": "ceilingGeneric",
+                            "modifications": {
+                                "paint": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "counters1": {
+                            "bc_asset": "counterGeneric",
+                            "modifications": {
+                                "ceramic": [
+                                    "quartzRockyShores"
+                                ]
+                            }
+                        },
+                        "doorsExterior1": {
+                            "bc_asset": "doorGeneric",
+                            "modifications": {
+                                "glass": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsExterior2": {
+                            "bc_asset": "doorFront",
+                            "modifications": {
+                                "msCraftsman3Panel": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsGarage1": {
+                            "bc_asset": "doorGarage",
+                            "modifications": {
+                                "country": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsHardware1": {
+                            "bc_asset": "doorHardwareInterior",
+                            "modifications": {
+                                "standard": [
+                                    "satinNickel"
+                                ]
+                            }
+                        },
+                        "doorsHardware2": {
+                            "bc_asset": "doorHardwareExterior",
+                            "modifications": {
+                                "standard": [
+                                    "satinNickel"
+                                ]
+                            }
+                        },
+                        "doorsInterior1": {
+                            "bc_asset": "doorInteriorGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesBathtubs1": {
+                            "bc_asset": "fixtureBathtubBuilIn",
+                            "modifications": {
+                                "aqTubShower260330S": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesFansLivingroom1": {
+                            "bc_asset": "fixtureFanGeneric",
+                            "modifications": {
+                                "maContractorPlusLED52Inch5Blade": [
+                                    "nickel"
+                                ]
+                            }
+                        },
+                        "fixturesFaucetsBathroom1": {
+                            "bc_asset": "fixtureFaucetBathroom",
+                            "modifications": {
+                                "moenGibson12SingleHole": [
+                                    "nickel"
+                                ]
+                            }
+                        },
+                        "fixturesFaucetsKitchen1": {
+                            "bc_asset": "fixtureFaucetKitchen",
+                            "modifications": {
+                                "moenEdwynSingleHandlePulldownSpray": [
+                                    "stainless"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareCabinetDoors1": {
+                            "bc_asset": "fixtureCabinetDrawerHardware",
+                            "modifications": {
+                                "naples": [
+                                    "satinNickel"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareDrawers1": {
+                            "bc_asset": "fixtureCabinetDoorHardware",
+                            "modifications": {
+                                "seaver": [
+                                    "satinNickel"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareShower1": {
+                            "bc_asset": "fixtureShowerHardware",
+                            "modifications": {
+                                "moenGibsonPosiTempTS": [
+                                    "nickel"
+                                ]
+                            }
+                        },
+                        "fixturesHardwareShower2": {
+                            "bc_asset": "fixtureShowerHardware",
+                            "modifications": {
+                                "moenGibsonPosiTemp": [
+                                    "nickel"
+                                ]
+                            }
+                        },
+                        "fixturesLightsBedroom1": {
+                            "bc_asset": "fixtureLightFeature",
+                            "modifications": {
+                                "plInspire2Light13Drum": [
+                                    "nickel"
+                                ]
+                            }
+                        },
+                        "fixturesLightsDining1": {
+                            "bc_asset": "fixtureLightFeature",
+                            "modifications": {
+                                "plReplay5Light21": [
+                                    "nickel"
+                                ]
+                            }
+                        },
+                        "fixturesLightsIsland1": {
+                            "bc_asset": "fixtureLightKitchenPendant",
+                            "modifications": {
+                                "plMarkor10Pendant": [
+                                    "bronze"
+                                ]
+                            }
+                        },
+                        "fixturesLightsVanity1": {
+                            "bc_asset": "fixtureLightVanity",
+                            "modifications": {
+                                "plMerry3Light24": [
+                                    "nickel"
+                                ]
+                            }
+                        },
+                        "fixturesLightsWafer1": {
+                            "bc_asset": "fixtureLightWafer",
+                            "modifications": {
+                                "mxWafer7LED": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesShowerPans1": {
+                            "bc_asset": "fixtureShowerPan",
+                            "modifications": {
+                                "khRely48x32": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "fixturesSinksKitchen1": {
+                            "bc_asset": "fixtureSinkKitchen",
+                            "modifications": {
+                                "be32UndermountDoubleBasin6040": [
+                                    "stainless"
+                                ]
+                            }
+                        },
+                        "fixturesVanity1": {
+                            "bc_asset": "fixtureVanitySolid",
+                            "modifications": {
+                                "dcMarble31x19": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "floorInterior1": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "hardwood": [
+                                    "timelessOrganic8by4"
+                                ]
+                            }
+                        },
+                        "floorInterior10": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "realmII12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior2": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "hardwood": [
+                                    "timelessOrganic8by4"
+                                ]
+                            }
+                        },
+                        "floorInterior3": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "realmII12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior4": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "realmII12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior6": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "realmII12by24RB"
+                                ]
+                            }
+                        },
+                        "floorInterior7": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "carpet": [
+                                    "antiqueSilk"
+                                ]
+                            }
+                        },
+                        "floorInterior8": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "carpet": [
+                                    "antiqueSilk"
+                                ]
+                            }
+                        },
+                        "floorInterior9": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "roughConcrete": [
+                                    "raw"
+                                ]
+                            }
+                        },
+                        "lightsInterior1": {
+                            "bc_asset": "lightPod",
+                            "modifications": {
+                                "standard": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "railingInterior1": {
+                            "bc_asset": "railingInterior",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "trimInterior1": {
+                            "bc_asset": "trimInterior",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "wallInterior1": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "paint": [
+                                    "driftOfMist"
+                                ]
+                            }
+                        },
+                        "wallInterior2": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "paint": [
+                                    "driftOfMist"
+                                ]
+                            }
+                        },
+                        "wallInterior3": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "paint": [
+                                    "driftOfMist"
+                                ]
+                            }
+                        },
+                        "wallInterior5": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "tile": [
+                                    "realmII12by24RB"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "layouts": null,
+                "preview": null
+            }
+        ],
         "meshes": [
             {
                 "building_component": 81,
@@ -2853,6 +3906,14 @@
                 "mtl": "0006-gossamerVeil"
             },
             {
+                "building_component": 85,
+                "variant": "paint",
+                "theme": "driftOfMist",
+                "region": "interior",
+                "obj": "0006",
+                "mtl": "0006-driftOfMist"
+            },
+            {
                 "building_component": 86,
                 "variant": "paint",
                 "theme": "snowbound",
@@ -2885,6 +3946,14 @@
                 "mtl": "0007-gossamerVeil"
             },
             {
+                "building_component": 86,
+                "variant": "paint",
+                "theme": "driftOfMist",
+                "region": "interior",
+                "obj": "0007",
+                "mtl": "0007-driftOfMist"
+            },
+            {
                 "building_component": 87,
                 "variant": "paint",
                 "theme": "snowbound",
@@ -2915,6 +3984,14 @@
                 "region": "interior",
                 "obj": "0008",
                 "mtl": "0008-gossamerVeil"
+            },
+            {
+                "building_component": 87,
+                "variant": "paint",
+                "theme": "driftOfMist",
+                "region": "interior",
+                "obj": "0008",
+                "mtl": "0008-driftOfMist"
             },
             {
                 "building_component": 88,
@@ -3719,6 +4796,29 @@
                 "heated": false
             }
         },
+        "templates": {
+            "intBaseModern": {
+                "name": "Modern",
+                "description": "The modern style in the base package.",
+                "tier": "base",
+                "style": "modern",
+                "type": "interior"
+            },
+            "intBaseFarmhouse": {
+                "name": "Farmhouse",
+                "description": "The farmhouse style in the base package.",
+                "tier": "base",
+                "style": "farmhouse",
+                "type": "interior"
+            },
+            "intBaseTraditional": {
+                "name": "Traditional",
+                "description": "The traditional style in the base package.",
+                "tier": "base",
+                "style": "traditional",
+                "type": "interior"
+            }
+        },
         "layouts": {
             "baseType": {
                 "name": "Base Type",
@@ -4418,7 +5518,7 @@
                             "https://www.hardwareresources.com/catalogsearch/result/?q=859-128mb#view/859-128MB"
                         ],
                         "themes": {
-                            "chrome": {
+                            "black": {
                                 "name": "Matte Black",
                                 "description": "Matte black finish.",
                                 "rendering_materials": {},
@@ -4481,7 +5581,7 @@
                             "https://www.hardwareresources.com/gatsby-matte-black-3960-mb.html"
                         ],
                         "themes": {
-                            "chrome": {
+                            "black": {
                                 "name": "Matte Black",
                                 "description": "Matte black finish.",
                                 "rendering_materials": {},
@@ -7030,6 +8130,20 @@
                                     }
                                 },
                                 "thumbnail": "thumbnail_paint_gossamerVeil.jpg"
+                            },
+                            "driftOfMist": {
+                                "name": "Drift Of Mist",
+                                "description": "Drift Of Mist theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-int01",
+                                            "driftOfMist"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "thumbnail_paint_driftOfMist.jpg"
                             }
                         },
                         "layer_props": {
@@ -7854,240 +8968,6 @@
                         }
                     }
                 }
-            }
-        }
-    },
-    "templates": {
-        "template_1": {
-            "0": {
-                "asphalt": [
-                    "dark"
-                ]
-            },
-            "1": {
-                "dcMarble31x19": [
-                    "white"
-                ]
-            },
-            "2": {
-                "moenGibsonPosiTempTS": [
-                    "chrome"
-                ]
-            },
-            "3": {
-                "moenGibsonPosiTemp": [
-                    "chrome"
-                ]
-            },
-            "4": {
-                "khRely48x32": [
-                    "white"
-                ]
-            },
-            "5": {
-                "aqTubShower260330S": [
-                    "white"
-                ]
-            },
-            "6": {
-                "moenGibson12SingleHole": [
-                    "chrome"
-                ]
-            },
-            "7": {
-                "plInspire2Light13Drum": [
-                    "nickel"
-                ]
-            },
-            "8": {
-                "plReplay3Light22": [
-                    "black"
-                ]
-            },
-            "9": {
-                "mxWafer7LED": [
-                    "white"
-                ]
-            },
-            "10": {
-                "slade": [
-                    "chrome"
-                ]
-            },
-            "11": {
-                "hadly": [
-                    "chrome"
-                ]
-            },
-            "12": {
-                "maContractorPlusLED52Inch5Blade": [
-                    "nickelWalnut"
-                ]
-            },
-            "13": {
-                "vigoGreenwichSingleHolePreRincePulldown": [
-                    "chrome"
-                ]
-            },
-            "14": {
-                "be32UndermountDoubleBasin6040": [
-                    "stainless"
-                ]
-            },
-            "15": {
-                "plMetalShade16Pendant": [
-                    "black"
-                ]
-            },
-            "16": {
-                "kcWinslow5Light20": [
-                    "black"
-                ]
-            },
-            "22": {
-                "minimal": [
-                    "dark"
-                ]
-            },
-            "24": {
-                "glass": [
-                    "white"
-                ]
-            },
-            "25": {
-                "msCraftsman3Panel": [
-                    "white"
-                ]
-            },
-            "26": {
-                "country": [
-                    "white"
-                ]
-            },
-            "27": {
-                "standard": [
-                    "white"
-                ]
-            },
-            "28": {
-                "standard": [
-                    "chrome"
-                ]
-            },
-            "29": {
-                "standard": [
-                    "chrome"
-                ]
-            },
-            "30": {
-                "standard": [
-                    "white"
-                ]
-            },
-            "31": {
-                "ceramic": [
-                    "quartzTofino"
-                ]
-            },
-            "32": {
-                "winstead": [
-                    "stoneGray"
-                ]
-            },
-            "33": {
-                "tile": [
-                    "subway4in16inWhite"
-                ]
-            },
-            "34": {
-                "standard": [
-                    "dark"
-                ]
-            },
-            "35": {
-                "paint": [
-                    "white"
-                ]
-            },
-            "36": {
-                "standard": [
-                    "white"
-                ]
-            },
-            "37": {
-                "paint": [
-                    "cityLoft"
-                ]
-            },
-            "38": {
-                "paint": [
-                    "cityLoft"
-                ]
-            },
-            "39": {
-                "paint": [
-                    "cityLoft"
-                ]
-            },
-            "40": {
-                "tile": [
-                    "darocaAtar12by24RB"
-                ]
-            },
-            "41": {
-                "hardwood": [
-                    "darkCanyon6by4"
-                ]
-            },
-            "42": {
-                "hardwood": [
-                    "darkCanyon6by4"
-                ]
-            },
-            "43": {
-                "tile": [
-                    "darocaAtar12by24RB"
-                ]
-            },
-            "44": {
-                "tile": [
-                    "darocaAtar12by24RB"
-                ]
-            },
-            "45": {
-                "tile": [
-                    "darocaAtar12by24RB"
-                ]
-            },
-            "46": {
-                "carpet": [
-                    "antiqueSilk"
-                ]
-            },
-            "47": {
-                "carpet": [
-                    "antiqueSilk"
-                ]
-            },
-            "48": {
-                "roughConcrete": [
-                    "raw"
-                ]
-            },
-            "49": {
-                "tile": [
-                    "darocaAtar12by24RB"
-                ]
-            },
-            "50": {
-                "concrete": [
-                    "unfinished"
-                ]
-            },
-            "52": {
-                "graphic": [
-                    "analysis"
-                ]
             }
         }
     }
