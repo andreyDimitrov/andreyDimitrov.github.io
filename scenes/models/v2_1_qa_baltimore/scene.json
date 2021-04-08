@@ -3830,6 +3830,202 @@
                 },
                 "layouts": null,
                 "preview": null
+            },
+            {
+                "asset": "extBaseCraftsman",
+                "embedded_asset": null,
+                "modifications": {
+                    "1": {
+                        "base1": {
+                            "bc_asset": "baseGeneric",
+                            "modifications": {
+                                "concrete": [
+                                    "unfinished"
+                                ]
+                            }
+                        },
+                        "doorsExterior1": {
+                            "bc_asset": "doorGeneric",
+                            "modifications": {
+                                "glass": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsExterior2": {
+                            "bc_asset": "doorFront",
+                            "modifications": {
+                                "msCraftsman3Panel": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsGarage1": {
+                            "bc_asset": "doorGarage",
+                            "modifications": {
+                                "country": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "porch1": {
+                            "bc_asset": "porchGeneric",
+                            "modifications": {
+                                "wood": [
+                                    "mountain_ash_dark_rail"
+                                ]
+                            }
+                        },
+                        "roof1": {
+                            "bc_asset": "roofingGeneric",
+                            "modifications": {
+                                "shingles": [
+                                    "light"
+                                ]
+                            }
+                        },
+                        "siding1": {
+                            "bc_asset": "sidingGeneric",
+                            "modifications": {
+                                "lap": [
+                                    "waterloo"
+                                ]
+                            }
+                        },
+                        "sidingAccent1": {
+                            "bc_asset": "sidingGeneric",
+                            "modifications": {
+                                "shake": [
+                                    "aspen"
+                                ]
+                            }
+                        },
+                        "soffits1": {
+                            "bc_asset": "soffitGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "trim1": {
+                            "bc_asset": "trimGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "windows1": {
+                            "bc_asset": "windowGeneric",
+                            "modifications": {
+                                "minimal": [
+                                    "dark"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "layouts": null,
+                "preview": null
+            },
+            {
+                "asset": "extBaseFarmhouse",
+                "embedded_asset": null,
+                "modifications": {
+                    "1": {
+                        "base1": {
+                            "bc_asset": "baseGeneric",
+                            "modifications": {
+                                "concrete": [
+                                    "unfinished"
+                                ]
+                            }
+                        },
+                        "doorsExterior1": {
+                            "bc_asset": "doorGeneric",
+                            "modifications": {
+                                "glass": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsExterior2": {
+                            "bc_asset": "doorFront",
+                            "modifications": {
+                                "msCraftsman3Panel": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsGarage1": {
+                            "bc_asset": "doorGarage",
+                            "modifications": {
+                                "country": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "porch1": {
+                            "bc_asset": "porchGeneric",
+                            "modifications": {
+                                "wood": [
+                                    "hill_country_dark_rail"
+                                ]
+                            }
+                        },
+                        "roof1": {
+                            "bc_asset": "roofingGeneric",
+                            "modifications": {
+                                "shingles": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "siding1": {
+                            "bc_asset": "sidingGeneric",
+                            "modifications": {
+                                "lap": [
+                                    "snowbound"
+                                ]
+                            }
+                        },
+                        "sidingAccent1": {
+                            "bc_asset": "sidingGeneric",
+                            "modifications": {
+                                "shake": [
+                                    "aspen"
+                                ]
+                            }
+                        },
+                        "soffits1": {
+                            "bc_asset": "soffitGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "trim1": {
+                            "bc_asset": "trimGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "windows1": {
+                            "bc_asset": "windowGeneric",
+                            "modifications": {
+                                "minimal": [
+                                    "dark"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "layouts": null,
+                "preview": null
             }
         ],
         "meshes": [
@@ -4621,7 +4817,7 @@
                 "building_component": 101,
                 "variant": "graphic",
                 "theme": "analysis",
-                "region": "exterior",
+                "region": "exterior_lot",
                 "obj": "l_0026",
                 "mtl": "l_0026-analysis"
             },
@@ -4629,7 +4825,7 @@
                 "building_component": 101,
                 "variant": "graphic",
                 "theme": "analysis",
-                "region": "exterior",
+                "region": "exterior_lot",
                 "obj": "l_0027",
                 "mtl": "l_0027-analysis"
             }
@@ -4817,6 +5013,20 @@
                 "tier": "base",
                 "style": "traditional",
                 "type": "interior"
+            },
+            "extBaseCraftsman": {
+                "name": "Craftsman",
+                "description": "The craftsman exterior style in the base package.",
+                "tier": "base",
+                "style": "craftsman",
+                "type": "exterior"
+            },
+            "extBaseFarmhouse": {
+                "name": "Farmhouse",
+                "description": "The farmhouse exterior style in the base package.",
+                "tier": "base",
+                "style": "farmhouse",
+                "type": "exterior"
             }
         },
         "layouts": {
@@ -8926,10 +9136,10 @@
                         },
                         "layer_props": {
                             "surface": {
-                                "region": "exterior"
+                                "region": "exterior_lot"
                             },
                             "box": {
-                                "region": "exterior"
+                                "region": "exterior_lot"
                             }
                         }
                     },
@@ -8960,10 +9170,10 @@
                         },
                         "layer_props": {
                             "surface": {
-                                "region": "exterior"
+                                "region": "exterior_lot"
                             },
                             "box": {
-                                "region": "exterior"
+                                "region": "exterior_lot"
                             }
                         }
                     }
