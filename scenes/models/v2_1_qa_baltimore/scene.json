@@ -2820,14 +2820,6 @@
                                 ]
                             }
                         },
-                        "doorsExterior1": {
-                            "bc_asset": "doorGeneric",
-                            "modifications": {
-                                "glass": [
-                                    "white"
-                                ]
-                            }
-                        },
                         "doorsExterior2": {
                             "bc_asset": "doorFront",
                             "modifications": {
@@ -3174,14 +3166,6 @@
                                 ]
                             }
                         },
-                        "doorsExterior1": {
-                            "bc_asset": "doorGeneric",
-                            "modifications": {
-                                "glass": [
-                                    "white"
-                                ]
-                            }
-                        },
                         "doorsExterior2": {
                             "bc_asset": "doorFront",
                             "modifications": {
@@ -3522,14 +3506,6 @@
                                 ]
                             }
                         },
-                        "doorsExterior1": {
-                            "bc_asset": "doorGeneric",
-                            "modifications": {
-                                "glass": [
-                                    "white"
-                                ]
-                            }
-                        },
                         "doorsExterior2": {
                             "bc_asset": "doorFront",
                             "modifications": {
@@ -3835,6 +3811,24 @@
                 "asset": "extBaseCraftsman",
                 "embedded_asset": null,
                 "modifications": {
+                    "0": {
+                        "driveway1": {
+                            "bc_asset": "drivewayGeneric",
+                            "modifications": {
+                                "asphalt": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "terrain1": {
+                            "bc_asset": "terrainGeneric",
+                            "modifications": {
+                                "graphic": [
+                                    "analysis"
+                                ]
+                            }
+                        }
+                    },
                     "1": {
                         "base1": {
                             "bc_asset": "baseGeneric",
@@ -3852,19 +3846,11 @@
                                 ]
                             }
                         },
-                        "doorsExterior2": {
-                            "bc_asset": "doorFront",
+                        "placeholderHome1": {
+                            "bc_asset": "placeholderHomeGeneric",
                             "modifications": {
-                                "msCraftsman3Panel": [
-                                    "white"
-                                ]
-                            }
-                        },
-                        "doorsGarage1": {
-                            "bc_asset": "doorGarage",
-                            "modifications": {
-                                "country": [
-                                    "white"
+                                "default": [
+                                    "unfinished"
                                 ]
                             }
                         },
@@ -3933,6 +3919,24 @@
                 "asset": "extBaseFarmhouse",
                 "embedded_asset": null,
                 "modifications": {
+                    "0": {
+                        "driveway1": {
+                            "bc_asset": "drivewayGeneric",
+                            "modifications": {
+                                "asphalt": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "terrain1": {
+                            "bc_asset": "terrainGeneric",
+                            "modifications": {
+                                "graphic": [
+                                    "analysis"
+                                ]
+                            }
+                        }
+                    },
                     "1": {
                         "base1": {
                             "bc_asset": "baseGeneric",
@@ -3950,19 +3954,11 @@
                                 ]
                             }
                         },
-                        "doorsExterior2": {
-                            "bc_asset": "doorFront",
+                        "placeholderHome1": {
+                            "bc_asset": "placeholderHomeGeneric",
                             "modifications": {
-                                "msCraftsman3Panel": [
-                                    "white"
-                                ]
-                            }
-                        },
-                        "doorsGarage1": {
-                            "bc_asset": "doorGarage",
-                            "modifications": {
-                                "country": [
-                                    "white"
+                                "default": [
+                                    "unfinished"
                                 ]
                             }
                         },
@@ -5034,9 +5030,13 @@
                 "name": "Base Type",
                 "description": "The type of base for the house.",
                 "variants": {
-                    "A": {
-                        "name": "A",
-                        "description": "This is base type A."
+                    "crawlspace": {
+                        "name": "Crawlspace",
+                        "description": "This is base type crawlspace."
+                    },
+                    "basementOpenToBack": {
+                        "name": "Basement Open To Back",
+                        "description": "This is base type has a basement that opens to the back."
                     }
                 }
             }
