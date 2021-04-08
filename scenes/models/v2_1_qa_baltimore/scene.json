@@ -5,7 +5,7 @@
                 "asset": "baseType",
                 "embedded_asset": null,
                 "structure": 1,
-                "variant": "A",
+                "variant": "crawlspace",
                 "primary": true
             }
         ],
@@ -3113,14 +3113,6 @@
                             "modifications": {
                                 "tile": [
                                     "darocaAtar12by24RB"
-                                ]
-                            }
-                        },
-                        "windows1": {
-                            "bc_asset": "windowGeneric",
-                            "modifications": {
-                                "minimal": [
-                                    "dark"
                                 ]
                             }
                         }
