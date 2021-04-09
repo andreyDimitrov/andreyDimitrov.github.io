@@ -1,0 +1,254 @@
+{
+    "scene": {
+        "layouts": [],
+        "structures": [
+            {
+                "asset": "lotGeneric",
+                "embedded_asset": null
+            }
+        ],
+        "levels": [],
+        "spaces": [],
+        "markers": [],
+        "cameras": [
+            {
+                "asset": "platformStreetDefault",
+                "embedded_asset": null,
+                "structure": 0,
+                "position": [
+                    493.56014908532114,
+                    71.7787857055664,
+                    -1066.6141191300812
+                ],
+                "target": [
+                    264.71770465412203,
+                    84.0,
+                    -1673.5337667061506
+                ],
+                "lat": 1.0794160260645065,
+                "lon": -110.65539783794418,
+                "env": 0,
+                "layout_expression": null
+            },
+            {
+                "asset": "platformEditDefault",
+                "embedded_asset": null,
+                "structure": 0,
+                "position": [
+                    -1988.6563342268755,
+                    829.8709480094899,
+                    -1910.870528923629
+                ],
+                "target": [
+                    203.86735078293123,
+                    0.0,
+                    -1761.844515790772
+                ],
+                "lat": -20.687992123959038,
+                "lon": 21.034489701313525,
+                "env": null,
+                "layout_expression": null
+            }
+        ],
+        "envs": [
+            {
+                "asset": "street1",
+                "embedded_asset": {
+                    "name": "Streetview Panorama",
+                    "description": "The panorama image used for street view.",
+                    "variants": {
+                        "source": {
+                            "name": "Source Image",
+                            "description": "The source panorama.",
+                            "foreground": "foreground.png",
+                            "background": "background.jpg"
+                        }
+                    },
+                    "source_dir": "/Volumes/GoogleDrive/My Drive/ingestion/alms/2716_baltimore_ave/assets/envs/street1/"
+                }
+            }
+        ],
+        "lights": [
+            {
+                "asset": "ambientBaked",
+                "structure": 0
+            }
+        ],
+        "modification_groups": [
+            {
+                "asset": "terrain1",
+                "embedded_asset": null,
+                "structure": 0,
+                "bc_asset": "terrainGeneric",
+                "modifications": {
+                    "graphic": [
+                        "analysis"
+                    ]
+                }
+            }
+        ],
+        "building_components": [
+            {
+                "asset": "terrainGeneric",
+                "embedded_asset": null,
+                "modification_group": 0,
+                "quantity": 1,
+                "layout_expression": null
+            }
+        ],
+        "templates": [],
+        "meshes": [
+            {
+                "building_component": 0,
+                "variant": "graphic",
+                "theme": "analysis",
+                "region": "exterior_lot",
+                "obj": "0000",
+                "mtl": "0000-analysis"
+            },
+            {
+                "building_component": 0,
+                "variant": "graphic",
+                "theme": "analysis",
+                "region": "exterior_lot",
+                "obj": "0001",
+                "mtl": "0001-analysis"
+            }
+        ]
+    },
+    "assets": {
+        "cameras": {
+            "platformStreetDefault": {
+                "name": "Street Camera",
+                "description": "A default streetview camera used on the Atmos platform.",
+                "type": "street",
+                "cam": {
+                    "fov": 60
+                }
+            },
+            "platformEditDefault": {
+                "name": "Edit Camera",
+                "description": "A default edit camera used on the Atmos platform.",
+                "type": "edit",
+                "cam": {
+                    "fov": 45
+                }
+            }
+        },
+        "lights": {
+            "ambientBaked": {
+                "name": "Ambient Light",
+                "description": "Light used for Baked environment.",
+                "type": "ambient",
+                "color": [
+                    1,
+                    1,
+                    1
+                ],
+                "intensity": 1.0
+            }
+        },
+        "markers": {},
+        "envs": {},
+        "structures": {
+            "lotGeneric": {
+                "name": "Lot",
+                "description": "A generic lot structure."
+            }
+        },
+        "levels": {},
+        "spaces": {},
+        "templates": {},
+        "layouts": {},
+        "modification_groups": {
+            "terrain1": {
+                "name": "Terrain",
+                "description": "Use this to modify the terrain look."
+            }
+        },
+        "building_components": {
+            "terrainGeneric": {
+                "name": "Terrain",
+                "description": "A terrain building component.",
+                "takeoff": {
+                    "unit": "SF",
+                    "type": "AREA",
+                    "section": "site"
+                },
+                "baking_properties": {
+                    "affected_by_externals": true
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "uv_mode": "h_bbox",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "graphic-pattern-solid",
+                                            "gray"
+                                        ],
+                                        "box": [
+                                            "sh",
+                                            "abstract-oglSolid-100",
+                                            null
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior_lot"
+                            },
+                            "box": {
+                                "region": "exterior_lot"
+                            }
+                        }
+                    },
+                    "graphic": {
+                        "name": "Graphic",
+                        "description": "Variant used for graphic renderings.",
+                        "uv_mode": "h_bbox",
+                        "themes": {
+                            "analysis": {
+                                "name": "Analysis",
+                                "description": "Theme showing site analysis including setbacks.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "local",
+                                            "terrain-graphic",
+                                            "setbacks"
+                                        ],
+                                        "box": [
+                                            "sh",
+                                            "abstract-oglSolid-100",
+                                            null
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior_lot"
+                            },
+                            "box": {
+                                "region": "exterior_lot"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
