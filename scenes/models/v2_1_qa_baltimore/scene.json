@@ -204,7 +204,7 @@
                 "area": 146.2750000000168
             },
             {
-                "asset": "void",
+                "asset": "unfinishedStorage",
                 "embedded_asset": null,
                 "level": 0,
                 "contour": [
@@ -1360,27 +1360,11 @@
                 ],
                 "lat": -25.597378342795363,
                 "lon": -152.0666338719792,
-                "env": 1,
+                "env": null,
                 "layout_expression": null
             }
         ],
         "envs": [
-            {
-                "asset": "street1",
-                "embedded_asset": {
-                    "name": "Streetview Panorama",
-                    "description": "The panorama image used for street view.",
-                    "variants": {
-                        "source": {
-                            "name": "Source Image",
-                            "description": "The source panorama.",
-                            "foreground": "foreground.png",
-                            "background": "background.jpg"
-                        }
-                    },
-                    "source_dir": "/Volumes/GoogleDrive/My Drive/ingestion/lhms/2716_baltimore_ave_AD_00001_Baltimore/assets/envs/street1/"
-                }
-            },
             {
                 "asset": "street1",
                 "embedded_asset": {
@@ -2820,7 +2804,7 @@
                 "asset": "placeholderHomeGeneric",
                 "embedded_asset": null,
                 "modification_group": 51,
-                "quantity": 2590.941666666871,
+                "quantity": 2390.27500000021,
                 "layout_expression": null
             },
             {
@@ -4973,10 +4957,10 @@
                 "description": "This is a porch.",
                 "heated": false
             },
-            "void": {
-                "name": "Void",
-                "description": "This is a void.",
-                "heated": true
+            "unfinishedStorage": {
+                "name": "Unfinished Storage",
+                "description": "This is an unfinished storage space.",
+                "heated": false
             },
             "pantry": {
                 "name": "Pantry",
@@ -5007,6 +4991,11 @@
                 "name": "Bedroom",
                 "description": "This is a bedroom.",
                 "heated": true
+            },
+            "void": {
+                "name": "Void",
+                "description": "This is a void.",
+                "heated": false
             },
             "patio": {
                 "name": "Patio",
