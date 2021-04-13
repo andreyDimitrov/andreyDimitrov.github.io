@@ -39,6 +39,80 @@
         ],
         "spaces": [
             {
+                "asset": "bathroom",
+                "embedded_asset": null,
+                "level": 1,
+                "contour": [
+                    [
+                        221.4235125764493,
+                        1860.5515258154903
+                    ],
+                    [
+                        160.16544645545827,
+                        1922.3289434947164
+                    ],
+                    [
+                        175.78732219043837,
+                        1937.8194889506026
+                    ],
+                    [
+                        150.43915689898762,
+                        1963.382558335116
+                    ],
+                    [
+                        134.81728116400762,
+                        1947.89201287923
+                    ],
+                    [
+                        82.00860347348623,
+                        2001.148407430299
+                    ],
+                    [
+                        165.08857897315363,
+                        2083.529944627512
+                    ],
+                    [
+                        272.7833781109155,
+                        1974.9220990080748
+                    ],
+                    [
+                        218.0493014255996,
+                        1920.648161789298
+                    ],
+                    [
+                        249.76941139080014,
+                        1888.6591257939165
+                    ]
+                ],
+                "layout_expression": null,
+                "area": 131.26065551330328
+            },
+            {
+                "asset": "bathroom",
+                "embedded_asset": null,
+                "level": 1,
+                "contour": [
+                    [
+                        218.0493014255996,
+                        1920.648161789298
+                    ],
+                    [
+                        272.7833781109155,
+                        1974.9220990080748
+                    ],
+                    [
+                        304.5034880761307,
+                        1942.9330630126897
+                    ],
+                    [
+                        249.76941139081475,
+                        1888.6591257939126
+                    ]
+                ],
+                "layout_expression": null,
+                "area": 24.114344486704795
+            },
+            {
                 "asset": "dining",
                 "embedded_asset": null,
                 "level": 0,
@@ -869,48 +943,7 @@
                 "area": 5.5
             },
             {
-                "asset": "bathroom",
-                "embedded_asset": null,
-                "level": 1,
-                "contour": [
-                    [
-                        82.00860347348623,
-                        2001.148407430299
-                    ],
-                    [
-                        165.08857897315363,
-                        2083.529944627512
-                    ],
-                    [
-                        304.5034880761306,
-                        1942.9330630126894
-                    ],
-                    [
-                        221.4235125764493,
-                        1860.5515258154903
-                    ],
-                    [
-                        160.16544645545827,
-                        1922.3289434947164
-                    ],
-                    [
-                        175.78732219043837,
-                        1937.8194889506026
-                    ],
-                    [
-                        150.43915689898762,
-                        1963.382558335116
-                    ],
-                    [
-                        134.81728116400762,
-                        1947.89201287923
-                    ]
-                ],
-                "layout_expression": null,
-                "area": 155.37500000000807
-            },
-            {
-                "asset": "bedroom",
+                "asset": "void",
                 "embedded_asset": null,
                 "level": 1,
                 "contour": [
@@ -1293,25 +1326,6 @@
         ],
         "cameras": [
             {
-                "asset": "platformEditDefault",
-                "embedded_asset": null,
-                "structure": 0,
-                "position": [
-                    -1988.6563342268755,
-                    829.8709480094899,
-                    -1910.870528923629
-                ],
-                "target": [
-                    203.86735078293123,
-                    0.0,
-                    -1761.844515790772
-                ],
-                "lat": -20.687992123959038,
-                "lon": 21.034489701313525,
-                "env": null,
-                "layout_expression": null
-            },
-            {
                 "asset": "platformStreetDefault",
                 "embedded_asset": null,
                 "structure": 0,
@@ -1329,9 +1343,44 @@
                 "lon": -110.65539783794418,
                 "env": 0,
                 "layout_expression": null
+            },
+            {
+                "asset": "platformEditDefault",
+                "embedded_asset": null,
+                "structure": 0,
+                "position": [
+                    1512.1187266177046,
+                    709.5071504371018,
+                    -1476.811834206353
+                ],
+                "target": [
+                    233.01160107334636,
+                    84.0,
+                    -1738.9276053414987
+                ],
+                "lat": -25.597378342795363,
+                "lon": -152.0666338719792,
+                "env": 1,
+                "layout_expression": null
             }
         ],
         "envs": [
+            {
+                "asset": "street1",
+                "embedded_asset": {
+                    "name": "Streetview Panorama",
+                    "description": "The panorama image used for street view.",
+                    "variants": {
+                        "source": {
+                            "name": "Source Image",
+                            "description": "The source panorama.",
+                            "foreground": "foreground.png",
+                            "background": "background.jpg"
+                        }
+                    },
+                    "source_dir": "/Volumes/GoogleDrive/My Drive/ingestion/lhms/2716_baltimore_ave_AD_00001_Baltimore/assets/envs/street1/"
+                }
+            },
             {
                 "asset": "street1",
                 "embedded_asset": {
@@ -2771,7 +2820,7 @@
                 "asset": "placeholderHomeGeneric",
                 "embedded_asset": null,
                 "modification_group": 51,
-                "quantity": 2504.6102777779656,
+                "quantity": 2590.941666666871,
                 "layout_expression": null
             },
             {
@@ -4821,20 +4870,20 @@
     },
     "assets": {
         "cameras": {
-            "platformEditDefault": {
-                "name": "Edit Camera",
-                "description": "A default edit camera used on the Atmos platform.",
-                "type": "edit",
-                "cam": {
-                    "fov": 45
-                }
-            },
             "platformStreetDefault": {
                 "name": "Street Camera",
                 "description": "A default streetview camera used on the Atmos platform.",
                 "type": "street",
                 "cam": {
                     "fov": 60
+                }
+            },
+            "platformEditDefault": {
+                "name": "Edit Camera",
+                "description": "A default edit camera used on the Atmos platform.",
+                "type": "edit",
+                "cam": {
+                    "fov": 45
                 }
             }
         },
@@ -4904,6 +4953,11 @@
             }
         },
         "spaces": {
+            "bathroom": {
+                "name": "Bathroom",
+                "description": "This is a bathroom.",
+                "heated": true
+            },
             "dining": {
                 "name": "Dining",
                 "description": "This is a dining.",
@@ -4947,16 +5001,11 @@
             "storage": {
                 "name": "Storage",
                 "description": "This is a storage space.",
-                "heated": false
+                "heated": true
             },
             "bedroom": {
                 "name": "Bedroom",
                 "description": "This is a bedroom.",
-                "heated": true
-            },
-            "bathroom": {
-                "name": "Bathroom",
-                "description": "This is a bathroom.",
                 "heated": true
             },
             "patio": {
@@ -4977,7 +5026,44 @@
             "carPark": {
                 "name": "Car Park",
                 "description": "This is a place to park a car.",
-                "heated": false
+                "heated": false,
+                "virtual": true
+            }
+        },
+        "space_connections": {
+            "stairGeneric": {
+                "name": "Stair",
+                "description": "This is a stair."
+            },
+            "windowGeneric": {
+                "name": "Window",
+                "description": "This is a window.",
+                "closed": true,
+                "is_access": false
+            },
+            "railingGeneric": {
+                "name": "Open",
+                "description": "This is open.",
+                "closed": false,
+                "is_access": false
+            },
+            "openGeneric": {
+                "name": "Open",
+                "description": "This is open.",
+                "closed": false,
+                "is_access": true
+            },
+            "doorGeneric": {
+                "name": "Door",
+                "description": "This is a door.",
+                "closed": true,
+                "is_access": true
+            },
+            "doorGarage": {
+                "name": "Garage Door",
+                "description": "This is a garage door.",
+                "closed": true,
+                "is_access": true
             }
         },
         "templates": {
@@ -8251,6 +8337,31 @@
                                     }
                                 },
                                 "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "interior"
+                            }
+                        }
+                    },
+                    "unfinished": {
+                        "name": "Unfinished Wall",
+                        "description": "Unfinished wall style.",
+                        "themes": {
+                            "concrete": {
+                                "name": "Concrete",
+                                "description": "Concrete theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "floor-concrete-cast01",
+                                            "light"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": ""
                             }
                         },
                         "layer_props": {
