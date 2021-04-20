@@ -1,0 +1,480 @@
+{
+    "scene": {
+        "layouts": [],
+        "structures": [
+            {
+                "asset": "homeGeneric",
+                "embedded_asset": null
+            }
+        ],
+        "levels": [],
+        "spaces": [],
+        "markers": [],
+        "cameras": [
+            {
+                "asset": "platformEditDefault",
+                "embedded_asset": null,
+                "structure": 0,
+                "position": [
+                    239.34003850472038,
+                    344.35823323249883,
+                    367.59704504580884
+                ],
+                "target": [
+                    -42.119816563840914,
+                    -70.98854008111766,
+                    -52.11766704725494
+                ],
+                "lat": -39.416678049401575,
+                "lon": -115.48518586558917,
+                "env": null,
+                "layout_expression": null
+            }
+        ],
+        "envs": [],
+        "lights": [
+            {
+                "asset": "ambientBaked",
+                "structure": 0
+            }
+        ],
+        "modification_groups": [
+            {
+                "asset": "siding1",
+                "embedded_asset": null,
+                "structure": 0,
+                "bc_asset": "sidingGeneric",
+                "modifications": {
+                    "lap": [
+                        "snowbound",
+                        "waterloo"
+                    ],
+                    "board": [
+                        "snowbound",
+                        "waterloo"
+                    ],
+                    "lapFiberCement": [
+                        "teak"
+                    ],
+                    "shake": [
+                        "aspen"
+                    ]
+                }
+            },
+            {
+                "asset": "graphicBase1",
+                "embedded_asset": null,
+                "structure": 0,
+                "bc_asset": "graphicGridExterior",
+                "modifications": {
+                    "grid": [
+                        "gray"
+                    ]
+                }
+            }
+        ],
+        "building_components": [
+            {
+                "asset": "sidingGeneric",
+                "embedded_asset": null,
+                "modification_group": 0,
+                "quantity": 0.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "graphicGridExterior",
+                "embedded_asset": null,
+                "modification_group": 1,
+                "quantity": null,
+                "layout_expression": null
+            }
+        ],
+        "templates": [],
+        "meshes": [
+            {
+                "building_component": 1,
+                "variant": "grid",
+                "theme": "gray",
+                "region": "exterior",
+                "obj": "0001",
+                "mtl": "0001-gray"
+            },
+            {
+                "building_component": 0,
+                "variant": "lap",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "0002",
+                "mtl": "0002-snowbound"
+            },
+            {
+                "building_component": 0,
+                "variant": "lap",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "0002",
+                "mtl": "0002-waterloo"
+            },
+            {
+                "building_component": 0,
+                "variant": "board",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "0003",
+                "mtl": "0003-snowbound"
+            },
+            {
+                "building_component": 0,
+                "variant": "board",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "0003",
+                "mtl": "0003-waterloo"
+            },
+            {
+                "building_component": 0,
+                "variant": "lapFiberCement",
+                "theme": "teak",
+                "region": "exterior",
+                "obj": "0004",
+                "mtl": "0004-teak"
+            },
+            {
+                "building_component": 0,
+                "variant": "shake",
+                "theme": "aspen",
+                "region": "exterior",
+                "obj": "0005",
+                "mtl": "0005-aspen"
+            }
+        ]
+    },
+    "assets": {
+        "cameras": {
+            "platformEditDefault": {
+                "name": "Edit Camera",
+                "description": "A default edit camera used on the Atmos platform.",
+                "type": "edit",
+                "cam": {
+                    "fov": 45
+                }
+            }
+        },
+        "lights": {
+            "sunDefault": {
+                "name": "Sun Light",
+                "description": "Light used for rendering outdoor environments.",
+                "type": "sun"
+            },
+            "ambientBaked": {
+                "name": "Ambient Light",
+                "description": "Light used for Baked environment.",
+                "type": "ambient",
+                "color": [
+                    1,
+                    1,
+                    1
+                ],
+                "intensity": 1.0
+            }
+        },
+        "markers": {},
+        "envs": {},
+        "structures": {
+            "homeGeneric": {
+                "name": "Home",
+                "description": "A generic home structure."
+            }
+        },
+        "levels": {},
+        "spaces": {},
+        "connections": {},
+        "templates": {},
+        "layouts": {},
+        "modification_groups": {
+            "siding1": {
+                "name": "Siding",
+                "description": "Use this to modify the siding."
+            },
+            "graphicBase1": {
+                "name": "Graphic Base",
+                "description": "Use this to modify the graphic base."
+            }
+        },
+        "building_components": {
+            "sidingGeneric": {
+                "name": "Siding",
+                "description": "A siding building component.",
+                "takeoff": {
+                    "unit": "SF",
+                    "type": "AREA",
+                    "section": "siding"
+                },
+                "baking_properties": {
+                    "affected_by_externals": true
+                },
+                "generative": "surface",
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "grooves": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "silver"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior"
+                            },
+                            "grooves": {
+                                "region": "exterior"
+                            }
+                        }
+                    },
+                    "lap": {
+                        "name": "Lap",
+                        "description": "Lap siding.",
+                        "themes": {
+                            "snowbound": {
+                                "name": "Snowbound",
+                                "description": "Snowbound theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "thumbnail_lap_snowbound.jpg"
+                            },
+                            "waterloo": {
+                                "name": "Waterloo",
+                                "description": "Waterloo theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "waterloo"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "thumbnail_lap_waterloo.jpg"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior",
+                                "surface_mesh": "meshes/lap_6in_h_01.obj"
+                            }
+                        }
+                    },
+                    "board": {
+                        "name": "Board and Batton",
+                        "description": "A vertical siding material made up of boards.",
+                        "themes": {
+                            "snowbound": {
+                                "name": "Snowbound",
+                                "description": "Snowbound theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "thumbnail_board_snowbound.jpg"
+                            },
+                            "waterloo": {
+                                "name": "Waterloo",
+                                "description": "Waterloo theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "waterloo"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "thumbnail_board_waterloo.jpg"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior",
+                                "surface_mesh": "meshes/board12in_v_01.obj"
+                            }
+                        }
+                    },
+                    "lapFiberCement": {
+                        "name": "Lap Fiber Cement",
+                        "description": "Lap fiber cement siding.",
+                        "themes": {
+                            "teak": {
+                                "name": "Teak",
+                                "description": "Teak theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-wood-lapFiberCement01",
+                                            "teak"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "thumbnail_lapFiberCement_teak.jpg"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior",
+                                "surface_mesh": "meshes/flat.obj"
+                            }
+                        }
+                    },
+                    "shake": {
+                        "name": "Shake",
+                        "description": "Sake siding.",
+                        "themes": {
+                            "aspen": {
+                                "name": "Aspen",
+                                "description": "Aspen theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-wood-shake01",
+                                            "aspen"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "thumbnail_shake_aspen.jpg"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior",
+                                "surface_mesh": "meshes/flat.obj"
+                            }
+                        }
+                    },
+                    "stucco": {
+                        "name": "Stucco",
+                        "description": "Stucco siding.",
+                        "themes": {
+                            "white": {
+                                "name": "White",
+                                "description": "White theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "wall-stucco-uniform01",
+                                            "white"
+                                        ],
+                                        "grooves": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "silver"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "thumbnail_stucco_white.jpg"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior"
+                            },
+                            "grooves": {
+                                "region": "exterior"
+                            }
+                        }
+                    }
+                }
+            },
+            "graphicGridExterior": {
+                "name": "Graphic Grid",
+                "description": "A graphic grid building component.",
+                "takeoff": {},
+                "baking_properties": {
+                    "affected_by_externals": true
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "graphic-grids-1ft01",
+                                            "gray"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior"
+                            }
+                        }
+                    },
+                    "grid": {
+                        "name": "Grid",
+                        "description": "Grid style.",
+                        "themes": {
+                            "gray": {
+                                "name": "Gray",
+                                "description": "Gray theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "graphic-grids-1ft01",
+                                            "gray"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": ""
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+newmtl 0001-gray
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0001-gray.jpg
+newmtl 0002-snowbound
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0002-snowbound.jpg
+newmtl 0002-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0002-waterloo.jpg
+newmtl 0003-snowbound
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0003-snowbound.jpg
+newmtl 0003-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0003-waterloo.jpg
+newmtl 0004-teak
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0004-teak.jpg
+newmtl 0005-aspen
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0005-aspen.jpg

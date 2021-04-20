@@ -16,17 +16,17 @@
                 "embedded_asset": null,
                 "structure": 0,
                 "position": [
-                    239.34003850472038,
-                    344.35823323249883,
-                    367.59704504580884
+                    188.81546634497124,
+                    205.84810493351915,
+                    147.16252679595448
                 ],
                 "target": [
-                    -42.119816563840914,
-                    -70.98854008111766,
-                    -52.11766704725494
+                    -2.9662206562069287,
+                    30.655082851403904,
+                    -13.062515195088963
                 ],
-                "lat": -39.416678049401575,
-                "lon": -115.48518586558917,
+                "lat": -35.03198354599615,
+                "lon": -128.9312675327177,
                 "env": null,
                 "layout_expression": null
             }
@@ -34,48 +34,20 @@
         "envs": [],
         "lights": [
             {
-                "asset": "ambientQA",
+                "asset": "ambientBaked",
                 "structure": 0
-            },
-            {
-                "asset": "directionalQA0",
-                "structure": 0,
-                "position": [
-                    2,
-                    1,
-                    1
-                ]
-            },
-            {
-                "asset": "directionalQA1",
-                "structure": 0,
-                "position": [
-                    -2,
-                    1,
-                    -1
-                ]
             }
         ],
         "modification_groups": [
             {
-                "asset": "siding1",
+                "asset": "trim1",
                 "embedded_asset": null,
                 "structure": 0,
-                "bc_asset": "sidingGeneric",
+                "bc_asset": "trimGeneric",
                 "modifications": {
-                    "lap": [
-                        "snowbound",
-                        "waterloo"
-                    ],
-                    "board": [
-                        "snowbound",
-                        "waterloo"
-                    ],
-                    "lapFiberCement": [
-                        "teak"
-                    ],
-                    "shake": [
-                        "aspen"
+                    "standard": [
+                        "white",
+                        "dark"
                     ]
                 }
             },
@@ -93,7 +65,7 @@
         ],
         "building_components": [
             {
-                "asset": "sidingGeneric",
+                "asset": "trimGeneric",
                 "embedded_asset": null,
                 "modification_group": 0,
                 "quantity": 0.0,
@@ -110,60 +82,28 @@
         "templates": [],
         "meshes": [
             {
+                "building_component": 0,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0000",
+                "mtl": "0000-white"
+            },
+            {
+                "building_component": 0,
+                "variant": "standard",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "0000",
+                "mtl": "0000-dark"
+            },
+            {
                 "building_component": 1,
                 "variant": "grid",
                 "theme": "gray",
                 "region": "exterior",
                 "obj": "0001",
                 "mtl": "0001-gray"
-            },
-            {
-                "building_component": 0,
-                "variant": "lap",
-                "theme": "snowbound",
-                "region": "exterior",
-                "obj": "0002",
-                "mtl": "0002-snowbound"
-            },
-            {
-                "building_component": 0,
-                "variant": "lap",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "0002",
-                "mtl": "0002-waterloo"
-            },
-            {
-                "building_component": 0,
-                "variant": "board",
-                "theme": "snowbound",
-                "region": "exterior",
-                "obj": "0003",
-                "mtl": "0003-snowbound"
-            },
-            {
-                "building_component": 0,
-                "variant": "board",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "0003",
-                "mtl": "0003-waterloo"
-            },
-            {
-                "building_component": 0,
-                "variant": "lapFiberCement",
-                "theme": "teak",
-                "region": "exterior",
-                "obj": "0004",
-                "mtl": "0004-teak"
-            },
-            {
-                "building_component": 0,
-                "variant": "shake",
-                "theme": "aspen",
-                "region": "exterior",
-                "obj": "0005",
-                "mtl": "0005-aspen"
             }
         ]
     },
@@ -179,38 +119,21 @@
             }
         },
         "lights": {
-            "ambientQA": {
+            "sunDefault": {
+                "name": "Sun Light",
+                "description": "Light used for rendering outdoor environments.",
+                "type": "sun"
+            },
+            "ambientBaked": {
                 "name": "Ambient Light",
-                "description": "Light used for QA environment.",
+                "description": "Light used for Baked environment.",
                 "type": "ambient",
                 "color": [
                     1,
                     1,
                     1
                 ],
-                "intensity": 0.6
-            },
-            "directionalQA0": {
-                "name": "Directional Light",
-                "description": "Light used for QA environment.",
-                "type": "directional",
-                "color": [
-                    1,
-                    1,
-                    1
-                ],
-                "intensity": 0.3
-            },
-            "directionalQA1": {
-                "name": "Directional Light",
-                "description": "Light used for QA environment.",
-                "type": "directional",
-                "color": [
-                    1,
-                    1,
-                    1
-                ],
-                "intensity": 0.5
+                "intensity": 1.0
             }
         },
         "markers": {},
@@ -227,9 +150,9 @@
         "templates": {},
         "layouts": {},
         "modification_groups": {
-            "siding1": {
-                "name": "Siding",
-                "description": "Use this to modify the siding."
+            "trim1": {
+                "name": "Trim",
+                "description": "Use this to modify the exterior trim."
             },
             "graphicBase1": {
                 "name": "Graphic Base",
@@ -237,18 +160,17 @@
             }
         },
         "building_components": {
-            "sidingGeneric": {
-                "name": "Siding",
-                "description": "A siding building component.",
+            "trimGeneric": {
+                "name": "Trim",
+                "description": "A trim building component.",
                 "takeoff": {
-                    "unit": "SF",
-                    "type": "AREA",
-                    "section": "siding"
+                    "unit": "FT",
+                    "type": "LENGTH",
+                    "section": "trim"
                 },
                 "baking_properties": {
                     "affected_by_externals": true
                 },
-                "generative": "surface",
                 "variants": {
                     "massing": {
                         "name": "Massing",
@@ -261,13 +183,8 @@
                                     "bake": {
                                         "surface": [
                                             "sh",
-                                            "wall-paint-ext01",
+                                            "trim-paint-ext01",
                                             "snowbound"
-                                        ],
-                                        "grooves": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "silver"
                                         ]
                                     }
                                 },
@@ -277,147 +194,12 @@
                         "layer_props": {
                             "surface": {
                                 "region": "exterior"
-                            },
-                            "grooves": {
-                                "region": "exterior"
                             }
                         }
                     },
-                    "lap": {
-                        "name": "Lap",
-                        "description": "Lap siding.",
-                        "themes": {
-                            "snowbound": {
-                                "name": "Snowbound",
-                                "description": "Snowbound theme.",
-                                "rendering_materials": {
-                                    "bake": {
-                                        "surface": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "snowbound"
-                                        ]
-                                    }
-                                },
-                                "thumbnail": "thumbnail_lap_snowbound.jpg"
-                            },
-                            "waterloo": {
-                                "name": "Waterloo",
-                                "description": "Waterloo theme.",
-                                "rendering_materials": {
-                                    "bake": {
-                                        "surface": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "waterloo"
-                                        ]
-                                    }
-                                },
-                                "thumbnail": "thumbnail_lap_waterloo.jpg"
-                            }
-                        },
-                        "layer_props": {
-                            "surface": {
-                                "region": "exterior",
-                                "surface_mesh": "meshes/lap_6in_h_01.obj"
-                            }
-                        }
-                    },
-                    "board": {
-                        "name": "Board and Batton",
-                        "description": "A vertical siding material made up of boards.",
-                        "themes": {
-                            "snowbound": {
-                                "name": "Snowbound",
-                                "description": "Snowbound theme.",
-                                "rendering_materials": {
-                                    "bake": {
-                                        "surface": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "snowbound"
-                                        ]
-                                    }
-                                },
-                                "thumbnail": "thumbnail_board_snowbound.jpg"
-                            },
-                            "waterloo": {
-                                "name": "Waterloo",
-                                "description": "Waterloo theme.",
-                                "rendering_materials": {
-                                    "bake": {
-                                        "surface": [
-                                            "sh",
-                                            "wall-paint-ext01",
-                                            "waterloo"
-                                        ]
-                                    }
-                                },
-                                "thumbnail": "thumbnail_board_waterloo.jpg"
-                            }
-                        },
-                        "layer_props": {
-                            "surface": {
-                                "region": "exterior",
-                                "surface_mesh": "meshes/board12in_v_01.obj"
-                            }
-                        }
-                    },
-                    "lapFiberCement": {
-                        "name": "Lap Fiber Cement",
-                        "description": "Lap fiber cement siding.",
-                        "themes": {
-                            "teak": {
-                                "name": "Teak",
-                                "description": "Teak theme.",
-                                "rendering_materials": {
-                                    "bake": {
-                                        "surface": [
-                                            "sh",
-                                            "wall-wood-lapFiberCement01",
-                                            "teak"
-                                        ]
-                                    }
-                                },
-                                "thumbnail": "thumbnail_lapFiberCement_teak.jpg"
-                            }
-                        },
-                        "layer_props": {
-                            "surface": {
-                                "region": "exterior",
-                                "surface_mesh": "meshes/flat.obj"
-                            }
-                        }
-                    },
-                    "shake": {
-                        "name": "Shake",
-                        "description": "Sake siding.",
-                        "themes": {
-                            "aspen": {
-                                "name": "Aspen",
-                                "description": "Aspen theme.",
-                                "rendering_materials": {
-                                    "bake": {
-                                        "surface": [
-                                            "sh",
-                                            "wall-wood-shake01",
-                                            "aspen"
-                                        ]
-                                    }
-                                },
-                                "thumbnail": "thumbnail_shake_aspen.jpg"
-                            }
-                        },
-                        "layer_props": {
-                            "surface": {
-                                "region": "exterior",
-                                "surface_mesh": "meshes/flat.obj"
-                            }
-                        }
-                    },
-                    "stucco": {
-                        "name": "Stucco",
-                        "description": "Stucco siding.",
+                    "standard": {
+                        "name": "Standard",
+                        "description": "Standard trim style.",
                         "themes": {
                             "white": {
                                 "name": "White",
@@ -426,24 +208,30 @@
                                     "bake": {
                                         "surface": [
                                             "sh",
-                                            "wall-stucco-uniform01",
-                                            "white"
-                                        ],
-                                        "grooves": [
-                                            "sh",
-                                            "millwork-hardware-diffuse",
-                                            "silver"
+                                            "trim-paint-ext01",
+                                            "snowbound"
                                         ]
                                     }
                                 },
-                                "thumbnail": "thumbnail_stucco_white.jpg"
+                                "thumbnail": "thumbnail_standard_white.jpg"
+                            },
+                            "dark": {
+                                "name": "Dark",
+                                "description": "Dark theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "trim-paint-ext01",
+                                            "dark"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "thumbnail_standard_dark.jpg"
                             }
                         },
                         "layer_props": {
                             "surface": {
-                                "region": "exterior"
-                            },
-                            "grooves": {
                                 "region": "exterior"
                             }
                         }
