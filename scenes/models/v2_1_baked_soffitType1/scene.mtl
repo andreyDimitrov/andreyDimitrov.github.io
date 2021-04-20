@@ -1,0 +1,40 @@
+newmtl 0000-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0000-white.jpg
+newmtl 0001-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0001-white.jpg
+newmtl 0002-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0002-white.jpg
+newmtl 0003-gray
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 1.0000
+map_Kd textures/0003-gray.jpg

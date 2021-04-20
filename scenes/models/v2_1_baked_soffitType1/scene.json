@@ -1,0 +1,344 @@
+{
+    "scene": {
+        "layouts": [],
+        "structures": [
+            {
+                "asset": "homeGeneric",
+                "embedded_asset": null
+            }
+        ],
+        "levels": [],
+        "spaces": [],
+        "markers": [],
+        "cameras": [
+            {
+                "asset": "platformEditDefault",
+                "embedded_asset": null,
+                "structure": 0,
+                "position": [
+                    222.00840892591054,
+                    175.74414234202743,
+                    188.1340811551031
+                ],
+                "target": [
+                    0.0,
+                    28.530682577362313,
+                    -0.0
+                ],
+                "lat": -26.834150302227144,
+                "lon": -132.9028822010626,
+                "env": null,
+                "layout_expression": null
+            }
+        ],
+        "envs": [],
+        "lights": [
+            {
+                "asset": "ambientBaked",
+                "structure": 0
+            }
+        ],
+        "modification_groups": [
+            {
+                "asset": "soffits1",
+                "embedded_asset": null,
+                "structure": 0,
+                "bc_asset": "soffitGeneric",
+                "modifications": {
+                    "standard": [
+                        "white"
+                    ]
+                }
+            },
+            {
+                "asset": "graphicBase1",
+                "embedded_asset": null,
+                "structure": 0,
+                "bc_asset": "graphicGridExterior",
+                "modifications": {
+                    "grid": [
+                        "gray"
+                    ]
+                }
+            }
+        ],
+        "building_components": [
+            {
+                "asset": "soffitGeneric",
+                "embedded_asset": null,
+                "modification_group": 0,
+                "quantity": 0.0,
+                "layout_expression": null
+            },
+            {
+                "asset": "graphicGridExterior",
+                "embedded_asset": null,
+                "modification_group": 1,
+                "quantity": null,
+                "layout_expression": null
+            }
+        ],
+        "templates": [],
+        "meshes": [
+            {
+                "building_component": 0,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0000",
+                "mtl": "0000-white"
+            },
+            {
+                "building_component": 0,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0001",
+                "mtl": "0001-white"
+            },
+            {
+                "building_component": 0,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0002",
+                "mtl": "0002-white"
+            },
+            {
+                "building_component": 1,
+                "variant": "grid",
+                "theme": "gray",
+                "region": "exterior",
+                "obj": "0003",
+                "mtl": "0003-gray"
+            }
+        ]
+    },
+    "assets": {
+        "cameras": {
+            "platformEditDefault": {
+                "name": "Edit Camera",
+                "description": "A default edit camera used on the Atmos platform.",
+                "type": "edit",
+                "cam": {
+                    "fov": 45
+                }
+            }
+        },
+        "lights": {
+            "sunDefault": {
+                "name": "Sun Light",
+                "description": "Light used for rendering outdoor environments.",
+                "type": "sun"
+            },
+            "ambientBaked": {
+                "name": "Ambient Light",
+                "description": "Light used for Baked environment.",
+                "type": "ambient",
+                "color": [
+                    1,
+                    1,
+                    1
+                ],
+                "intensity": 1.0
+            }
+        },
+        "markers": {},
+        "envs": {},
+        "structures": {
+            "homeGeneric": {
+                "name": "Home",
+                "description": "A generic home structure."
+            }
+        },
+        "levels": {},
+        "spaces": {},
+        "connections": {},
+        "templates": {},
+        "layouts": {},
+        "modification_groups": {
+            "soffits1": {
+                "name": "Soffits",
+                "description": "Use this to modify the soffits."
+            },
+            "graphicBase1": {
+                "name": "Graphic Base",
+                "description": "Use this to modify the graphic base."
+            }
+        },
+        "building_components": {
+            "soffitGeneric": {
+                "name": "Soffit",
+                "description": "A soffit building component.",
+                "takeoff": {
+                    "unit": "FT",
+                    "type": "LENGTH",
+                    "section": "trim"
+                },
+                "baking_properties": {
+                    "affected_by_externals": true
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "facia": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "soffit": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "gutter": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_ceiling": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "facia": {
+                                "region": "exterior"
+                            },
+                            "soffit": {
+                                "region": "exterior"
+                            },
+                            "gutter": {
+                                "region": "exterior"
+                            },
+                            "ext_ceiling": {
+                                "region": "exterior"
+                            }
+                        }
+                    },
+                    "standard": {
+                        "name": "Standard",
+                        "description": "Standard soffit style.",
+                        "themes": {
+                            "white": {
+                                "name": "White",
+                                "description": "White theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "facia": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "soffit": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ],
+                                        "gutter": [
+                                            "sh",
+                                            "millwork-hardware-diffuse",
+                                            "dark"
+                                        ],
+                                        "ext_ceiling": [
+                                            "sh",
+                                            "wall-paint-ext01",
+                                            "snowbound"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "thumbnail_standard_white.jpg"
+                            }
+                        },
+                        "layer_props": {
+                            "facia": {
+                                "region": "exterior"
+                            },
+                            "soffit": {
+                                "region": "exterior"
+                            },
+                            "gutter": {
+                                "region": "exterior"
+                            },
+                            "ext_ceiling": {
+                                "region": "exterior"
+                            }
+                        }
+                    }
+                }
+            },
+            "graphicGridExterior": {
+                "name": "Graphic Grid",
+                "description": "A graphic grid building component.",
+                "takeoff": {},
+                "baking_properties": {
+                    "affected_by_externals": true
+                },
+                "variants": {
+                    "massing": {
+                        "name": "Massing",
+                        "description": "Massing for baking.",
+                        "themes": {
+                            "bake": {
+                                "name": "Bake",
+                                "description": "Theme for baking.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "graphic-grids-1ft01",
+                                            "gray"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": "local url to image"
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior"
+                            }
+                        }
+                    },
+                    "grid": {
+                        "name": "Grid",
+                        "description": "Grid style.",
+                        "themes": {
+                            "gray": {
+                                "name": "Gray",
+                                "description": "Gray theme.",
+                                "rendering_materials": {
+                                    "bake": {
+                                        "surface": [
+                                            "sh",
+                                            "graphic-grids-1ft01",
+                                            "gray"
+                                        ]
+                                    }
+                                },
+                                "thumbnail": ""
+                            }
+                        },
+                        "layer_props": {
+                            "surface": {
+                                "region": "exterior"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
