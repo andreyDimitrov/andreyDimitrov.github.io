@@ -1218,7 +1218,8 @@
                         }
                     }
                 },
-                "layouts":{
+                "layouts": {
+                    "0": {},
                     "1": {
                         "archStyle": [
                             "farmhouse"
@@ -1237,14 +1238,6 @@
                             "modifications": {
                                 "tile": [
                                     "subway4in16inWhite"
-                                ]
-                            }
-                        },
-                        "base1": {
-                            "bc_asset": "baseGeneric",
-                            "modifications": {
-                                "concrete": [
-                                    "unfinished"
                                 ]
                             }
                         },
@@ -1300,9 +1293,7 @@
                             "bc_asset": "floorInterior",
                             "modifications": {
                                 "hardwood": [
-                                    "timelessOrganic8by4",
-                                    "prodigyUmber9by7",
-                                    "prodigyCotton9by7"
+                                    "timelessOrganic8by4"
                                 ]
                             }
                         },
@@ -1342,14 +1333,15 @@
                             "bc_asset": "wallInterior",
                             "modifications": {
                                 "paint": [
-                                    "snowbound",
                                     "worldlyGray"
                                 ]
                             }
                         }
                     }
                 },
-                "layouts":{},
+                "layouts": {
+                    "1": {}
+                },
                 "preview": null
             },
             {
@@ -1473,7 +1465,8 @@
                         }
                     }
                 },
-                "layouts":{
+                "layouts": {
+                    "0": {},
                     "1": {
                         "archStyle": [
                             "modern"
