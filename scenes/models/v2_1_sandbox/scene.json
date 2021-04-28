@@ -1102,394 +1102,254 @@
                 "embedded_asset": null,
                 "modifications": {
                     "0": {
-                        "layouts": {},
-                        "modification_groups": {
-                            "placeholderLot1": {
-                                "bc_asset": "placeholderLotGeneric",
-                                "modifications": {
-                                    "abstract": [
-                                        "white"
-                                    ]
-                                }
+                        "placeholderLot1": {
+                            "bc_asset": "placeholderLotGeneric",
+                            "modifications": {
+                                "abstract": [
+                                    "white"
+                                ]
                             }
                         }
                     },
                     "1": {
-                        "layouts": {
-                            "archStyle": [
-                                "farmhouse"
-                            ]
+                        "base1": {
+                            "bc_asset": "baseGeneric",
+                            "modifications": {
+                                "concrete": [
+                                    "unfinished"
+                                ]
+                            }
                         },
-                        "modification_groups": {
-                            "base1": {
-                                "bc_asset": "baseGeneric",
-                                "modifications": {
-                                    "concrete": [
-                                        "unfinished"
-                                    ]
-                                }
-                            },
-                            "doorsExterior1": {
-                                "bc_asset": "doorGeneric",
-                                "modifications": {
-                                    "glass": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "doorsExterior2": {
-                                "bc_asset": "doorFront",
-                                "modifications": {
-                                    "glass": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "porch1": {
-                                "bc_asset": "porchGeneric",
-                                "modifications": {
-                                    "wood": [
-                                        "hill_country"
-                                    ]
-                                }
-                            },
-                            "porch2": {
-                                "bc_asset": "porchConcrete",
-                                "modifications": {
-                                    "concrete": [
-                                        "unfinished"
-                                    ]
-                                }
-                            },
-                            "roof1": {
-                                "bc_asset": "roofingGeneric",
-                                "modifications": {
-                                    "metalSeam": [
-                                        "dark"
-                                    ]
-                                }
-                            },
-                            "roof2": {
-                                "bc_asset": "roofingFlat",
-                                "modifications": {
-                                    "rubber": [
-                                        "light"
-                                    ]
-                                }
-                            },
-                            "siding1": {
-                                "bc_asset": "sidingGeneric",
-                                "modifications": {
-                                    "lap": [
-                                        "snowbound"
-                                    ]
-                                }
-                            },
-                            "sidingAccent1": {
-                                "bc_asset": "sidingGeneric",
-                                "modifications": {
-                                    "board": [
-                                        "snowbound"
-                                    ]
-                                }
-                            },
-                            "sidingAccent2": {
-                                "bc_asset": "sidingGeneric",
-                                "modifications": {
-                                    "lapFiberCement": [
-                                        "mountain_ash"
-                                    ]
-                                }
-                            },
-                            "soffits1": {
-                                "bc_asset": "soffitGeneric",
-                                "modifications": {
-                                    "standard": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "trim1": {
-                                "bc_asset": "trimGeneric",
-                                "modifications": {
-                                    "standard": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "windows1": {
-                                "bc_asset": "windowGeneric",
-                                "modifications": {
-                                    "minimal": [
-                                        "dark"
-                                    ]
-                                }
+                        "doorsExterior1": {
+                            "bc_asset": "doorGeneric",
+                            "modifications": {
+                                "glass": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsExterior2": {
+                            "bc_asset": "doorFront",
+                            "modifications": {
+                                "glass": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "porch1": {
+                            "bc_asset": "porchGeneric",
+                            "modifications": {
+                                "wood": [
+                                    "hill_country"
+                                ]
+                            }
+                        },
+                        "porch2": {
+                            "bc_asset": "porchConcrete",
+                            "modifications": {
+                                "concrete": [
+                                    "unfinished"
+                                ]
+                            }
+                        },
+                        "roof1": {
+                            "bc_asset": "roofingGeneric",
+                            "modifications": {
+                                "metalSeam": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "roof2": {
+                            "bc_asset": "roofingFlat",
+                            "modifications": {
+                                "rubber": [
+                                    "light"
+                                ]
+                            }
+                        },
+                        "siding1": {
+                            "bc_asset": "sidingGeneric",
+                            "modifications": {
+                                "lap": [
+                                    "snowbound"
+                                ]
+                            }
+                        },
+                        "sidingAccent1": {
+                            "bc_asset": "sidingGeneric",
+                            "modifications": {
+                                "board": [
+                                    "snowbound"
+                                ]
+                            }
+                        },
+                        "sidingAccent2": {
+                            "bc_asset": "sidingGeneric",
+                            "modifications": {
+                                "lapFiberCement": [
+                                    "mountain_ash"
+                                ]
+                            }
+                        },
+                        "soffits1": {
+                            "bc_asset": "soffitGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "trim1": {
+                            "bc_asset": "trimGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "windows1": {
+                            "bc_asset": "windowGeneric",
+                            "modifications": {
+                                "minimal": [
+                                    "dark"
+                                ]
                             }
                         }
                     }
                 },
-                "layouts": null,
+                "layouts":{
+                    "1": {
+                        "archStyle": [
+                            "farmhouse"
+                        ]
+                    }
+                },
                 "preview": null
             },
             {
                 "asset": "intDefault",
                 "embedded_asset": null,
                 "modifications": {
-                    "0": {
-                        "layouts": {},
-                        "modification_groups": {
-                            "placeholderLot1": {
-                                "bc_asset": "placeholderLotGeneric",
-                                "modifications": {
-                                    "abstract": [
-                                        "white"
-                                    ]
-                                }
-                            }
-                        }
-                    },
                     "1": {
-                        "layouts": {
-                            "archStyle": [
-                                "farmhouse",
-                                "modern"
-                            ],
-                            "numFloors": [
-                                "3",
-                                "2"
-                            ]
+                        "backsplash1": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "tile": [
+                                    "subway4in16inWhite"
+                                ]
+                            }
                         },
-                        "modification_groups": {
-                            "backsplash1": {
-                                "bc_asset": "wallInterior",
-                                "modifications": {
-                                    "tile": [
-                                        "subway4in16inWhite"
-                                    ]
-                                }
-                            },
-                            "base1": {
-                                "bc_asset": "baseGeneric",
-                                "modifications": {
-                                    "concrete": [
-                                        "unfinished"
-                                    ]
-                                }
-                            },
-                            "cabinets1": {
-                                "bc_asset": "cabinetGeneric",
-                                "modifications": {
-                                    "standard": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "ceilings1": {
-                                "bc_asset": "ceilingGeneric",
-                                "modifications": {
-                                    "paint": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "counters1": {
-                                "bc_asset": "counterGeneric",
-                                "modifications": {
-                                    "ceramic": [
-                                        "quartzTofino"
-                                    ]
-                                }
-                            },
-                            "doorsExterior1": {
-                                "bc_asset": "doorGeneric",
-                                "modifications": {
-                                    "glass": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "doorsExterior2": {
-                                "bc_asset": "doorFront",
-                                "modifications": {
-                                    "glass": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "doorsHardware1": {
-                                "bc_asset": "doorHardwareInterior",
-                                "modifications": {
-                                    "standard": [
-                                        "black"
-                                    ]
-                                }
-                            },
-                            "doorsHardware2": {
-                                "bc_asset": "doorHardwareExterior",
-                                "modifications": {
-                                    "standard": [
-                                        "black"
-                                    ]
-                                }
-                            },
-                            "doorsInterior1": {
-                                "bc_asset": "doorInteriorGeneric",
-                                "modifications": {
-                                    "standard": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "floorInterior1": {
-                                "bc_asset": "floorInterior",
-                                "modifications": {
-                                    "hardwood": [
-                                        "timelessOrganic8by4",
-                                        "prodigyUmber9by7",
-                                        "prodigyCotton9by7"
-                                    ]
-                                }
-                            },
-                            "floorInterior2": {
-                                "bc_asset": "floorInterior",
-                                "modifications": {
-                                    "tile": [
-                                        "hex_dark"
-                                    ]
-                                }
-                            },
-                            "lightsInterior1": {
-                                "bc_asset": "lightPod",
-                                "modifications": {
-                                    "standard": [
-                                        "dark"
-                                    ]
-                                }
-                            },
-                            "porch1": {
-                                "bc_asset": "porchGeneric",
-                                "modifications": {
-                                    "wood": [
-                                        "mountain_ash",
-                                        "hill_country"
-                                    ]
-                                }
-                            },
-                            "porch2": {
-                                "bc_asset": "porchConcrete",
-                                "modifications": {
-                                    "concrete": [
-                                        "unfinished"
-                                    ]
-                                }
-                            },
-                            "railingInterior1": {
-                                "bc_asset": "railingInterior",
-                                "modifications": {
-                                    "standard": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "roof1": {
-                                "bc_asset": "roofingGeneric",
-                                "modifications": {
-                                    "metalSeam": [
-                                        "light",
-                                        "dark"
-                                    ],
-                                    "shingles": [
-                                        "light",
-                                        "dark"
-                                    ]
-                                }
-                            },
-                            "roof2": {
-                                "bc_asset": "roofingFlat",
-                                "modifications": {
-                                    "rubber": [
-                                        "light"
-                                    ]
-                                }
-                            },
-                            "siding1": {
-                                "bc_asset": "sidingGeneric",
-                                "modifications": {
-                                    "lap": [
-                                        "snowbound",
-                                        "waterloo"
-                                    ]
-                                }
-                            },
-                            "sidingAccent1": {
-                                "bc_asset": "sidingGeneric",
-                                "modifications": {
-                                    "board": [
-                                        "snowbound",
-                                        "waterloo"
-                                    ],
-                                    "lap": [
-                                        "snowbound",
-                                        "waterloo"
-                                    ]
-                                }
-                            },
-                            "sidingAccent2": {
-                                "bc_asset": "sidingGeneric",
-                                "modifications": {
-                                    "lapFiberCement": [
-                                        "teak",
-                                        "mountain_ash",
-                                        "hill_country"
-                                    ]
-                                }
-                            },
-                            "soffits1": {
-                                "bc_asset": "soffitGeneric",
-                                "modifications": {
-                                    "standard": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "trim1": {
-                                "bc_asset": "trimGeneric",
-                                "modifications": {
-                                    "standard": [
-                                        "white",
-                                        "dark"
-                                    ]
-                                }
-                            },
-                            "trimInterior1": {
-                                "bc_asset": "trimInterior",
-                                "modifications": {
-                                    "standard": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "wallInterior1": {
-                                "bc_asset": "wallInterior",
-                                "modifications": {
-                                    "paint": [
-                                        "snowbound",
-                                        "worldlyGray"
-                                    ]
-                                }
-                            },
-                            "windows1": {
-                                "bc_asset": "windowGeneric",
-                                "modifications": {
-                                    "minimal": [
-                                        "dark"
-                                    ]
-                                }
+                        "base1": {
+                            "bc_asset": "baseGeneric",
+                            "modifications": {
+                                "concrete": [
+                                    "unfinished"
+                                ]
+                            }
+                        },
+                        "cabinets1": {
+                            "bc_asset": "cabinetGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "ceilings1": {
+                            "bc_asset": "ceilingGeneric",
+                            "modifications": {
+                                "paint": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "counters1": {
+                            "bc_asset": "counterGeneric",
+                            "modifications": {
+                                "ceramic": [
+                                    "quartzTofino"
+                                ]
+                            }
+                        },
+                        "doorsHardware1": {
+                            "bc_asset": "doorHardwareInterior",
+                            "modifications": {
+                                "standard": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "doorsHardware2": {
+                            "bc_asset": "doorHardwareExterior",
+                            "modifications": {
+                                "standard": [
+                                    "black"
+                                ]
+                            }
+                        },
+                        "doorsInterior1": {
+                            "bc_asset": "doorInteriorGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "floorInterior1": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "hardwood": [
+                                    "timelessOrganic8by4",
+                                    "prodigyUmber9by7",
+                                    "prodigyCotton9by7"
+                                ]
+                            }
+                        },
+                        "floorInterior2": {
+                            "bc_asset": "floorInterior",
+                            "modifications": {
+                                "tile": [
+                                    "hex_dark"
+                                ]
+                            }
+                        },
+                        "lightsInterior1": {
+                            "bc_asset": "lightPod",
+                            "modifications": {
+                                "standard": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "railingInterior1": {
+                            "bc_asset": "railingInterior",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "trimInterior1": {
+                            "bc_asset": "trimInterior",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "wallInterior1": {
+                            "bc_asset": "wallInterior",
+                            "modifications": {
+                                "paint": [
+                                    "snowbound",
+                                    "worldlyGray"
+                                ]
                             }
                         }
                     }
                 },
-                "layouts": null,
+                "layouts":{},
                 "preview": null
             },
             {
@@ -1497,133 +1357,129 @@
                 "embedded_asset": null,
                 "modifications": {
                     "0": {
-                        "layouts": {},
-                        "modification_groups": {
-                            "placeholderLot1": {
-                                "bc_asset": "placeholderLotGeneric",
-                                "modifications": {
-                                    "abstract": [
-                                        "white"
-                                    ]
-                                }
+                        "placeholderLot1": {
+                            "bc_asset": "placeholderLotGeneric",
+                            "modifications": {
+                                "abstract": [
+                                    "white"
+                                ]
                             }
                         }
                     },
                     "1": {
-                        "layouts": {
-                            "archStyle": [
-                                "modern"
-                            ]
+                        "base1": {
+                            "bc_asset": "baseGeneric",
+                            "modifications": {
+                                "concrete": [
+                                    "unfinished"
+                                ]
+                            }
                         },
-                        "modification_groups": {
-                            "base1": {
-                                "bc_asset": "baseGeneric",
-                                "modifications": {
-                                    "concrete": [
-                                        "unfinished"
-                                    ]
-                                }
-                            },
-                            "doorsExterior1": {
-                                "bc_asset": "doorGeneric",
-                                "modifications": {
-                                    "glass": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "doorsExterior2": {
-                                "bc_asset": "doorFront",
-                                "modifications": {
-                                    "glass": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "porch1": {
-                                "bc_asset": "porchGeneric",
-                                "modifications": {
-                                    "wood": [
-                                        "mountain_ash"
-                                    ]
-                                }
-                            },
-                            "porch2": {
-                                "bc_asset": "porchConcrete",
-                                "modifications": {
-                                    "concrete": [
-                                        "unfinished"
-                                    ]
-                                }
-                            },
-                            "roof1": {
-                                "bc_asset": "roofingGeneric",
-                                "modifications": {
-                                    "shingles": [
-                                        "light"
-                                    ]
-                                }
-                            },
-                            "roof2": {
-                                "bc_asset": "roofingFlat",
-                                "modifications": {
-                                    "rubber": [
-                                        "light"
-                                    ]
-                                }
-                            },
-                            "siding1": {
-                                "bc_asset": "sidingGeneric",
-                                "modifications": {
-                                    "lap": [
-                                        "dark"
-                                    ]
-                                }
-                            },
-                            "sidingAccent1": {
-                                "bc_asset": "sidingGeneric",
-                                "modifications": {
-                                    "lap": [
-                                        "snowbound"
-                                    ]
-                                }
-                            },
-                            "sidingAccent2": {
-                                "bc_asset": "sidingGeneric",
-                                "modifications": {
-                                    "lapFiberCement": [
-                                        "mountain_ash"
-                                    ]
-                                }
-                            },
-                            "soffits1": {
-                                "bc_asset": "soffitGeneric",
-                                "modifications": {
-                                    "standard": [
-                                        "white"
-                                    ]
-                                }
-                            },
-                            "trim1": {
-                                "bc_asset": "trimGeneric",
-                                "modifications": {
-                                    "standard": [
-                                        "dark"
-                                    ]
-                                }
-                            },
-                            "windows1": {
-                                "bc_asset": "windowGeneric",
-                                "modifications": {
-                                    "minimal": [
-                                        "dark"
-                                    ]
-                                }
+                        "doorsExterior1": {
+                            "bc_asset": "doorGeneric",
+                            "modifications": {
+                                "glass": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "doorsExterior2": {
+                            "bc_asset": "doorFront",
+                            "modifications": {
+                                "glass": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "porch1": {
+                            "bc_asset": "porchGeneric",
+                            "modifications": {
+                                "wood": [
+                                    "mountain_ash"
+                                ]
+                            }
+                        },
+                        "porch2": {
+                            "bc_asset": "porchConcrete",
+                            "modifications": {
+                                "concrete": [
+                                    "unfinished"
+                                ]
+                            }
+                        },
+                        "roof1": {
+                            "bc_asset": "roofingGeneric",
+                            "modifications": {
+                                "shingles": [
+                                    "light"
+                                ]
+                            }
+                        },
+                        "roof2": {
+                            "bc_asset": "roofingFlat",
+                            "modifications": {
+                                "rubber": [
+                                    "light"
+                                ]
+                            }
+                        },
+                        "siding1": {
+                            "bc_asset": "sidingGeneric",
+                            "modifications": {
+                                "lap": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "sidingAccent1": {
+                            "bc_asset": "sidingGeneric",
+                            "modifications": {
+                                "lap": [
+                                    "snowbound"
+                                ]
+                            }
+                        },
+                        "sidingAccent2": {
+                            "bc_asset": "sidingGeneric",
+                            "modifications": {
+                                "lapFiberCement": [
+                                    "mountain_ash"
+                                ]
+                            }
+                        },
+                        "soffits1": {
+                            "bc_asset": "soffitGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "white"
+                                ]
+                            }
+                        },
+                        "trim1": {
+                            "bc_asset": "trimGeneric",
+                            "modifications": {
+                                "standard": [
+                                    "dark"
+                                ]
+                            }
+                        },
+                        "windows1": {
+                            "bc_asset": "windowGeneric",
+                            "modifications": {
+                                "minimal": [
+                                    "dark"
+                                ]
                             }
                         }
                     }
                 },
-                "layouts": null,
+                "layouts":{
+                    "1": {
+                        "archStyle": [
+                            "modern"
+                        ]
+                    }
+                },
                 "preview": null
             }
         ],
