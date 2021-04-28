@@ -5,14 +5,14 @@
                 "asset": "numFloors",
                 "embedded_asset": null,
                 "structure": 1,
-                "variant": "2",
+                "variant": "3",
                 "primary": true
             },
             {
                 "asset": "numFloors",
                 "embedded_asset": null,
                 "structure": 1,
-                "variant": "3",
+                "variant": "2",
                 "primary": true
             },
             {
@@ -26,34 +26,6 @@
                 "asset": "archStyle",
                 "embedded_asset": null,
                 "structure": 1,
-                "variant": "modern",
-                "primary": true
-            },
-            {
-                "asset": "numFloors",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "variant": "2",
-                "primary": true
-            },
-            {
-                "asset": "numFloors",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "variant": "3",
-                "primary": true
-            },
-            {
-                "asset": "archStyle",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "variant": "farmhouse",
-                "primary": true
-            },
-            {
-                "asset": "archStyle",
-                "embedded_asset": null,
-                "structure": "mainHouse",
                 "variant": "modern",
                 "primary": true
             }
@@ -66,18 +38,18 @@
             {
                 "asset": "homeGeneric",
                 "embedded_asset": null
-            },
-            {
-                "asset": "lotGeneric",
-                "embedded_asset": null
-            },
-            {
-                "asset": "homeGeneric",
-                "embedded_asset": null
             }
         ],
         "levels": [
             {
+                "asset": "levelGeneric",
+                "embedded_asset": null,
+                "structure": 1,
+                "name": "2",
+                "top": 358.3199999999995,
+                "bottom": 261.95999999999947
+            },
+            {
                 "asset": "levelGround",
                 "embedded_asset": null,
                 "structure": 1,
@@ -92,63 +64,11 @@
                 "name": "1",
                 "top": 244.32,
                 "bottom": 147.96
-            },
-            {
-                "asset": "levelGeneric",
-                "embedded_asset": null,
-                "structure": 1,
-                "name": "2",
-                "top": 358.3199999999995,
-                "bottom": 261.95999999999947
-            },
-            {
-                "asset": "levelGround",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "name": "0",
-                "top": 130.32,
-                "bottom": 27.96000000000001
-            },
-            {
-                "asset": "levelGeneric",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "name": "1",
-                "top": 244.32,
-                "bottom": 147.96
-            },
-            {
-                "asset": "levelGeneric",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "name": "2",
-                "top": 358.3199999999995,
-                "bottom": 261.95999999999947
             }
         ],
         "spaces": [],
         "markers": [
             {
-                "asset": "orbAdd",
-                "embedded_asset": null,
-                "structure": 1,
-                "position": [
-                    -7.1811365144287675,
-                    382.6030408479893,
-                    -212.74779582316032
-                ],
-                "instruction": {
-                    "AND": [
-                        1
-                    ]
-                },
-                "layout_expression": {
-                    "AND": [
-                        0
-                    ]
-                }
-            },
-            {
                 "asset": "orbRemove",
                 "embedded_asset": null,
                 "structure": 1,
@@ -159,19 +79,19 @@
                 ],
                 "instruction": {
                     "AND": [
-                        0
+                        1
                     ]
                 },
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
             {
                 "asset": "orbAdd",
                 "embedded_asset": null,
-                "structure": "mainHouse",
+                "structure": 1,
                 "position": [
                     -7.1811365144287675,
                     382.6030408479893,
@@ -179,32 +99,12 @@
                 ],
                 "instruction": {
                     "AND": [
-                        1
-                    ]
-                },
-                "layout_expression": {
-                    "AND": [
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "orbRemove",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "position": [
-                    -7.1811365144287675,
-                    496.6030408479886,
-                    -212.74779582316032
-                ],
-                "instruction": {
-                    "AND": [
                         0
                     ]
                 },
                 "layout_expression": {
                     "AND": [
-                        5
+                        1
                     ]
                 }
             }
@@ -228,50 +128,13 @@
                 "lon": -121.85354143108842,
                 "env": null,
                 "layout_expression": null
-            },
-            {
-                "asset": "platformEditDefault",
-                "embedded_asset": null,
-                "structure": null,
-                "position": [
-                    875.7082206199098,
-                    765.8027275029817,
-                    1103.4462598611055
-                ],
-                "target": [
-                    -1.8070390616783243,
-                    0.0,
-                    -83.24936632859567
-                ],
-                "lat": -27.42352752338908,
-                "lon": -121.85354143108842,
-                "env": null,
-                "layout_expression": null
             }
         ],
         "envs": [],
         "lights": [
             {
-                "asset": "ambientQA",
+                "asset": "ambientBaked",
                 "structure": 0
-            },
-            {
-                "asset": "directionalQA0",
-                "structure": 0,
-                "position": [
-                    2,
-                    1,
-                    1
-                ]
-            },
-            {
-                "asset": "directionalQA1",
-                "structure": 0,
-                "position": [
-                    -2,
-                    1,
-                    -1
-                ]
             }
         ],
         "modification_groups": [
@@ -477,6 +340,19 @@
                 }
             },
             {
+                "asset": "sidingAccent2",
+                "embedded_asset": null,
+                "structure": 1,
+                "bc_asset": "sidingGeneric",
+                "modifications": {
+                    "lapFiberCement": [
+                        "teak",
+                        "mountain_ash",
+                        "hill_country"
+                    ]
+                }
+            },
+            {
                 "asset": "siding1",
                 "embedded_asset": null,
                 "structure": 1,
@@ -577,208 +453,6 @@
                         "light"
                     ]
                 }
-            },
-            {
-                "asset": "sidingAccent2",
-                "embedded_asset": null,
-                "structure": 1,
-                "bc_asset": "sidingGeneric",
-                "modifications": {
-                    "lapFiberCement": [
-                        "teak",
-                        "mountain_ash",
-                        "hill_country"
-                    ]
-                }
-            },
-            {
-                "asset": "placeholderLot1",
-                "embedded_asset": null,
-                "structure": null,
-                "bc_asset": null,
-                "modifications": {}
-            },
-            {
-                "asset": "windows1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "windowGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "doorsInterior1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "doorInteriorGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "doorsHardware1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "doorHardwareInterior",
-                "modifications": {}
-            },
-            {
-                "asset": "doorsHardware2",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "doorHardwareExterior",
-                "modifications": {}
-            },
-            {
-                "asset": "doorsExterior1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "doorGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "doorsExterior2",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "doorFront",
-                "modifications": {}
-            },
-            {
-                "asset": "trimInterior1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "trimInterior",
-                "modifications": {}
-            },
-            {
-                "asset": "lightsInterior1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "lightPod",
-                "modifications": {}
-            },
-            {
-                "asset": "wallInterior1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "wallInterior",
-                "modifications": {}
-            },
-            {
-                "asset": "backsplash1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "wallInterior",
-                "modifications": {}
-            },
-            {
-                "asset": "cabinets1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "cabinetGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "counters1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "counterGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "railingInterior1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "railingInterior",
-                "modifications": {}
-            },
-            {
-                "asset": "ceilings1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "ceilingGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "floorInterior1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "floorInterior",
-                "modifications": {}
-            },
-            {
-                "asset": "floorInterior2",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "floorInterior",
-                "modifications": {}
-            },
-            {
-                "asset": "base1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "baseGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "siding1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "sidingGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "sidingAccent1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "sidingGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "porch1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "porchGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "trim1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "trimGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "soffits1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "soffitGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "roof1",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "roofingGeneric",
-                "modifications": {}
-            },
-            {
-                "asset": "porch2",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "porchConcrete",
-                "modifications": {}
-            },
-            {
-                "asset": "roof2",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "roofingFlat",
-                "modifications": {}
-            },
-            {
-                "asset": "sidingAccent2",
-                "embedded_asset": null,
-                "structure": "mainHouse",
-                "bc_asset": "sidingGeneric",
-                "modifications": {}
             }
         ],
         "building_components": [
@@ -908,7 +582,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -919,7 +593,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -930,7 +604,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -941,7 +615,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -952,7 +626,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -963,7 +637,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -974,7 +648,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -985,7 +659,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -996,7 +670,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -1007,7 +681,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -1018,7 +692,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -1029,7 +703,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        1
+                        0
                     ]
                 }
             },
@@ -1040,7 +714,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        0
+                        1
                     ]
                 }
             },
@@ -1051,7 +725,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        0
+                        1
                     ]
                 }
             },
@@ -1062,7 +736,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        0
+                        1
                     ]
                 }
             },
@@ -1073,7 +747,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        0
+                        1
                     ]
                 }
             },
@@ -1084,7 +758,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        0
+                        1
                     ]
                 }
             },
@@ -1117,8 +791,7 @@
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        2,
-                        0
+                        3
                     ]
                 }
             },
@@ -1130,55 +803,67 @@
                 "layout_expression": {
                     "AND": [
                         2,
-                        0
+                        1
                     ]
                 }
             },
             {
-                "asset": "porchGeneric",
+                "asset": "sidingGeneric",
                 "embedded_asset": null,
                 "modification_group": 20,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         2,
-                        0
+                        1
                     ]
                 }
             },
             {
-                "asset": "trimGeneric",
+                "asset": "porchGeneric",
                 "embedded_asset": null,
                 "modification_group": 21,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         2,
-                        0
+                        1
                     ]
                 }
             },
             {
-                "asset": "soffitGeneric",
+                "asset": "trimGeneric",
                 "embedded_asset": null,
                 "modification_group": 22,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         2,
-                        0
+                        1
                     ]
                 }
             },
             {
-                "asset": "roofingGeneric",
+                "asset": "soffitGeneric",
                 "embedded_asset": null,
                 "modification_group": 23,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         2,
-                        0
+                        1
+                    ]
+                }
+            },
+            {
+                "asset": "roofingGeneric",
+                "embedded_asset": null,
+                "modification_group": 24,
+                "quantity": 0.0,
+                "layout_expression": {
+                    "AND": [
+                        2,
+                        1
                     ]
                 }
             },
@@ -1190,18 +875,6 @@
                 "layout_expression": {
                     "AND": [
                         2,
-                        0
-                    ]
-                }
-            },
-            {
-                "asset": "sidingGeneric",
-                "embedded_asset": null,
-                "modification_group": 18,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        2,
                         1
                     ]
                 }
@@ -1214,134 +887,86 @@
                 "layout_expression": {
                     "AND": [
                         2,
-                        1
+                        0
                     ]
                 }
             },
             {
-                "asset": "porchGeneric",
+                "asset": "sidingGeneric",
                 "embedded_asset": null,
                 "modification_group": 20,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         2,
-                        1
+                        0
                     ]
                 }
             },
             {
-                "asset": "trimGeneric",
+                "asset": "porchGeneric",
                 "embedded_asset": null,
                 "modification_group": 21,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         2,
-                        1
+                        0
                     ]
                 }
             },
             {
-                "asset": "soffitGeneric",
+                "asset": "trimGeneric",
                 "embedded_asset": null,
                 "modification_group": 22,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         2,
-                        1
+                        0
                     ]
                 }
             },
             {
-                "asset": "roofingGeneric",
+                "asset": "soffitGeneric",
                 "embedded_asset": null,
                 "modification_group": 23,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         2,
-                        1
+                        0
+                    ]
+                }
+            },
+            {
+                "asset": "roofingGeneric",
+                "embedded_asset": null,
+                "modification_group": 24,
+                "quantity": 0.0,
+                "layout_expression": {
+                    "AND": [
+                        2,
+                        0
                     ]
                 }
             },
             {
                 "asset": "sidingGeneric",
                 "embedded_asset": null,
-                "modification_group": 18,
+                "modification_group": 19,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         3,
-                        0
+                        1
                     ]
                 }
             },
             {
                 "asset": "porchGeneric",
                 "embedded_asset": null,
-                "modification_group": 20,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        3,
-                        0
-                    ]
-                }
-            },
-            {
-                "asset": "porchConcrete",
-                "embedded_asset": null,
-                "modification_group": 24,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        3,
-                        0
-                    ]
-                }
-            },
-            {
-                "asset": "trimGeneric",
-                "embedded_asset": null,
                 "modification_group": 21,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        3,
-                        0
-                    ]
-                }
-            },
-            {
-                "asset": "soffitGeneric",
-                "embedded_asset": null,
-                "modification_group": 22,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        3,
-                        0
-                    ]
-                }
-            },
-            {
-                "asset": "roofingFlat",
-                "embedded_asset": null,
-                "modification_group": 25,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        3,
-                        0
-                    ]
-                }
-            },
-            {
-                "asset": "sidingGeneric",
-                "embedded_asset": null,
-                "modification_group": 18,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
@@ -1351,712 +976,122 @@
                 }
             },
             {
-                "asset": "sidingGeneric",
+                "asset": "porchConcrete",
+                "embedded_asset": null,
+                "modification_group": 25,
+                "quantity": 0.0,
+                "layout_expression": {
+                    "AND": [
+                        3,
+                        1
+                    ]
+                }
+            },
+            {
+                "asset": "trimGeneric",
+                "embedded_asset": null,
+                "modification_group": 22,
+                "quantity": 0.0,
+                "layout_expression": {
+                    "AND": [
+                        3,
+                        1
+                    ]
+                }
+            },
+            {
+                "asset": "soffitGeneric",
+                "embedded_asset": null,
+                "modification_group": 23,
+                "quantity": 0.0,
+                "layout_expression": {
+                    "AND": [
+                        3,
+                        1
+                    ]
+                }
+            },
+            {
+                "asset": "roofingFlat",
                 "embedded_asset": null,
                 "modification_group": 26,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        3
+                        3,
+                        1
+                    ]
+                }
+            },
+            {
+                "asset": "sidingGeneric",
+                "embedded_asset": null,
+                "modification_group": 19,
+                "quantity": 0.0,
+                "layout_expression": {
+                    "AND": [
+                        3,
+                        0
                     ]
                 }
             },
             {
                 "asset": "porchGeneric",
-                "embedded_asset": null,
-                "modification_group": 20,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        3,
-                        1
-                    ]
-                }
-            },
-            {
-                "asset": "porchConcrete",
-                "embedded_asset": null,
-                "modification_group": 24,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        3,
-                        1
-                    ]
-                }
-            },
-            {
-                "asset": "trimGeneric",
                 "embedded_asset": null,
                 "modification_group": 21,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         3,
-                        1
+                        0
                     ]
                 }
             },
             {
-                "asset": "soffitGeneric",
-                "embedded_asset": null,
-                "modification_group": 22,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        3,
-                        1
-                    ]
-                }
-            },
-            {
-                "asset": "roofingFlat",
+                "asset": "porchConcrete",
                 "embedded_asset": null,
                 "modification_group": 25,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
                         3,
-                        1
-                    ]
-                }
-            },
-            {
-                "asset": "placeholderLotGeneric",
-                "embedded_asset": null,
-                "modification_group": 0,
-                "quantity": null,
-                "layout_expression": null
-            },
-            {
-                "asset": "windowGeneric",
-                "embedded_asset": null,
-                "modification_group": 28,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "doorInteriorGeneric",
-                "embedded_asset": null,
-                "modification_group": 29,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "doorHardwareInterior",
-                "embedded_asset": null,
-                "modification_group": 30,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "doorHardwareExterior",
-                "embedded_asset": null,
-                "modification_group": 31,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "doorGeneric",
-                "embedded_asset": null,
-                "modification_group": 32,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "doorFront",
-                "embedded_asset": null,
-                "modification_group": 33,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "trimInterior",
-                "embedded_asset": null,
-                "modification_group": 34,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "lightPod",
-                "embedded_asset": null,
-                "modification_group": 35,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "wallInterior",
-                "embedded_asset": null,
-                "modification_group": 36,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "wallInterior",
-                "embedded_asset": null,
-                "modification_group": 37,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "cabinetGeneric",
-                "embedded_asset": null,
-                "modification_group": 38,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "counterGeneric",
-                "embedded_asset": null,
-                "modification_group": 39,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "railingInterior",
-                "embedded_asset": null,
-                "modification_group": 40,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "ceilingGeneric",
-                "embedded_asset": null,
-                "modification_group": 41,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "floorInterior",
-                "embedded_asset": null,
-                "modification_group": 42,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "floorInterior",
-                "embedded_asset": null,
-                "modification_group": 43,
-                "quantity": 0.0,
-                "layout_expression": null
-            },
-            {
-                "asset": "windowGeneric",
-                "embedded_asset": null,
-                "modification_group": 28,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "doorInteriorGeneric",
-                "embedded_asset": null,
-                "modification_group": 29,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "doorHardwareInterior",
-                "embedded_asset": null,
-                "modification_group": 30,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "doorHardwareExterior",
-                "embedded_asset": null,
-                "modification_group": 31,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "doorGeneric",
-                "embedded_asset": null,
-                "modification_group": 32,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "trimInterior",
-                "embedded_asset": null,
-                "modification_group": 34,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "lightPod",
-                "embedded_asset": null,
-                "modification_group": 35,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "wallInterior",
-                "embedded_asset": null,
-                "modification_group": 36,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "railingInterior",
-                "embedded_asset": null,
-                "modification_group": 40,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "ceilingGeneric",
-                "embedded_asset": null,
-                "modification_group": 41,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "floorInterior",
-                "embedded_asset": null,
-                "modification_group": 42,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "floorInterior",
-                "embedded_asset": null,
-                "modification_group": 43,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "lightPod",
-                "embedded_asset": null,
-                "modification_group": 35,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "wallInterior",
-                "embedded_asset": null,
-                "modification_group": 36,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "railingInterior",
-                "embedded_asset": null,
-                "modification_group": 40,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "ceilingGeneric",
-                "embedded_asset": null,
-                "modification_group": 41,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "floorInterior",
-                "embedded_asset": null,
-                "modification_group": 42,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "baseGeneric",
-                "embedded_asset": null,
-                "modification_group": 44,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6
-                    ]
-                }
-            },
-            {
-                "asset": "baseGeneric",
-                "embedded_asset": null,
-                "modification_group": 44,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7
-                    ]
-                }
-            },
-            {
-                "asset": "sidingGeneric",
-                "embedded_asset": null,
-                "modification_group": 45,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "sidingGeneric",
-                "embedded_asset": null,
-                "modification_group": 46,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "porchGeneric",
-                "embedded_asset": null,
-                "modification_group": 47,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        4
+                        0
                     ]
                 }
             },
             {
                 "asset": "trimGeneric",
                 "embedded_asset": null,
-                "modification_group": 48,
+                "modification_group": 22,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        6,
-                        4
+                        3,
+                        0
                     ]
                 }
             },
             {
                 "asset": "soffitGeneric",
                 "embedded_asset": null,
-                "modification_group": 49,
+                "modification_group": 23,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        6,
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "roofingGeneric",
-                "embedded_asset": null,
-                "modification_group": 50,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "baseGeneric",
-                "embedded_asset": null,
-                "modification_group": 44,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "sidingGeneric",
-                "embedded_asset": null,
-                "modification_group": 45,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "sidingGeneric",
-                "embedded_asset": null,
-                "modification_group": 46,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "porchGeneric",
-                "embedded_asset": null,
-                "modification_group": 47,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "trimGeneric",
-                "embedded_asset": null,
-                "modification_group": 48,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "soffitGeneric",
-                "embedded_asset": null,
-                "modification_group": 49,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "roofingGeneric",
-                "embedded_asset": null,
-                "modification_group": 50,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        6,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "sidingGeneric",
-                "embedded_asset": null,
-                "modification_group": 45,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "porchGeneric",
-                "embedded_asset": null,
-                "modification_group": 47,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "porchConcrete",
-                "embedded_asset": null,
-                "modification_group": 51,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "trimGeneric",
-                "embedded_asset": null,
-                "modification_group": 48,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "soffitGeneric",
-                "embedded_asset": null,
-                "modification_group": 49,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        4
+                        3,
+                        0
                     ]
                 }
             },
             {
                 "asset": "roofingFlat",
                 "embedded_asset": null,
-                "modification_group": 52,
+                "modification_group": 26,
                 "quantity": 0.0,
                 "layout_expression": {
                     "AND": [
-                        7,
-                        4
-                    ]
-                }
-            },
-            {
-                "asset": "sidingGeneric",
-                "embedded_asset": null,
-                "modification_group": 45,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "sidingGeneric",
-                "embedded_asset": null,
-                "modification_group": 53,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7
-                    ]
-                }
-            },
-            {
-                "asset": "porchGeneric",
-                "embedded_asset": null,
-                "modification_group": 47,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "porchConcrete",
-                "embedded_asset": null,
-                "modification_group": 51,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "trimGeneric",
-                "embedded_asset": null,
-                "modification_group": 48,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "soffitGeneric",
-                "embedded_asset": null,
-                "modification_group": 49,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        5
-                    ]
-                }
-            },
-            {
-                "asset": "roofingFlat",
-                "embedded_asset": null,
-                "modification_group": 52,
-                "quantity": 0.0,
-                "layout_expression": {
-                    "AND": [
-                        7,
-                        5
+                        3,
+                        0
                     ]
                 }
             }
@@ -2962,14 +1997,6 @@
                 "mtl": "0103-worldlyGray"
             },
             {
-                "building_component": 0,
-                "variant": "abstract",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "0104",
-                "mtl": "0104-white"
-            },
-            {
                 "building_component": 1,
                 "variant": "minimal",
                 "theme": "dark",
@@ -3371,47 +2398,55 @@
             },
             {
                 "building_component": 36,
-                "variant": "lap",
-                "theme": "snowbound",
+                "variant": "lapFiberCement",
+                "theme": "teak",
                 "region": "exterior",
                 "obj": "l_0050",
-                "mtl": "l_0050-snowbound"
+                "mtl": "l_0050-teak"
             },
             {
                 "building_component": 36,
-                "variant": "lap",
-                "theme": "waterloo",
+                "variant": "lapFiberCement",
+                "theme": "mountain_ash",
                 "region": "exterior",
                 "obj": "l_0050",
-                "mtl": "l_0050-waterloo"
+                "mtl": "l_0050-mountain_ash"
             },
             {
                 "building_component": 36,
-                "variant": "lap",
-                "theme": "dark",
+                "variant": "lapFiberCement",
+                "theme": "hill_country",
                 "region": "exterior",
                 "obj": "l_0050",
-                "mtl": "l_0050-dark"
+                "mtl": "l_0050-hill_country"
+            },
+            {
+                "building_component": 36,
+                "variant": "lapFiberCement",
+                "theme": "teak",
+                "region": "exterior",
+                "obj": "l_0051",
+                "mtl": "l_0051-teak"
+            },
+            {
+                "building_component": 36,
+                "variant": "lapFiberCement",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0051",
+                "mtl": "l_0051-mountain_ash"
+            },
+            {
+                "building_component": 36,
+                "variant": "lapFiberCement",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0051",
+                "mtl": "l_0051-hill_country"
             },
             {
                 "building_component": 37,
                 "variant": "lap",
-                "theme": "snowbound",
-                "region": "exterior",
-                "obj": "l_0051",
-                "mtl": "l_0051-snowbound"
-            },
-            {
-                "building_component": 37,
-                "variant": "lap",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "l_0051",
-                "mtl": "l_0051-waterloo"
-            },
-            {
-                "building_component": 37,
-                "variant": "board",
                 "theme": "snowbound",
                 "region": "exterior",
                 "obj": "l_0052",
@@ -3419,91 +2454,99 @@
             },
             {
                 "building_component": 37,
-                "variant": "board",
+                "variant": "lap",
                 "theme": "waterloo",
                 "region": "exterior",
                 "obj": "l_0052",
                 "mtl": "l_0052-waterloo"
             },
             {
-                "building_component": 38,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0053",
-                "mtl": "l_0053-mountain_ash"
-            },
-            {
-                "building_component": 38,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0053",
-                "mtl": "l_0053-hill_country"
-            },
-            {
-                "building_component": 38,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0054",
-                "mtl": "l_0054-mountain_ash"
-            },
-            {
-                "building_component": 38,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0054",
-                "mtl": "l_0054-hill_country"
-            },
-            {
-                "building_component": 38,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0055",
-                "mtl": "l_0055-mountain_ash"
-            },
-            {
-                "building_component": 38,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0055",
-                "mtl": "l_0055-hill_country"
-            },
-            {
-                "building_component": 39,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0056",
-                "mtl": "l_0056-white"
-            },
-            {
-                "building_component": 39,
-                "variant": "standard",
+                "building_component": 37,
+                "variant": "lap",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0056",
-                "mtl": "l_0056-dark"
+                "obj": "l_0052",
+                "mtl": "l_0052-dark"
             },
             {
-                "building_component": 40,
-                "variant": "standard",
-                "theme": "white",
+                "building_component": 38,
+                "variant": "board",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "l_0053",
+                "mtl": "l_0053-snowbound"
+            },
+            {
+                "building_component": 38,
+                "variant": "board",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "l_0053",
+                "mtl": "l_0053-waterloo"
+            },
+            {
+                "building_component": 38,
+                "variant": "lap",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "l_0055",
+                "mtl": "l_0055-snowbound"
+            },
+            {
+                "building_component": 38,
+                "variant": "lap",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "l_0055",
+                "mtl": "l_0055-waterloo"
+            },
+            {
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0056",
+                "mtl": "l_0056-mountain_ash"
+            },
+            {
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0056",
+                "mtl": "l_0056-hill_country"
+            },
+            {
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "mountain_ash",
                 "region": "exterior",
                 "obj": "l_0057",
-                "mtl": "l_0057-white"
+                "mtl": "l_0057-mountain_ash"
             },
             {
-                "building_component": 40,
-                "variant": "standard",
-                "theme": "white",
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0057",
+                "mtl": "l_0057-hill_country"
+            },
+            {
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "mountain_ash",
                 "region": "exterior",
                 "obj": "l_0058",
-                "mtl": "l_0058-white"
+                "mtl": "l_0058-mountain_ash"
+            },
+            {
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0058",
+                "mtl": "l_0058-hill_country"
             },
             {
                 "building_component": 40,
@@ -3516,6 +2559,14 @@
             {
                 "building_component": 40,
                 "variant": "standard",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0059",
+                "mtl": "l_0059-dark"
+            },
+            {
+                "building_component": 41,
+                "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
                 "obj": "l_0060",
@@ -3523,207 +2574,183 @@
             },
             {
                 "building_component": 41,
-                "variant": "metalSeam",
-                "theme": "light",
+                "variant": "standard",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0061",
-                "mtl": "l_0061-light"
+                "mtl": "l_0061-white"
             },
             {
                 "building_component": 41,
-                "variant": "metalSeam",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "l_0061",
-                "mtl": "l_0061-dark"
-            },
-            {
-                "building_component": 41,
-                "variant": "shingles",
-                "theme": "light",
+                "variant": "standard",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0062",
-                "mtl": "l_0062-light"
+                "mtl": "l_0062-white"
             },
             {
                 "building_component": 41,
-                "variant": "shingles",
-                "theme": "dark",
+                "variant": "standard",
+                "theme": "white",
                 "region": "exterior",
-                "obj": "l_0062",
-                "mtl": "l_0062-dark"
+                "obj": "l_0063",
+                "mtl": "l_0063-white"
             },
             {
                 "building_component": 42,
-                "variant": "concrete",
-                "theme": "unfinished",
-                "region": "exterior",
-                "obj": "l_0063",
-                "mtl": "l_0063-unfinished"
-            },
-            {
-                "building_component": 43,
-                "variant": "lap",
-                "theme": "snowbound",
+                "variant": "shingles",
+                "theme": "light",
                 "region": "exterior",
                 "obj": "l_0064",
-                "mtl": "l_0064-snowbound"
+                "mtl": "l_0064-light"
             },
             {
-                "building_component": 43,
-                "variant": "lap",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "l_0064",
-                "mtl": "l_0064-waterloo"
-            },
-            {
-                "building_component": 43,
-                "variant": "lap",
+                "building_component": 42,
+                "variant": "shingles",
                 "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0064",
                 "mtl": "l_0064-dark"
             },
             {
-                "building_component": 44,
-                "variant": "lap",
-                "theme": "snowbound",
-                "region": "exterior",
-                "obj": "l_0065",
-                "mtl": "l_0065-snowbound"
-            },
-            {
-                "building_component": 44,
-                "variant": "lap",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "l_0065",
-                "mtl": "l_0065-waterloo"
-            },
-            {
-                "building_component": 44,
-                "variant": "board",
-                "theme": "snowbound",
-                "region": "exterior",
-                "obj": "l_0066",
-                "mtl": "l_0066-snowbound"
-            },
-            {
-                "building_component": 44,
-                "variant": "board",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "l_0066",
-                "mtl": "l_0066-waterloo"
-            },
-            {
-                "building_component": 45,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0067",
-                "mtl": "l_0067-mountain_ash"
-            },
-            {
-                "building_component": 45,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0067",
-                "mtl": "l_0067-hill_country"
-            },
-            {
-                "building_component": 45,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0068",
-                "mtl": "l_0068-mountain_ash"
-            },
-            {
-                "building_component": 45,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0068",
-                "mtl": "l_0068-hill_country"
-            },
-            {
-                "building_component": 45,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0069",
-                "mtl": "l_0069-mountain_ash"
-            },
-            {
-                "building_component": 45,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0069",
-                "mtl": "l_0069-hill_country"
-            },
-            {
-                "building_component": 46,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0070",
-                "mtl": "l_0070-white"
-            },
-            {
-                "building_component": 46,
-                "variant": "standard",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "l_0070",
-                "mtl": "l_0070-dark"
-            },
-            {
-                "building_component": 47,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0071",
-                "mtl": "l_0071-white"
-            },
-            {
-                "building_component": 47,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0072",
-                "mtl": "l_0072-white"
-            },
-            {
-                "building_component": 47,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0073",
-                "mtl": "l_0073-white"
-            },
-            {
-                "building_component": 47,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0074",
-                "mtl": "l_0074-white"
-            },
-            {
-                "building_component": 48,
-                "variant": "shingles",
+                "building_component": 42,
+                "variant": "metalSeam",
                 "theme": "light",
                 "region": "exterior",
-                "obj": "l_0075",
-                "mtl": "l_0075-light"
+                "obj": "l_0065",
+                "mtl": "l_0065-light"
             },
             {
-                "building_component": 48,
-                "variant": "shingles",
+                "building_component": 42,
+                "variant": "metalSeam",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0065",
+                "mtl": "l_0065-dark"
+            },
+            {
+                "building_component": 43,
+                "variant": "concrete",
+                "theme": "unfinished",
+                "region": "exterior",
+                "obj": "l_0067",
+                "mtl": "l_0067-unfinished"
+            },
+            {
+                "building_component": 44,
+                "variant": "lap",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "l_0068",
+                "mtl": "l_0068-snowbound"
+            },
+            {
+                "building_component": 44,
+                "variant": "lap",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "l_0068",
+                "mtl": "l_0068-waterloo"
+            },
+            {
+                "building_component": 44,
+                "variant": "lap",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0068",
+                "mtl": "l_0068-dark"
+            },
+            {
+                "building_component": 45,
+                "variant": "board",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "l_0070",
+                "mtl": "l_0070-snowbound"
+            },
+            {
+                "building_component": 45,
+                "variant": "board",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "l_0070",
+                "mtl": "l_0070-waterloo"
+            },
+            {
+                "building_component": 45,
+                "variant": "lap",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "l_0071",
+                "mtl": "l_0071-snowbound"
+            },
+            {
+                "building_component": 45,
+                "variant": "lap",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "l_0071",
+                "mtl": "l_0071-waterloo"
+            },
+            {
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0072",
+                "mtl": "l_0072-mountain_ash"
+            },
+            {
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0072",
+                "mtl": "l_0072-hill_country"
+            },
+            {
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0073",
+                "mtl": "l_0073-mountain_ash"
+            },
+            {
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0073",
+                "mtl": "l_0073-hill_country"
+            },
+            {
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0074",
+                "mtl": "l_0074-mountain_ash"
+            },
+            {
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0074",
+                "mtl": "l_0074-hill_country"
+            },
+            {
+                "building_component": 47,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0075",
+                "mtl": "l_0075-white"
+            },
+            {
+                "building_component": 47,
+                "variant": "standard",
                 "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0075",
@@ -3731,291 +2758,291 @@
             },
             {
                 "building_component": 48,
-                "variant": "metalSeam",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "l_0076",
-                "mtl": "l_0076-light"
-            },
-            {
-                "building_component": 48,
-                "variant": "metalSeam",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "l_0076",
-                "mtl": "l_0076-dark"
-            },
-            {
-                "building_component": 49,
-                "variant": "lap",
-                "theme": "snowbound",
-                "region": "exterior",
-                "obj": "l_0077",
-                "mtl": "l_0077-snowbound"
-            },
-            {
-                "building_component": 49,
-                "variant": "lap",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "l_0077",
-                "mtl": "l_0077-waterloo"
-            },
-            {
-                "building_component": 49,
-                "variant": "lap",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "l_0077",
-                "mtl": "l_0077-dark"
-            },
-            {
-                "building_component": 50,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0078",
-                "mtl": "l_0078-mountain_ash"
-            },
-            {
-                "building_component": 50,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0078",
-                "mtl": "l_0078-hill_country"
-            },
-            {
-                "building_component": 51,
-                "variant": "concrete",
-                "theme": "unfinished",
-                "region": "exterior",
-                "obj": "l_0079",
-                "mtl": "l_0079-unfinished"
-            },
-            {
-                "building_component": 51,
-                "variant": "concrete",
-                "theme": "unfinished",
-                "region": "exterior",
-                "obj": "l_0080",
-                "mtl": "l_0080-unfinished"
-            },
-            {
-                "building_component": 52,
                 "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
-                "obj": "l_0081",
-                "mtl": "l_0081-white"
+                "obj": "l_0076",
+                "mtl": "l_0076-white"
             },
             {
-                "building_component": 52,
+                "building_component": 48,
                 "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0077",
+                "mtl": "l_0077-white"
+            },
+            {
+                "building_component": 48,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0078",
+                "mtl": "l_0078-white"
+            },
+            {
+                "building_component": 48,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0079",
+                "mtl": "l_0079-white"
+            },
+            {
+                "building_component": 49,
+                "variant": "shingles",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "l_0080",
+                "mtl": "l_0080-light"
+            },
+            {
+                "building_component": 49,
+                "variant": "shingles",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0080",
+                "mtl": "l_0080-dark"
+            },
+            {
+                "building_component": 49,
+                "variant": "metalSeam",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "l_0081",
+                "mtl": "l_0081-light"
+            },
+            {
+                "building_component": 49,
+                "variant": "metalSeam",
                 "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0081",
                 "mtl": "l_0081-dark"
             },
             {
-                "building_component": 53,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0082",
-                "mtl": "l_0082-white"
-            },
-            {
-                "building_component": 53,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0083",
-                "mtl": "l_0083-white"
-            },
-            {
-                "building_component": 54,
-                "variant": "rubber",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "l_0084",
-                "mtl": "l_0084-light"
-            },
-            {
-                "building_component": 54,
-                "variant": "rubber",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "l_0085",
-                "mtl": "l_0085-light"
-            },
-            {
-                "building_component": 55,
+                "building_component": 50,
                 "variant": "lap",
                 "theme": "snowbound",
                 "region": "exterior",
-                "obj": "l_0086",
-                "mtl": "l_0086-snowbound"
+                "obj": "l_0083",
+                "mtl": "l_0083-snowbound"
             },
             {
-                "building_component": 55,
+                "building_component": 50,
                 "variant": "lap",
                 "theme": "waterloo",
                 "region": "exterior",
-                "obj": "l_0086",
-                "mtl": "l_0086-waterloo"
+                "obj": "l_0083",
+                "mtl": "l_0083-waterloo"
             },
             {
-                "building_component": 55,
+                "building_component": 50,
                 "variant": "lap",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0086",
-                "mtl": "l_0086-dark"
+                "obj": "l_0083",
+                "mtl": "l_0083-dark"
             },
             {
-                "building_component": 56,
-                "variant": "lapFiberCement",
-                "theme": "teak",
-                "region": "exterior",
-                "obj": "l_0087",
-                "mtl": "l_0087-teak"
-            },
-            {
-                "building_component": 56,
-                "variant": "lapFiberCement",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0087",
-                "mtl": "l_0087-mountain_ash"
-            },
-            {
-                "building_component": 56,
-                "variant": "lapFiberCement",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0087",
-                "mtl": "l_0087-hill_country"
-            },
-            {
-                "building_component": 56,
-                "variant": "lapFiberCement",
-                "theme": "teak",
-                "region": "exterior",
-                "obj": "l_0088",
-                "mtl": "l_0088-teak"
-            },
-            {
-                "building_component": 56,
-                "variant": "lapFiberCement",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0088",
-                "mtl": "l_0088-mountain_ash"
-            },
-            {
-                "building_component": 56,
-                "variant": "lapFiberCement",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0088",
-                "mtl": "l_0088-hill_country"
-            },
-            {
-                "building_component": 57,
+                "building_component": 51,
                 "variant": "wood",
                 "theme": "mountain_ash",
                 "region": "exterior",
-                "obj": "l_0089",
-                "mtl": "l_0089-mountain_ash"
+                "obj": "l_0084",
+                "mtl": "l_0084-mountain_ash"
             },
             {
-                "building_component": 57,
+                "building_component": 51,
                 "variant": "wood",
                 "theme": "hill_country",
                 "region": "exterior",
-                "obj": "l_0089",
-                "mtl": "l_0089-hill_country"
+                "obj": "l_0084",
+                "mtl": "l_0084-hill_country"
             },
             {
-                "building_component": 57,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0090",
-                "mtl": "l_0090-mountain_ash"
-            },
-            {
-                "building_component": 57,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0090",
-                "mtl": "l_0090-hill_country"
-            },
-            {
-                "building_component": 58,
+                "building_component": 52,
                 "variant": "concrete",
                 "theme": "unfinished",
+                "region": "exterior",
+                "obj": "l_0085",
+                "mtl": "l_0085-unfinished"
+            },
+            {
+                "building_component": 52,
+                "variant": "concrete",
+                "theme": "unfinished",
+                "region": "exterior",
+                "obj": "l_0086",
+                "mtl": "l_0086-unfinished"
+            },
+            {
+                "building_component": 53,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0087",
+                "mtl": "l_0087-white"
+            },
+            {
+                "building_component": 53,
+                "variant": "standard",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0087",
+                "mtl": "l_0087-dark"
+            },
+            {
+                "building_component": 54,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0088",
+                "mtl": "l_0088-white"
+            },
+            {
+                "building_component": 54,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0089",
+                "mtl": "l_0089-white"
+            },
+            {
+                "building_component": 55,
+                "variant": "rubber",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "l_0090",
+                "mtl": "l_0090-light"
+            },
+            {
+                "building_component": 55,
+                "variant": "rubber",
+                "theme": "light",
                 "region": "exterior",
                 "obj": "l_0091",
-                "mtl": "l_0091-unfinished"
+                "mtl": "l_0091-light"
+            },
+            {
+                "building_component": 56,
+                "variant": "lap",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "l_0092",
+                "mtl": "l_0092-snowbound"
+            },
+            {
+                "building_component": 56,
+                "variant": "lap",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "l_0092",
+                "mtl": "l_0092-waterloo"
+            },
+            {
+                "building_component": 56,
+                "variant": "lap",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0092",
+                "mtl": "l_0092-dark"
+            },
+            {
+                "building_component": 57,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0093",
+                "mtl": "l_0093-mountain_ash"
+            },
+            {
+                "building_component": 57,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0093",
+                "mtl": "l_0093-hill_country"
+            },
+            {
+                "building_component": 57,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0094",
+                "mtl": "l_0094-mountain_ash"
+            },
+            {
+                "building_component": 57,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0094",
+                "mtl": "l_0094-hill_country"
             },
             {
                 "building_component": 58,
                 "variant": "concrete",
                 "theme": "unfinished",
                 "region": "exterior",
-                "obj": "l_0092",
-                "mtl": "l_0092-unfinished"
+                "obj": "l_0095",
+                "mtl": "l_0095-unfinished"
+            },
+            {
+                "building_component": 58,
+                "variant": "concrete",
+                "theme": "unfinished",
+                "region": "exterior",
+                "obj": "l_0096",
+                "mtl": "l_0096-unfinished"
             },
             {
                 "building_component": 59,
                 "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
-                "obj": "l_0093",
-                "mtl": "l_0093-white"
+                "obj": "l_0097",
+                "mtl": "l_0097-white"
             },
             {
                 "building_component": 59,
                 "variant": "standard",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0093",
-                "mtl": "l_0093-dark"
-            },
-            {
-                "building_component": 60,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0094",
-                "mtl": "l_0094-white"
-            },
-            {
-                "building_component": 60,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0095",
-                "mtl": "l_0095-white"
-            },
-            {
-                "building_component": 61,
-                "variant": "rubber",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "l_0096",
-                "mtl": "l_0096-light"
-            },
-            {
-                "building_component": 61,
-                "variant": "rubber",
-                "theme": "light",
-                "region": "exterior",
                 "obj": "l_0097",
-                "mtl": "l_0097-light"
+                "mtl": "l_0097-dark"
+            },
+            {
+                "building_component": 60,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0098",
+                "mtl": "l_0098-white"
+            },
+            {
+                "building_component": 60,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0099",
+                "mtl": "l_0099-white"
+            },
+            {
+                "building_component": 61,
+                "variant": "rubber",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "l_0100",
+                "mtl": "l_0100-light"
+            },
+            {
+                "building_component": 61,
+                "variant": "rubber",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "l_0101",
+                "mtl": "l_0101-light"
             }
         ]
     },
@@ -4031,54 +3058,37 @@
             }
         },
         "lights": {
-            "ambientQA": {
+            "sunDefault": {
+                "name": "Sun Light",
+                "description": "Light used for rendering outdoor environments.",
+                "type": "sun"
+            },
+            "ambientBaked": {
                 "name": "Ambient Light",
-                "description": "Light used for QA environment.",
+                "description": "Light used for Baked environment.",
                 "type": "ambient",
                 "color": [
                     1,
                     1,
                     1
                 ],
-                "intensity": 0.6
-            },
-            "directionalQA0": {
-                "name": "Directional Light",
-                "description": "Light used for QA environment.",
-                "type": "directional",
-                "color": [
-                    1,
-                    1,
-                    1
-                ],
-                "intensity": 0.3
-            },
-            "directionalQA1": {
-                "name": "Directional Light",
-                "description": "Light used for QA environment.",
-                "type": "directional",
-                "color": [
-                    1,
-                    1,
-                    1
-                ],
-                "intensity": 0.5
+                "intensity": 1.0
             }
         },
         "markers": {
-            "orbAdd": {
-                "name": "Addition",
-                "description": "This is an option to add something.",
-                "sprite_type": "abstract",
-                "scale": 20,
-                "icon": "add.svg"
-            },
             "orbRemove": {
                 "name": "Removal",
                 "description": "This is an option to remove something.",
                 "sprite_type": "abstract",
                 "scale": 20,
                 "icon": "remove.svg"
+            },
+            "orbAdd": {
+                "name": "Addition",
+                "description": "This is an option to add something.",
+                "sprite_type": "abstract",
+                "scale": 20,
+                "icon": "add.svg"
             }
         },
         "envs": {},
@@ -4093,13 +3103,13 @@
             }
         },
         "levels": {
-            "levelGround": {
-                "name": "Ground Level",
-                "description": "This is the ground level of the house."
-            },
             "levelGeneric": {
                 "name": "Level",
                 "description": "This is a level."
+            },
+            "levelGround": {
+                "name": "Ground Level",
+                "description": "This is the ground level of the house."
             }
         },
         "spaces": {},
@@ -4238,6 +3248,10 @@
                 "name": "Foundation Base",
                 "description": "Use this to modify the foundation base finish."
             },
+            "sidingAccent2": {
+                "name": "Siding Accent 2",
+                "description": "Use this to modify the accent siding."
+            },
             "siding1": {
                 "name": "Siding",
                 "description": "Use this to modify the siding."
@@ -4269,10 +3283,6 @@
             "roof2": {
                 "name": "Roof",
                 "description": "Use this to modify the roof finish."
-            },
-            "sidingAccent2": {
-                "name": "Siding Accent 2",
-                "description": "Use this to modify the accent siding."
             }
         },
         "building_components": {
