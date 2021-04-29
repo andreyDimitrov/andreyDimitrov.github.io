@@ -1478,14 +1478,6 @@
         ],
         "meshes": [
             {
-                "building_component": 0,
-                "variant": "abstract",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "0000",
-                "mtl": "0000-white"
-            },
-            {
                 "building_component": 23,
                 "variant": "standard",
                 "theme": "dark",
@@ -1846,42 +1838,42 @@
                 "mtl": "0103-worldlyGray"
             },
             {
-                "building_component": 1,
-                "variant": "minimal",
-                "theme": "dark",
+                "building_component": 0,
+                "variant": "abstract",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0000",
-                "mtl": "l_0000-dark"
+                "mtl": "l_0000-white"
             },
             {
-                "building_component": 1,
-                "variant": "minimal",
-                "theme": "dark",
+                "building_component": 0,
+                "variant": "abstract",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0001",
-                "mtl": "l_0001-dark"
+                "mtl": "l_0001-white"
             },
             {
-                "building_component": 1,
-                "variant": "minimal",
-                "theme": "dark",
+                "building_component": 0,
+                "variant": "abstract",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0002",
-                "mtl": "l_0002-dark"
+                "mtl": "l_0002-white"
+            },
+            {
+                "building_component": 0,
+                "variant": "abstract",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0003",
+                "mtl": "l_0003-white"
             },
             {
                 "building_component": 1,
                 "variant": "minimal",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0003",
-                "mtl": "l_0003-dark"
-            },
-            {
-                "building_component": 1,
-                "variant": "minimal",
-                "theme": "dark",
-                "region": "interior",
                 "obj": "l_0004",
                 "mtl": "l_0004-dark"
             },
@@ -1889,7 +1881,7 @@
                 "building_component": 1,
                 "variant": "minimal",
                 "theme": "dark",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0005",
                 "mtl": "l_0005-dark"
             },
@@ -1897,7 +1889,7 @@
                 "building_component": 1,
                 "variant": "minimal",
                 "theme": "dark",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0006",
                 "mtl": "l_0006-dark"
             },
@@ -1905,7 +1897,7 @@
                 "building_component": 1,
                 "variant": "minimal",
                 "theme": "dark",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0007",
                 "mtl": "l_0007-dark"
             },
@@ -1913,7 +1905,7 @@
                 "building_component": 1,
                 "variant": "minimal",
                 "theme": "dark",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0008",
                 "mtl": "l_0008-dark"
             },
@@ -1921,7 +1913,7 @@
                 "building_component": 1,
                 "variant": "minimal",
                 "theme": "dark",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0009",
                 "mtl": "l_0009-dark"
             },
@@ -1929,7 +1921,7 @@
                 "building_component": 1,
                 "variant": "minimal",
                 "theme": "dark",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0010",
                 "mtl": "l_0010-dark"
             },
@@ -1937,47 +1929,47 @@
                 "building_component": 1,
                 "variant": "minimal",
                 "theme": "dark",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0011",
                 "mtl": "l_0011-dark"
             },
             {
-                "building_component": 5,
-                "variant": "glass",
-                "theme": "white",
-                "region": "interior",
-                "obj": "l_0012",
-                "mtl": "l_0012-white"
-            },
-            {
-                "building_component": 5,
-                "variant": "glass",
-                "theme": "white",
-                "region": "interior",
-                "obj": "l_0013",
-                "mtl": "l_0013-white"
-            },
-            {
-                "building_component": 5,
-                "variant": "glass",
-                "theme": "white",
-                "region": "interior",
-                "obj": "l_0014",
-                "mtl": "l_0014-white"
-            },
-            {
-                "building_component": 5,
-                "variant": "glass",
-                "theme": "white",
-                "region": "interior",
-                "obj": "l_0015",
-                "mtl": "l_0015-white"
-            },
-            {
-                "building_component": 5,
-                "variant": "glass",
-                "theme": "white",
+                "building_component": 1,
+                "variant": "minimal",
+                "theme": "dark",
                 "region": "exterior",
+                "obj": "l_0012",
+                "mtl": "l_0012-dark"
+            },
+            {
+                "building_component": 1,
+                "variant": "minimal",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0013",
+                "mtl": "l_0013-dark"
+            },
+            {
+                "building_component": 1,
+                "variant": "minimal",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0014",
+                "mtl": "l_0014-dark"
+            },
+            {
+                "building_component": 1,
+                "variant": "minimal",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0015",
+                "mtl": "l_0015-dark"
+            },
+            {
+                "building_component": 5,
+                "variant": "glass",
+                "theme": "white",
+                "region": "interior",
                 "obj": "l_0016",
                 "mtl": "l_0016-white"
             },
@@ -1985,7 +1977,7 @@
                 "building_component": 5,
                 "variant": "glass",
                 "theme": "white",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0017",
                 "mtl": "l_0017-white"
             },
@@ -1993,7 +1985,7 @@
                 "building_component": 5,
                 "variant": "glass",
                 "theme": "white",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0018",
                 "mtl": "l_0018-white"
             },
@@ -2001,7 +1993,7 @@
                 "building_component": 5,
                 "variant": "glass",
                 "theme": "white",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0019",
                 "mtl": "l_0019-white"
             },
@@ -2038,7 +2030,7 @@
                 "mtl": "l_0023-white"
             },
             {
-                "building_component": 6,
+                "building_component": 5,
                 "variant": "glass",
                 "theme": "white",
                 "region": "exterior",
@@ -2046,7 +2038,7 @@
                 "mtl": "l_0024-white"
             },
             {
-                "building_component": 6,
+                "building_component": 5,
                 "variant": "glass",
                 "theme": "white",
                 "region": "exterior",
@@ -2054,7 +2046,7 @@
                 "mtl": "l_0025-white"
             },
             {
-                "building_component": 6,
+                "building_component": 5,
                 "variant": "glass",
                 "theme": "white",
                 "region": "exterior",
@@ -2062,7 +2054,7 @@
                 "mtl": "l_0026-white"
             },
             {
-                "building_component": 6,
+                "building_component": 5,
                 "variant": "glass",
                 "theme": "white",
                 "region": "exterior",
@@ -2073,7 +2065,7 @@
                 "building_component": 6,
                 "variant": "glass",
                 "theme": "white",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0028",
                 "mtl": "l_0028-white"
             },
@@ -2081,7 +2073,7 @@
                 "building_component": 6,
                 "variant": "glass",
                 "theme": "white",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0029",
                 "mtl": "l_0029-white"
             },
@@ -2089,7 +2081,7 @@
                 "building_component": 6,
                 "variant": "glass",
                 "theme": "white",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0030",
                 "mtl": "l_0030-white"
             },
@@ -2097,7 +2089,7 @@
                 "building_component": 6,
                 "variant": "glass",
                 "theme": "white",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0031",
                 "mtl": "l_0031-white"
             },
@@ -2105,7 +2097,7 @@
                 "building_component": 6,
                 "variant": "glass",
                 "theme": "white",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0032",
                 "mtl": "l_0032-white"
             },
@@ -2113,7 +2105,7 @@
                 "building_component": 6,
                 "variant": "glass",
                 "theme": "white",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0033",
                 "mtl": "l_0033-white"
             },
@@ -2121,7 +2113,7 @@
                 "building_component": 6,
                 "variant": "glass",
                 "theme": "white",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0034",
                 "mtl": "l_0034-white"
             },
@@ -2129,47 +2121,47 @@
                 "building_component": 6,
                 "variant": "glass",
                 "theme": "white",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "l_0035",
                 "mtl": "l_0035-white"
             },
             {
-                "building_component": 17,
-                "variant": "minimal",
-                "theme": "dark",
+                "building_component": 6,
+                "variant": "glass",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0036",
-                "mtl": "l_0036-dark"
+                "mtl": "l_0036-white"
             },
             {
-                "building_component": 17,
-                "variant": "minimal",
-                "theme": "dark",
+                "building_component": 6,
+                "variant": "glass",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0037",
-                "mtl": "l_0037-dark"
+                "mtl": "l_0037-white"
             },
             {
-                "building_component": 17,
-                "variant": "minimal",
-                "theme": "dark",
+                "building_component": 6,
+                "variant": "glass",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0038",
-                "mtl": "l_0038-dark"
+                "mtl": "l_0038-white"
+            },
+            {
+                "building_component": 6,
+                "variant": "glass",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0039",
+                "mtl": "l_0039-white"
             },
             {
                 "building_component": 17,
                 "variant": "minimal",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0039",
-                "mtl": "l_0039-dark"
-            },
-            {
-                "building_component": 17,
-                "variant": "minimal",
-                "theme": "dark",
-                "region": "interior",
                 "obj": "l_0040",
                 "mtl": "l_0040-dark"
             },
@@ -2177,268 +2169,260 @@
                 "building_component": 17,
                 "variant": "minimal",
                 "theme": "dark",
-                "region": "interior",
+                "region": "exterior",
                 "obj": "l_0041",
                 "mtl": "l_0041-dark"
             },
             {
-                "building_component": 21,
-                "variant": "glass",
-                "theme": "white",
+                "building_component": 17,
+                "variant": "minimal",
+                "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0042",
-                "mtl": "l_0042-white"
+                "mtl": "l_0042-dark"
             },
             {
-                "building_component": 21,
-                "variant": "glass",
-                "theme": "white",
+                "building_component": 17,
+                "variant": "minimal",
+                "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0043",
-                "mtl": "l_0043-white"
+                "mtl": "l_0043-dark"
             },
             {
-                "building_component": 21,
-                "variant": "glass",
-                "theme": "white",
-                "region": "exterior",
+                "building_component": 17,
+                "variant": "minimal",
+                "theme": "dark",
+                "region": "interior",
                 "obj": "l_0044",
-                "mtl": "l_0044-white"
+                "mtl": "l_0044-dark"
+            },
+            {
+                "building_component": 17,
+                "variant": "minimal",
+                "theme": "dark",
+                "region": "interior",
+                "obj": "l_0045",
+                "mtl": "l_0045-dark"
             },
             {
                 "building_component": 21,
                 "variant": "glass",
                 "theme": "white",
-                "region": "exterior",
-                "obj": "l_0045",
-                "mtl": "l_0045-white"
-            },
-            {
-                "building_component": 34,
-                "variant": "concrete",
-                "theme": "unfinished",
                 "region": "exterior",
                 "obj": "l_0046",
-                "mtl": "l_0046-unfinished"
+                "mtl": "l_0046-white"
+            },
+            {
+                "building_component": 21,
+                "variant": "glass",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0047",
+                "mtl": "l_0047-white"
+            },
+            {
+                "building_component": 21,
+                "variant": "glass",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0048",
+                "mtl": "l_0048-white"
+            },
+            {
+                "building_component": 21,
+                "variant": "glass",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0049",
+                "mtl": "l_0049-white"
             },
             {
                 "building_component": 34,
                 "variant": "concrete",
                 "theme": "unfinished",
                 "region": "exterior",
-                "obj": "l_0047",
-                "mtl": "l_0047-unfinished"
+                "obj": "l_0050",
+                "mtl": "l_0050-unfinished"
+            },
+            {
+                "building_component": 34,
+                "variant": "concrete",
+                "theme": "unfinished",
+                "region": "exterior",
+                "obj": "l_0051",
+                "mtl": "l_0051-unfinished"
             },
             {
                 "building_component": 35,
                 "variant": "concrete",
                 "theme": "unfinished",
                 "region": "exterior",
-                "obj": "l_0048",
-                "mtl": "l_0048-unfinished"
+                "obj": "l_0052",
+                "mtl": "l_0052-unfinished"
             },
             {
                 "building_component": 35,
                 "variant": "concrete",
                 "theme": "unfinished",
                 "region": "exterior",
-                "obj": "l_0049",
-                "mtl": "l_0049-unfinished"
+                "obj": "l_0053",
+                "mtl": "l_0053-unfinished"
             },
             {
                 "building_component": 36,
                 "variant": "lapFiberCement",
                 "theme": "teak",
                 "region": "exterior",
-                "obj": "l_0050",
-                "mtl": "l_0050-teak"
+                "obj": "l_0054",
+                "mtl": "l_0054-teak"
             },
             {
                 "building_component": 36,
                 "variant": "lapFiberCement",
                 "theme": "mountain_ash",
                 "region": "exterior",
-                "obj": "l_0050",
-                "mtl": "l_0050-mountain_ash"
+                "obj": "l_0054",
+                "mtl": "l_0054-mountain_ash"
             },
             {
                 "building_component": 36,
                 "variant": "lapFiberCement",
                 "theme": "hill_country",
                 "region": "exterior",
-                "obj": "l_0050",
-                "mtl": "l_0050-hill_country"
+                "obj": "l_0054",
+                "mtl": "l_0054-hill_country"
             },
             {
                 "building_component": 36,
                 "variant": "lapFiberCement",
                 "theme": "teak",
                 "region": "exterior",
-                "obj": "l_0051",
-                "mtl": "l_0051-teak"
+                "obj": "l_0055",
+                "mtl": "l_0055-teak"
             },
             {
                 "building_component": 36,
                 "variant": "lapFiberCement",
                 "theme": "mountain_ash",
                 "region": "exterior",
-                "obj": "l_0051",
-                "mtl": "l_0051-mountain_ash"
+                "obj": "l_0055",
+                "mtl": "l_0055-mountain_ash"
             },
             {
                 "building_component": 36,
                 "variant": "lapFiberCement",
                 "theme": "hill_country",
                 "region": "exterior",
-                "obj": "l_0051",
-                "mtl": "l_0051-hill_country"
+                "obj": "l_0055",
+                "mtl": "l_0055-hill_country"
             },
             {
                 "building_component": 37,
                 "variant": "lap",
                 "theme": "snowbound",
                 "region": "exterior",
-                "obj": "l_0052",
-                "mtl": "l_0052-snowbound"
+                "obj": "l_0056",
+                "mtl": "l_0056-snowbound"
             },
             {
                 "building_component": 37,
                 "variant": "lap",
                 "theme": "waterloo",
                 "region": "exterior",
-                "obj": "l_0052",
-                "mtl": "l_0052-waterloo"
+                "obj": "l_0056",
+                "mtl": "l_0056-waterloo"
             },
             {
                 "building_component": 37,
                 "variant": "lap",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0052",
-                "mtl": "l_0052-dark"
+                "obj": "l_0056",
+                "mtl": "l_0056-dark"
             },
             {
                 "building_component": 38,
                 "variant": "board",
                 "theme": "snowbound",
                 "region": "exterior",
-                "obj": "l_0053",
-                "mtl": "l_0053-snowbound"
+                "obj": "l_0057",
+                "mtl": "l_0057-snowbound"
             },
             {
                 "building_component": 38,
                 "variant": "board",
                 "theme": "waterloo",
                 "region": "exterior",
-                "obj": "l_0053",
-                "mtl": "l_0053-waterloo"
+                "obj": "l_0057",
+                "mtl": "l_0057-waterloo"
             },
             {
                 "building_component": 38,
                 "variant": "lap",
                 "theme": "snowbound",
                 "region": "exterior",
-                "obj": "l_0055",
-                "mtl": "l_0055-snowbound"
+                "obj": "l_0059",
+                "mtl": "l_0059-snowbound"
             },
             {
                 "building_component": 38,
                 "variant": "lap",
                 "theme": "waterloo",
                 "region": "exterior",
-                "obj": "l_0055",
-                "mtl": "l_0055-waterloo"
-            },
-            {
-                "building_component": 39,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0056",
-                "mtl": "l_0056-mountain_ash"
-            },
-            {
-                "building_component": 39,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0056",
-                "mtl": "l_0056-hill_country"
-            },
-            {
-                "building_component": 39,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0057",
-                "mtl": "l_0057-mountain_ash"
-            },
-            {
-                "building_component": 39,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0057",
-                "mtl": "l_0057-hill_country"
-            },
-            {
-                "building_component": 39,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0058",
-                "mtl": "l_0058-mountain_ash"
-            },
-            {
-                "building_component": 39,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0058",
-                "mtl": "l_0058-hill_country"
-            },
-            {
-                "building_component": 40,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
                 "obj": "l_0059",
-                "mtl": "l_0059-white"
+                "mtl": "l_0059-waterloo"
             },
             {
-                "building_component": 40,
-                "variant": "standard",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "l_0059",
-                "mtl": "l_0059-dark"
-            },
-            {
-                "building_component": 41,
-                "variant": "standard",
-                "theme": "white",
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "mountain_ash",
                 "region": "exterior",
                 "obj": "l_0060",
-                "mtl": "l_0060-white"
+                "mtl": "l_0060-mountain_ash"
             },
             {
-                "building_component": 41,
-                "variant": "standard",
-                "theme": "white",
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0060",
+                "mtl": "l_0060-hill_country"
+            },
+            {
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "mountain_ash",
                 "region": "exterior",
                 "obj": "l_0061",
-                "mtl": "l_0061-white"
+                "mtl": "l_0061-mountain_ash"
             },
             {
-                "building_component": 41,
-                "variant": "standard",
-                "theme": "white",
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0061",
+                "mtl": "l_0061-hill_country"
+            },
+            {
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "mountain_ash",
                 "region": "exterior",
                 "obj": "l_0062",
-                "mtl": "l_0062-white"
+                "mtl": "l_0062-mountain_ash"
             },
             {
-                "building_component": 41,
+                "building_component": 39,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0062",
+                "mtl": "l_0062-hill_country"
+            },
+            {
+                "building_component": 40,
                 "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
@@ -2446,191 +2430,191 @@
                 "mtl": "l_0063-white"
             },
             {
-                "building_component": 42,
-                "variant": "shingles",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "l_0064",
-                "mtl": "l_0064-light"
-            },
-            {
-                "building_component": 42,
-                "variant": "shingles",
+                "building_component": 40,
+                "variant": "standard",
                 "theme": "dark",
                 "region": "exterior",
+                "obj": "l_0063",
+                "mtl": "l_0063-dark"
+            },
+            {
+                "building_component": 41,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
                 "obj": "l_0064",
-                "mtl": "l_0064-dark"
+                "mtl": "l_0064-white"
             },
             {
-                "building_component": 42,
-                "variant": "metalSeam",
-                "theme": "light",
+                "building_component": 41,
+                "variant": "standard",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0065",
-                "mtl": "l_0065-light"
+                "mtl": "l_0065-white"
             },
             {
-                "building_component": 42,
-                "variant": "metalSeam",
-                "theme": "dark",
+                "building_component": 41,
+                "variant": "standard",
+                "theme": "white",
                 "region": "exterior",
-                "obj": "l_0065",
-                "mtl": "l_0065-dark"
+                "obj": "l_0066",
+                "mtl": "l_0066-white"
             },
             {
-                "building_component": 43,
-                "variant": "concrete",
-                "theme": "unfinished",
+                "building_component": 41,
+                "variant": "standard",
+                "theme": "white",
                 "region": "exterior",
                 "obj": "l_0067",
-                "mtl": "l_0067-unfinished"
+                "mtl": "l_0067-white"
             },
             {
-                "building_component": 44,
-                "variant": "lap",
-                "theme": "snowbound",
+                "building_component": 42,
+                "variant": "shingles",
+                "theme": "light",
                 "region": "exterior",
                 "obj": "l_0068",
-                "mtl": "l_0068-snowbound"
+                "mtl": "l_0068-light"
             },
             {
-                "building_component": 44,
-                "variant": "lap",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "l_0068",
-                "mtl": "l_0068-waterloo"
-            },
-            {
-                "building_component": 44,
-                "variant": "lap",
+                "building_component": 42,
+                "variant": "shingles",
                 "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0068",
                 "mtl": "l_0068-dark"
             },
             {
-                "building_component": 45,
-                "variant": "board",
-                "theme": "snowbound",
+                "building_component": 42,
+                "variant": "metalSeam",
+                "theme": "light",
                 "region": "exterior",
-                "obj": "l_0070",
-                "mtl": "l_0070-snowbound"
+                "obj": "l_0069",
+                "mtl": "l_0069-light"
             },
             {
-                "building_component": 45,
-                "variant": "board",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "l_0070",
-                "mtl": "l_0070-waterloo"
-            },
-            {
-                "building_component": 45,
-                "variant": "lap",
-                "theme": "snowbound",
-                "region": "exterior",
-                "obj": "l_0071",
-                "mtl": "l_0071-snowbound"
-            },
-            {
-                "building_component": 45,
-                "variant": "lap",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "l_0071",
-                "mtl": "l_0071-waterloo"
-            },
-            {
-                "building_component": 46,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0072",
-                "mtl": "l_0072-mountain_ash"
-            },
-            {
-                "building_component": 46,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0072",
-                "mtl": "l_0072-hill_country"
-            },
-            {
-                "building_component": 46,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0073",
-                "mtl": "l_0073-mountain_ash"
-            },
-            {
-                "building_component": 46,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0073",
-                "mtl": "l_0073-hill_country"
-            },
-            {
-                "building_component": 46,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0074",
-                "mtl": "l_0074-mountain_ash"
-            },
-            {
-                "building_component": 46,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0074",
-                "mtl": "l_0074-hill_country"
-            },
-            {
-                "building_component": 47,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0075",
-                "mtl": "l_0075-white"
-            },
-            {
-                "building_component": 47,
-                "variant": "standard",
+                "building_component": 42,
+                "variant": "metalSeam",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0075",
-                "mtl": "l_0075-dark"
+                "obj": "l_0069",
+                "mtl": "l_0069-dark"
             },
             {
-                "building_component": 48,
-                "variant": "standard",
-                "theme": "white",
+                "building_component": 43,
+                "variant": "concrete",
+                "theme": "unfinished",
+                "region": "exterior",
+                "obj": "l_0071",
+                "mtl": "l_0071-unfinished"
+            },
+            {
+                "building_component": 44,
+                "variant": "lap",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "l_0072",
+                "mtl": "l_0072-snowbound"
+            },
+            {
+                "building_component": 44,
+                "variant": "lap",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "l_0072",
+                "mtl": "l_0072-waterloo"
+            },
+            {
+                "building_component": 44,
+                "variant": "lap",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0072",
+                "mtl": "l_0072-dark"
+            },
+            {
+                "building_component": 45,
+                "variant": "board",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "l_0074",
+                "mtl": "l_0074-snowbound"
+            },
+            {
+                "building_component": 45,
+                "variant": "board",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "l_0074",
+                "mtl": "l_0074-waterloo"
+            },
+            {
+                "building_component": 45,
+                "variant": "lap",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "l_0075",
+                "mtl": "l_0075-snowbound"
+            },
+            {
+                "building_component": 45,
+                "variant": "lap",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "l_0075",
+                "mtl": "l_0075-waterloo"
+            },
+            {
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "mountain_ash",
                 "region": "exterior",
                 "obj": "l_0076",
-                "mtl": "l_0076-white"
+                "mtl": "l_0076-mountain_ash"
             },
             {
-                "building_component": 48,
-                "variant": "standard",
-                "theme": "white",
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0076",
+                "mtl": "l_0076-hill_country"
+            },
+            {
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "mountain_ash",
                 "region": "exterior",
                 "obj": "l_0077",
-                "mtl": "l_0077-white"
+                "mtl": "l_0077-mountain_ash"
             },
             {
-                "building_component": 48,
-                "variant": "standard",
-                "theme": "white",
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0077",
+                "mtl": "l_0077-hill_country"
+            },
+            {
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "mountain_ash",
                 "region": "exterior",
                 "obj": "l_0078",
-                "mtl": "l_0078-white"
+                "mtl": "l_0078-mountain_ash"
             },
             {
-                "building_component": 48,
+                "building_component": 46,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0078",
+                "mtl": "l_0078-hill_country"
+            },
+            {
+                "building_component": 47,
                 "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
@@ -2638,260 +2622,300 @@
                 "mtl": "l_0079-white"
             },
             {
+                "building_component": 47,
+                "variant": "standard",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0079",
+                "mtl": "l_0079-dark"
+            },
+            {
+                "building_component": 48,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0080",
+                "mtl": "l_0080-white"
+            },
+            {
+                "building_component": 48,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0081",
+                "mtl": "l_0081-white"
+            },
+            {
+                "building_component": 48,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0082",
+                "mtl": "l_0082-white"
+            },
+            {
+                "building_component": 48,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0083",
+                "mtl": "l_0083-white"
+            },
+            {
                 "building_component": 49,
                 "variant": "shingles",
                 "theme": "light",
                 "region": "exterior",
-                "obj": "l_0080",
-                "mtl": "l_0080-light"
+                "obj": "l_0084",
+                "mtl": "l_0084-light"
             },
             {
                 "building_component": 49,
                 "variant": "shingles",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0080",
-                "mtl": "l_0080-dark"
+                "obj": "l_0084",
+                "mtl": "l_0084-dark"
             },
             {
                 "building_component": 49,
                 "variant": "metalSeam",
                 "theme": "light",
                 "region": "exterior",
-                "obj": "l_0081",
-                "mtl": "l_0081-light"
+                "obj": "l_0085",
+                "mtl": "l_0085-light"
             },
             {
                 "building_component": 49,
                 "variant": "metalSeam",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0081",
-                "mtl": "l_0081-dark"
+                "obj": "l_0085",
+                "mtl": "l_0085-dark"
             },
             {
                 "building_component": 50,
                 "variant": "lap",
                 "theme": "snowbound",
                 "region": "exterior",
-                "obj": "l_0083",
-                "mtl": "l_0083-snowbound"
+                "obj": "l_0087",
+                "mtl": "l_0087-snowbound"
             },
             {
                 "building_component": 50,
                 "variant": "lap",
                 "theme": "waterloo",
                 "region": "exterior",
-                "obj": "l_0083",
-                "mtl": "l_0083-waterloo"
+                "obj": "l_0087",
+                "mtl": "l_0087-waterloo"
             },
             {
                 "building_component": 50,
                 "variant": "lap",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "l_0083",
-                "mtl": "l_0083-dark"
-            },
-            {
-                "building_component": 51,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0084",
-                "mtl": "l_0084-mountain_ash"
-            },
-            {
-                "building_component": 51,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0084",
-                "mtl": "l_0084-hill_country"
-            },
-            {
-                "building_component": 52,
-                "variant": "concrete",
-                "theme": "unfinished",
-                "region": "exterior",
-                "obj": "l_0085",
-                "mtl": "l_0085-unfinished"
-            },
-            {
-                "building_component": 52,
-                "variant": "concrete",
-                "theme": "unfinished",
-                "region": "exterior",
-                "obj": "l_0086",
-                "mtl": "l_0086-unfinished"
-            },
-            {
-                "building_component": 53,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0087",
-                "mtl": "l_0087-white"
-            },
-            {
-                "building_component": 53,
-                "variant": "standard",
                 "theme": "dark",
                 "region": "exterior",
                 "obj": "l_0087",
                 "mtl": "l_0087-dark"
             },
             {
-                "building_component": 54,
-                "variant": "standard",
-                "theme": "white",
+                "building_component": 51,
+                "variant": "wood",
+                "theme": "mountain_ash",
                 "region": "exterior",
                 "obj": "l_0088",
-                "mtl": "l_0088-white"
+                "mtl": "l_0088-mountain_ash"
+            },
+            {
+                "building_component": 51,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0088",
+                "mtl": "l_0088-hill_country"
+            },
+            {
+                "building_component": 52,
+                "variant": "concrete",
+                "theme": "unfinished",
+                "region": "exterior",
+                "obj": "l_0089",
+                "mtl": "l_0089-unfinished"
+            },
+            {
+                "building_component": 52,
+                "variant": "concrete",
+                "theme": "unfinished",
+                "region": "exterior",
+                "obj": "l_0090",
+                "mtl": "l_0090-unfinished"
+            },
+            {
+                "building_component": 53,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0091",
+                "mtl": "l_0091-white"
+            },
+            {
+                "building_component": 53,
+                "variant": "standard",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "l_0091",
+                "mtl": "l_0091-dark"
             },
             {
                 "building_component": 54,
                 "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
-                "obj": "l_0089",
-                "mtl": "l_0089-white"
+                "obj": "l_0092",
+                "mtl": "l_0092-white"
+            },
+            {
+                "building_component": 54,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0093",
+                "mtl": "l_0093-white"
             },
             {
                 "building_component": 55,
                 "variant": "rubber",
                 "theme": "light",
                 "region": "exterior",
-                "obj": "l_0090",
-                "mtl": "l_0090-light"
+                "obj": "l_0094",
+                "mtl": "l_0094-light"
             },
             {
                 "building_component": 55,
                 "variant": "rubber",
                 "theme": "light",
                 "region": "exterior",
-                "obj": "l_0091",
-                "mtl": "l_0091-light"
+                "obj": "l_0095",
+                "mtl": "l_0095-light"
             },
             {
                 "building_component": 56,
                 "variant": "lap",
                 "theme": "snowbound",
                 "region": "exterior",
-                "obj": "l_0092",
-                "mtl": "l_0092-snowbound"
+                "obj": "l_0096",
+                "mtl": "l_0096-snowbound"
             },
             {
                 "building_component": 56,
                 "variant": "lap",
                 "theme": "waterloo",
                 "region": "exterior",
-                "obj": "l_0092",
-                "mtl": "l_0092-waterloo"
+                "obj": "l_0096",
+                "mtl": "l_0096-waterloo"
             },
             {
                 "building_component": 56,
                 "variant": "lap",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0092",
-                "mtl": "l_0092-dark"
-            },
-            {
-                "building_component": 57,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0093",
-                "mtl": "l_0093-mountain_ash"
-            },
-            {
-                "building_component": 57,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0093",
-                "mtl": "l_0093-hill_country"
-            },
-            {
-                "building_component": 57,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "l_0094",
-                "mtl": "l_0094-mountain_ash"
-            },
-            {
-                "building_component": 57,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "l_0094",
-                "mtl": "l_0094-hill_country"
-            },
-            {
-                "building_component": 58,
-                "variant": "concrete",
-                "theme": "unfinished",
-                "region": "exterior",
-                "obj": "l_0095",
-                "mtl": "l_0095-unfinished"
-            },
-            {
-                "building_component": 58,
-                "variant": "concrete",
-                "theme": "unfinished",
-                "region": "exterior",
                 "obj": "l_0096",
-                "mtl": "l_0096-unfinished"
+                "mtl": "l_0096-dark"
+            },
+            {
+                "building_component": 57,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0097",
+                "mtl": "l_0097-mountain_ash"
+            },
+            {
+                "building_component": 57,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0097",
+                "mtl": "l_0097-hill_country"
+            },
+            {
+                "building_component": 57,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "l_0098",
+                "mtl": "l_0098-mountain_ash"
+            },
+            {
+                "building_component": 57,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "l_0098",
+                "mtl": "l_0098-hill_country"
+            },
+            {
+                "building_component": 58,
+                "variant": "concrete",
+                "theme": "unfinished",
+                "region": "exterior",
+                "obj": "l_0099",
+                "mtl": "l_0099-unfinished"
+            },
+            {
+                "building_component": 58,
+                "variant": "concrete",
+                "theme": "unfinished",
+                "region": "exterior",
+                "obj": "l_0100",
+                "mtl": "l_0100-unfinished"
             },
             {
                 "building_component": 59,
                 "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
-                "obj": "l_0097",
-                "mtl": "l_0097-white"
+                "obj": "l_0101",
+                "mtl": "l_0101-white"
             },
             {
                 "building_component": 59,
                 "variant": "standard",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "l_0097",
-                "mtl": "l_0097-dark"
-            },
-            {
-                "building_component": 60,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0098",
-                "mtl": "l_0098-white"
-            },
-            {
-                "building_component": 60,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "l_0099",
-                "mtl": "l_0099-white"
-            },
-            {
-                "building_component": 61,
-                "variant": "rubber",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "l_0100",
-                "mtl": "l_0100-light"
-            },
-            {
-                "building_component": 61,
-                "variant": "rubber",
-                "theme": "light",
-                "region": "exterior",
                 "obj": "l_0101",
-                "mtl": "l_0101-light"
+                "mtl": "l_0101-dark"
+            },
+            {
+                "building_component": 60,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0102",
+                "mtl": "l_0102-white"
+            },
+            {
+                "building_component": 60,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "l_0103",
+                "mtl": "l_0103-white"
+            },
+            {
+                "building_component": 61,
+                "variant": "rubber",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "l_0104",
+                "mtl": "l_0104-light"
+            },
+            {
+                "building_component": 61,
+                "variant": "rubber",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "l_0105",
+                "mtl": "l_0105-light"
             }
         ]
     },
@@ -3140,7 +3164,7 @@
                 "description": "A placeholder lot component building component.",
                 "takeoff": {},
                 "baking_properties": {
-                    "affected_by_externals": false
+                    "affected_by_externals": true
                 },
                 "variants": {
                     "massing": {
