@@ -7,6 +7,15 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0000-white.jpg
+newmtl 0001-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0001-white.jpg
 newmtl 0002-dark
 Ka 1 1 1
 Kd 1 1 1
@@ -16,6 +25,52 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0002-dark.jpg
+newmtl 0003-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0003-white.jpg
+newmtl 0004-unfinished
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0004-unfinished.jpg
+newmtl 0005-snowbound
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0005-snowbound.jpg
+newmtl 0005-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0005-waterloo.jpg
+newmtl 0005-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0005-dark.jpg
 newmtl 0006-hex_dark
 Ka 1 1 1
 Kd 1 1 1
@@ -26,6 +81,16 @@ d 1
 illum 2
 size 120.0000
 map_Kd textures/0006-hex_dark.jpg
+newmtl 0008-unfinished
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0008-unfinished.jpg
 newmtl 0009-dark
 Ka 1 1 1
 Kd 0.9900 0.9900 0.9000
@@ -34,6 +99,25 @@ Ns 0
 Ni 1
 d 1
 illum 2
+newmtl 0010-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0010-white.jpg
+newmtl 0011-unfinished
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0011-unfinished.jpg
 newmtl 0012-black
 Ka 1 1 1
 Kd 1 1 1
@@ -43,6 +127,33 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0012-black.jpg
+newmtl 0013-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0013-white.jpg
+newmtl 0014-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0014-white.jpg
+newmtl 0015-unfinished
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0015-unfinished.jpg
 newmtl 0016-timelessOrganic8by4
 Ka 1 1 1
 Kd 1 1 1
@@ -73,6 +184,70 @@ d 1
 illum 2
 size 84.0000
 map_Kd textures/0016-prodigyCotton9by7.jpg
+newmtl 0017-unfinished
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0017-unfinished.jpg
+newmtl 0018-white
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl 0019-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0019-dark.jpg
+newmtl 0020-mountain_ash
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0020-mountain_ash.jpg
+newmtl 0020-hill_country
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0020-hill_country.jpg
+newmtl 0021-mountain_ash
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0021-mountain_ash.jpg
+newmtl 0021-hill_country
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0021-hill_country.jpg
 newmtl 0022-white
 Ka 1 1 1
 Kd 1 1 1
@@ -82,6 +257,26 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0022-white.jpg
+newmtl 0023-light
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0023-light.jpg
+newmtl 0023-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0023-dark.jpg
 newmtl 0024-white
 Ka 1 1 1
 Kd 1 1 1
@@ -92,6 +287,63 @@ d 1
 illum 2
 size 120.0000
 map_Kd textures/0024-white.jpg
+newmtl 0025-snowbound
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0025-snowbound.jpg
+newmtl 0025-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0025-waterloo.jpg
+newmtl 0026-teak
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 48.0000
+map_Kd textures/0026-teak.jpg
+newmtl 0026-mountain_ash
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0026-mountain_ash.jpg
+newmtl 0026-hill_country
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0026-hill_country.jpg
+newmtl 0027-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0027-white.jpg
 newmtl 0028-hex_dark
 Ka 1 1 1
 Kd 1 1 1
@@ -151,6 +403,42 @@ d 1
 illum 2
 size 32.0000
 map_Kd textures/0031-subway4in16inWhite.jpg
+newmtl 0032-snowbound
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0032-snowbound.jpg
+newmtl 0032-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0032-waterloo.jpg
+newmtl 0033-snowbound
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0033-snowbound.jpg
+newmtl 0033-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0033-waterloo.jpg
 newmtl 0034-white
 Ka 1 1 1
 Kd 1 1 1
@@ -170,6 +458,23 @@ d 1
 illum 2
 size 120.0000
 map_Kd textures/0035-white.jpg
+newmtl 0036-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0036-white.jpg
+newmtl 0037-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
 newmtl 0038-white
 Ka 1 1 1
 Kd 1 1 1
@@ -179,6 +484,119 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0038-white.jpg
+newmtl 0039-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0039-dark.jpg
+newmtl 0040-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0040-white.jpg
+newmtl 0041-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0041-dark.jpg
+newmtl 0042-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0042-white.jpg
+newmtl 0043-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0043-white.jpg
+newmtl 0044-light
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 108.0000
+map_Kd textures/0044-light.jpg
+newmtl 0045-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0045-white.jpg
+newmtl 0046-light
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0046-light.jpg
+newmtl 0046-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0046-dark.jpg
+newmtl 0047-mountain_ash
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0047-mountain_ash.jpg
+newmtl 0047-hill_country
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0047-hill_country.jpg
+newmtl 0048-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0048-white.jpg
 newmtl 0049-black
 Ka 1 1 1
 Kd 1 1 1
@@ -188,6 +606,64 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0049-black.jpg
+newmtl 0050-light
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0050-light.jpg
+newmtl 0050-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0050-dark.jpg
+newmtl 0051-light
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0051-light.jpg
+newmtl 0051-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0051-dark.jpg
+newmtl 0052-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0052-white.jpg
+newmtl 0052-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0052-dark.jpg
 newmtl 0053-snowbound
 Ka 1 1 1
 Kd 1 1 1
@@ -206,6 +682,15 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0053-worldlyGray.jpg
+newmtl 0054-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0054-dark.jpg
 newmtl 0055-white
 Ka 1 1 1
 Kd 1 1 1
@@ -216,6 +701,53 @@ d 1
 illum 2
 size 120.0000
 map_Kd textures/0055-white.jpg
+newmtl 0056-snowbound
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0056-snowbound.jpg
+newmtl 0056-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0056-waterloo.jpg
+newmtl 0056-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0056-dark.jpg
+newmtl 0057-mountain_ash
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0057-mountain_ash.jpg
+newmtl 0057-hill_country
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0057-hill_country.jpg
 newmtl 0059-white
 Ka 1 1 1
 Kd 1 1 1
@@ -225,6 +757,15 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0059-white.jpg
+newmtl 0060-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0060-white.jpg
 newmtl 0061-white
 Ka 1 1 1
 Kd 1 1 1
@@ -234,6 +775,26 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0061-white.jpg
+newmtl 0062-mountain_ash
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0062-mountain_ash.jpg
+newmtl 0062-hill_country
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0062-hill_country.jpg
 newmtl 0063-quartzTofino
 Ka 1 1 1
 Kd 1 1 1
@@ -262,6 +823,14 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0065-dark.jpg
+newmtl 0066-dark
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
 newmtl 0067-white
 Ka 1 1 1
 Kd 1 1 1
@@ -271,6 +840,54 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0067-white.jpg
+newmtl 0068-mountain_ash
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0068-mountain_ash.jpg
+newmtl 0068-hill_country
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0068-hill_country.jpg
+newmtl 0069-light
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 108.0000
+map_Kd textures/0069-light.jpg
+newmtl 0070-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0070-white.jpg
+newmtl 0070-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0070-dark.jpg
 newmtl 0071-black
 Ka 1 1 1
 Kd 1 1 1
@@ -280,6 +897,16 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0071-black.jpg
+newmtl 0073-unfinished
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0073-unfinished.jpg
 newmtl 0074-white
 Ka 1 1 1
 Kd 1 1 1
@@ -297,6 +924,74 @@ Ns 0
 Ni 1
 d 1
 illum 2
+newmtl 0076-mountain_ash
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0076-mountain_ash.jpg
+newmtl 0076-hill_country
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0076-hill_country.jpg
+newmtl 0077-mountain_ash
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0077-mountain_ash.jpg
+newmtl 0077-hill_country
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0077-hill_country.jpg
+newmtl 0078-light
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0078-light.jpg
+newmtl 0079-mountain_ash
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0079-mountain_ash.jpg
+newmtl 0079-hill_country
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0079-hill_country.jpg
 newmtl 0080-white
 Ka 1 1 1
 Kd 1 1 1
@@ -306,6 +1001,69 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0080-white.jpg
+newmtl 0081-white
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl 0082-unfinished
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0082-unfinished.jpg
+newmtl 0083-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0083-white.jpg
+newmtl 0084-snowbound
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0084-snowbound.jpg
+newmtl 0084-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0084-waterloo.jpg
+newmtl 0084-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0084-dark.jpg
+newmtl 0085-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0085-white.jpg
 newmtl 0086-dark
 Ka 1 1 1
 Kd 1 1 1
@@ -315,6 +1073,50 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0086-dark.jpg
+newmtl 0087-white
+Ka 1 1 1
+Kd 0.0000 0.0000 0.0000
+Ks 0 0 0
+Ns 0
+Ni 1
+d 0.5000
+illum 2
+newmtl 0088-snowbound
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0088-snowbound.jpg
+newmtl 0088-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0088-waterloo.jpg
+newmtl 0088-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0088-dark.jpg
+newmtl 0089-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0089-white.jpg
 newmtl 0090-black
 Ka 1 1 1
 Kd 1 1 1
@@ -324,6 +1126,24 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0090-black.jpg
+newmtl 0091-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0091-white.jpg
+newmtl 0091-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0091-dark.jpg
 newmtl 0092-black
 Ka 1 1 1
 Kd 1 1 1
@@ -381,6 +1201,52 @@ d 1
 illum 2
 size 84.0000
 map_Kd textures/0094-prodigyCotton9by7.jpg
+newmtl 0095-light
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0095-light.jpg
+newmtl 0096-snowbound
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0096-snowbound.jpg
+newmtl 0096-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0096-waterloo.jpg
+newmtl 0097-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0097-white.jpg
+newmtl 0097-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0097-dark.jpg
 newmtl 0099-dark
 Ka 1 1 1
 Kd 0.9900 0.9900 0.9000
@@ -389,6 +1255,15 @@ Ns 0
 Ni 1
 d 1
 illum 2
+newmtl 0100-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0100-white.jpg
 newmtl 0101-black
 Ka 1 1 1
 Kd 1 1 1
@@ -425,7 +1300,7 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0103-worldlyGray.jpg
-newmtl l_0000-dark
+newmtl 0104-white
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -433,8 +1308,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0000-dark.jpg
-newmtl l_0001-dark
+map_Kd textures/0104-white.jpg
+newmtl 0105-white
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -442,8 +1317,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0001-dark.jpg
-newmtl l_0002-dark
+map_Kd textures/0105-white.jpg
+newmtl 0106-white
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -451,8 +1326,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0002-dark.jpg
-newmtl l_0003-dark
+map_Kd textures/0106-white.jpg
+newmtl 0107-dark
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -460,8 +1335,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0003-dark.jpg
-newmtl l_0004-dark
+map_Kd textures/0107-dark.jpg
+newmtl 0108-dark
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -469,35 +1344,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0004-dark.jpg
-newmtl l_0005-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0005-dark.jpg
-newmtl l_0006-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0006-dark.jpg
-newmtl l_0007-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0007-dark.jpg
-newmtl l_0008-dark
+map_Kd textures/0108-dark.jpg
+newmtl 0109-dark
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -505,7 +1353,25 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0009-dark
+newmtl 0110-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0110-dark.jpg
+newmtl 0111-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0111-dark.jpg
+newmtl 0112-dark
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -513,7 +1379,25 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0010-dark
+newmtl 0113-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0113-dark.jpg
+newmtl 0114-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0114-dark.jpg
+newmtl 0115-dark
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -521,7 +1405,16 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0011-dark
+newmtl 0116-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0116-white.jpg
+newmtl 0117-white
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -529,7 +1422,7 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0012-white
+newmtl 0118-white
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -537,8 +1430,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0012-white.jpg
-newmtl l_0013-white
+map_Kd textures/0118-white.jpg
+newmtl 0119-white
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -546,26 +1439,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0013-white.jpg
-newmtl l_0014-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0014-white.jpg
-newmtl l_0015-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0015-white.jpg
-newmtl l_0016-white
+map_Kd textures/0119-white.jpg
+newmtl 0120-white
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -573,7 +1448,25 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0017-white
+newmtl 0121-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0121-white.jpg
+newmtl 0122-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0122-white.jpg
+newmtl 0123-white
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -581,7 +1474,34 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0018-white
+newmtl 0124-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0124-white.jpg
+newmtl 0125-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0125-white.jpg
+newmtl 0126-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0126-white.jpg
+newmtl 0127-white
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -589,7 +1509,25 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0019-white
+newmtl 0128-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0128-white.jpg
+newmtl 0129-white
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0129-white.jpg
+newmtl 0130-white
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -597,7 +1535,7 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0020-white
+newmtl 0131-white
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -605,8 +1543,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0020-white.jpg
-newmtl l_0021-white
+map_Kd textures/0131-white.jpg
+newmtl 0132-white
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -614,98 +1552,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0021-white.jpg
-newmtl l_0022-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0022-white.jpg
-newmtl l_0023-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0023-white.jpg
-newmtl l_0024-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0024-white.jpg
-newmtl l_0025-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0025-white.jpg
-newmtl l_0026-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0026-white.jpg
-newmtl l_0027-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0027-white.jpg
-newmtl l_0028-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0028-white.jpg
-newmtl l_0029-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0029-white.jpg
-newmtl l_0030-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0030-white.jpg
-newmtl l_0031-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0031-white.jpg
-newmtl l_0032-white
+map_Kd textures/0132-white.jpg
+newmtl 0133-white
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -713,31 +1561,7 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0033-white
-Ka 1 1 1
-Kd 0.0000 0.0000 0.0000
-Ks 0 0 0
-Ns 0
-Ni 1
-d 0.5000
-illum 2
-newmtl l_0034-white
-Ka 1 1 1
-Kd 0.0000 0.0000 0.0000
-Ks 0 0 0
-Ns 0
-Ni 1
-d 0.5000
-illum 2
-newmtl l_0035-white
-Ka 1 1 1
-Kd 0.0000 0.0000 0.0000
-Ks 0 0 0
-Ns 0
-Ni 1
-d 0.5000
-illum 2
-newmtl l_0036-dark
+newmtl 0134-dark
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -745,17 +1569,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0036-dark.jpg
-newmtl l_0037-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0037-dark.jpg
-newmtl l_0038-dark
+map_Kd textures/0134-dark.jpg
+newmtl 0135-dark
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -763,7 +1578,16 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0039-dark
+newmtl 0136-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0136-dark.jpg
+newmtl 0137-white
 Ka 1 1 1
 Kd 0.0000 0.0000 0.0000
 Ks 0 0 0
@@ -771,7 +1595,7 @@ Ns 0
 Ni 1
 d 0.5000
 illum 2
-newmtl l_0040-dark
+newmtl 0138-white
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -779,51 +1603,8 @@ Ns 0
 Ni 1
 d 1
 illum 2
-map_Kd textures/l_0040-dark.jpg
-newmtl l_0041-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0041-dark.jpg
-newmtl l_0042-white
-Ka 1 1 1
-Kd 0.0000 0.0000 0.0000
-Ks 0 0 0
-Ns 0
-Ni 1
-d 0.5000
-illum 2
-newmtl l_0043-white
-Ka 1 1 1
-Kd 0.0000 0.0000 0.0000
-Ks 0 0 0
-Ns 0
-Ni 1
-d 0.5000
-illum 2
-newmtl l_0044-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0044-white.jpg
-newmtl l_0045-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0045-white.jpg
-newmtl l_0046-unfinished
+map_Kd textures/0138-white.jpg
+newmtl 0139-unfinished
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -832,8 +1613,8 @@ Ni 1
 d 1
 illum 2
 size 120.0000
-map_Kd textures/l_0046-unfinished.jpg
-newmtl l_0047-unfinished
+map_Kd textures/0139-unfinished.jpg
+newmtl 0140-unfinished
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -842,28 +1623,8 @@ Ni 1
 d 1
 illum 2
 size 120.0000
-map_Kd textures/l_0047-unfinished.jpg
-newmtl l_0048-unfinished
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0048-unfinished.jpg
-newmtl l_0049-unfinished
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0049-unfinished.jpg
-newmtl l_0050-teak
+map_Kd textures/0140-unfinished.jpg
+newmtl 0141-teak
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -872,8 +1633,8 @@ Ni 1
 d 1
 illum 2
 size 48.0000
-map_Kd textures/l_0050-teak.jpg
-newmtl l_0050-mountain_ash
+map_Kd textures/0141-teak.jpg
+newmtl 0141-mountain_ash
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -882,8 +1643,8 @@ Ni 1
 d 1
 illum 2
 size 120.0000
-map_Kd textures/l_0050-mountain_ash.jpg
-newmtl l_0050-hill_country
+map_Kd textures/0141-mountain_ash.jpg
+newmtl 0141-hill_country
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -892,738 +1653,4 @@ Ni 1
 d 1
 illum 2
 size 120.0000
-map_Kd textures/l_0050-hill_country.jpg
-newmtl l_0051-teak
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 48.0000
-map_Kd textures/l_0051-teak.jpg
-newmtl l_0051-mountain_ash
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0051-mountain_ash.jpg
-newmtl l_0051-hill_country
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0051-hill_country.jpg
-newmtl l_0052-snowbound
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0052-snowbound.jpg
-newmtl l_0052-waterloo
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0052-waterloo.jpg
-newmtl l_0052-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0052-dark.jpg
-newmtl l_0053-snowbound
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0053-snowbound.jpg
-newmtl l_0053-waterloo
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0053-waterloo.jpg
-newmtl l_0054-snowbound
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0054-snowbound.jpg
-newmtl l_0054-waterloo
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0054-waterloo.jpg
-newmtl l_0055-mountain_ash
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0055-mountain_ash.jpg
-newmtl l_0055-hill_country
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0055-hill_country.jpg
-newmtl l_0056-mountain_ash
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0056-mountain_ash.jpg
-newmtl l_0056-hill_country
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0056-hill_country.jpg
-newmtl l_0057-mountain_ash
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0057-mountain_ash.jpg
-newmtl l_0057-hill_country
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0057-hill_country.jpg
-newmtl l_0058-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0058-white.jpg
-newmtl l_0058-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0058-dark.jpg
-newmtl l_0059-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0059-white.jpg
-newmtl l_0060-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0060-white.jpg
-newmtl l_0061-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0061-white.jpg
-newmtl l_0062-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0062-white.jpg
-newmtl l_0063-light
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0063-light.jpg
-newmtl l_0063-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0063-dark.jpg
-newmtl l_0064-light
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0064-light.jpg
-newmtl l_0064-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0064-dark.jpg
-newmtl l_0065-unfinished
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0065-unfinished.jpg
-newmtl l_0066-snowbound
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0066-snowbound.jpg
-newmtl l_0066-waterloo
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0066-waterloo.jpg
-newmtl l_0066-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0066-dark.jpg
-newmtl l_0067-snowbound
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0067-snowbound.jpg
-newmtl l_0067-waterloo
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0067-waterloo.jpg
-newmtl l_0068-snowbound
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0068-snowbound.jpg
-newmtl l_0068-waterloo
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0068-waterloo.jpg
-newmtl l_0069-mountain_ash
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0069-mountain_ash.jpg
-newmtl l_0069-hill_country
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0069-hill_country.jpg
-newmtl l_0070-mountain_ash
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0070-mountain_ash.jpg
-newmtl l_0070-hill_country
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0070-hill_country.jpg
-newmtl l_0071-mountain_ash
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0071-mountain_ash.jpg
-newmtl l_0071-hill_country
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0071-hill_country.jpg
-newmtl l_0072-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0072-white.jpg
-newmtl l_0072-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0072-dark.jpg
-newmtl l_0073-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0073-white.jpg
-newmtl l_0074-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0074-white.jpg
-newmtl l_0075-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0075-white.jpg
-newmtl l_0076-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0076-white.jpg
-newmtl l_0077-light
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0077-light.jpg
-newmtl l_0077-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0077-dark.jpg
-newmtl l_0078-light
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0078-light.jpg
-newmtl l_0078-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0078-dark.jpg
-newmtl l_0079-snowbound
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0079-snowbound.jpg
-newmtl l_0079-waterloo
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0079-waterloo.jpg
-newmtl l_0079-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0079-dark.jpg
-newmtl l_0080-mountain_ash
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0080-mountain_ash.jpg
-newmtl l_0080-hill_country
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0080-hill_country.jpg
-newmtl l_0081-unfinished
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0081-unfinished.jpg
-newmtl l_0082-unfinished
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0082-unfinished.jpg
-newmtl l_0083-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0083-white.jpg
-newmtl l_0083-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0083-dark.jpg
-newmtl l_0084-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0084-white.jpg
-newmtl l_0085-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0085-white.jpg
-newmtl l_0086-light
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 108.0000
-map_Kd textures/l_0086-light.jpg
-newmtl l_0087-light
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0087-light.jpg
-newmtl l_0088-snowbound
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0088-snowbound.jpg
-newmtl l_0088-waterloo
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0088-waterloo.jpg
-newmtl l_0088-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0088-dark.jpg
-newmtl l_0089-mountain_ash
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0089-mountain_ash.jpg
-newmtl l_0089-hill_country
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0089-hill_country.jpg
-newmtl l_0090-mountain_ash
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0090-mountain_ash.jpg
-newmtl l_0090-hill_country
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0090-hill_country.jpg
-newmtl l_0091-unfinished
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0091-unfinished.jpg
-newmtl l_0092-unfinished
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0092-unfinished.jpg
-newmtl l_0093-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0093-white.jpg
-newmtl l_0093-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0093-dark.jpg
-newmtl l_0094-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0094-white.jpg
-newmtl l_0095-white
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/l_0095-white.jpg
-newmtl l_0096-light
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 108.0000
-map_Kd textures/l_0096-light.jpg
-newmtl l_0097-light
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/l_0097-light.jpg
+map_Kd textures/0141-hill_country.jpg
