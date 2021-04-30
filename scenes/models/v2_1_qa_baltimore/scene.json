@@ -2094,7 +2094,9 @@
                 "bc_asset": "wallInterior",
                 "modifications": {
                     "tile": [
+                        "darocaAtar12by24RB",
                         "trovataII12by24RB",
+                        "realmII12by24RB",
                         "justeerQuellDune3by14"
                     ]
                 }
@@ -3171,7 +3173,7 @@
                             "bc_asset": "trimGeneric",
                             "modifications": {
                                 "standard": [
-                                    "dark"
+                                    "white"
                                 ]
                             }
                         },
@@ -5499,10 +5501,26 @@
             {
                 "building_component": 89,
                 "variant": "tile",
+                "theme": "darocaAtar12by24RB",
+                "region": "interior",
+                "obj": "0008",
+                "mtl": "0008-darocaAtar12by24RB"
+            },
+            {
+                "building_component": 89,
+                "variant": "tile",
                 "theme": "trovataII12by24RB",
                 "region": "interior",
                 "obj": "0008",
                 "mtl": "0008-trovataII12by24RB"
+            },
+            {
+                "building_component": 89,
+                "variant": "tile",
+                "theme": "realmII12by24RB",
+                "region": "interior",
+                "obj": "0008",
+                "mtl": "0008-realmII12by24RB"
             },
             {
                 "building_component": 89,
@@ -6625,24 +6643,32 @@
                 "mtl": "0059-white"
             },
             {
-                "building_component": 0,
-                "variant": "concrete",
-                "theme": "light",
+                "building_component": 68,
+                "variant": "lap",
+                "theme": "snowbound",
                 "region": "exterior",
-                "obj": "0061",
-                "mtl": "0061-light"
+                "obj": "0060",
+                "mtl": "0060-snowbound"
             },
             {
                 "building_component": 68,
                 "variant": "lap",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "0060",
+                "mtl": "0060-waterloo"
+            },
+            {
+                "building_component": 67,
+                "variant": "board",
                 "theme": "snowbound",
                 "region": "exterior",
                 "obj": "0062",
                 "mtl": "0062-snowbound"
             },
             {
-                "building_component": 68,
-                "variant": "lap",
+                "building_component": 67,
+                "variant": "board",
                 "theme": "waterloo",
                 "region": "exterior",
                 "obj": "0062",
@@ -6650,59 +6676,51 @@
             },
             {
                 "building_component": 67,
-                "variant": "board",
-                "theme": "snowbound",
-                "region": "exterior",
-                "obj": "0064",
-                "mtl": "0064-snowbound"
-            },
-            {
-                "building_component": 67,
-                "variant": "board",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "0064",
-                "mtl": "0064-waterloo"
-            },
-            {
-                "building_component": 67,
                 "variant": "shake",
                 "theme": "aspen",
                 "region": "exterior",
-                "obj": "0066",
-                "mtl": "0066-aspen"
+                "obj": "0064",
+                "mtl": "0064-aspen"
             },
             {
                 "building_component": 66,
                 "variant": "shingles",
                 "theme": "light",
                 "region": "exterior",
-                "obj": "0067",
-                "mtl": "0067-light"
+                "obj": "0065",
+                "mtl": "0065-light"
             },
             {
                 "building_component": 66,
                 "variant": "shingles",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "0067",
-                "mtl": "0067-dark"
+                "obj": "0065",
+                "mtl": "0065-dark"
             },
             {
                 "building_component": 65,
                 "variant": "metalSeam",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "0066",
+                "mtl": "0066-light"
+            },
+            {
+                "building_component": 65,
+                "variant": "metalSeam",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "0066",
+                "mtl": "0066-dark"
+            },
+            {
+                "building_component": 0,
+                "variant": "concrete",
                 "theme": "light",
                 "region": "exterior",
                 "obj": "0068",
                 "mtl": "0068-light"
-            },
-            {
-                "building_component": 65,
-                "variant": "metalSeam",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "0068",
-                "mtl": "0068-dark"
             },
             {
                 "building_component": 102,

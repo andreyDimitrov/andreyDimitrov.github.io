@@ -171,6 +171,16 @@ d 1
 illum 2
 size 120.0000
 map_Kd textures/0007-hill_country_dark_rail.jpg
+newmtl 0008-darocaAtar12by24RB
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 48.0000
+map_Kd textures/0008-darocaAtar12by24RB.jpg
 newmtl 0008-trovataII12by24RB
 Ka 1 1 1
 Kd 1 1 1
@@ -181,6 +191,16 @@ d 1
 illum 2
 size 48.0000
 map_Kd textures/0008-trovataII12by24RB.jpg
+newmtl 0008-realmII12by24RB
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 48.0000
+map_Kd textures/0008-realmII12by24RB.jpg
 newmtl 0008-justeerQuellDune3by14
 Ka 1 1 1
 Kd 1 1 1
@@ -1518,7 +1538,7 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0059-white.jpg
-newmtl 0061-light
+newmtl 0060-snowbound
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -1526,8 +1546,16 @@ Ns 0
 Ni 1
 d 1
 illum 2
-size 120.0000
-map_Kd textures/0061-light.jpg
+map_Kd textures/0060-snowbound.jpg
+newmtl 0060-waterloo
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+map_Kd textures/0060-waterloo.jpg
 newmtl 0062-snowbound
 Ka 1 1 1
 Kd 1 1 1
@@ -1546,25 +1574,7 @@ Ni 1
 d 1
 illum 2
 map_Kd textures/0062-waterloo.jpg
-newmtl 0064-snowbound
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/0064-snowbound.jpg
-newmtl 0064-waterloo
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-map_Kd textures/0064-waterloo.jpg
-newmtl 0066-aspen
+newmtl 0064-aspen
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -1573,8 +1583,8 @@ Ni 1
 d 1
 illum 2
 size 108.0000
-map_Kd textures/0066-aspen.jpg
-newmtl 0067-light
+map_Kd textures/0064-aspen.jpg
+newmtl 0065-light
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -1583,8 +1593,8 @@ Ni 1
 d 1
 illum 2
 size 120.0000
-map_Kd textures/0067-light.jpg
-newmtl 0067-dark
+map_Kd textures/0065-light.jpg
+newmtl 0065-dark
 Ka 1 1 1
 Kd 1 1 1
 Ks 0 0 0
@@ -1593,7 +1603,27 @@ Ni 1
 d 1
 illum 2
 size 120.0000
-map_Kd textures/0067-dark.jpg
+map_Kd textures/0065-dark.jpg
+newmtl 0066-light
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0066-light.jpg
+newmtl 0066-dark
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+Ni 1
+d 1
+illum 2
+size 120.0000
+map_Kd textures/0066-dark.jpg
 newmtl 0068-light
 Ka 1 1 1
 Kd 1 1 1
@@ -1604,16 +1634,6 @@ d 1
 illum 2
 size 120.0000
 map_Kd textures/0068-light.jpg
-newmtl 0068-dark
-Ka 1 1 1
-Kd 1 1 1
-Ks 0 0 0
-Ns 0
-Ni 1
-d 1
-illum 2
-size 120.0000
-map_Kd textures/0068-dark.jpg
 newmtl 0069-analysis
 Ka 1 1 1
 Kd 1 1 1
