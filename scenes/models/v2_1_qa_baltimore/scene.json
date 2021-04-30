@@ -5433,220 +5433,148 @@
                 "mtl": "0003-caesarstoneBlizzard"
             },
             {
+                "building_component": 68,
+                "variant": "board",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "0004",
+                "mtl": "0004-snowbound"
+            },
+            {
+                "building_component": 68,
+                "variant": "board",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "0004",
+                "mtl": "0004-waterloo"
+            },
+            {
+                "building_component": 68,
+                "variant": "shake",
+                "theme": "aspen",
+                "region": "exterior",
+                "obj": "0005",
+                "mtl": "0005-aspen"
+            },
+            {
                 "building_component": 85,
                 "variant": "standard",
                 "theme": "white",
                 "region": "interior",
-                "obj": "0004",
-                "mtl": "0004-white"
+                "obj": "0006",
+                "mtl": "0006-white"
             },
             {
                 "building_component": 100,
                 "variant": "wood",
                 "theme": "mountain_ash",
                 "region": "exterior",
-                "obj": "0005",
-                "mtl": "0005-mountain_ash"
+                "obj": "0007",
+                "mtl": "0007-mountain_ash"
             },
             {
                 "building_component": 100,
                 "variant": "wood",
                 "theme": "hill_country",
                 "region": "exterior",
-                "obj": "0005",
-                "mtl": "0005-hill_country"
+                "obj": "0007",
+                "mtl": "0007-hill_country"
             },
             {
                 "building_component": 100,
                 "variant": "wood",
                 "theme": "mountain_ash_dark_rail",
                 "region": "exterior",
-                "obj": "0005",
-                "mtl": "0005-mountain_ash_dark_rail"
+                "obj": "0007",
+                "mtl": "0007-mountain_ash_dark_rail"
             },
             {
                 "building_component": 100,
                 "variant": "wood",
                 "theme": "hill_country_dark_rail",
                 "region": "exterior",
-                "obj": "0005",
-                "mtl": "0005-hill_country_dark_rail"
+                "obj": "0007",
+                "mtl": "0007-hill_country_dark_rail"
             },
             {
                 "building_component": 89,
                 "variant": "tile",
                 "theme": "trovataII12by24RB",
                 "region": "interior",
-                "obj": "0006",
-                "mtl": "0006-trovataII12by24RB"
+                "obj": "0008",
+                "mtl": "0008-trovataII12by24RB"
             },
             {
                 "building_component": 89,
                 "variant": "tile",
                 "theme": "justeerQuellDune3by14",
                 "region": "interior",
-                "obj": "0006",
-                "mtl": "0006-justeerQuellDune3by14"
+                "obj": "0008",
+                "mtl": "0008-justeerQuellDune3by14"
             },
             {
                 "building_component": 70,
                 "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
-                "obj": "0008",
-                "mtl": "0008-white"
+                "obj": "0010",
+                "mtl": "0010-white"
             },
             {
                 "building_component": 69,
                 "variant": "wood",
                 "theme": "mountain_ash",
                 "region": "exterior",
-                "obj": "0009",
-                "mtl": "0009-mountain_ash"
+                "obj": "0011",
+                "mtl": "0011-mountain_ash"
             },
             {
                 "building_component": 69,
                 "variant": "wood",
                 "theme": "hill_country",
                 "region": "exterior",
-                "obj": "0009",
-                "mtl": "0009-hill_country"
+                "obj": "0011",
+                "mtl": "0011-hill_country"
             },
             {
                 "building_component": 69,
                 "variant": "wood",
                 "theme": "mountain_ash_dark_rail",
                 "region": "exterior",
-                "obj": "0009",
-                "mtl": "0009-mountain_ash_dark_rail"
+                "obj": "0011",
+                "mtl": "0011-mountain_ash_dark_rail"
             },
             {
                 "building_component": 69,
                 "variant": "wood",
                 "theme": "hill_country_dark_rail",
                 "region": "exterior",
-                "obj": "0009",
-                "mtl": "0009-hill_country_dark_rail"
+                "obj": "0011",
+                "mtl": "0011-hill_country_dark_rail"
             },
             {
                 "building_component": 81,
                 "variant": "dayton",
                 "theme": "white",
                 "region": "interior",
-                "obj": "0010",
-                "mtl": "0010-white"
+                "obj": "0012",
+                "mtl": "0012-white"
             },
             {
                 "building_component": 81,
                 "variant": "dayton",
                 "theme": "stoneGray",
                 "region": "interior",
-                "obj": "0010",
-                "mtl": "0010-stoneGray"
+                "obj": "0012",
+                "mtl": "0012-stoneGray"
             },
             {
                 "building_component": 81,
                 "variant": "dayton",
                 "theme": "greyhound",
                 "region": "interior",
-                "obj": "0010",
-                "mtl": "0010-greyhound"
-            },
-            {
-                "building_component": 83,
-                "variant": "standard",
-                "theme": "dark",
-                "region": "interior",
-                "obj": "0011",
-                "mtl": "0011-dark"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "darocaAtar12by24RB",
-                "region": "interior",
                 "obj": "0012",
-                "mtl": "0012-darocaAtar12by24RB"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "trovataII12by24RB",
-                "region": "interior",
-                "obj": "0012",
-                "mtl": "0012-trovataII12by24RB"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "realmII12by24RB",
-                "region": "interior",
-                "obj": "0012",
-                "mtl": "0012-realmII12by24RB"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "chaidoLoring12by24RB",
-                "region": "interior",
-                "obj": "0012",
-                "mtl": "0012-chaidoLoring12by24RB"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "chaidoLoringMosaic2by2",
-                "region": "interior",
-                "obj": "0012",
-                "mtl": "0012-chaidoLoringMosaic2by2"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "emserFlexGray4by10",
-                "region": "interior",
-                "obj": "0012",
-                "mtl": "0012-emserFlexGray4by10"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "sterlinaSilver12by24RB",
-                "region": "interior",
-                "obj": "0012",
-                "mtl": "0012-sterlinaSilver12by24RB"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "sterlinaSilverMosaic2by2",
-                "region": "interior",
-                "obj": "0012",
-                "mtl": "0012-sterlinaSilverMosaic2by2"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "contessa12by24RB",
-                "region": "interior",
-                "obj": "0012",
-                "mtl": "0012-contessa12by24RB"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "contessaMosaic2by2",
-                "region": "interior",
-                "obj": "0012",
-                "mtl": "0012-contessaMosaic2by2"
-            },
-            {
-                "building_component": 93,
-                "variant": "tile",
-                "theme": "emserFlexGray3by6",
-                "region": "interior",
-                "obj": "0012",
-                "mtl": "0012-emserFlexGray3by6"
+                "mtl": "0012-greyhound"
             },
             {
                 "building_component": 83,
@@ -5657,976 +5585,1064 @@
                 "mtl": "0013-dark"
             },
             {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "darocaAtar12by24RB",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-darocaAtar12by24RB"
+            },
+            {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "trovataII12by24RB",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-trovataII12by24RB"
+            },
+            {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "realmII12by24RB",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-realmII12by24RB"
+            },
+            {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "chaidoLoring12by24RB",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-chaidoLoring12by24RB"
+            },
+            {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "chaidoLoringMosaic2by2",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-chaidoLoringMosaic2by2"
+            },
+            {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "emserFlexGray4by10",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-emserFlexGray4by10"
+            },
+            {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "sterlinaSilver12by24RB",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-sterlinaSilver12by24RB"
+            },
+            {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "sterlinaSilverMosaic2by2",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-sterlinaSilverMosaic2by2"
+            },
+            {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "contessa12by24RB",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-contessa12by24RB"
+            },
+            {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "contessaMosaic2by2",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-contessaMosaic2by2"
+            },
+            {
+                "building_component": 93,
+                "variant": "tile",
+                "theme": "emserFlexGray3by6",
+                "region": "interior",
+                "obj": "0014",
+                "mtl": "0014-emserFlexGray3by6"
+            },
+            {
+                "building_component": 83,
+                "variant": "standard",
+                "theme": "dark",
+                "region": "interior",
+                "obj": "0015",
+                "mtl": "0015-dark"
+            },
+            {
                 "building_component": 97,
                 "variant": "roughConcrete",
                 "theme": "raw",
                 "region": "interior",
-                "obj": "0014",
-                "mtl": "0014-raw"
+                "obj": "0016",
+                "mtl": "0016-raw"
             },
             {
                 "building_component": 91,
                 "variant": "hardwood",
                 "theme": "darkCanyon6by4",
                 "region": "interior",
-                "obj": "0015",
-                "mtl": "0015-darkCanyon6by4"
+                "obj": "0017",
+                "mtl": "0017-darkCanyon6by4"
             },
             {
                 "building_component": 91,
                 "variant": "hardwood",
                 "theme": "ashleeGrey6by4",
                 "region": "interior",
-                "obj": "0015",
-                "mtl": "0015-ashleeGrey6by4"
+                "obj": "0017",
+                "mtl": "0017-ashleeGrey6by4"
             },
             {
                 "building_component": 91,
                 "variant": "hardwood",
                 "theme": "timelessOrganic8by4",
                 "region": "interior",
-                "obj": "0015",
-                "mtl": "0015-timelessOrganic8by4"
+                "obj": "0017",
+                "mtl": "0017-timelessOrganic8by4"
             },
             {
                 "building_component": 91,
                 "variant": "hardwood",
                 "theme": "prodigyUmber9by7",
                 "region": "interior",
-                "obj": "0015",
-                "mtl": "0015-prodigyUmber9by7"
+                "obj": "0017",
+                "mtl": "0017-prodigyUmber9by7"
             },
             {
                 "building_component": 91,
                 "variant": "hardwood",
                 "theme": "prodigyCotton9by7",
                 "region": "interior",
-                "obj": "0015",
-                "mtl": "0015-prodigyCotton9by7"
+                "obj": "0017",
+                "mtl": "0017-prodigyCotton9by7"
             },
             {
                 "building_component": 73,
                 "variant": "glass",
                 "theme": "white",
                 "region": "exterior",
-                "obj": "0016",
-                "mtl": "0016-white"
+                "obj": "0018",
+                "mtl": "0018-white"
             },
             {
                 "building_component": 71,
                 "variant": "minimal",
                 "theme": "dark",
                 "region": "exterior",
-                "obj": "0017",
-                "mtl": "0017-dark"
+                "obj": "0019",
+                "mtl": "0019-dark"
             },
             {
                 "building_component": 99,
                 "variant": "concrete",
                 "theme": "unfinished",
                 "region": "exterior",
-                "obj": "0018",
-                "mtl": "0018-unfinished"
+                "obj": "0020",
+                "mtl": "0020-unfinished"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "darocaAtar12by24RB",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-darocaAtar12by24RB"
+                "obj": "0021",
+                "mtl": "0021-darocaAtar12by24RB"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "trovataII12by24RB",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-trovataII12by24RB"
+                "obj": "0021",
+                "mtl": "0021-trovataII12by24RB"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "realmII12by24RB",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-realmII12by24RB"
+                "obj": "0021",
+                "mtl": "0021-realmII12by24RB"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "chaidoLoring12by24RB",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-chaidoLoring12by24RB"
+                "obj": "0021",
+                "mtl": "0021-chaidoLoring12by24RB"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "chaidoLoringMosaic2by2",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-chaidoLoringMosaic2by2"
+                "obj": "0021",
+                "mtl": "0021-chaidoLoringMosaic2by2"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "emserFlexGray4by10",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-emserFlexGray4by10"
+                "obj": "0021",
+                "mtl": "0021-emserFlexGray4by10"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "sterlinaSilver12by24RB",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-sterlinaSilver12by24RB"
+                "obj": "0021",
+                "mtl": "0021-sterlinaSilver12by24RB"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "sterlinaSilverMosaic2by2",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-sterlinaSilverMosaic2by2"
+                "obj": "0021",
+                "mtl": "0021-sterlinaSilverMosaic2by2"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "contessa12by24RB",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-contessa12by24RB"
+                "obj": "0021",
+                "mtl": "0021-contessa12by24RB"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "contessaMosaic2by2",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-contessaMosaic2by2"
+                "obj": "0021",
+                "mtl": "0021-contessaMosaic2by2"
             },
             {
                 "building_component": 94,
                 "variant": "tile",
                 "theme": "emserFlexGray3by6",
                 "region": "interior",
-                "obj": "0019",
-                "mtl": "0019-emserFlexGray3by6"
+                "obj": "0021",
+                "mtl": "0021-emserFlexGray3by6"
             },
             {
                 "building_component": 74,
                 "variant": "msCraftsman3Panel",
                 "theme": "white",
                 "region": "interior",
-                "obj": "0020",
-                "mtl": "0020-white"
+                "obj": "0022",
+                "mtl": "0022-white"
             },
             {
                 "building_component": 90,
                 "variant": "hardwood",
                 "theme": "darkCanyon6by4",
                 "region": "interior",
-                "obj": "0021",
-                "mtl": "0021-darkCanyon6by4"
+                "obj": "0023",
+                "mtl": "0023-darkCanyon6by4"
             },
             {
                 "building_component": 90,
                 "variant": "hardwood",
                 "theme": "ashleeGrey6by4",
                 "region": "interior",
-                "obj": "0021",
-                "mtl": "0021-ashleeGrey6by4"
+                "obj": "0023",
+                "mtl": "0023-ashleeGrey6by4"
             },
             {
                 "building_component": 90,
                 "variant": "hardwood",
                 "theme": "timelessOrganic8by4",
                 "region": "interior",
-                "obj": "0021",
-                "mtl": "0021-timelessOrganic8by4"
+                "obj": "0023",
+                "mtl": "0023-timelessOrganic8by4"
             },
             {
                 "building_component": 90,
                 "variant": "hardwood",
                 "theme": "prodigyUmber9by7",
                 "region": "interior",
-                "obj": "0021",
-                "mtl": "0021-prodigyUmber9by7"
+                "obj": "0023",
+                "mtl": "0023-prodigyUmber9by7"
             },
             {
                 "building_component": 90,
                 "variant": "hardwood",
                 "theme": "prodigyCotton9by7",
                 "region": "interior",
-                "obj": "0021",
-                "mtl": "0021-prodigyCotton9by7"
+                "obj": "0023",
+                "mtl": "0023-prodigyCotton9by7"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "darocaAtar12by24RB",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-darocaAtar12by24RB"
+                "obj": "0024",
+                "mtl": "0024-darocaAtar12by24RB"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "trovataII12by24RB",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-trovataII12by24RB"
+                "obj": "0024",
+                "mtl": "0024-trovataII12by24RB"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "realmII12by24RB",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-realmII12by24RB"
+                "obj": "0024",
+                "mtl": "0024-realmII12by24RB"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "chaidoLoring12by24RB",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-chaidoLoring12by24RB"
+                "obj": "0024",
+                "mtl": "0024-chaidoLoring12by24RB"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "chaidoLoringMosaic2by2",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-chaidoLoringMosaic2by2"
+                "obj": "0024",
+                "mtl": "0024-chaidoLoringMosaic2by2"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "emserFlexGray4by10",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-emserFlexGray4by10"
+                "obj": "0024",
+                "mtl": "0024-emserFlexGray4by10"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "sterlinaSilver12by24RB",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-sterlinaSilver12by24RB"
+                "obj": "0024",
+                "mtl": "0024-sterlinaSilver12by24RB"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "sterlinaSilverMosaic2by2",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-sterlinaSilverMosaic2by2"
+                "obj": "0024",
+                "mtl": "0024-sterlinaSilverMosaic2by2"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "contessa12by24RB",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-contessa12by24RB"
+                "obj": "0024",
+                "mtl": "0024-contessa12by24RB"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "contessaMosaic2by2",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-contessaMosaic2by2"
+                "obj": "0024",
+                "mtl": "0024-contessaMosaic2by2"
             },
             {
                 "building_component": 98,
                 "variant": "tile",
                 "theme": "emserFlexGray3by6",
                 "region": "interior",
-                "obj": "0022",
-                "mtl": "0022-emserFlexGray3by6"
+                "obj": "0024",
+                "mtl": "0024-emserFlexGray3by6"
             },
             {
                 "building_component": 79,
                 "variant": "standard",
                 "theme": "white",
                 "region": "interior",
-                "obj": "0023",
-                "mtl": "0023-white"
+                "obj": "0025",
+                "mtl": "0025-white"
             },
             {
                 "building_component": 87,
                 "variant": "paint",
                 "theme": "snowbound",
                 "region": "interior",
-                "obj": "0024",
-                "mtl": "0024-snowbound"
+                "obj": "0026",
+                "mtl": "0026-snowbound"
             },
             {
                 "building_component": 87,
                 "variant": "paint",
                 "theme": "reposeGray",
                 "region": "interior",
-                "obj": "0024",
-                "mtl": "0024-reposeGray"
+                "obj": "0026",
+                "mtl": "0026-reposeGray"
             },
             {
                 "building_component": 87,
                 "variant": "paint",
                 "theme": "cityLoft",
                 "region": "interior",
-                "obj": "0024",
-                "mtl": "0024-cityLoft"
+                "obj": "0026",
+                "mtl": "0026-cityLoft"
             },
             {
                 "building_component": 87,
                 "variant": "paint",
                 "theme": "gossamerVeil",
                 "region": "interior",
-                "obj": "0024",
-                "mtl": "0024-gossamerVeil"
+                "obj": "0026",
+                "mtl": "0026-gossamerVeil"
             },
             {
                 "building_component": 87,
                 "variant": "paint",
                 "theme": "driftOfMist",
                 "region": "interior",
-                "obj": "0024",
-                "mtl": "0024-driftOfMist"
+                "obj": "0026",
+                "mtl": "0026-driftOfMist"
             },
             {
                 "building_component": 87,
                 "variant": "paint",
                 "theme": "worldlyGray",
                 "region": "interior",
-                "obj": "0024",
-                "mtl": "0024-worldlyGray"
+                "obj": "0026",
+                "mtl": "0026-worldlyGray"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "darocaAtar12by24RB",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-darocaAtar12by24RB"
+                "obj": "0027",
+                "mtl": "0027-darocaAtar12by24RB"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "trovataII12by24RB",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-trovataII12by24RB"
+                "obj": "0027",
+                "mtl": "0027-trovataII12by24RB"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "realmII12by24RB",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-realmII12by24RB"
+                "obj": "0027",
+                "mtl": "0027-realmII12by24RB"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "chaidoLoring12by24RB",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-chaidoLoring12by24RB"
+                "obj": "0027",
+                "mtl": "0027-chaidoLoring12by24RB"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "chaidoLoringMosaic2by2",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-chaidoLoringMosaic2by2"
+                "obj": "0027",
+                "mtl": "0027-chaidoLoringMosaic2by2"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "emserFlexGray4by10",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-emserFlexGray4by10"
+                "obj": "0027",
+                "mtl": "0027-emserFlexGray4by10"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "sterlinaSilver12by24RB",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-sterlinaSilver12by24RB"
+                "obj": "0027",
+                "mtl": "0027-sterlinaSilver12by24RB"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "sterlinaSilverMosaic2by2",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-sterlinaSilverMosaic2by2"
+                "obj": "0027",
+                "mtl": "0027-sterlinaSilverMosaic2by2"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "contessa12by24RB",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-contessa12by24RB"
+                "obj": "0027",
+                "mtl": "0027-contessa12by24RB"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "contessaMosaic2by2",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-contessaMosaic2by2"
+                "obj": "0027",
+                "mtl": "0027-contessaMosaic2by2"
             },
             {
                 "building_component": 92,
                 "variant": "tile",
                 "theme": "emserFlexGray3by6",
                 "region": "interior",
-                "obj": "0025",
-                "mtl": "0025-emserFlexGray3by6"
+                "obj": "0027",
+                "mtl": "0027-emserFlexGray3by6"
             },
             {
                 "building_component": 75,
                 "variant": "country",
                 "theme": "white",
                 "region": "interior",
-                "obj": "0026",
-                "mtl": "0026-white"
+                "obj": "0028",
+                "mtl": "0028-white"
+            },
+            {
+                "building_component": 66,
+                "variant": "metalSeam",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "0029",
+                "mtl": "0029-light"
+            },
+            {
+                "building_component": 66,
+                "variant": "metalSeam",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "0029",
+                "mtl": "0029-dark"
+            },
+            {
+                "building_component": 65,
+                "variant": "shingles",
+                "theme": "light",
+                "region": "exterior",
+                "obj": "0031",
+                "mtl": "0031-light"
+            },
+            {
+                "building_component": 65,
+                "variant": "shingles",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "0031",
+                "mtl": "0031-dark"
             },
             {
                 "building_component": 73,
                 "variant": "glass",
                 "theme": "white",
                 "region": "exterior",
-                "obj": "0028",
-                "mtl": "0028-white"
+                "obj": "0032",
+                "mtl": "0032-white"
             },
             {
                 "building_component": 96,
                 "variant": "carpet",
                 "theme": "antiqueSilk",
                 "region": "interior",
-                "obj": "0029",
-                "mtl": "0029-antiqueSilk"
+                "obj": "0033",
+                "mtl": "0033-antiqueSilk"
             },
             {
                 "building_component": 96,
                 "variant": "carpet",
                 "theme": "translateFossil",
                 "region": "interior",
-                "obj": "0029",
-                "mtl": "0029-translateFossil"
+                "obj": "0033",
+                "mtl": "0033-translateFossil"
             },
             {
                 "building_component": 96,
                 "variant": "carpet",
                 "theme": "secretPassageWashedLinen",
                 "region": "interior",
-                "obj": "0029",
-                "mtl": "0029-secretPassageWashedLinen"
+                "obj": "0033",
+                "mtl": "0033-secretPassageWashedLinen"
             },
             {
                 "building_component": 96,
                 "variant": "carpet",
                 "theme": "secretPassageEnglishStreets",
                 "region": "interior",
-                "obj": "0029",
-                "mtl": "0029-secretPassageEnglishStreets"
+                "obj": "0033",
+                "mtl": "0033-secretPassageEnglishStreets"
             },
             {
                 "building_component": 96,
                 "variant": "carpet",
                 "theme": "secretPassageReflection",
                 "region": "interior",
-                "obj": "0029",
-                "mtl": "0029-secretPassageReflection"
+                "obj": "0033",
+                "mtl": "0033-secretPassageReflection"
             },
             {
                 "building_component": 79,
                 "variant": "standard",
                 "theme": "white",
                 "region": "interior",
-                "obj": "0030",
-                "mtl": "0030-white"
+                "obj": "0034",
+                "mtl": "0034-white"
             },
             {
                 "building_component": 75,
                 "variant": "country",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "0031",
-                "mtl": "0031-white"
-            },
-            {
-                "building_component": 84,
-                "variant": "paint",
-                "theme": "white",
-                "region": "interior",
-                "obj": "0032",
-                "mtl": "0032-white"
-            },
-            {
-                "building_component": 76,
-                "variant": "standard",
-                "theme": "white",
-                "region": "interior",
-                "obj": "0033",
-                "mtl": "0033-white"
-            },
-            {
-                "building_component": 69,
-                "variant": "wood",
-                "theme": "mountain_ash",
-                "region": "exterior",
-                "obj": "0034",
-                "mtl": "0034-mountain_ash"
-            },
-            {
-                "building_component": 69,
-                "variant": "wood",
-                "theme": "hill_country",
-                "region": "exterior",
-                "obj": "0034",
-                "mtl": "0034-hill_country"
-            },
-            {
-                "building_component": 69,
-                "variant": "wood",
-                "theme": "mountain_ash_dark_rail",
-                "region": "exterior",
-                "obj": "0034",
-                "mtl": "0034-mountain_ash_dark_rail"
-            },
-            {
-                "building_component": 69,
-                "variant": "wood",
-                "theme": "hill_country_dark_rail",
-                "region": "exterior",
-                "obj": "0034",
-                "mtl": "0034-hill_country_dark_rail"
-            },
-            {
-                "building_component": 72,
-                "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
                 "obj": "0035",
                 "mtl": "0035-white"
             },
             {
-                "building_component": 71,
-                "variant": "minimal",
-                "theme": "dark",
+                "building_component": 84,
+                "variant": "paint",
+                "theme": "white",
                 "region": "interior",
                 "obj": "0036",
-                "mtl": "0036-dark"
+                "mtl": "0036-white"
             },
             {
-                "building_component": 75,
-                "variant": "country",
+                "building_component": 76,
+                "variant": "standard",
                 "theme": "white",
-                "region": "exterior",
+                "region": "interior",
                 "obj": "0037",
                 "mtl": "0037-white"
-            },
-            {
-                "building_component": 70,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "0038",
-                "mtl": "0038-white"
-            },
-            {
-                "building_component": 88,
-                "variant": "paint",
-                "theme": "snowbound",
-                "region": "interior",
-                "obj": "0039",
-                "mtl": "0039-snowbound"
-            },
-            {
-                "building_component": 88,
-                "variant": "paint",
-                "theme": "reposeGray",
-                "region": "interior",
-                "obj": "0039",
-                "mtl": "0039-reposeGray"
-            },
-            {
-                "building_component": 88,
-                "variant": "paint",
-                "theme": "cityLoft",
-                "region": "interior",
-                "obj": "0039",
-                "mtl": "0039-cityLoft"
-            },
-            {
-                "building_component": 88,
-                "variant": "paint",
-                "theme": "gossamerVeil",
-                "region": "interior",
-                "obj": "0039",
-                "mtl": "0039-gossamerVeil"
-            },
-            {
-                "building_component": 88,
-                "variant": "paint",
-                "theme": "driftOfMist",
-                "region": "interior",
-                "obj": "0039",
-                "mtl": "0039-driftOfMist"
-            },
-            {
-                "building_component": 88,
-                "variant": "paint",
-                "theme": "worldlyGray",
-                "region": "interior",
-                "obj": "0039",
-                "mtl": "0039-worldlyGray"
-            },
-            {
-                "building_component": 77,
-                "variant": "standard",
-                "theme": "black",
-                "region": "interior",
-                "obj": "0042",
-                "mtl": "0042-black"
-            },
-            {
-                "building_component": 77,
-                "variant": "standard",
-                "theme": "chrome",
-                "region": "interior",
-                "obj": "0042",
-                "mtl": "0042-chrome"
-            },
-            {
-                "building_component": 77,
-                "variant": "standard",
-                "theme": "satinNickel",
-                "region": "interior",
-                "obj": "0042",
-                "mtl": "0042-satinNickel"
-            },
-            {
-                "building_component": 82,
-                "variant": "tile",
-                "theme": "subway4in16inWhite",
-                "region": "interior",
-                "obj": "0043",
-                "mtl": "0043-subway4in16inWhite"
-            },
-            {
-                "building_component": 82,
-                "variant": "tile",
-                "theme": "justeerQuellDune3by14",
-                "region": "interior",
-                "obj": "0043",
-                "mtl": "0043-justeerQuellDune3by14"
-            },
-            {
-                "building_component": 70,
-                "variant": "standard",
-                "theme": "white",
-                "region": "exterior",
-                "obj": "0044",
-                "mtl": "0044-white"
             },
             {
                 "building_component": 69,
                 "variant": "wood",
                 "theme": "mountain_ash",
                 "region": "exterior",
-                "obj": "0045",
-                "mtl": "0045-mountain_ash"
+                "obj": "0038",
+                "mtl": "0038-mountain_ash"
             },
             {
                 "building_component": 69,
                 "variant": "wood",
                 "theme": "hill_country",
                 "region": "exterior",
-                "obj": "0045",
-                "mtl": "0045-hill_country"
+                "obj": "0038",
+                "mtl": "0038-hill_country"
             },
             {
                 "building_component": 69,
                 "variant": "wood",
                 "theme": "mountain_ash_dark_rail",
                 "region": "exterior",
-                "obj": "0045",
-                "mtl": "0045-mountain_ash_dark_rail"
+                "obj": "0038",
+                "mtl": "0038-mountain_ash_dark_rail"
             },
             {
                 "building_component": 69,
                 "variant": "wood",
                 "theme": "hill_country_dark_rail",
                 "region": "exterior",
-                "obj": "0045",
-                "mtl": "0045-hill_country_dark_rail"
+                "obj": "0038",
+                "mtl": "0038-hill_country_dark_rail"
             },
             {
-                "building_component": 81,
-                "variant": "winstead",
-                "theme": "birchFlagstone",
-                "region": "interior",
-                "obj": "0046",
-                "mtl": "0046-birchFlagstone"
-            },
-            {
-                "building_component": 81,
-                "variant": "winstead",
+                "building_component": 72,
+                "variant": "standard",
                 "theme": "white",
-                "region": "interior",
-                "obj": "0046",
-                "mtl": "0046-white"
-            },
-            {
-                "building_component": 81,
-                "variant": "winstead",
-                "theme": "stoneGray",
-                "region": "interior",
-                "obj": "0046",
-                "mtl": "0046-stoneGray"
-            },
-            {
-                "building_component": 73,
-                "variant": "glass",
-                "theme": "white",
-                "region": "interior",
-                "obj": "0047",
-                "mtl": "0047-white"
+                "region": "exterior",
+                "obj": "0039",
+                "mtl": "0039-white"
             },
             {
                 "building_component": 71,
                 "variant": "minimal",
                 "theme": "dark",
-                "region": "exterior",
-                "obj": "0048",
-                "mtl": "0048-dark"
+                "region": "interior",
+                "obj": "0040",
+                "mtl": "0040-dark"
             },
             {
-                "building_component": 78,
-                "variant": "standard",
-                "theme": "black",
-                "region": "exterior",
-                "obj": "0049",
-                "mtl": "0049-black"
-            },
-            {
-                "building_component": 78,
-                "variant": "standard",
-                "theme": "chrome",
-                "region": "exterior",
-                "obj": "0049",
-                "mtl": "0049-chrome"
-            },
-            {
-                "building_component": 78,
-                "variant": "standard",
-                "theme": "satinNickel",
-                "region": "exterior",
-                "obj": "0049",
-                "mtl": "0049-satinNickel"
-            },
-            {
-                "building_component": 74,
-                "variant": "msCraftsman3Panel",
+                "building_component": 75,
+                "variant": "country",
                 "theme": "white",
                 "region": "exterior",
-                "obj": "0050",
-                "mtl": "0050-white"
-            },
-            {
-                "building_component": 79,
-                "variant": "standard",
-                "theme": "white",
-                "region": "interior",
-                "obj": "0051",
-                "mtl": "0051-white"
-            },
-            {
-                "building_component": 95,
-                "variant": "carpet",
-                "theme": "antiqueSilk",
-                "region": "interior",
-                "obj": "0052",
-                "mtl": "0052-antiqueSilk"
-            },
-            {
-                "building_component": 95,
-                "variant": "carpet",
-                "theme": "translateFossil",
-                "region": "interior",
-                "obj": "0052",
-                "mtl": "0052-translateFossil"
-            },
-            {
-                "building_component": 95,
-                "variant": "carpet",
-                "theme": "secretPassageWashedLinen",
-                "region": "interior",
-                "obj": "0052",
-                "mtl": "0052-secretPassageWashedLinen"
-            },
-            {
-                "building_component": 95,
-                "variant": "carpet",
-                "theme": "secretPassageEnglishStreets",
-                "region": "interior",
-                "obj": "0052",
-                "mtl": "0052-secretPassageEnglishStreets"
-            },
-            {
-                "building_component": 95,
-                "variant": "carpet",
-                "theme": "secretPassageReflection",
-                "region": "interior",
-                "obj": "0052",
-                "mtl": "0052-secretPassageReflection"
-            },
-            {
-                "building_component": 86,
-                "variant": "paint",
-                "theme": "snowbound",
-                "region": "interior",
-                "obj": "0053",
-                "mtl": "0053-snowbound"
-            },
-            {
-                "building_component": 86,
-                "variant": "paint",
-                "theme": "reposeGray",
-                "region": "interior",
-                "obj": "0053",
-                "mtl": "0053-reposeGray"
-            },
-            {
-                "building_component": 86,
-                "variant": "paint",
-                "theme": "cityLoft",
-                "region": "interior",
-                "obj": "0053",
-                "mtl": "0053-cityLoft"
-            },
-            {
-                "building_component": 86,
-                "variant": "paint",
-                "theme": "gossamerVeil",
-                "region": "interior",
-                "obj": "0053",
-                "mtl": "0053-gossamerVeil"
-            },
-            {
-                "building_component": 86,
-                "variant": "paint",
-                "theme": "driftOfMist",
-                "region": "interior",
-                "obj": "0053",
-                "mtl": "0053-driftOfMist"
-            },
-            {
-                "building_component": 86,
-                "variant": "paint",
-                "theme": "worldlyGray",
-                "region": "interior",
-                "obj": "0053",
-                "mtl": "0053-worldlyGray"
+                "obj": "0041",
+                "mtl": "0041-white"
             },
             {
                 "building_component": 70,
                 "variant": "standard",
                 "theme": "white",
                 "region": "exterior",
+                "obj": "0042",
+                "mtl": "0042-white"
+            },
+            {
+                "building_component": 88,
+                "variant": "paint",
+                "theme": "snowbound",
+                "region": "interior",
+                "obj": "0043",
+                "mtl": "0043-snowbound"
+            },
+            {
+                "building_component": 88,
+                "variant": "paint",
+                "theme": "reposeGray",
+                "region": "interior",
+                "obj": "0043",
+                "mtl": "0043-reposeGray"
+            },
+            {
+                "building_component": 88,
+                "variant": "paint",
+                "theme": "cityLoft",
+                "region": "interior",
+                "obj": "0043",
+                "mtl": "0043-cityLoft"
+            },
+            {
+                "building_component": 88,
+                "variant": "paint",
+                "theme": "gossamerVeil",
+                "region": "interior",
+                "obj": "0043",
+                "mtl": "0043-gossamerVeil"
+            },
+            {
+                "building_component": 88,
+                "variant": "paint",
+                "theme": "driftOfMist",
+                "region": "interior",
+                "obj": "0043",
+                "mtl": "0043-driftOfMist"
+            },
+            {
+                "building_component": 88,
+                "variant": "paint",
+                "theme": "worldlyGray",
+                "region": "interior",
+                "obj": "0043",
+                "mtl": "0043-worldlyGray"
+            },
+            {
+                "building_component": 77,
+                "variant": "standard",
+                "theme": "black",
+                "region": "interior",
+                "obj": "0046",
+                "mtl": "0046-black"
+            },
+            {
+                "building_component": 77,
+                "variant": "standard",
+                "theme": "chrome",
+                "region": "interior",
+                "obj": "0046",
+                "mtl": "0046-chrome"
+            },
+            {
+                "building_component": 77,
+                "variant": "standard",
+                "theme": "satinNickel",
+                "region": "interior",
+                "obj": "0046",
+                "mtl": "0046-satinNickel"
+            },
+            {
+                "building_component": 67,
+                "variant": "lap",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "0047",
+                "mtl": "0047-snowbound"
+            },
+            {
+                "building_component": 67,
+                "variant": "lap",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "0047",
+                "mtl": "0047-waterloo"
+            },
+            {
+                "building_component": 82,
+                "variant": "tile",
+                "theme": "subway4in16inWhite",
+                "region": "interior",
+                "obj": "0048",
+                "mtl": "0048-subway4in16inWhite"
+            },
+            {
+                "building_component": 82,
+                "variant": "tile",
+                "theme": "justeerQuellDune3by14",
+                "region": "interior",
+                "obj": "0048",
+                "mtl": "0048-justeerQuellDune3by14"
+            },
+            {
+                "building_component": 70,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0049",
+                "mtl": "0049-white"
+            },
+            {
+                "building_component": 69,
+                "variant": "wood",
+                "theme": "mountain_ash",
+                "region": "exterior",
+                "obj": "0050",
+                "mtl": "0050-mountain_ash"
+            },
+            {
+                "building_component": 69,
+                "variant": "wood",
+                "theme": "hill_country",
+                "region": "exterior",
+                "obj": "0050",
+                "mtl": "0050-hill_country"
+            },
+            {
+                "building_component": 69,
+                "variant": "wood",
+                "theme": "mountain_ash_dark_rail",
+                "region": "exterior",
+                "obj": "0050",
+                "mtl": "0050-mountain_ash_dark_rail"
+            },
+            {
+                "building_component": 69,
+                "variant": "wood",
+                "theme": "hill_country_dark_rail",
+                "region": "exterior",
+                "obj": "0050",
+                "mtl": "0050-hill_country_dark_rail"
+            },
+            {
+                "building_component": 81,
+                "variant": "winstead",
+                "theme": "birchFlagstone",
+                "region": "interior",
+                "obj": "0051",
+                "mtl": "0051-birchFlagstone"
+            },
+            {
+                "building_component": 81,
+                "variant": "winstead",
+                "theme": "white",
+                "region": "interior",
+                "obj": "0051",
+                "mtl": "0051-white"
+            },
+            {
+                "building_component": 81,
+                "variant": "winstead",
+                "theme": "stoneGray",
+                "region": "interior",
+                "obj": "0051",
+                "mtl": "0051-stoneGray"
+            },
+            {
+                "building_component": 73,
+                "variant": "glass",
+                "theme": "white",
+                "region": "interior",
+                "obj": "0052",
+                "mtl": "0052-white"
+            },
+            {
+                "building_component": 71,
+                "variant": "minimal",
+                "theme": "dark",
+                "region": "exterior",
+                "obj": "0053",
+                "mtl": "0053-dark"
+            },
+            {
+                "building_component": 78,
+                "variant": "standard",
+                "theme": "black",
+                "region": "exterior",
                 "obj": "0054",
-                "mtl": "0054-white"
+                "mtl": "0054-black"
+            },
+            {
+                "building_component": 78,
+                "variant": "standard",
+                "theme": "chrome",
+                "region": "exterior",
+                "obj": "0054",
+                "mtl": "0054-chrome"
+            },
+            {
+                "building_component": 78,
+                "variant": "standard",
+                "theme": "satinNickel",
+                "region": "exterior",
+                "obj": "0054",
+                "mtl": "0054-satinNickel"
+            },
+            {
+                "building_component": 74,
+                "variant": "msCraftsman3Panel",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0055",
+                "mtl": "0055-white"
+            },
+            {
+                "building_component": 79,
+                "variant": "standard",
+                "theme": "white",
+                "region": "interior",
+                "obj": "0056",
+                "mtl": "0056-white"
+            },
+            {
+                "building_component": 95,
+                "variant": "carpet",
+                "theme": "antiqueSilk",
+                "region": "interior",
+                "obj": "0057",
+                "mtl": "0057-antiqueSilk"
+            },
+            {
+                "building_component": 95,
+                "variant": "carpet",
+                "theme": "translateFossil",
+                "region": "interior",
+                "obj": "0057",
+                "mtl": "0057-translateFossil"
+            },
+            {
+                "building_component": 95,
+                "variant": "carpet",
+                "theme": "secretPassageWashedLinen",
+                "region": "interior",
+                "obj": "0057",
+                "mtl": "0057-secretPassageWashedLinen"
+            },
+            {
+                "building_component": 95,
+                "variant": "carpet",
+                "theme": "secretPassageEnglishStreets",
+                "region": "interior",
+                "obj": "0057",
+                "mtl": "0057-secretPassageEnglishStreets"
+            },
+            {
+                "building_component": 95,
+                "variant": "carpet",
+                "theme": "secretPassageReflection",
+                "region": "interior",
+                "obj": "0057",
+                "mtl": "0057-secretPassageReflection"
+            },
+            {
+                "building_component": 86,
+                "variant": "paint",
+                "theme": "snowbound",
+                "region": "interior",
+                "obj": "0058",
+                "mtl": "0058-snowbound"
+            },
+            {
+                "building_component": 86,
+                "variant": "paint",
+                "theme": "reposeGray",
+                "region": "interior",
+                "obj": "0058",
+                "mtl": "0058-reposeGray"
+            },
+            {
+                "building_component": 86,
+                "variant": "paint",
+                "theme": "cityLoft",
+                "region": "interior",
+                "obj": "0058",
+                "mtl": "0058-cityLoft"
+            },
+            {
+                "building_component": 86,
+                "variant": "paint",
+                "theme": "gossamerVeil",
+                "region": "interior",
+                "obj": "0058",
+                "mtl": "0058-gossamerVeil"
+            },
+            {
+                "building_component": 86,
+                "variant": "paint",
+                "theme": "driftOfMist",
+                "region": "interior",
+                "obj": "0058",
+                "mtl": "0058-driftOfMist"
+            },
+            {
+                "building_component": 86,
+                "variant": "paint",
+                "theme": "worldlyGray",
+                "region": "interior",
+                "obj": "0058",
+                "mtl": "0058-worldlyGray"
+            },
+            {
+                "building_component": 70,
+                "variant": "standard",
+                "theme": "white",
+                "region": "exterior",
+                "obj": "0059",
+                "mtl": "0059-white"
             },
             {
                 "building_component": 0,
                 "variant": "concrete",
                 "theme": "light",
                 "region": "exterior",
-                "obj": "0056",
-                "mtl": "0056-light"
-            },
-            {
-                "building_component": 68,
-                "variant": "lap",
-                "theme": "snowbound",
-                "region": "exterior",
-                "obj": "0057",
-                "mtl": "0057-snowbound"
-            },
-            {
-                "building_component": 68,
-                "variant": "lap",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "0057",
-                "mtl": "0057-waterloo"
-            },
-            {
-                "building_component": 68,
-                "variant": "board",
-                "theme": "snowbound",
-                "region": "exterior",
-                "obj": "0058",
-                "mtl": "0058-snowbound"
-            },
-            {
-                "building_component": 68,
-                "variant": "board",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "0058",
-                "mtl": "0058-waterloo"
-            },
-            {
-                "building_component": 68,
-                "variant": "shake",
-                "theme": "aspen",
-                "region": "exterior",
-                "obj": "0060",
-                "mtl": "0060-aspen"
-            },
-            {
-                "building_component": 67,
-                "variant": "lap",
-                "theme": "snowbound",
-                "region": "exterior",
                 "obj": "0061",
-                "mtl": "0061-snowbound"
+                "mtl": "0061-light"
             },
             {
-                "building_component": 67,
+                "building_component": 68,
                 "variant": "lap",
-                "theme": "waterloo",
-                "region": "exterior",
-                "obj": "0061",
-                "mtl": "0061-waterloo"
-            },
-            {
-                "building_component": 67,
-                "variant": "board",
                 "theme": "snowbound",
                 "region": "exterior",
                 "obj": "0062",
                 "mtl": "0062-snowbound"
             },
             {
-                "building_component": 67,
-                "variant": "board",
+                "building_component": 68,
+                "variant": "lap",
                 "theme": "waterloo",
                 "region": "exterior",
                 "obj": "0062",
@@ -6634,55 +6650,39 @@
             },
             {
                 "building_component": 67,
+                "variant": "board",
+                "theme": "snowbound",
+                "region": "exterior",
+                "obj": "0064",
+                "mtl": "0064-snowbound"
+            },
+            {
+                "building_component": 67,
+                "variant": "board",
+                "theme": "waterloo",
+                "region": "exterior",
+                "obj": "0064",
+                "mtl": "0064-waterloo"
+            },
+            {
+                "building_component": 67,
                 "variant": "shake",
                 "theme": "aspen",
                 "region": "exterior",
-                "obj": "0064",
-                "mtl": "0064-aspen"
-            },
-            {
-                "building_component": 66,
-                "variant": "metalSeam",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "0065",
-                "mtl": "0065-light"
-            },
-            {
-                "building_component": 66,
-                "variant": "metalSeam",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "0065",
-                "mtl": "0065-dark"
+                "obj": "0066",
+                "mtl": "0066-aspen"
             },
             {
                 "building_component": 66,
                 "variant": "shingles",
-                "theme": "light",
-                "region": "exterior",
-                "obj": "0066",
-                "mtl": "0066-light"
-            },
-            {
-                "building_component": 66,
-                "variant": "shingles",
-                "theme": "dark",
-                "region": "exterior",
-                "obj": "0066",
-                "mtl": "0066-dark"
-            },
-            {
-                "building_component": 65,
-                "variant": "metalSeam",
                 "theme": "light",
                 "region": "exterior",
                 "obj": "0067",
                 "mtl": "0067-light"
             },
             {
-                "building_component": 65,
-                "variant": "metalSeam",
+                "building_component": 66,
+                "variant": "shingles",
                 "theme": "dark",
                 "region": "exterior",
                 "obj": "0067",
@@ -6690,7 +6690,7 @@
             },
             {
                 "building_component": 65,
-                "variant": "shingles",
+                "variant": "metalSeam",
                 "theme": "light",
                 "region": "exterior",
                 "obj": "0068",
@@ -6698,7 +6698,7 @@
             },
             {
                 "building_component": 65,
-                "variant": "shingles",
+                "variant": "metalSeam",
                 "theme": "dark",
                 "region": "exterior",
                 "obj": "0068",
@@ -6963,10 +6963,10 @@
             },
             "intPremiumModern": {
                 "name": "Modern",
-                "description": "The modern exterior style in the premium package.",
+                "description": "The modern style in the premium package.",
                 "tier": "premium",
                 "style": "modern",
-                "type": "exterior"
+                "type": "interior"
             }
         },
         "layouts": {
